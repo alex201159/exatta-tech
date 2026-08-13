@@ -7,7 +7,9 @@
   "manufacturers": [],
   "removed": {
     "apps": [],
-    "downloads": [],
+    "downloads": [
+      "dl-config-tool"
+    ],
     "manuals": [],
     "videos": [],
     "products": [],
