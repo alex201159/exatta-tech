@@ -325,8 +325,8 @@ const COMMUNITY_QUESTIONS = [
 ];
 
 // Calculado a partir dos dados reais (não é mais um número fixo) — ver
-// window.exattaGetBalanceirosStats() logo abaixo, chamada depois que os
-// itens do painel admin já foram somados aos arrays.
+// exattaRecomputeStats() mais abaixo, chamada depois que os itens do
+// painel admin já foram somados/removidos dos arrays.
 let BALANCEIROS_STATS = [
   { value: 0, suffix: "+", label: "Manuais cadastrados" },
   { value: 0, suffix: "+", label: "Fabricantes" },
@@ -451,6 +451,15 @@ function exattaMergeSection(baseArr, overrideItems, removedIds) {
   }
 }
 
+function exattaRecomputeStats() {
+  BALANCEIROS_STATS = [
+    { value: MANUALS.length, suffix: "+", label: "Manuais cadastrados" },
+    { value: MANUFACTURERS.length, suffix: "+", label: "Fabricantes" },
+    { value: MANUAL_VIDEOS.length, suffix: "+", label: "Vídeos técnicos" },
+    { value: 1, suffix: "", label: "Comunidade ativa", customLabel: "Comunidade" },
+  ];
+}
+
 window.exattaLoadOverrides = async function exattaLoadOverrides() {
   try {
     const res = await fetch("data/overrides.json", { cache: "no-store" });
@@ -465,5 +474,7 @@ window.exattaLoadOverrides = async function exattaLoadOverrides() {
     exattaMergeSection(MANUFACTURERS, extra.manufacturers, removed.manufacturers);
   } catch (e) {
     console.warn("Não foi possível carregar data/overrides.json — usando apenas os dados padrão.", e);
+  } finally {
+    exattaRecomputeStats();
   }
 };

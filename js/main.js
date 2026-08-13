@@ -558,12 +558,14 @@
     const brandChips = qs("#brandChips");
     if (!brandChips || typeof MANUFACTURERS === "undefined") return;
 
-    // Chips de fabricantes
+    // Chips de fabricantes — contagem real de manuais cadastrados por marca,
+    // não o número fixo de exemplo que ficava em MANUFACTURERS[].count.
     brandChips.innerHTML =
-      `<button class="chip is-active" data-brand="all">Todos <span class="count">(${MANUALS.length + MANUAL_VIDEOS.length})</span></button>` +
-      MANUFACTURERS.map(
-        (m) => `<button class="chip" data-brand="${m.name}">${m.name} <span class="count">(${m.count})</span></button>`
-      ).join("");
+      `<button class="chip is-active" data-brand="all">Todos <span class="count">(${MANUALS.length})</span></button>` +
+      MANUFACTURERS.map((m) => {
+        const count = MANUALS.filter((man) => man.brand === m.name).length;
+        return `<button class="chip" data-brand="${m.name}">${m.name} <span class="count">(${count})</span></button>`;
+      }).join("");
 
     // Stats
     const statsEl = qs("#balStats");
