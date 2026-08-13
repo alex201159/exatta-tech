@@ -403,11 +403,15 @@
     const overrideArr = STATE.overrides[section] || [];
     const removedIds = (STATE.overrides.removed && STATE.overrides.removed[section]) || [];
     const map = new Map();
-    baseArr.forEach((item) => map.set(item.id, { item, kind: "base" }));
+    baseArr.forEach((item) => {
+      if (!removedIds.includes(item.id)) map.set(item.id, { item, kind: "base" });
+    });
+    // Um item presente em overrides sempre aparece, mesmo que sua id também
+    // esteja (por engano/dado antigo) na lista de removidos — do contrário
+    // ele fica editado/publicado no site mas some da tela do admin.
     overrideArr.forEach((item) => {
       map.set(item.id, { item, kind: map.has(item.id) ? "edited" : "new" });
     });
-    removedIds.forEach((id) => map.delete(id));
     return Array.from(map.values());
   }
 
@@ -772,6 +776,13 @@
       else arr.push(item);
     });
 
+    const removedArr = STATE.overrides.removed.manuals;
+    const removedSnapshot = removedArr.slice();
+    items.forEach((item) => {
+      const idx = removedArr.indexOf(item.id);
+      if (idx !== -1) removedArr.splice(idx, 1);
+    });
+
     try {
       const message = editingId
         ? `Admin: edita ${brand} — ${items[0].model} (manuals)`
@@ -784,6 +795,7 @@
       populateBrandDatalists();
     } catch (err) {
       STATE.overrides.manuals = snapshot;
+      STATE.overrides.removed.manuals = removedSnapshot;
       setStatus(statusEl, "Erro ao publicar: " + err.message, "error");
     } finally {
       submitBtn.disabled = false;
@@ -915,6 +927,13 @@
       if (idxInOverrides !== -1) arr[idxInOverrides] = item;
       else arr.push(item);
 
+      // Publicar/editar um item sempre "desremove" ele — evita que fique
+      // marcado como removido e ao mesmo tempo presente em overrides (o que
+      // faz ele sumir do admin mas continuar aparecendo no site, ou vice-versa).
+      const removedArr = STATE.overrides.removed[section];
+      const removedIdx = removedArr.indexOf(item.id);
+      if (removedIdx !== -1) removedArr.splice(removedIdx, 1);
+
       try {
         const sha = await ghPutOverrides(
           STATE.cfg,
@@ -930,6 +949,7 @@
       } catch (err) {
         if (idxInOverrides !== -1) arr[idxInOverrides] = prevOverrideSnapshot;
         else arr.pop();
+        if (removedIdx !== -1) removedArr.splice(removedIdx, 0, item.id);
         setStatus(statusEl, "Erro ao publicar: " + err.message, "error");
       } finally {
         submitBtn.disabled = false;
