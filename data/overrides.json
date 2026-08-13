@@ -500,7 +500,8 @@
     "products": [
       "prod-integracao-personalizada",
       "prod-suporte-premium",
-      "prod-instalacao"
+      "prod-instalacao",
+      "prod-lc-peso-licenca"
     ],
     "manufacturers": []
   }
