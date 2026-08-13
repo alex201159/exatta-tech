@@ -46,7 +46,17 @@
     }
   ],
   "downloads": [],
-  "manuals": [],
+  "manuals": [
+    {
+      "id": "m1",
+      "brand": "Toledo",
+      "model": "Prix 4 Uno",
+      "type": "Balança comercial",
+      "desc": "Manual de operação, calibração e códigos de erro do indicador Prix 4 Uno.",
+      "url": "https://pt.scribd.com/document/754155325/Manual-de-instrucao-Balanca-Prix-4-uno",
+      "sourceUrl": ""
+    }
+  ],
   "videos": [],
   "products": [],
   "manufacturers": [],
