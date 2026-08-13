@@ -807,6 +807,18 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 .modal-body { padding: 28px; display: flex; flex-direction: column; gap: 22px; }
 .modal-media { height: 200px; border-radius: var(--radius-md); background: linear-gradient(135deg, rgba(47,111,237,0.22), rgba(34,211,238,0.08)); display: flex; align-items: center; justify-content: center; }
 .modal-media svg { width: 72px; height: 72px; color: var(--cyan); }
+
+/* ---------- Modal de produto: tela cheia (fotos não podem ser cortadas) ---------- */
+#productModal { padding: 16px; }
+#productModal .modal-box { max-width: 1200px; height: min(94vh, 980px); max-height: 94vh; display: flex; flex-direction: column; }
+#productModal .modal-body { flex: 1; overflow-y: auto; }
+#productModal .modal-media { height: min(56vh, 560px); background: #000; }
+#productModal .modal-media img { object-fit: contain !important; }
+@media (max-width: 640px) {
+  #productModal { padding: 0; }
+  #productModal .modal-box { max-width: 100vw; width: 100vw; height: 100vh; max-height: 100vh; border-radius: 0; }
+  #productModal .modal-media { height: 40vh; }
+}
 .modal-section h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 10px; }
 .modal-section p { color: var(--text-secondary); font-size: 14.5px; }
 .feature-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
