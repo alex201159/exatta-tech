@@ -637,7 +637,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 .dl-icon--tool { background: rgba(242,179,80,0.15); color: var(--warning); }
 .dl-card h4 { font-size: 16px; margin-bottom: 2px; }
 .dl-card .plat { font-size: 12.5px; color: var(--text-muted); }
-.dl-card p { font-size: 13.5px; color: var(--text-secondary); }
+.dl-card p { font-size: 13.5px; color: var(--text-secondary); display: -webkit-box; -webkit-line-clamp: 4; line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
 .dl-meta { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 12.5px; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 12px; }
 .dl-meta b { color: var(--text-secondary); font-weight: 600; }
 .dl-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--success); }
