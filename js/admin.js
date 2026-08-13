@@ -597,8 +597,8 @@
     row.innerHTML = `
       <div class="form-grid">
         <div class="field"><label>Modelo</label><input class="f-model" required placeholder="Ex: Prix 4 Uno"></div>
-        <div class="field"><label>Tipo de equipamento</label><input class="f-type" placeholder="Ex: Indicador digital"></div>
-        <div class="field full"><label>Descrição</label><input class="f-desc" placeholder="O que o manual cobre"></div>
+        <div class="field"><label>Tipo de equipamento</label><input class="f-type" value="Balança" placeholder="Ex: Indicador digital"></div>
+        <div class="field full"><label>Descrição</label><input class="f-desc" value="Manual do usuário" placeholder="O que o manual cobre"></div>
         <div class="field"><label>Link do PDF</label><input class="f-url" required placeholder="https://..."></div>
         <div class="field"><label>Link da fonte (opcional)</label><input class="f-sourceUrl" placeholder="https://..."></div>
       </div>
