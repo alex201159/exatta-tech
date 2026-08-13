@@ -1,5 +1,50 @@
 {
-  "apps": [],
+  "apps": [
+    {
+      "id": "lc-peso",
+      "name": "LC Peso",
+      "icon": "scale",
+      "category": "Balanças",
+      "filters": [
+        "balancas",
+        "tecnico"
+      ],
+      "shortDesc": "Controle de pesagem conectado a balanças e indicadores via Bluetooth, BLE e Serial.",
+      "fullDesc": "O LC Peso conecta o seu smartphone diretamente a balanças e indicadores comerciais, industriais e agrícolas, capturando o peso em tempo real e organizando cada pesagem em relatórios prontos para exportação. Criado para operações que não podem parar, funciona mesmo em campo, com pouca conectividade.",
+      "features": [
+        "Leitura em tempo real via Bluetooth / BLE",
+        "Suporte a comunicação Serial e RS-232",
+        "Geração de relatórios em PDF",
+        "Histórico completo de pesagens",
+        "Modo offline com sincronização posterior",
+        "Cadastro de produtos e clientes"
+      ],
+      "tech": [
+        "Flutter",
+        "Bluetooth LE",
+        "SQLite",
+        "REST API"
+      ],
+      "compatibility": "Android 8.0 ou superior",
+      "version": "1.4.2",
+      "changelog": [
+        {
+          "v": "1.4.2",
+          "d": "Correções de estabilidade na leitura Bluetooth."
+        },
+        {
+          "v": "1.4.0",
+          "d": "Novo layout de relatórios em PDF."
+        },
+        {
+          "v": "1.3.0",
+          "d": "Suporte a protocolo Serial adicionado."
+        }
+      ],
+      "hasDownload": true,
+      "image": "assets/uploads/apps-lc-peso.jpeg?v=1786624923568"
+    }
+  ],
   "downloads": [],
   "manuals": [],
   "videos": [],
