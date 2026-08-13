@@ -419,17 +419,43 @@ const FAQ = [
 /* Se o fetch falhar (ex: abrindo o HTML direto como arquivo, sem         */
 /* servidor), o site simplesmente segue com os dados padrão acima.        */
 /* ---------------------------------------------------------------------- */
+// `const` no nível superior de um <script> não vira propriedade de `window`
+// (diferente de `var`/funções), mas admin.js precisa localizar estes arrays
+// dinamicamente pelo nome (ex: window["APPS"]) para listar os dados padrão.
+window.APPS = APPS;
+window.DOWNLOADS = DOWNLOADS;
+window.MANUALS = MANUALS;
+window.MANUAL_VIDEOS = MANUAL_VIDEOS;
+window.PRODUCTS = PRODUCTS;
+window.MANUFACTURERS = MANUFACTURERS;
+
+function exattaMergeSection(baseArr, overrideItems, removedIds) {
+  if (Array.isArray(removedIds) && removedIds.length) {
+    for (let i = baseArr.length - 1; i >= 0; i--) {
+      if (removedIds.includes(baseArr[i].id)) baseArr.splice(i, 1);
+    }
+  }
+  if (Array.isArray(overrideItems)) {
+    overrideItems.forEach((item) => {
+      const idx = baseArr.findIndex((b) => b.id === item.id);
+      if (idx !== -1) baseArr[idx] = item; // edição de um item existente
+      else baseArr.push(item); // item novo
+    });
+  }
+}
+
 window.exattaLoadOverrides = async function exattaLoadOverrides() {
   try {
     const res = await fetch("data/overrides.json", { cache: "no-store" });
     if (!res.ok) return;
     const extra = await res.json();
-    if (Array.isArray(extra.apps)) APPS.push(...extra.apps);
-    if (Array.isArray(extra.downloads)) DOWNLOADS.push(...extra.downloads);
-    if (Array.isArray(extra.manuals)) MANUALS.push(...extra.manuals);
-    if (Array.isArray(extra.videos)) MANUAL_VIDEOS.push(...extra.videos);
-    if (Array.isArray(extra.products)) PRODUCTS.push(...extra.products);
-    if (Array.isArray(extra.manufacturers)) MANUFACTURERS.push(...extra.manufacturers);
+    const removed = extra.removed || {};
+    exattaMergeSection(APPS, extra.apps, removed.apps);
+    exattaMergeSection(DOWNLOADS, extra.downloads, removed.downloads);
+    exattaMergeSection(MANUALS, extra.manuals, removed.manuals);
+    exattaMergeSection(MANUAL_VIDEOS, extra.videos, removed.videos);
+    exattaMergeSection(PRODUCTS, extra.products, removed.products);
+    exattaMergeSection(MANUFACTURERS, extra.manufacturers, removed.manufacturers);
   } catch (e) {
     console.warn("Não foi possível carregar data/overrides.json — usando apenas os dados padrão.", e);
   }

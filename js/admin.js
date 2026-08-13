@@ -15,6 +15,30 @@
   const FILE_PATH = "data/overrides.json";
 
   const SECTIONS = ["apps", "downloads", "manuals", "videos", "products", "manufacturers"];
+  const BASE_VAR = {
+    apps: "APPS",
+    downloads: "DOWNLOADS",
+    manuals: "MANUALS",
+    videos: "MANUAL_VIDEOS",
+    products: "PRODUCTS",
+    manufacturers: "MANUFACTURERS",
+  };
+  const SUBMIT_LABEL = {
+    apps: "Publicar aplicativo",
+    downloads: "Publicar arquivo",
+    manuals: "Publicar manual",
+    videos: "Publicar vídeo",
+    products: "Publicar produto",
+    manufacturers: "Publicar fabricante",
+  };
+  const FORM_TITLE = {
+    apps: "Adicionar aplicativo",
+    downloads: "Adicionar arquivo",
+    manuals: "Adicionar manual",
+    videos: "Adicionar vídeo",
+    products: "Adicionar produto",
+    manufacturers: "Adicionar fabricante",
+  };
 
   const qs = (sel, ctx) => (ctx || document).querySelector(sel);
   const qsa = (sel, ctx) => Array.from((ctx || document).querySelectorAll(sel));
@@ -26,7 +50,15 @@
   };
 
   function emptyOverrides() {
-    return { apps: [], downloads: [], manuals: [], videos: [], products: [], manufacturers: [] };
+    return {
+      apps: [],
+      downloads: [],
+      manuals: [],
+      videos: [],
+      products: [],
+      manufacturers: [],
+      removed: { apps: [], downloads: [], manuals: [], videos: [], products: [], manufacturers: [] },
+    };
   }
 
   /* ------------------------------------------------------------------ */
@@ -108,7 +140,10 @@
     } catch (e) {
       throw new Error("data/overrides.json existe no repositório mas não é um JSON válido.");
     }
-    return { data: Object.assign(emptyOverrides(), data), sha: json.sha };
+    const merged = emptyOverrides();
+    Object.assign(merged, data);
+    merged.removed = Object.assign(emptyOverrides().removed, data.removed || {});
+    return { data: merged, sha: json.sha };
   }
   async function ghPutOverrides(cfg, data, sha, message) {
     const url = `${GH_API}/repos/${cfg.owner}/${cfg.repo}/contents/${FILE_PATH}`;
@@ -292,6 +327,27 @@
   }
 
   /* ------------------------------------------------------------------ */
+  /* Combina dados padrão (js/data.js) + overrides para exibição        */
+  /* ------------------------------------------------------------------ */
+  function effectiveList(section) {
+    const baseArr = (typeof window[BASE_VAR[section]] !== "undefined" && window[BASE_VAR[section]]) || [];
+    const overrideArr = STATE.overrides[section] || [];
+    const removedIds = (STATE.overrides.removed && STATE.overrides.removed[section]) || [];
+    const map = new Map();
+    baseArr.forEach((item) => map.set(item.id, { item, kind: "base" }));
+    overrideArr.forEach((item) => {
+      map.set(item.id, { item, kind: map.has(item.id) ? "edited" : "new" });
+    });
+    removedIds.forEach((id) => map.delete(id));
+    return Array.from(map.values());
+  }
+
+  function findItem(section, id) {
+    const entry = effectiveList(section).find((e) => e.item.id === id);
+    return entry ? entry.item : null;
+  }
+
+  /* ------------------------------------------------------------------ */
   /* Listas por seção                                                   */
   /* ------------------------------------------------------------------ */
   function itemLabel(section, item) {
@@ -307,74 +363,176 @@
     if (section === "products") return item.category || "";
     return "";
   }
+  const KIND_LABEL = { base: "Padrão", edited: "Editado", new: "Novo" };
 
   function renderList(section) {
     const el = document.getElementById("list-" + section);
     if (!el) return;
-    const items = STATE.overrides[section] || [];
-    if (!items.length) {
-      el.innerHTML = `<p class="admin-empty">Nenhum item publicado pelo painel nesta seção ainda.</p>`;
+    const entries = effectiveList(section);
+    if (!entries.length) {
+      el.innerHTML = `<p class="admin-empty">Nenhum item nesta seção.</p>`;
       return;
     }
-    el.innerHTML = items
+    el.innerHTML = entries
       .map(
-        (item) => `
+        ({ item, kind }) => `
       <div class="admin-row">
         <div>
           <strong>${escapeHtml(itemLabel(section, item))}</strong>
           <span>${escapeHtml(itemMeta(section, item))}</span>
         </div>
-        <span class="badge badge--local">Publicado</span>
-        <button type="button" class="btn btn--ghost btn--sm remove" data-remove="${escapeHtml(item.id)}">Remover</button>
+        <span class="badge badge--${kind}">${KIND_LABEL[kind]}</span>
+        <div class="actions">
+          <button type="button" class="btn btn--outline btn--sm" data-edit="${escapeHtml(item.id)}">Editar</button>
+          <button type="button" class="btn btn--ghost btn--sm" data-remove="${escapeHtml(item.id)}">Remover</button>
+        </div>
       </div>`
       )
       .join("");
+    qsa("[data-edit]", el).forEach((btn) => {
+      btn.addEventListener("click", () => startEdit(section, btn.getAttribute("data-edit")));
+    });
     qsa("[data-remove]", el).forEach((btn) => {
       btn.addEventListener("click", () => removeItem(section, btn.getAttribute("data-remove"), btn));
     });
   }
 
   async function removeItem(section, id, btn) {
-    const idx = STATE.overrides[section].findIndex((i) => i.id === id);
-    if (idx === -1) return;
     btn.disabled = true;
     btn.textContent = "Removendo...";
-    const removed = STATE.overrides[section].splice(idx, 1)[0];
+    const arr = STATE.overrides[section];
+    const idx = arr.findIndex((i) => i.id === id);
+    const removedOverrideItem = idx !== -1 ? arr.splice(idx, 1)[0] : null;
+    const alreadyMarkedRemoved = STATE.overrides.removed[section].includes(id);
+    if (!alreadyMarkedRemoved) STATE.overrides.removed[section].push(id);
     try {
       const sha = await ghPutOverrides(STATE.cfg, STATE.overrides, STATE.sha, `Admin: remove item de ${section}`);
       STATE.sha = sha;
       renderList(section);
     } catch (e) {
-      STATE.overrides[section].splice(idx, 0, removed);
+      if (removedOverrideItem) arr.splice(idx, 0, removedOverrideItem);
+      if (!alreadyMarkedRemoved) STATE.overrides.removed[section].pop();
       alert("Erro ao remover: " + e.message);
       renderList(section);
     }
   }
 
   /* ------------------------------------------------------------------ */
-  /* Formulários de adição                                              */
+  /* Modo edição                                                        */
   /* ------------------------------------------------------------------ */
-  function buildItem(section, fd) {
+  function formEl(section) {
+    return document.getElementById("form-" + section);
+  }
+
+  function fillForm(section, item) {
+    const form = formEl(section);
+    form.reset();
     switch (section) {
       case "apps":
-        return {
-          id: shortId("app", fd.get("name")),
+        form.name.value = item.name || "";
+        form.category.value = item.category || "";
+        form.icon.value = item.icon || "scale";
+        form.version.value = item.version || "";
+        form.compatibility.value = item.compatibility || "";
+        form.tech.value = (item.tech || []).join(", ");
+        form.filters.value = (item.filters || []).join(", ");
+        form.shortDesc.value = item.shortDesc || "";
+        form.fullDesc.value = item.fullDesc || "";
+        form.features.value = (item.features || []).join("\n");
+        form.hasDownload.checked = !!item.hasDownload;
+        break;
+      case "downloads":
+        form.name.value = item.name || "";
+        form.type.value = item.type || "android";
+        form.platform.value = item.platform || "";
+        form.version.value = item.version || "";
+        form.size.value = item.size || "";
+        form.date.value = item.date || "";
+        form.desc.value = item.desc || "";
+        form.url.value = item.url || "";
+        form.current.checked = !!item.current;
+        break;
+      case "manuals":
+        form.brand.value = item.brand || "";
+        form.model.value = item.model || "";
+        form.type.value = item.type || "";
+        form.desc.value = item.desc || "";
+        form.url.value = item.url || "";
+        form.sourceUrl.value = item.sourceUrl || "";
+        break;
+      case "videos":
+        form.brand.value = item.brand || "";
+        form.model.value = item.model || "";
+        form.desc.value = item.desc || "";
+        form.url.value = item.url || "";
+        break;
+      case "products":
+        form.name.value = item.name || "";
+        form.category.value = item.category || "";
+        form.icon.value = item.icon || "package";
+        form.availability.value = item.availability || "available";
+        form.desc.value = item.desc || "";
+        form.priceLabel.value = item.priceLabel || "Consultar preço";
+        break;
+      case "manufacturers":
+        form.name.value = item.name || "";
+        form.count.value = item.count != null ? item.count : 1;
+        break;
+    }
+  }
+
+  function startEdit(section, id) {
+    const item = findItem(section, id);
+    if (!item) return;
+    const form = formEl(section);
+    fillForm(section, item);
+    form.dataset.editingId = id;
+    qs("[data-form-title]", form).textContent = `Editando: ${itemLabel(section, item)}`;
+    qs("[data-submit-label]", form).textContent = "Salvar alterações";
+    qs("[data-cancel-edit]", form).hidden = false;
+    setStatus(qs("[data-status]", form), "", "");
+    form.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function cancelEdit(section) {
+    const form = formEl(section);
+    form.reset();
+    delete form.dataset.editingId;
+    qs("[data-form-title]", form).textContent = FORM_TITLE[section];
+    qs("[data-submit-label]", form).textContent = SUBMIT_LABEL[section];
+    qs("[data-cancel-edit]", form).hidden = true;
+    if (form.querySelector('[name="current"]')) form.current.checked = true;
+    if (form.querySelector('[name="hasDownload"]')) form.hasDownload.checked = true;
+  }
+
+  qsa("[data-cancel-edit]").forEach((btn) => {
+    btn.addEventListener("click", () => cancelEdit(btn.closest("form").getAttribute("data-section")));
+  });
+
+  /* ------------------------------------------------------------------ */
+  /* Formulários de adição/edição                                       */
+  /* ------------------------------------------------------------------ */
+  function buildItem(section, fd, existing) {
+    const carry = existing ? Object.assign({}, existing) : {};
+    switch (section) {
+      case "apps":
+        return Object.assign(carry, {
+          id: existing ? existing.id : shortId("app", fd.get("name")),
           name: fd.get("name"),
           icon: fd.get("icon") || "scale",
           category: fd.get("category"),
-          filters: [],
+          filters: csvToArray(fd.get("filters")),
           shortDesc: fd.get("shortDesc"),
           fullDesc: fd.get("fullDesc") || fd.get("shortDesc"),
           features: linesToArray(fd.get("features")),
           tech: csvToArray(fd.get("tech")),
           compatibility: fd.get("compatibility") || "",
           version: fd.get("version") || "1.0.0",
-          changelog: [],
           hasDownload: fd.get("hasDownload") === "on",
-        };
+        });
       case "downloads":
-        return {
-          id: shortId("dl", fd.get("name")),
+        return Object.assign(carry, {
+          id: existing ? existing.id : shortId("dl", fd.get("name")),
           name: fd.get("name"),
           platform: fd.get("platform") || "",
           type: fd.get("type") || "tool",
@@ -384,28 +542,28 @@
           desc: fd.get("desc") || "",
           current: fd.get("current") === "on",
           url: fd.get("url"),
-        };
+        });
       case "manuals":
-        return {
-          id: shortId("m", fd.get("model")),
+        return Object.assign(carry, {
+          id: existing ? existing.id : shortId("m", fd.get("model")),
           brand: fd.get("brand"),
           model: fd.get("model"),
           type: fd.get("type") || "",
           desc: fd.get("desc") || "",
           url: fd.get("url"),
           sourceUrl: fd.get("sourceUrl") || "",
-        };
+        });
       case "videos":
-        return {
-          id: shortId("v", fd.get("model")),
+        return Object.assign(carry, {
+          id: existing ? existing.id : shortId("v", fd.get("model")),
           brand: fd.get("brand"),
           model: fd.get("model"),
           desc: fd.get("desc") || "",
           url: fd.get("url"),
-        };
+        });
       case "products":
-        return {
-          id: shortId("prod", fd.get("name")),
+        return Object.assign(carry, {
+          id: existing ? existing.id : shortId("prod", fd.get("name")),
           name: fd.get("name"),
           category: fd.get("category") || "",
           icon: fd.get("icon") || "package",
@@ -413,13 +571,13 @@
           priceLabel: fd.get("priceLabel") || "Consultar preço",
           desc: fd.get("desc") || "",
           availability: fd.get("availability") || "available",
-        };
+        });
       case "manufacturers":
-        return {
-          id: slugify(fd.get("name")) || shortId("brand", fd.get("name")),
+        return Object.assign(carry, {
+          id: existing ? existing.id : slugify(fd.get("name")) || shortId("brand", fd.get("name")),
           name: fd.get("name"),
           count: parseInt(fd.get("count"), 10) || 0,
-        };
+        });
       default:
         return null;
     }
@@ -431,22 +589,35 @@
       const section = form.getAttribute("data-section");
       const statusEl = form.querySelector("[data-status]");
       const submitBtn = form.querySelector('button[type="submit"]');
-      const item = buildItem(section, new FormData(form));
+      const editingId = form.dataset.editingId || null;
+      const existing = editingId ? findItem(section, editingId) : null;
+      const item = buildItem(section, new FormData(form), existing);
+      if (editingId) item.id = editingId;
 
-      setStatus(statusEl, "Publicando no GitHub...", "busy");
+      setStatus(statusEl, editingId ? "Salvando alterações..." : "Publicando no GitHub...", "busy");
       submitBtn.disabled = true;
-      STATE.overrides[section].push(item);
+
+      const arr = STATE.overrides[section];
+      const idxInOverrides = arr.findIndex((i) => i.id === item.id);
+      const prevOverrideSnapshot = idxInOverrides !== -1 ? arr[idxInOverrides] : null;
+      if (idxInOverrides !== -1) arr[idxInOverrides] = item;
+      else arr.push(item);
+
       try {
-        const sha = await ghPutOverrides(STATE.cfg, STATE.overrides, STATE.sha, `Admin: adiciona ${itemLabel(section, item)} (${section})`);
+        const sha = await ghPutOverrides(
+          STATE.cfg,
+          STATE.overrides,
+          STATE.sha,
+          `Admin: ${editingId ? "edita" : "adiciona"} ${itemLabel(section, item)} (${section})`
+        );
         STATE.sha = sha;
         setStatus(statusEl, "Publicado! O site deve atualizar em ~1 minuto.", "success");
+        cancelEdit(section);
         renderList(section);
         if (section === "manuals" || section === "videos" || section === "manufacturers") populateBrandDatalists();
-        form.reset();
-        if (form.querySelector('[name="current"]')) form.querySelector('[name="current"]').checked = true;
-        if (form.querySelector('[name="hasDownload"]')) form.querySelector('[name="hasDownload"]').checked = true;
       } catch (err) {
-        STATE.overrides[section].pop();
+        if (idxInOverrides !== -1) arr[idxInOverrides] = prevOverrideSnapshot;
+        else arr.pop();
         setStatus(statusEl, "Erro ao publicar: " + err.message, "error");
       } finally {
         submitBtn.disabled = false;

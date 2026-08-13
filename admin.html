@@ -91,11 +91,11 @@
 
     <!-- APLICATIVOS -->
     <section class="admin-panel is-active" data-admin-panel="apps">
-      <div class="admin-panel-head"><h2>Aplicativos adicionados pelo painel</h2></div>
+      <div class="admin-panel-head"><h2>Aplicativos</h2></div>
       <div class="admin-list" id="list-apps"></div>
 
       <form class="admin-form" id="form-apps" data-section="apps">
-        <h3>Adicionar aplicativo</h3>
+        <h3 data-form-title>Adicionar aplicativo</h3>
         <div class="form-grid">
           <div class="field"><label>Nome</label><input name="name" required placeholder="Ex: LC Frigor"></div>
           <div class="field"><label>Categoria</label><input name="category" required placeholder="Ex: Balanças"></div>
@@ -113,23 +113,27 @@
           <div class="field"><label>Versão</label><input name="version" placeholder="Ex: 1.0.0"></div>
           <div class="field"><label>Compatibilidade</label><input name="compatibility" placeholder="Ex: Android 8.0 ou superior"></div>
           <div class="field"><label>Tecnologias (separadas por vírgula)</label><input name="tech" placeholder="Flutter, Bluetooth LE"></div>
+          <div class="field"><label>Filtros da página Apps (separados por vírgula)</label><input name="filters" placeholder="balancas, gestao, tecnico, producao, licencas"></div>
           <div class="field full"><label>Descrição curta (aparece no card)</label><input name="shortDesc" required placeholder="Frase curta"></div>
           <div class="field full"><label>Descrição completa</label><textarea name="fullDesc" placeholder="Texto completo, aparece ao clicar em Conhecer"></textarea></div>
           <div class="field full"><label>Funcionalidades (uma por linha)</label><textarea name="features" placeholder="Leitura em tempo real&#10;Relatórios em PDF"></textarea></div>
           <div class="field"><label class="admin-check"><input type="checkbox" name="hasDownload" checked>Tem download disponível</label></div>
         </div>
-        <button type="submit" class="btn btn--primary" style="margin-top:16px">Publicar aplicativo</button>
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <button type="submit" class="btn btn--primary" data-submit-label>Publicar aplicativo</button>
+          <button type="button" class="btn btn--ghost" data-cancel-edit hidden>Cancelar edição</button>
+        </div>
         <p class="admin-status" data-status="apps"></p>
       </form>
     </section>
 
     <!-- DOWNLOADS -->
     <section class="admin-panel" data-admin-panel="downloads">
-      <div class="admin-panel-head"><h2>Downloads adicionados pelo painel</h2></div>
+      <div class="admin-panel-head"><h2>Downloads</h2></div>
       <div class="admin-list" id="list-downloads"></div>
 
       <form class="admin-form" id="form-downloads" data-section="downloads">
-        <h3>Adicionar arquivo</h3>
+        <h3 data-form-title>Adicionar arquivo</h3>
         <div class="form-grid">
           <div class="field"><label>Nome</label><input name="name" required placeholder="Ex: LC Peso"></div>
           <div class="field">
@@ -149,18 +153,21 @@
           <div class="field full"><label>Link direto do arquivo (URL)</label><input name="url" required placeholder="https://..."></div>
           <div class="field"><label class="admin-check"><input type="checkbox" name="current" checked>É a versão atual</label></div>
         </div>
-        <button type="submit" class="btn btn--primary" style="margin-top:16px">Publicar arquivo</button>
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <button type="submit" class="btn btn--primary" data-submit-label>Publicar arquivo</button>
+          <button type="button" class="btn btn--ghost" data-cancel-edit hidden>Cancelar edição</button>
+        </div>
         <p class="admin-status" data-status="downloads"></p>
       </form>
     </section>
 
     <!-- MANUAIS -->
     <section class="admin-panel" data-admin-panel="manuals">
-      <div class="admin-panel-head"><h2>Manuais adicionados pelo painel</h2></div>
+      <div class="admin-panel-head"><h2>Manuais</h2></div>
       <div class="admin-list" id="list-manuals"></div>
 
       <form class="admin-form" id="form-manuals" data-section="manuals">
-        <h3>Adicionar manual</h3>
+        <h3 data-form-title>Adicionar manual</h3>
         <div class="form-grid">
           <div class="field"><label>Fabricante</label><input name="brand" required placeholder="Ex: Toledo" list="brandOptions"></div>
           <div class="field"><label>Modelo</label><input name="model" required placeholder="Ex: Prix 4 Uno"></div>
@@ -170,18 +177,21 @@
           <div class="field"><label>Link da fonte original (opcional)</label><input name="sourceUrl" placeholder="https://..."></div>
         </div>
         <datalist id="brandOptions"></datalist>
-        <button type="submit" class="btn btn--primary" style="margin-top:16px">Publicar manual</button>
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <button type="submit" class="btn btn--primary" data-submit-label>Publicar manual</button>
+          <button type="button" class="btn btn--ghost" data-cancel-edit hidden>Cancelar edição</button>
+        </div>
         <p class="admin-status" data-status="manuals"></p>
       </form>
     </section>
 
     <!-- VÍDEOS -->
     <section class="admin-panel" data-admin-panel="videos">
-      <div class="admin-panel-head"><h2>Vídeos adicionados pelo painel</h2></div>
+      <div class="admin-panel-head"><h2>Vídeos</h2></div>
       <div class="admin-list" id="list-videos"></div>
 
       <form class="admin-form" id="form-videos" data-section="videos">
-        <h3>Adicionar vídeo</h3>
+        <h3 data-form-title>Adicionar vídeo</h3>
         <div class="form-grid">
           <div class="field"><label>Fabricante</label><input name="brand" required placeholder="Ex: Toledo" list="brandOptions2"></div>
           <div class="field"><label>Modelo</label><input name="model" required placeholder="Ex: Prix 4 Uno"></div>
@@ -189,18 +199,21 @@
           <div class="field full"><label>Link do vídeo (YouTube, Drive...)</label><input name="url" required placeholder="https://..."></div>
         </div>
         <datalist id="brandOptions2"></datalist>
-        <button type="submit" class="btn btn--primary" style="margin-top:16px">Publicar vídeo</button>
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <button type="submit" class="btn btn--primary" data-submit-label>Publicar vídeo</button>
+          <button type="button" class="btn btn--ghost" data-cancel-edit hidden>Cancelar edição</button>
+        </div>
         <p class="admin-status" data-status="videos"></p>
       </form>
     </section>
 
     <!-- PRODUTOS -->
     <section class="admin-panel" data-admin-panel="products">
-      <div class="admin-panel-head"><h2>Produtos adicionados pelo painel</h2></div>
+      <div class="admin-panel-head"><h2>Produtos (Vendas)</h2></div>
       <div class="admin-list" id="list-products"></div>
 
       <form class="admin-form" id="form-products" data-section="products">
-        <h3>Adicionar produto</h3>
+        <h3 data-form-title>Adicionar produto</h3>
         <div class="form-grid">
           <div class="field"><label>Nome</label><input name="name" required placeholder="Ex: Kit Bluetooth"></div>
           <div class="field"><label>Categoria</label><input name="category" placeholder="Ex: Equipamento"></div>
@@ -226,23 +239,29 @@
           <div class="field full"><label>Descrição</label><input name="desc" placeholder="Descrição curta"></div>
           <div class="field full"><label>Texto do preço</label><input name="priceLabel" value="Consultar preço"></div>
         </div>
-        <button type="submit" class="btn btn--primary" style="margin-top:16px">Publicar produto</button>
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <button type="submit" class="btn btn--primary" data-submit-label>Publicar produto</button>
+          <button type="button" class="btn btn--ghost" data-cancel-edit hidden>Cancelar edição</button>
+        </div>
         <p class="admin-status" data-status="products"></p>
       </form>
     </section>
 
     <!-- FABRICANTES -->
     <section class="admin-panel" data-admin-panel="manufacturers">
-      <div class="admin-panel-head"><h2>Fabricantes adicionados pelo painel</h2></div>
+      <div class="admin-panel-head"><h2>Fabricantes</h2></div>
       <div class="admin-list" id="list-manufacturers"></div>
 
       <form class="admin-form" id="form-manufacturers" data-section="manufacturers">
-        <h3>Adicionar fabricante</h3>
+        <h3 data-form-title>Adicionar fabricante</h3>
         <div class="form-grid">
           <div class="field"><label>Nome</label><input name="name" required placeholder="Ex: Michel"></div>
           <div class="field"><label>Quantidade de manuais (número exibido)</label><input name="count" type="number" min="0" value="1"></div>
         </div>
-        <button type="submit" class="btn btn--primary" style="margin-top:16px">Publicar fabricante</button>
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <button type="submit" class="btn btn--primary" data-submit-label>Publicar fabricante</button>
+          <button type="button" class="btn btn--ghost" data-cancel-edit hidden>Cancelar edição</button>
+        </div>
         <p class="admin-status" data-status="manufacturers"></p>
       </form>
     </section>

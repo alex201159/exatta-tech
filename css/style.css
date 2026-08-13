@@ -883,8 +883,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 .admin-row span { font-size: 12.5px; color: var(--text-muted); }
 .admin-row .badge { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; padding: 4px 9px; border-radius: var(--radius-full); flex-shrink: 0; }
 .admin-row .badge--base { background: var(--surface-2); color: var(--text-muted); }
-.admin-row .badge--local { background: rgba(46,204,143,0.16); color: var(--success); }
-.admin-row .remove { margin-left: auto; flex-shrink: 0; }
+.admin-row .badge--local, .admin-row .badge--new { background: rgba(46,204,143,0.16); color: var(--success); }
+.admin-row .badge--edited { background: rgba(242,179,80,0.16); color: var(--warning); }
+.admin-row .actions { margin-left: auto; flex-shrink: 0; display: flex; gap: 8px; }
 
 .admin-form {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
