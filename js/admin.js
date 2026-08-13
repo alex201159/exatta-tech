@@ -41,7 +41,9 @@
   };
   const SUPPORTS_IMAGE = { apps: true, downloads: true, products: true };
   const SUPPORTS_GALLERY = { products: true };
+  const SUPPORTS_FILE = { downloads: true };
   const MAX_IMAGE_BYTES = 3 * 1024 * 1024;
+  const MAX_DOWNLOAD_BYTES = 40 * 1024 * 1024;
 
   const qs = (sel, ctx) => (ctx || document).querySelector(sel);
   const qsa = (sel, ctx) => Array.from((ctx || document).querySelectorAll(sel));
@@ -224,6 +226,22 @@
       uploaded.push(`${path}?v=${Date.now()}`);
     }
     return uploaded.concat(linesToArray(fd.get("galleryUrls")));
+  }
+  async function resolveDownloadFile(section, id, fd) {
+    if (!SUPPORTS_FILE[section]) return undefined;
+    const file = fd.get("fileFile");
+    if (file && file.size > 0) {
+      if (file.size > MAX_DOWNLOAD_BYTES) {
+        throw new Error("Arquivo muito grande (máx. 40 MB). Hospede em outro lugar (Google Drive, etc.) e cole o link.");
+      }
+      const base64 = await readFileAsBase64(file);
+      const ext = (file.name.split(".").pop() || "bin").toLowerCase().replace(/[^a-z0-9]/g, "") || "bin";
+      const path = `assets/uploads/${section}-${id}.${ext}`;
+      const label = fd.get("name") || id;
+      await ghPutBinaryFile(STATE.cfg, path, base64, `Admin: arquivo de ${label}`);
+      return `${path}?v=${Date.now()}`;
+    }
+    return (fd.get("url") || "").trim();
   }
 
   /* ------------------------------------------------------------------ */
@@ -554,6 +572,7 @@
         form.desc.value = item.desc || "";
         form.url.value = item.url || "";
         form.current.checked = !!item.current;
+        updateCurrentFileHint("downloads", item.url || "");
         break;
       case "videos":
         form.brand.value = item.brand || "";
@@ -615,6 +634,24 @@
     if (!wrap) return;
     wrap.innerHTML = urls.map((u) => `<img src="${u}" alt="">`).join("");
   }
+  function updateCurrentFileHint(section, url) {
+    const hint = document.querySelector(`[data-current-file="${section}"]`);
+    if (!hint) return;
+    const link = hint.querySelector("a");
+    if (url) {
+      link.href = url;
+      link.textContent = url;
+      hint.hidden = false;
+    } else {
+      hint.hidden = true;
+    }
+  }
+  qsa("[data-file-input]").forEach((input) => {
+    input.addEventListener("change", () => {
+      const section = input.getAttribute("data-file-input");
+      updateCurrentFileHint(section, "");
+    });
+  });
   qsa("[data-gallery-input]").forEach((input) => {
     input.addEventListener("change", () => {
       const section = input.getAttribute("data-gallery-input");
@@ -661,6 +698,7 @@
     if (form.querySelector('[name="hasDownload"]')) form.hasDownload.checked = true;
     if (SUPPORTS_IMAGE[section]) updateImagePreview(section, "");
     if (SUPPORTS_GALLERY[section]) updateGalleryPreview(section, []);
+    if (SUPPORTS_FILE[section]) updateCurrentFileHint(section, "");
     if (section === "manuals") {
       resetManualRows();
       document.getElementById("addManualRow").hidden = false;
@@ -832,7 +870,6 @@
           date: fd.get("date") || "",
           desc: fd.get("desc") || "",
           current: fd.get("current") === "on",
-          url: fd.get("url"),
         });
       case "videos":
         return Object.assign(carry, {
@@ -913,11 +950,28 @@
           return;
         }
       }
+      let downloadUrl;
+      if (SUPPORTS_FILE[section]) {
+        setStatus(statusEl, "Enviando arquivo...", "busy");
+        try {
+          downloadUrl = await resolveDownloadFile(section, id, fd);
+        } catch (fileErr) {
+          setStatus(statusEl, fileErr.message, "error");
+          submitBtn.disabled = false;
+          return;
+        }
+        if (!downloadUrl) {
+          setStatus(statusEl, "Escolha um arquivo para upload ou cole um link direto.", "error");
+          submitBtn.disabled = false;
+          return;
+        }
+      }
 
       const item = buildItem(section, fd, existing);
       item.id = id;
       if (image !== undefined) item.image = image;
       if (gallery !== undefined) item.gallery = gallery;
+      if (downloadUrl !== undefined) item.url = downloadUrl;
 
       setStatus(statusEl, editingId ? "Salvando alterações..." : "Publicando no GitHub...", "busy");
 

@@ -158,7 +158,13 @@
           <div class="field"><label>Tamanho</label><input name="size" placeholder="Ex: 20 MB"></div>
           <div class="field"><label>Data</label><input name="date" placeholder="Ex: 12/08/2026"></div>
           <div class="field full"><label>Descrição</label><input name="desc" placeholder="Descrição curta do arquivo"></div>
-          <div class="field full"><label>Link direto do arquivo (URL)</label><input name="url" required placeholder="https://..."></div>
+          <div class="field full">
+            <label>Arquivo para download</label>
+            <input type="file" name="fileFile" data-file-input="downloads">
+            <p class="admin-field-hint">Escolher um arquivo aqui tem prioridade. Até 40 MB. Ou cole um link abaixo (ex: Google Drive):</p>
+            <input type="url" name="url" placeholder="https://... (link direto do arquivo)" style="margin-top:8px">
+            <p class="admin-field-hint" data-current-file="downloads" hidden>Arquivo atual: <a target="_blank" rel="noopener"></a></p>
+          </div>
           <div class="field full">
             <label>Foto/ícone personalizado (opcional)</label>
             <input type="file" name="imageFile" accept="image/*" data-image-input="downloads">
