@@ -255,13 +255,25 @@
               <option value="low">Estoque limitado</option>
             </select>
           </div>
-          <div class="field full"><label>Descrição</label><input name="desc" placeholder="Descrição curta"></div>
+          <div class="field full"><label>Descrição</label><input name="desc" placeholder="Descrição curta ou completa (aparece no card e nos detalhes)"></div>
           <div class="field full">
-            <label>Foto do produto (opcional)</label>
+            <label>Foto de capa (opcional)</label>
             <input type="file" name="imageFile" accept="image/*" data-image-input="products">
             <p class="admin-field-hint">Escolher um arquivo aqui tem prioridade. Até 3 MB. Ou cole um link abaixo:</p>
             <input type="url" name="imageUrl" placeholder="https://... (link de uma imagem já hospedada)" style="margin-top:8px">
             <img class="admin-image-preview" data-image-preview="products" alt="Prévia">
+          </div>
+          <div class="field full">
+            <label>Mais fotos do produto (opcional, aparecem em "Ver detalhes")</label>
+            <input type="file" name="galleryFiles" accept="image/*" multiple data-gallery-input="products">
+            <p class="admin-field-hint">Pode escolher várias fotos de uma vez. Até 3 MB cada. Ou cole links abaixo, um por linha:</p>
+            <textarea name="galleryUrls" rows="3" placeholder="https://...&#10;https://..." style="margin-top:8px"></textarea>
+            <div class="admin-gallery-preview" data-gallery-preview="products"></div>
+          </div>
+          <div class="field full">
+            <label>Vídeo do produto (opcional)</label>
+            <input type="url" name="videoUrl" placeholder="Link do YouTube ou de um vídeo direto (.mp4)">
+            <p class="admin-field-hint">Aparece na tela de "Ver detalhes" do produto.</p>
           </div>
           <div class="field full"><label>Texto do preço</label><input name="priceLabel" value="Consultar preço"></div>
         </div>

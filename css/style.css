@@ -672,11 +672,19 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 }
 .product-body .cat { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
 .product-body h3 { font-size: 18px; text-shadow: 0 1px 12px rgba(0,0,0,0.4); }
-.product-body p { font-size: 13.5px; color: var(--text-secondary); }
+.product-body p { font-size: 13.5px; color: var(--text-secondary); display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .product-price { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--text); margin-top: 4px; }
 .product-price small { display: block; font-family: var(--font-sans); font-size: 12px; font-weight: 500; color: var(--text-muted); }
 .product-actions { display: flex; gap: 10px; }
 .product-actions .btn { flex: 1; }
+
+/* ---------- Modal de produto: galeria + vídeo ---------- */
+.gallery-thumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.gallery-thumbs img { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; border: 2px solid transparent; cursor: pointer; opacity: 0.65; transition: opacity var(--t-fast), border-color var(--t-fast); }
+.gallery-thumbs img:hover { opacity: 1; }
+.gallery-thumbs img.is-active { opacity: 1; border-color: var(--cyan); }
+.modal-video { position: relative; aspect-ratio: 16/9; border-radius: var(--radius-md); overflow: hidden; background: #000; margin-top: 14px; }
+.modal-video iframe, .modal-video video { width: 100%; height: 100%; border: 0; display: block; }
 
 /* ---------- Process / steps ---------- */
 .steps-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; position: relative; }
@@ -973,6 +981,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 .field input[type="file"] { padding: 10px 14px; min-height: auto; }
 .admin-image-preview { width: 96px; height: 96px; border-radius: var(--radius-md); object-fit: cover; margin-top: 10px; border: 1px solid var(--border-strong); display: none; }
 .admin-image-preview.is-visible { display: block; }
+.admin-gallery-preview { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.admin-gallery-preview img { width: 72px; height: 72px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-strong); }
 .admin-field-hint { font-size: 12px; color: var(--text-muted); margin-top: -4px; }
 .admin-manual-row {
   border: 1px solid var(--border); border-radius: var(--radius-md);

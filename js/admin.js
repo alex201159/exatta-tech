@@ -40,6 +40,7 @@
     manufacturers: "Adicionar fabricante",
   };
   const SUPPORTS_IMAGE = { apps: true, downloads: true, products: true };
+  const SUPPORTS_GALLERY = { products: true };
   const MAX_IMAGE_BYTES = 3 * 1024 * 1024;
 
   const qs = (sel, ctx) => (ctx || document).querySelector(sel);
@@ -205,6 +206,24 @@
       return `${path}?v=${Date.now()}`;
     }
     return (fd.get("imageUrl") || "").trim();
+  }
+  async function resolveGallery(section, id, fd) {
+    if (!SUPPORTS_GALLERY[section]) return undefined;
+    const files = (fd.getAll("galleryFiles") || []).filter((f) => f && f.size > 0);
+    const uploaded = [];
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      if (file.size > MAX_IMAGE_BYTES) {
+        throw new Error(`Foto da galeria muito grande (máx. 3 MB): ${file.name}`);
+      }
+      const base64 = await readFileAsBase64(file);
+      const ext = (file.name.split(".").pop() || "jpg").toLowerCase().replace(/[^a-z0-9]/g, "") || "jpg";
+      const path = `assets/uploads/${section}-${id}-gallery-${Date.now()}-${i}.${ext}`;
+      const label = fd.get("name") || id;
+      await ghPutBinaryFile(STATE.cfg, path, base64, `Admin: foto da galeria de ${label}`);
+      uploaded.push(`${path}?v=${Date.now()}`);
+    }
+    return uploaded.concat(linesToArray(fd.get("galleryUrls")));
   }
 
   /* ------------------------------------------------------------------ */
@@ -545,6 +564,9 @@
         form.availability.value = item.availability || "available";
         form.desc.value = item.desc || "";
         form.priceLabel.value = item.priceLabel || "Consultar preço";
+        form.videoUrl.value = item.videoUrl || "";
+        form.galleryUrls.value = (item.gallery || []).join("\n");
+        updateGalleryPreview("products", item.gallery || []);
         break;
       case "manufacturers":
         form.name.value = item.name || "";
@@ -584,6 +606,29 @@
     });
   });
 
+  function updateGalleryPreview(section, urls) {
+    const wrap = document.querySelector(`[data-gallery-preview="${section}"]`);
+    if (!wrap) return;
+    wrap.innerHTML = urls.map((u) => `<img src="${u}" alt="">`).join("");
+  }
+  qsa("[data-gallery-input]").forEach((input) => {
+    input.addEventListener("change", () => {
+      const section = input.getAttribute("data-gallery-input");
+      const form = input.form;
+      const fileUrls = Array.from(input.files || []).map((f) => URL.createObjectURL(f));
+      const pastedUrls = linesToArray(form.querySelector('[name="galleryUrls"]').value);
+      updateGalleryPreview(section, fileUrls.concat(pastedUrls));
+    });
+  });
+  qsa('textarea[name="galleryUrls"]').forEach((textarea) => {
+    textarea.addEventListener("input", () => {
+      const section = textarea.form.getAttribute("data-section");
+      const fileInput = textarea.form.querySelector('[name="galleryFiles"]');
+      const fileUrls = fileInput && fileInput.files.length ? Array.from(fileInput.files).map((f) => URL.createObjectURL(f)) : [];
+      updateGalleryPreview(section, fileUrls.concat(linesToArray(textarea.value)));
+    });
+  });
+
   function startEdit(section, id) {
     const item = findItem(section, id);
     if (!item) return;
@@ -611,6 +656,7 @@
     if (form.querySelector('[name="current"]')) form.current.checked = true;
     if (form.querySelector('[name="hasDownload"]')) form.hasDownload.checked = true;
     if (SUPPORTS_IMAGE[section]) updateImagePreview(section, "");
+    if (SUPPORTS_GALLERY[section]) updateGalleryPreview(section, []);
     if (section === "manuals") {
       resetManualRows();
       document.getElementById("addManualRow").hidden = false;
@@ -792,6 +838,7 @@
           priceLabel: fd.get("priceLabel") || "Consultar preço",
           desc: fd.get("desc") || "",
           availability: fd.get("availability") || "available",
+          videoUrl: (fd.get("videoUrl") || "").trim(),
         });
       case "manufacturers":
         return Object.assign(carry, {
@@ -843,10 +890,22 @@
           return;
         }
       }
+      let gallery;
+      if (SUPPORTS_GALLERY[section]) {
+        setStatus(statusEl, "Enviando fotos da galeria...", "busy");
+        try {
+          gallery = await resolveGallery(section, id, fd);
+        } catch (galErr) {
+          setStatus(statusEl, galErr.message, "error");
+          submitBtn.disabled = false;
+          return;
+        }
+      }
 
       const item = buildItem(section, fd, existing);
       item.id = id;
       if (image !== undefined) item.image = image;
+      if (gallery !== undefined) item.gallery = gallery;
 
       setStatus(statusEl, editingId ? "Salvando alterações..." : "Publicando no GitHub...", "busy");
 

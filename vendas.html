@@ -82,6 +82,38 @@
   </section>
 </main>
 
+<!-- MODAL DE PRODUTO -->
+<div class="modal-overlay" id="productModal">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+    <div class="modal-head">
+      <div>
+        <h3 id="productModalTitle">Nome do produto</h3>
+        <span class="tag tag--blue" id="productModalCategory">Categoria</span>
+      </div>
+      <button class="modal-close" data-modal-close aria-label="Fechar"><i data-icon="close"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-media" id="productModalMedia"></div>
+      <div class="gallery-thumbs" id="productModalThumbs"></div>
+      <div id="productModalVideoWrap"></div>
+
+      <div class="modal-section">
+        <h4>Sobre o produto</h4>
+        <p id="productModalDesc"></p>
+      </div>
+
+      <div class="modal-section">
+        <h4>Disponibilidade &amp; preço</h4>
+        <p><span id="productModalAvail"></span> · <span id="productModalPrice"></span></p>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <a href="contato.html?assunto=Contato%20comercial" class="btn btn--outline">Contato comercial</a>
+      <a href="#" id="productModalQuote" class="btn btn--primary" data-wa-link>Solicitar orçamento</a>
+    </div>
+  </div>
+</div>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">

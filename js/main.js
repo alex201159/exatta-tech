@@ -516,6 +516,20 @@
   /* ------------------------------------------------------------------ */
   /* Vendas.html                                                        */
   /* ------------------------------------------------------------------ */
+  function productMediaImages(p) {
+    const list = [p.image, ...(p.gallery || [])].filter(Boolean);
+    return list.length ? list : [];
+  }
+
+  function videoEmbedHtml(url) {
+    if (!url) return "";
+    const yt = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/);
+    if (yt) {
+      return `<div class="modal-video"><iframe src="https://www.youtube.com/embed/${yt[1]}" title="Vídeo do produto" allowfullscreen loading="lazy"></iframe></div>`;
+    }
+    return `<div class="modal-video"><video controls src="${url}"></video></div>`;
+  }
+
   function renderProductsPage() {
     const grid = qs("#productsGrid");
     if (!grid || typeof PRODUCTS === "undefined") return;
@@ -535,7 +549,7 @@
           <p>${p.desc}</p>
           <div class="product-price">${p.priceLabel}<small>Valor sob consulta</small></div>
           <div class="product-actions">
-            <button class="btn btn--outline btn--sm" data-quote="${p.name}">Ver detalhes</button>
+            <button class="btn btn--outline btn--sm" data-open-product="${p.id}">Ver detalhes</button>
             <a class="btn btn--primary btn--sm" data-wa-link data-wa-message="Olá! Tenho interesse em: ${p.name}. Poderiam me passar mais informações?">Solicitar orçamento</a>
           </div>
         </div>
@@ -543,12 +557,74 @@
     ).join("");
     observeReveal(grid);
     initWhatsapp();
+    initProductModal();
 
-    qsa("[data-quote]", grid).forEach((btn) => {
-      btn.addEventListener("click", () => {
-        window.location.href = "contato.html?assunto=" + encodeURIComponent(btn.getAttribute("data-quote"));
-      });
+    const hashId = window.location.hash.replace("#", "");
+    if (hashId && PRODUCTS.some((p) => p.id === hashId)) {
+      setTimeout(() => openProductModal(hashId), 300);
+    }
+  }
+
+  function initProductModal() {
+    const overlay = qs("#productModal");
+    if (!overlay) return;
+    qsa("[data-open-product]").forEach((btn) => {
+      btn.addEventListener("click", () => openProductModal(btn.getAttribute("data-open-product")));
     });
+    qsa("[data-modal-close]", overlay).forEach((el) => el.addEventListener("click", closeProductModal));
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) closeProductModal();
+    });
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeProductModal();
+    });
+  }
+
+  function setProductModalMedia(overlay, src) {
+    qs("#productModalMedia", overlay).innerHTML = src
+      ? `<img src="${src}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">`
+      : icon("package");
+    qsa(".gallery-thumbs img", overlay).forEach((t) => t.classList.toggle("is-active", t.getAttribute("data-src") === src));
+  }
+
+  function openProductModal(id) {
+    const overlay = qs("#productModal");
+    const p = PRODUCTS.find((x) => x.id === id);
+    if (!overlay || !p) return;
+    const images = productMediaImages(p);
+
+    qs("#productModalTitle", overlay).textContent = p.name;
+    qs("#productModalCategory", overlay).textContent = p.category || "";
+    qs("#productModalDesc", overlay).textContent = p.desc || "";
+    qs("#productModalAvail", overlay).textContent = p.availability === "low" ? "Estoque limitado" : "Disponível";
+    qs("#productModalPrice", overlay).textContent = p.priceLabel || "Consultar preço";
+
+    setProductModalMedia(overlay, images[0] || "");
+    const thumbsEl = qs("#productModalThumbs", overlay);
+    thumbsEl.innerHTML =
+      images.length > 1
+        ? images.map((src) => `<img src="${src}" data-src="${src}" alt="" class="${src === images[0] ? "is-active" : ""}">`).join("")
+        : "";
+    qsa("img", thumbsEl).forEach((thumb) => {
+      thumb.addEventListener("click", () => setProductModalMedia(overlay, thumb.getAttribute("data-src")));
+    });
+
+    qs("#productModalVideoWrap", overlay).innerHTML = p.videoUrl ? videoEmbedHtml(p.videoUrl) : "";
+
+    const quoteBtn = qs("#productModalQuote", overlay);
+    quoteBtn.setAttribute("data-wa-message", `Olá! Tenho interesse em: ${p.name}. Poderiam me passar mais informações?`);
+    initWhatsapp();
+
+    overlay.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+    history.replaceState(null, "", `#${id}`);
+  }
+
+  function closeProductModal() {
+    const overlay = qs("#productModal");
+    if (!overlay) return;
+    overlay.classList.remove("is-open");
+    document.body.style.overflow = "";
   }
 
   /* ------------------------------------------------------------------ */
