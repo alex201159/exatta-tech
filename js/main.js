@@ -1147,8 +1147,9 @@
           _captcha: "false",
         }),
       })
-        .then((res) => {
-          if (!res.ok) throw new Error("Falha ao enviar");
+        .then((res) => res.json().then((body) => ({ ok: res.ok, body })))
+        .then(({ ok, body }) => {
+          if (!ok || (body && body.success === "false")) throw new Error((body && body.message) || "Falha ao enviar");
           if (toast) {
             if (toastIcon) toastIcon.outerHTML = icon("check");
             if (toastText) toastText.textContent = "Mensagem enviada para nossa equipe! Você também pode falar pelo WhatsApp para uma resposta mais rápida.";
