@@ -266,8 +266,11 @@
   /* ------------------------------------------------------------------ */
   /* Home — preview de apps + stats dos balanceiros                     */
   /* ------------------------------------------------------------------ */
-  function appMediaIcon(iconName) {
-    return `<div class="app-card-media">${icon(iconName)}</div>`;
+  function appMediaIcon(app) {
+    if (app.image) {
+      return `<div class="app-card-media"><img src="${app.image}" alt="${app.name}" loading="lazy"></div>`;
+    }
+    return `<div class="app-card-media">${icon(app.icon)}</div>`;
   }
 
   function renderHomeApps() {
@@ -277,7 +280,7 @@
       .map(
         (app, i) => `
       <article class="app-card" data-reveal data-reveal-delay="${i + 1}">
-        ${appMediaIcon(app.icon)}
+        ${appMediaIcon(app)}
         <div class="app-card-body">
           <div class="app-card-top">
             <h3>${app.name}</h3>
@@ -346,7 +349,7 @@
         .map(
           (app, i) => `
         <article class="app-card" data-reveal data-reveal-delay="${(i % 3) + 1}" id="${app.id}">
-          ${appMediaIcon(app.icon)}
+          ${appMediaIcon(app)}
           <div class="app-card-body">
             <div class="app-card-top">
               <h3>${app.name}</h3>
@@ -410,7 +413,9 @@
     const overlay = qs("#appModal");
     const app = APPS.find((a) => a.id === id);
     if (!overlay || !app) return;
-    qs("#modalMedia", overlay).innerHTML = icon(app.icon);
+    qs("#modalMedia", overlay).innerHTML = app.image
+      ? `<img src="${app.image}" alt="${app.name}" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">`
+      : icon(app.icon);
     qs("#modalTitle", overlay).textContent = app.name;
     qs("#modalCategory", overlay).textContent = app.category;
     qs("#modalVersion", overlay).textContent = `Versão ${app.version}`;
@@ -460,7 +465,9 @@
           (d, i) => `
         <div class="dl-card" data-reveal data-reveal-delay="${(i % 3) + 1}" id="${d.id.replace("dl-", "").replace("-apk", "")}">
           <div class="dl-card-top">
-            <div class="dl-icon dl-icon--${d.type}">${icon(iconFor[d.type])}</div>
+            <div class="dl-icon dl-icon--${d.type}">${
+            d.image ? `<img src="${d.image}" alt="${d.name}" loading="lazy">` : icon(iconFor[d.type])
+          }</div>
             <div>
               <h4>${d.name}</h4>
               <div class="plat">${d.platform}</div>
@@ -517,7 +524,7 @@
       (p, i) => `
       <article class="product-card" data-reveal data-reveal-delay="${(i % 3) + 1}">
         <div class="product-media">
-          ${icon(p.icon)}
+          ${p.image ? `<img src="${p.image}" alt="${p.name}" loading="lazy">` : icon(p.icon)}
           <span class="product-avail ${p.availability === "low" ? "low" : ""}">${
         p.availability === "low" ? "Estoque limitado" : "Disponível"
       }</span>

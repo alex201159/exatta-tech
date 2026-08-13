@@ -114,6 +114,13 @@
           <div class="field"><label>Compatibilidade</label><input name="compatibility" placeholder="Ex: Android 8.0 ou superior"></div>
           <div class="field"><label>Tecnologias (separadas por vírgula)</label><input name="tech" placeholder="Flutter, Bluetooth LE"></div>
           <div class="field"><label>Filtros da página Apps (separados por vírgula)</label><input name="filters" placeholder="balancas, gestao, tecnico, producao, licencas"></div>
+          <div class="field full">
+            <label>Foto do app (opcional)</label>
+            <input type="file" name="imageFile" accept="image/*" data-image-input="apps">
+            <p class="admin-field-hint">Escolher um arquivo aqui tem prioridade. Até 3 MB. Ou cole um link abaixo:</p>
+            <input type="url" name="imageUrl" placeholder="https://... (link de uma imagem já hospedada)" style="margin-top:8px">
+            <img class="admin-image-preview" data-image-preview="apps" alt="Prévia">
+          </div>
           <div class="field full"><label>Descrição curta (aparece no card)</label><input name="shortDesc" required placeholder="Frase curta"></div>
           <div class="field full"><label>Descrição completa</label><textarea name="fullDesc" placeholder="Texto completo, aparece ao clicar em Conhecer"></textarea></div>
           <div class="field full"><label>Funcionalidades (uma por linha)</label><textarea name="features" placeholder="Leitura em tempo real&#10;Relatórios em PDF"></textarea></div>
@@ -151,6 +158,13 @@
           <div class="field"><label>Data</label><input name="date" placeholder="Ex: 12/08/2026"></div>
           <div class="field full"><label>Descrição</label><input name="desc" placeholder="Descrição curta do arquivo"></div>
           <div class="field full"><label>Link direto do arquivo (URL)</label><input name="url" required placeholder="https://..."></div>
+          <div class="field full">
+            <label>Foto/ícone personalizado (opcional)</label>
+            <input type="file" name="imageFile" accept="image/*" data-image-input="downloads">
+            <p class="admin-field-hint">Escolher um arquivo aqui tem prioridade. Até 3 MB. Ou cole um link abaixo:</p>
+            <input type="url" name="imageUrl" placeholder="https://... (link de uma imagem já hospedada)" style="margin-top:8px">
+            <img class="admin-image-preview" data-image-preview="downloads" alt="Prévia">
+          </div>
           <div class="field"><label class="admin-check"><input type="checkbox" name="current" checked>É a versão atual</label></div>
         </div>
         <div style="display:flex;gap:10px;margin-top:16px">
@@ -237,6 +251,13 @@
             </select>
           </div>
           <div class="field full"><label>Descrição</label><input name="desc" placeholder="Descrição curta"></div>
+          <div class="field full">
+            <label>Foto do produto (opcional)</label>
+            <input type="file" name="imageFile" accept="image/*" data-image-input="products">
+            <p class="admin-field-hint">Escolher um arquivo aqui tem prioridade. Até 3 MB. Ou cole um link abaixo:</p>
+            <input type="url" name="imageUrl" placeholder="https://... (link de uma imagem já hospedada)" style="margin-top:8px">
+            <img class="admin-image-preview" data-image-preview="products" alt="Prévia">
+          </div>
           <div class="field full"><label>Texto do preço</label><input name="priceLabel" value="Consultar preço"></div>
         </div>
         <div style="display:flex;gap:10px;margin-top:16px">

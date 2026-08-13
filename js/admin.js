@@ -39,6 +39,8 @@
     products: "Adicionar produto",
     manufacturers: "Adicionar fabricante",
   };
+  const SUPPORTS_IMAGE = { apps: true, downloads: true, products: true };
+  const MAX_IMAGE_BYTES = 3 * 1024 * 1024;
 
   const qs = (sel, ctx) => (ctx || document).querySelector(sel);
   const qsa = (sel, ctx) => Array.from((ctx || document).querySelectorAll(sel));
@@ -157,6 +159,51 @@
     if (!res.ok) throw await ghErrorFrom(res);
     const json = await res.json();
     return json.content.sha;
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* Upload de imagens (arquivos binários) via API do GitHub            */
+  /* ------------------------------------------------------------------ */
+  async function ghGetFileSha(cfg, path) {
+    const url = `${GH_API}/repos/${cfg.owner}/${cfg.repo}/contents/${path}?ref=${encodeURIComponent(cfg.branch)}`;
+    const res = await fetch(url, { headers: ghHeaders(cfg) });
+    if (res.status === 404) return null;
+    if (!res.ok) throw await ghErrorFrom(res);
+    const json = await res.json();
+    return json.sha;
+  }
+  async function ghPutBinaryFile(cfg, path, base64Content, message) {
+    const sha = await ghGetFileSha(cfg, path);
+    const url = `${GH_API}/repos/${cfg.owner}/${cfg.repo}/contents/${path}`;
+    const body = { message, content: base64Content, branch: cfg.branch };
+    if (sha) body.sha = sha;
+    const res = await fetch(url, { method: "PUT", headers: ghHeaders(cfg), body: JSON.stringify(body) });
+    if (!res.ok) throw await ghErrorFrom(res);
+    return path;
+  }
+  function readFileAsBase64(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(String(reader.result).split(",")[1] || "");
+      reader.onerror = () => reject(new Error("Não foi possível ler o arquivo selecionado."));
+      reader.readAsDataURL(file);
+    });
+  }
+  async function resolveImage(section, id, fd) {
+    if (!SUPPORTS_IMAGE[section]) return undefined;
+    const file = fd.get("imageFile");
+    if (file && file.size > 0) {
+      if (file.size > MAX_IMAGE_BYTES) {
+        throw new Error("Imagem muito grande (máx. 3 MB). Reduza o tamanho e tente de novo.");
+      }
+      const base64 = await readFileAsBase64(file);
+      const ext = (file.name.split(".").pop() || "jpg").toLowerCase().replace(/[^a-z0-9]/g, "") || "jpg";
+      const path = `assets/uploads/${section}-${id}.${ext}`;
+      const label = fd.get("name") || fd.get("model") || id;
+      await ghPutBinaryFile(STATE.cfg, path, base64, `Admin: imagem de ${label}`);
+      return `${path}?v=${Date.now()}`;
+    }
+    return (fd.get("imageUrl") || "").trim();
   }
 
   /* ------------------------------------------------------------------ */
@@ -479,7 +526,38 @@
         form.count.value = item.count != null ? item.count : 1;
         break;
     }
+    if (SUPPORTS_IMAGE[section]) {
+      form.imageUrl.value = item.image || "";
+      updateImagePreview(section, item.image || "");
+    }
   }
+
+  function updateImagePreview(section, url) {
+    const img = document.querySelector(`[data-image-preview="${section}"]`);
+    if (!img) return;
+    if (url) {
+      img.src = url;
+      img.classList.add("is-visible");
+    } else {
+      img.removeAttribute("src");
+      img.classList.remove("is-visible");
+    }
+  }
+
+  qsa("[data-image-input]").forEach((input) => {
+    input.addEventListener("change", () => {
+      const section = input.getAttribute("data-image-input");
+      const file = input.files && input.files[0];
+      if (file) updateImagePreview(section, URL.createObjectURL(file));
+    });
+  });
+  qsa('input[name="imageUrl"]').forEach((input) => {
+    input.addEventListener("input", () => {
+      const section = input.form.getAttribute("data-section");
+      const fileInput = input.form.querySelector('[name="imageFile"]');
+      if (!fileInput || !fileInput.files.length) updateImagePreview(section, input.value.trim());
+    });
+  });
 
   function startEdit(section, id) {
     const item = findItem(section, id);
@@ -503,6 +581,7 @@
     qs("[data-cancel-edit]", form).hidden = true;
     if (form.querySelector('[name="current"]')) form.current.checked = true;
     if (form.querySelector('[name="hasDownload"]')) form.hasDownload.checked = true;
+    if (SUPPORTS_IMAGE[section]) updateImagePreview(section, "");
   }
 
   qsa("[data-cancel-edit]").forEach((btn) => {
@@ -517,7 +596,6 @@
     switch (section) {
       case "apps":
         return Object.assign(carry, {
-          id: existing ? existing.id : shortId("app", fd.get("name")),
           name: fd.get("name"),
           icon: fd.get("icon") || "scale",
           category: fd.get("category"),
@@ -532,7 +610,6 @@
         });
       case "downloads":
         return Object.assign(carry, {
-          id: existing ? existing.id : shortId("dl", fd.get("name")),
           name: fd.get("name"),
           platform: fd.get("platform") || "",
           type: fd.get("type") || "tool",
@@ -545,7 +622,6 @@
         });
       case "manuals":
         return Object.assign(carry, {
-          id: existing ? existing.id : shortId("m", fd.get("model")),
           brand: fd.get("brand"),
           model: fd.get("model"),
           type: fd.get("type") || "",
@@ -555,7 +631,6 @@
         });
       case "videos":
         return Object.assign(carry, {
-          id: existing ? existing.id : shortId("v", fd.get("model")),
           brand: fd.get("brand"),
           model: fd.get("model"),
           desc: fd.get("desc") || "",
@@ -563,7 +638,6 @@
         });
       case "products":
         return Object.assign(carry, {
-          id: existing ? existing.id : shortId("prod", fd.get("name")),
           name: fd.get("name"),
           category: fd.get("category") || "",
           icon: fd.get("icon") || "package",
@@ -574,12 +648,30 @@
         });
       case "manufacturers":
         return Object.assign(carry, {
-          id: existing ? existing.id : slugify(fd.get("name")) || shortId("brand", fd.get("name")),
           name: fd.get("name"),
           count: parseInt(fd.get("count"), 10) || 0,
         });
       default:
         return null;
+    }
+  }
+
+  function generateId(section, fd) {
+    switch (section) {
+      case "apps":
+        return shortId("app", fd.get("name"));
+      case "downloads":
+        return shortId("dl", fd.get("name"));
+      case "manuals":
+        return shortId("m", fd.get("model"));
+      case "videos":
+        return shortId("v", fd.get("model"));
+      case "products":
+        return shortId("prod", fd.get("name"));
+      case "manufacturers":
+        return slugify(fd.get("name")) || shortId("brand", fd.get("name"));
+      default:
+        return shortId("item", "");
     }
   }
 
@@ -591,11 +683,27 @@
       const submitBtn = form.querySelector('button[type="submit"]');
       const editingId = form.dataset.editingId || null;
       const existing = editingId ? findItem(section, editingId) : null;
-      const item = buildItem(section, new FormData(form), existing);
-      if (editingId) item.id = editingId;
+      const fd = new FormData(form);
+      const id = editingId || generateId(section, fd);
+
+      submitBtn.disabled = true;
+      let image;
+      if (SUPPORTS_IMAGE[section]) {
+        setStatus(statusEl, "Enviando imagem...", "busy");
+        try {
+          image = await resolveImage(section, id, fd);
+        } catch (imgErr) {
+          setStatus(statusEl, imgErr.message, "error");
+          submitBtn.disabled = false;
+          return;
+        }
+      }
+
+      const item = buildItem(section, fd, existing);
+      item.id = id;
+      if (image !== undefined) item.image = image;
 
       setStatus(statusEl, editingId ? "Salvando alterações..." : "Publicando no GitHub...", "busy");
-      submitBtn.disabled = true;
 
       const arr = STATE.overrides[section];
       const idxInOverrides = arr.findIndex((i) => i.id === item.id);
