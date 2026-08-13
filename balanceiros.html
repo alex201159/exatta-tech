@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Central dos Balanceiros | Exatta Tech</title>
+<meta name="description" content="Manuais, vídeos, comunidade e informações técnicas organizadas por fabricante e modelo para profissionais de balanças.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Central dos Balanceiros | Exatta Tech">
+<meta property="og:description" content="Encontre manuais, vídeos e informações técnicas organizadas por fabricante e modelo.">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i data-icon="scale"></i></span>
+      <span class="brand-name">Exatta<span>Tech</span></span>
+    </a>
+    <nav class="nav-desktop" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="apps.html">Apps</a>
+      <a href="ajuda.html">Ajuda</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="vendas.html">Vendas</a>
+      <a href="balanceiros.html" class="is-active">Balanceiros</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <a href="contato.html?assunto=Suporte%20t%C3%A9cnico" class="btn btn--primary btn--sm">Solicitar suporte</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMobile">
+        <i data-icon="menu" class="icon-menu"></i>
+        <i data-icon="close" class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-mobile" id="navMobile" aria-label="Navegação mobile">
+  <a href="index.html">Início</a>
+  <a href="apps.html">Apps</a>
+  <a href="ajuda.html">Ajuda</a>
+  <a href="downloads.html">Downloads</a>
+  <a href="vendas.html">Vendas</a>
+  <a href="balanceiros.html" class="is-active">Balanceiros</a>
+  <a href="contato.html">Contato</a>
+  <a href="contato.html?assunto=Suporte%20t%C3%A9cnico" class="btn btn--primary btn--block">Solicitar suporte</a>
+</nav>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow">Central dos Balanceiros</span>
+        <h1 class="section-title">O que você está procurando?</h1>
+        <p class="section-sub">Manuais, vídeos e informações técnicas organizadas por fabricante e modelo.</p>
+      </div>
+
+      <div class="search-hero" data-reveal data-reveal-delay="1" style="max-width:860px;margin:0 auto">
+        <div class="search-box" style="margin-top:0">
+          <i data-icon="search"></i>
+          <input type="text" id="balSearch" placeholder="Ex: Prix 4 Uno, CSP-10A, TI400, Platina...">
+        </div>
+        <div class="chip-row" id="brandChips"><!-- preenchido via js/main.js --></div>
+      </div>
+
+      <div class="stats-row" id="balStats" style="margin-top:36px"><!-- preenchido via js/main.js --></div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="tabs" data-reveal>
+        <button class="tab-btn is-active" data-tab-target="manuais"><i data-icon="pdf"></i>Manuais</button>
+        <button class="tab-btn" data-tab-target="videos"><i data-icon="video"></i>Vídeos</button>
+        <button class="tab-btn" data-tab-target="perguntas"><i data-icon="question"></i>Perguntas</button>
+        <button class="tab-btn" data-tab-target="comunidade"><i data-icon="users"></i>Comunidade</button>
+      </div>
+
+      <div class="tab-panel is-active" data-tab-panel="manuais">
+        <div class="result-grid" id="manualsGrid"></div>
+        <div class="load-more-wrap" id="manualsLoadMore" style="display:none">
+          <button class="btn btn--outline">Carregar mais manuais</button>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-tab-panel="videos">
+        <div class="result-grid" id="videosGrid"></div>
+      </div>
+
+      <div class="tab-panel" data-tab-panel="perguntas">
+        <div class="result-grid" id="questionsGrid"></div>
+        <div style="text-align:center;margin-top:32px">
+          <a href="contato.html?assunto=Pergunta%20t%C3%A9cnica" class="btn btn--primary">Fazer uma pergunta</a>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-tab-panel="comunidade">
+        <div class="search-hero">
+          <div class="card-icon" style="margin:0 auto 20px"><i data-icon="users"></i></div>
+          <h3 class="section-title" style="font-size:24px">Postar material técnico</h3>
+          <p class="section-sub" style="max-width:520px;margin:0 auto 24px">Contribua com manuais, vídeos, dicas e procedimentos técnicos para ajudar outros balanceiros da comunidade.</p>
+          <a href="contato.html?assunto=Postar%20material%20t%C3%A9cnico" class="btn btn--primary">Enviar material</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><i data-icon="scale"></i></span>
+          <span class="brand-name">Exatta<span>Tech</span></span>
+        </a>
+        <p>Aplicativos, automação e tecnologia para sistemas de pesagem.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Soluções</h4>
+        <ul>
+          <li><a href="apps.html">Apps</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="vendas.html">Vendas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="ajuda.html">Ajuda</a></li>
+          <li><a href="balanceiros.html">Balanceiros</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Exatta Tech. Todos os direitos reservados.</span>
+      <span>Feito com precisão, em código.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="float-stack">
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><i data-icon="up"></i></button>
+  <a class="whatsapp-float" data-wa-link aria-label="Falar com a Exatta Tech pelo WhatsApp">
+    <i data-icon="whatsapp"></i>
+    <span class="wa-tooltip">Falar com a Exatta Tech</span>
+  </a>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const params = new URLSearchParams(window.location.search);
+  const q = params.get('q');
+  if (q) { const input = document.getElementById('balSearch'); if (input) { input.value = q; input.dispatchEvent(new Event('input')); } }
+</script>
+</body>
+</html>

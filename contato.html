@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato | Exatta Tech</title>
+<meta name="description" content="Fale com a Exatta Tech para suporte técnico, orçamentos, aplicativos, produtos e parcerias.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contato | Exatta Tech">
+<meta property="og:description" content="Fale diretamente com a Exatta Tech pelo formulário ou WhatsApp.">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i data-icon="scale"></i></span>
+      <span class="brand-name">Exatta<span>Tech</span></span>
+    </a>
+    <nav class="nav-desktop" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="apps.html">Apps</a>
+      <a href="ajuda.html">Ajuda</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="vendas.html">Vendas</a>
+      <a href="balanceiros.html">Balanceiros</a>
+      <a href="contato.html" class="is-active">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <a href="contato.html?assunto=Suporte%20t%C3%A9cnico" class="btn btn--primary btn--sm">Solicitar suporte</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMobile">
+        <i data-icon="menu" class="icon-menu"></i>
+        <i data-icon="close" class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-mobile" id="navMobile" aria-label="Navegação mobile">
+  <a href="index.html">Início</a>
+  <a href="apps.html">Apps</a>
+  <a href="ajuda.html">Ajuda</a>
+  <a href="downloads.html">Downloads</a>
+  <a href="vendas.html">Vendas</a>
+  <a href="balanceiros.html">Balanceiros</a>
+  <a href="contato.html" class="is-active">Contato</a>
+  <a href="contato.html?assunto=Suporte%20t%C3%A9cnico" class="btn btn--primary btn--block">Solicitar suporte</a>
+</nav>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow">Contato</span>
+        <h1 class="section-title">Fale diretamente com a Exatta Tech.</h1>
+        <p class="section-sub">Escolha o motivo do contato, preencha o formulário e nossa equipe responde o mais rápido possível.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="contact-type-grid" data-reveal>
+        <button class="contact-type" data-contact-type="suporte">
+          <div class="ico"><i data-icon="headset"></i></div>
+          <span>Suporte técnico</span>
+        </button>
+        <button class="contact-type" data-contact-type="orcamento">
+          <div class="ico"><i data-icon="file"></i></div>
+          <span>Orçamento</span>
+        </button>
+        <button class="contact-type" data-contact-type="apps">
+          <div class="ico"><i data-icon="phone"></i></div>
+          <span>Aplicativos</span>
+        </button>
+        <button class="contact-type" data-contact-type="produtos">
+          <div class="ico"><i data-icon="package"></i></div>
+          <span>Produtos</span>
+        </button>
+        <button class="contact-type" data-contact-type="parcerias">
+          <div class="ico"><i data-icon="star"></i></div>
+          <span>Parcerias</span>
+        </button>
+      </div>
+
+      <div class="contact-split">
+        <div class="contact-panel" data-reveal>
+          <h3 style="font-size:20px;margin-bottom:6px">Envie uma mensagem</h3>
+          <p style="color:var(--text-secondary);font-size:14.5px;margin-bottom:26px">Preencha os campos abaixo com o máximo de detalhes possível.</p>
+
+          <form id="contactForm" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                <span class="field-error">Informe seu nome.</span>
+              </div>
+              <div class="field">
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa (opcional)">
+              </div>
+              <div class="field">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                <span class="field-error">Informe um telefone.</span>
+              </div>
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="voce@empresa.com" required>
+                <span class="field-error">Informe um e-mail válido.</span>
+              </div>
+              <div class="field full">
+                <label for="assunto">Assunto</label>
+                <input type="text" id="assunto" name="assunto" placeholder="Ex: Suporte técnico, orçamento, dúvida sobre app" required>
+                <span class="field-error">Informe o assunto.</span>
+              </div>
+              <div class="field full">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Descreva sua situação com o máximo de detalhes" required></textarea>
+                <span class="field-error">Escreva sua mensagem.</span>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block" style="margin-top:22px">Enviar mensagem</button>
+            <div class="form-toast" id="formToast">
+              <i data-icon="check"></i>
+              <span>Mensagem pronta! Envie também pelo WhatsApp para uma resposta mais rápida.</span>
+            </div>
+          </form>
+
+          <a href="#" id="sendWhatsapp" data-wa-link class="btn btn--whatsapp btn--block" style="margin-top:16px">
+            <i data-icon="whatsapp"></i>Falar pelo WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-panel" data-reveal data-reveal-delay="1">
+          <h3 style="font-size:20px;margin-bottom:6px">Outros canais</h3>
+          <p style="color:var(--text-secondary);font-size:14.5px">Prefere falar direto? Use um dos canais abaixo.</p>
+
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="ico"><i data-icon="whatsapp"></i></div>
+              <div>
+                <strong>WhatsApp</strong>
+                <a data-wa-link>Iniciar conversa</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ico"><i data-icon="mail"></i></div>
+              <div>
+                <strong>E-mail</strong>
+                <a href="mailto:contato@exattatech.com.br">contato@exattatech.com.br</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ico"><i data-icon="building"></i></div>
+              <div>
+                <strong>Atendimento</strong>
+                <span>Segunda a sexta, 8h às 18h</span>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ico"><i data-icon="pin"></i></div>
+              <div>
+                <strong>Cobertura</strong>
+                <span>Atendimento remoto em todo o Brasil</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:30px;padding-top:26px;border-top:1px solid var(--border)">
+            <a href="balanceiros.html" class="card-link">Prefere pesquisar um manual? Acesse a Central dos Balanceiros <i data-icon="arrowRight"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><i data-icon="scale"></i></span>
+          <span class="brand-name">Exatta<span>Tech</span></span>
+        </a>
+        <p>Aplicativos, automação e tecnologia para sistemas de pesagem.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Soluções</h4>
+        <ul>
+          <li><a href="apps.html">Apps</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="vendas.html">Vendas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="ajuda.html">Ajuda</a></li>
+          <li><a href="balanceiros.html">Balanceiros</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Exatta Tech. Todos os direitos reservados.</span>
+      <span>Feito com precisão, em código.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="float-stack">
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><i data-icon="up"></i></button>
+  <a class="whatsapp-float" data-wa-link aria-label="Falar com a Exatta Tech pelo WhatsApp">
+    <i data-icon="whatsapp"></i>
+    <span class="wa-tooltip">Falar com a Exatta Tech</span>
+  </a>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

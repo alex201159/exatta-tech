@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel administrativo | Exatta Tech</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body">
+
+<!-- TELA 1: SENHA -->
+<div class="admin-gate" id="gateScreen">
+  <div class="admin-gate-card">
+    <span class="brand-mark" style="margin:0 auto 18px"><i data-icon="shield"></i></span>
+    <h1>Área restrita</h1>
+    <p>Digite o código de acesso para gerenciar o conteúdo do site.</p>
+    <form id="pinForm">
+      <input id="pinInput" class="admin-pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="••••" autocomplete="off" autofocus>
+      <button type="submit" class="btn btn--primary btn--block">Entrar</button>
+    </form>
+    <p class="admin-gate-error" id="pinError">Código incorreto. Tente novamente.</p>
+    <a href="index.html" class="admin-gate-back">Voltar ao site</a>
+  </div>
+</div>
+
+<!-- TELA 2: CONFIGURAÇÃO DO GITHUB -->
+<div class="admin-gate" id="configScreen" hidden>
+  <div class="admin-gate-card" style="max-width:460px">
+    <span class="brand-mark" style="margin:0 auto 18px"><i data-icon="cpu"></i></span>
+    <h1>Conectar ao GitHub</h1>
+    <p>O painel grava as novidades direto no seu repositório. Preencha os dados abaixo — eles ficam só no seu navegador, nunca são publicados no site.</p>
+    <form id="configForm">
+      <div class="field"><label>Usuário/organização do GitHub</label><input name="owner" required placeholder="ex: seu-usuario"></div>
+      <div class="field"><label>Nome do repositório</label><input name="repo" required placeholder="ex: exatta-tech"></div>
+      <div class="field"><label>Branch</label><input name="branch" value="main" required></div>
+      <div class="field">
+        <label>Token de acesso (Personal Access Token)</label>
+        <input name="token" type="password" required placeholder="ghp_..." autocomplete="off">
+      </div>
+      <p class="admin-gate-note">
+        Crie em <strong>github.com → Settings → Developer settings → Personal access tokens → Fine-grained tokens</strong>,
+        marcando acesso <strong>somente a este repositório</strong> e permissão <strong>Contents: Read and write</strong>.
+      </p>
+      <label class="admin-check"><input type="checkbox" name="remember" checked>Lembrar neste navegador (inclui o token)</label>
+      <button type="submit" class="btn btn--primary btn--block" style="margin-top:16px">Conectar</button>
+    </form>
+    <p class="admin-gate-error" id="configError"></p>
+    <a href="#" id="backToPin" class="admin-gate-back">Voltar</a>
+  </div>
+</div>
+
+<!-- TELA 3: PAINEL -->
+<div class="admin-app" id="adminApp" hidden>
+  <header class="admin-header">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i data-icon="scale"></i></span>
+      <span class="brand-name">Exatta<span>Tech</span></span>
+    </a>
+    <span class="tag" style="margin-left:-4px">Admin</span>
+    <span id="repoLabel" class="tag tag--blue"></span>
+    <div style="margin-left:auto;display:flex;gap:10px">
+      <a href="index.html" class="btn btn--ghost btn--sm">Ver site</a>
+      <button class="btn btn--outline btn--sm" id="reconnectBtn">Trocar repositório</button>
+      <button class="btn btn--outline btn--sm" id="logoutBtn">Sair</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="admin-banner">
+      <i data-icon="alert"></i>
+      <div>
+        Cada alteração aqui vira um <strong>commit direto no seu repositório</strong>, em <code>data/overrides.json</code>.
+        O GitHub Pages costuma republicar o site em cerca de 1 minuto depois.
+      </div>
+    </div>
+
+    <div class="admin-banner" id="loadStatus" hidden></div>
+
+    <nav class="admin-tabs">
+      <button class="admin-tab is-active" data-admin-tab="apps">Aplicativos</button>
+      <button class="admin-tab" data-admin-tab="downloads">Downloads</button>
+      <button class="admin-tab" data-admin-tab="manuals">Manuais</button>
+      <button class="admin-tab" data-admin-tab="videos">Vídeos</button>
+      <button class="admin-tab" data-admin-tab="products">Produtos (Vendas)</button>
+      <button class="admin-tab" data-admin-tab="manufacturers">Fabricantes</button>
+    </nav>
+
+    <!-- APLICATIVOS -->
+    <section class="admin-panel is-active" data-admin-panel="apps">
+      <div class="admin-panel-head"><h2>Aplicativos adicionados pelo painel</h2></div>
+      <div class="admin-list" id="list-apps"></div>
+
+      <form class="admin-form" id="form-apps" data-section="apps">
+        <h3>Adicionar aplicativo</h3>
+        <div class="form-grid">
+          <div class="field"><label>Nome</label><input name="name" required placeholder="Ex: LC Frigor"></div>
+          <div class="field"><label>Categoria</label><input name="category" required placeholder="Ex: Balanças"></div>
+          <div class="field">
+            <label>Ícone</label>
+            <select name="icon">
+              <option value="scale">Balança</option>
+              <option value="leaf">Folha (agro)</option>
+              <option value="database">Banco de dados</option>
+              <option value="cpu">Chip</option>
+              <option value="bluetooth">Bluetooth</option>
+              <option value="phone">Celular</option>
+            </select>
+          </div>
+          <div class="field"><label>Versão</label><input name="version" placeholder="Ex: 1.0.0"></div>
+          <div class="field"><label>Compatibilidade</label><input name="compatibility" placeholder="Ex: Android 8.0 ou superior"></div>
+          <div class="field"><label>Tecnologias (separadas por vírgula)</label><input name="tech" placeholder="Flutter, Bluetooth LE"></div>
+          <div class="field full"><label>Descrição curta (aparece no card)</label><input name="shortDesc" required placeholder="Frase curta"></div>
+          <div class="field full"><label>Descrição completa</label><textarea name="fullDesc" placeholder="Texto completo, aparece ao clicar em Conhecer"></textarea></div>
+          <div class="field full"><label>Funcionalidades (uma por linha)</label><textarea name="features" placeholder="Leitura em tempo real&#10;Relatórios em PDF"></textarea></div>
+          <div class="field"><label class="admin-check"><input type="checkbox" name="hasDownload" checked>Tem download disponível</label></div>
+        </div>
+        <button type="submit" class="btn btn--primary" style="margin-top:16px">Publicar aplicativo</button>
+        <p class="admin-status" data-status="apps"></p>
+      </form>
+    </section>
+
+    <!-- DOWNLOADS -->
+    <section class="admin-panel" data-admin-panel="downloads">
+      <div class="admin-panel-head"><h2>Downloads adicionados pelo painel</h2></div>
+      <div class="admin-list" id="list-downloads"></div>
+
+      <form class="admin-form" id="form-downloads" data-section="downloads">
+        <h3>Adicionar arquivo</h3>
+        <div class="form-grid">
+          <div class="field"><label>Nome</label><input name="name" required placeholder="Ex: LC Peso"></div>
+          <div class="field">
+            <label>Tipo</label>
+            <select name="type">
+              <option value="android">Android / APK</option>
+              <option value="windows">Windows</option>
+              <option value="pdf">PDF</option>
+              <option value="tool">Ferramenta</option>
+            </select>
+          </div>
+          <div class="field"><label>Plataforma (texto)</label><input name="platform" placeholder="Ex: Android"></div>
+          <div class="field"><label>Versão</label><input name="version" placeholder="Ex: 1.0.0"></div>
+          <div class="field"><label>Tamanho</label><input name="size" placeholder="Ex: 20 MB"></div>
+          <div class="field"><label>Data</label><input name="date" placeholder="Ex: 12/08/2026"></div>
+          <div class="field full"><label>Descrição</label><input name="desc" placeholder="Descrição curta do arquivo"></div>
+          <div class="field full"><label>Link direto do arquivo (URL)</label><input name="url" required placeholder="https://..."></div>
+          <div class="field"><label class="admin-check"><input type="checkbox" name="current" checked>É a versão atual</label></div>
+        </div>
+        <button type="submit" class="btn btn--primary" style="margin-top:16px">Publicar arquivo</button>
+        <p class="admin-status" data-status="downloads"></p>
+      </form>
+    </section>
+
+    <!-- MANUAIS -->
+    <section class="admin-panel" data-admin-panel="manuals">
+      <div class="admin-panel-head"><h2>Manuais adicionados pelo painel</h2></div>
+      <div class="admin-list" id="list-manuals"></div>
+
+      <form class="admin-form" id="form-manuals" data-section="manuals">
+        <h3>Adicionar manual</h3>
+        <div class="form-grid">
+          <div class="field"><label>Fabricante</label><input name="brand" required placeholder="Ex: Toledo" list="brandOptions"></div>
+          <div class="field"><label>Modelo</label><input name="model" required placeholder="Ex: Prix 4 Uno"></div>
+          <div class="field"><label>Tipo de equipamento</label><input name="type" placeholder="Ex: Indicador digital"></div>
+          <div class="field full"><label>Descrição</label><input name="desc" placeholder="O que o manual cobre"></div>
+          <div class="field"><label>Link do PDF (URL)</label><input name="url" required placeholder="https://..."></div>
+          <div class="field"><label>Link da fonte original (opcional)</label><input name="sourceUrl" placeholder="https://..."></div>
+        </div>
+        <datalist id="brandOptions"></datalist>
+        <button type="submit" class="btn btn--primary" style="margin-top:16px">Publicar manual</button>
+        <p class="admin-status" data-status="manuals"></p>
+      </form>
+    </section>
+
+    <!-- VÍDEOS -->
+    <section class="admin-panel" data-admin-panel="videos">
+      <div class="admin-panel-head"><h2>Vídeos adicionados pelo painel</h2></div>
+      <div class="admin-list" id="list-videos"></div>
+
+      <form class="admin-form" id="form-videos" data-section="videos">
+        <h3>Adicionar vídeo</h3>
+        <div class="form-grid">
+          <div class="field"><label>Fabricante</label><input name="brand" required placeholder="Ex: Toledo" list="brandOptions2"></div>
+          <div class="field"><label>Modelo</label><input name="model" required placeholder="Ex: Prix 4 Uno"></div>
+          <div class="field full"><label>Descrição</label><input name="desc" placeholder="O que o vídeo ensina"></div>
+          <div class="field full"><label>Link do vídeo (YouTube, Drive...)</label><input name="url" required placeholder="https://..."></div>
+        </div>
+        <datalist id="brandOptions2"></datalist>
+        <button type="submit" class="btn btn--primary" style="margin-top:16px">Publicar vídeo</button>
+        <p class="admin-status" data-status="videos"></p>
+      </form>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section class="admin-panel" data-admin-panel="products">
+      <div class="admin-panel-head"><h2>Produtos adicionados pelo painel</h2></div>
+      <div class="admin-list" id="list-products"></div>
+
+      <form class="admin-form" id="form-products" data-section="products">
+        <h3>Adicionar produto</h3>
+        <div class="form-grid">
+          <div class="field"><label>Nome</label><input name="name" required placeholder="Ex: Kit Bluetooth"></div>
+          <div class="field"><label>Categoria</label><input name="category" placeholder="Ex: Equipamento"></div>
+          <div class="field">
+            <label>Ícone</label>
+            <select name="icon">
+              <option value="scale">Balança</option>
+              <option value="leaf">Folha</option>
+              <option value="bluetooth">Bluetooth</option>
+              <option value="wrench">Ferramenta</option>
+              <option value="headset">Suporte</option>
+              <option value="cpu">Chip</option>
+              <option value="package">Pacote</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Disponibilidade</label>
+            <select name="availability">
+              <option value="available">Disponível</option>
+              <option value="low">Estoque limitado</option>
+            </select>
+          </div>
+          <div class="field full"><label>Descrição</label><input name="desc" placeholder="Descrição curta"></div>
+          <div class="field full"><label>Texto do preço</label><input name="priceLabel" value="Consultar preço"></div>
+        </div>
+        <button type="submit" class="btn btn--primary" style="margin-top:16px">Publicar produto</button>
+        <p class="admin-status" data-status="products"></p>
+      </form>
+    </section>
+
+    <!-- FABRICANTES -->
+    <section class="admin-panel" data-admin-panel="manufacturers">
+      <div class="admin-panel-head"><h2>Fabricantes adicionados pelo painel</h2></div>
+      <div class="admin-list" id="list-manufacturers"></div>
+
+      <form class="admin-form" id="form-manufacturers" data-section="manufacturers">
+        <h3>Adicionar fabricante</h3>
+        <div class="form-grid">
+          <div class="field"><label>Nome</label><input name="name" required placeholder="Ex: Michel"></div>
+          <div class="field"><label>Quantidade de manuais (número exibido)</label><input name="count" type="number" min="0" value="1"></div>
+        </div>
+        <button type="submit" class="btn btn--primary" style="margin-top:16px">Publicar fabricante</button>
+        <p class="admin-status" data-status="manufacturers"></p>
+      </form>
+    </section>
+  </div>
+
+  <div style="height:80px"></div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

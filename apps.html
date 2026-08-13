@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apps | Exatta Tech</title>
+<meta name="description" content="Conheça os aplicativos desenvolvidos pela Exatta Tech para pesagem, gestão, produção e integração com balanças.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Apps | Exatta Tech">
+<meta property="og:description" content="Software criado para resolver problemas reais de quem trabalha com pesagem.">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i data-icon="scale"></i></span>
+      <span class="brand-name">Exatta<span>Tech</span></span>
+    </a>
+    <nav class="nav-desktop" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="apps.html" class="is-active">Apps</a>
+      <a href="ajuda.html">Ajuda</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="vendas.html">Vendas</a>
+      <a href="balanceiros.html">Balanceiros</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <a href="contato.html?assunto=Suporte%20t%C3%A9cnico" class="btn btn--primary btn--sm">Solicitar suporte</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMobile">
+        <i data-icon="menu" class="icon-menu"></i>
+        <i data-icon="close" class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-mobile" id="navMobile" aria-label="Navegação mobile">
+  <a href="index.html">Início</a>
+  <a href="apps.html" class="is-active">Apps</a>
+  <a href="ajuda.html">Ajuda</a>
+  <a href="downloads.html">Downloads</a>
+  <a href="vendas.html">Vendas</a>
+  <a href="balanceiros.html">Balanceiros</a>
+  <a href="contato.html">Contato</a>
+  <a href="contato.html?assunto=Suporte%20t%C3%A9cnico" class="btn btn--primary btn--block">Solicitar suporte</a>
+</nav>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Aplicativos Exatta Tech</span>
+        <h1 class="section-title">Software criado para resolver problemas reais.</h1>
+        <p class="section-sub">Aplicativos Flutter, multiplataforma, feitos para funcionar onde a operação não pode parar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="filter-bar" data-reveal>
+        <div class="filter-chips">
+          <button class="chip is-active" data-filter="all">Todos</button>
+          <button class="chip" data-filter="balancas">Balanças</button>
+          <button class="chip" data-filter="gestao">Gestão</button>
+          <button class="chip" data-filter="tecnico">Técnico</button>
+          <button class="chip" data-filter="producao">Produção</button>
+          <button class="chip" data-filter="licencas">Licenças</button>
+        </div>
+        <div class="filter-search">
+          <i data-icon="search"></i>
+          <input type="text" id="appsSearch" placeholder="Buscar aplicativo...">
+        </div>
+      </div>
+
+      <div class="app-grid" id="appsGrid">
+        <!-- preenchido via js/main.js -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- MODAL DE APLICATIVO -->
+<div class="modal-overlay" id="appModal">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head">
+      <div>
+        <h3 id="modalTitle">Nome do app</h3>
+        <span class="tag tag--blue" id="modalCategory">Categoria</span>
+      </div>
+      <button class="modal-close" data-modal-close aria-label="Fechar"><i data-icon="close"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-media" id="modalMedia"></div>
+
+      <div class="modal-section">
+        <h4>Sobre o aplicativo</h4>
+        <p id="modalDesc"></p>
+      </div>
+
+      <div class="modal-section">
+        <h4>Funcionalidades</h4>
+        <ul class="feature-list" id="modalFeatures"></ul>
+      </div>
+
+      <div class="modal-section">
+        <h4>Tecnologias</h4>
+        <div class="tech-pills" id="modalTech"></div>
+      </div>
+
+      <div class="modal-section">
+        <h4>Compatibilidade &amp; versão</h4>
+        <p><span id="modalCompat"></span> · <span id="modalVersion"></span></p>
+      </div>
+
+      <div class="modal-section">
+        <h4>Changelog</h4>
+        <div id="modalChangelog" style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--text-secondary)"></div>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <a href="contato.html?assunto=Contato%20comercial" class="btn btn--outline">Contato comercial</a>
+      <a href="#" id="modalDownload" class="btn btn--primary"><i data-icon="download"></i>Download</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><i data-icon="scale"></i></span>
+          <span class="brand-name">Exatta<span>Tech</span></span>
+        </a>
+        <p>Aplicativos, automação e tecnologia para sistemas de pesagem.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Soluções</h4>
+        <ul>
+          <li><a href="apps.html">Apps</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="vendas.html">Vendas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="ajuda.html">Ajuda</a></li>
+          <li><a href="balanceiros.html">Balanceiros</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Exatta Tech. Todos os direitos reservados.</span>
+      <span>Feito com precisão, em código.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="float-stack">
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><i data-icon="up"></i></button>
+  <a class="whatsapp-float" data-wa-link aria-label="Falar com a Exatta Tech pelo WhatsApp">
+    <i data-icon="whatsapp"></i>
+    <span class="wa-tooltip">Falar com a Exatta Tech</span>
+  </a>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
