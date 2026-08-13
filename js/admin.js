@@ -568,7 +568,7 @@
         form.availability.value = item.availability || "available";
         form.desc.value = item.desc || "";
         form.priceLabel.value = item.priceLabel || "Consultar preço";
-        form.videoUrl.value = item.videoUrl || "";
+        form.videoUrls.value = (item.videos || (item.videoUrl ? [item.videoUrl] : [])).join("\n");
         form.galleryUrls.value = (item.gallery || []).join("\n");
         updateGalleryPreview("products", item.gallery || []);
         break;
@@ -850,7 +850,7 @@
           priceLabel: fd.get("priceLabel") || "Consultar preço",
           desc: fd.get("desc") || "",
           availability: fd.get("availability") || "available",
-          videoUrl: (fd.get("videoUrl") || "").trim(),
+          videos: linesToArray(fd.get("videoUrls")),
         });
       case "manufacturers":
         return Object.assign(carry, {

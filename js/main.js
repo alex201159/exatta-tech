@@ -527,7 +527,18 @@
     if (yt) {
       return `<div class="modal-video"><iframe src="https://www.youtube.com/embed/${yt[1]}" title="Vídeo do produto" allowfullscreen loading="lazy"></iframe></div>`;
     }
-    return `<div class="modal-video"><video controls src="${url}"></video></div>`;
+    const vimeo = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    if (vimeo) {
+      return `<div class="modal-video"><iframe src="https://player.vimeo.com/video/${vimeo[1]}" title="Vídeo do produto" allowfullscreen loading="lazy"></iframe></div>`;
+    }
+    if (/\.(mp4|webm|ogg|mov)(\?.*)?$/i.test(url)) {
+      return `<div class="modal-video"><video controls src="${url}"></video></div>`;
+    }
+    return `<a class="modal-video-link" href="${url}" target="_blank" rel="noopener">${icon("video")}<span>Assistir vídeo</span></a>`;
+  }
+
+  function videosEmbedHtml(videos) {
+    return (videos || []).map(videoEmbedHtml).join("");
   }
 
   function renderProductsPage() {
@@ -609,7 +620,8 @@
       thumb.addEventListener("click", () => setProductModalMedia(overlay, thumb.getAttribute("data-src")));
     });
 
-    qs("#productModalVideoWrap", overlay).innerHTML = p.videoUrl ? videoEmbedHtml(p.videoUrl) : "";
+    const videos = p.videos || (p.videoUrl ? [p.videoUrl] : []);
+    qs("#productModalVideoWrap", overlay).innerHTML = videosEmbedHtml(videos);
 
     const quoteBtn = qs("#productModalQuote", overlay);
     quoteBtn.setAttribute("data-wa-message", `Olá! Tenho interesse em: ${p.name}. Poderiam me passar mais informações?`);

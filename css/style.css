@@ -685,6 +685,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 .gallery-thumbs img.is-active { opacity: 1; border-color: var(--cyan); }
 .modal-video { position: relative; aspect-ratio: 16/9; border-radius: var(--radius-md); overflow: hidden; background: #000; margin-top: 14px; }
 .modal-video iframe, .modal-video video { width: 100%; height: 100%; border: 0; display: block; }
+.modal-video-link { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 14px; padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border); background: var(--surface); color: var(--text); font-weight: 600; font-size: 14px; transition: border-color var(--t-fast), background var(--t-fast); }
+.modal-video-link:hover { border-color: var(--border-accent); background: var(--surface-hover); }
+.modal-video-link svg { width: 20px; height: 20px; color: var(--cyan); }
 
 /* ---------- Process / steps ---------- */
 .steps-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; position: relative; }
