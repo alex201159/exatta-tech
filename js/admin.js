@@ -59,6 +59,7 @@
       videos: [],
       products: [],
       manufacturers: [],
+      youtubeApiKey: "",
       removed: { apps: [], downloads: [], manuals: [], videos: [], products: [], manufacturers: [] },
     };
   }
@@ -338,6 +339,8 @@
       hideLoadStatus();
       SECTIONS.forEach(renderList);
       populateBrandDatalists();
+      const ytField = qs('#form-settings [name="youtubeApiKey"]');
+      if (ytField) ytField.value = STATE.overrides.youtubeApiKey || "";
     } catch (e) {
       showLoadStatus(
         `<i data-icon="alert"></i><div><strong>Não foi possível conectar ao GitHub.</strong><br>${escapeHtml(
@@ -874,6 +877,35 @@
       }
     });
   });
+
+  /* ------------------------------------------------------------------ */
+  /* Configurações                                                       */
+  /* ------------------------------------------------------------------ */
+  const settingsForm = qs("#form-settings");
+  if (settingsForm) {
+    settingsForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const statusEl = qs("[data-status]", settingsForm);
+      const submitBtn = settingsForm.querySelector('button[type="submit"]');
+      const newKey = settingsForm.querySelector('[name="youtubeApiKey"]').value.trim();
+      const prevKey = STATE.overrides.youtubeApiKey || "";
+
+      submitBtn.disabled = true;
+      setStatus(statusEl, "Salvando...", "busy");
+      STATE.overrides.youtubeApiKey = newKey;
+
+      try {
+        const sha = await ghPutOverrides(STATE.cfg, STATE.overrides, STATE.sha, "Admin: atualiza configurações");
+        STATE.sha = sha;
+        setStatus(statusEl, "Salvo! O site deve atualizar em ~1 minuto.", "success");
+      } catch (err) {
+        STATE.overrides.youtubeApiKey = prevKey;
+        setStatus(statusEl, "Erro ao salvar: " + err.message, "error");
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  }
 
   /* ------------------------------------------------------------------ */
   /* Tabs                                                                */

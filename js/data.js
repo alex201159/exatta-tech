@@ -22,6 +22,13 @@ const EXATTA_CONFIG = {
     repo: "", // ex: "exatta-tech"
     branch: "main",
   },
+  // Chave da YouTube Data API v3, usada na Central dos Balanceiros para
+  // buscar vídeos reais do YouTube ao pesquisar um equipamento. Fica
+  // pública no código do site (todo visitante usa ela), então DEVE ser
+  // restrita ao seu domínio no Google Cloud Console. Pode ser preenchida
+  // aqui ou pelo painel admin (aba Configurações) — o painel tem
+  // prioridade quando preenchida.
+  youtubeApiKey: "",
 };
 // `const` no nível superior de um <script> não vira propriedade de `window`
 // (ver nota mais abaixo) — main.js lê window.EXATTA_CONFIG para montar os
@@ -472,6 +479,7 @@ window.exattaLoadOverrides = async function exattaLoadOverrides() {
     exattaMergeSection(MANUAL_VIDEOS, extra.videos, removed.videos);
     exattaMergeSection(PRODUCTS, extra.products, removed.products);
     exattaMergeSection(MANUFACTURERS, extra.manufacturers, removed.manufacturers);
+    if (extra.youtubeApiKey) EXATTA_CONFIG.youtubeApiKey = extra.youtubeApiKey;
   } catch (e) {
     console.warn("Não foi possível carregar data/overrides.json — usando apenas os dados padrão.", e);
   } finally {

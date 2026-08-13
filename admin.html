@@ -87,6 +87,7 @@
       <button class="admin-tab" data-admin-tab="videos">Vídeos</button>
       <button class="admin-tab" data-admin-tab="products">Produtos (Vendas)</button>
       <button class="admin-tab" data-admin-tab="manufacturers">Fabricantes</button>
+      <button class="admin-tab" data-admin-tab="settings">Configurações</button>
     </nav>
 
     <!-- APLICATIVOS -->
@@ -288,6 +289,31 @@
           <button type="button" class="btn btn--ghost" data-cancel-edit hidden>Cancelar edição</button>
         </div>
         <p class="admin-status" data-status="manufacturers"></p>
+      </form>
+    </section>
+
+    <!-- CONFIGURAÇÕES -->
+    <section class="admin-panel" data-admin-panel="settings">
+      <div class="admin-panel-head"><h2>Configurações</h2></div>
+
+      <form class="admin-form" id="form-settings">
+        <h3>Busca de vídeos no YouTube</h3>
+        <p class="admin-field-hint" style="margin-bottom:14px">
+          Com essa chave preenchida, a página de Balanceiros passa a mostrar vídeos reais do YouTube ao pesquisar um
+          equipamento. Sem ela, continua funcionando normalmente, só sem os vídeos externos.
+        </p>
+        <div class="field">
+          <label>Chave da YouTube Data API v3</label>
+          <input name="youtubeApiKey" placeholder="AIzaSy...">
+        </div>
+        <p class="admin-gate-note" style="margin-top:10px">
+          Crie em <strong>console.cloud.google.com → APIs e Serviços → Credenciais → Criar credenciais → Chave de
+          API</strong>, ative a <strong>YouTube Data API v3</strong> pra esse projeto, e depois restrinja a chave
+          (em "Restrições de aplicativo" → HTTP referrers) para <code>exattatech.com/*</code> e
+          <code>alex201159.github.io/*</code> — assim ninguém mais consegue usar sua chave.
+        </p>
+        <button type="submit" class="btn btn--primary" style="margin-top:16px">Salvar configuração</button>
+        <p class="admin-status" data-status="settings"></p>
       </form>
     </section>
   </div>

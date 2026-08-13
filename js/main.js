@@ -552,6 +552,132 @@
   }
 
   /* ------------------------------------------------------------------ */
+  /* Busca de vídeos no YouTube (Central dos Balanceiros)                */
+  /* ------------------------------------------------------------------ */
+  function escapeHtml(str) {
+    return (str || "").toString().replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  }
+
+  const ytCache = new Map();
+  let ytDebounceTimer = null;
+  let ytRequestToken = 0;
+
+  async function fetchYoutubeVideos(query) {
+    const apiKey = (window.EXATTA_CONFIG || {}).youtubeApiKey;
+    if (!apiKey) return { ok: false, reason: "no-key", items: [] };
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=6&q=${encodeURIComponent(
+      query + " balança"
+    )}&key=${apiKey}`;
+    try {
+      const res = await fetch(url);
+      if (!res.ok) {
+        let reason = "error";
+        try {
+          const errBody = await res.json();
+          if (res.status === 403 && /quota/i.test(JSON.stringify(errBody))) reason = "quota";
+        } catch (e) {
+          /* corpo de erro não era JSON — mantém reason genérico */
+        }
+        return { ok: false, reason, items: [] };
+      }
+      const data = await res.json();
+      const items = (data.items || [])
+        .filter((it) => it.id && it.id.videoId)
+        .map((it) => ({
+          id: it.id.videoId,
+          title: it.snippet.title,
+          channel: it.snippet.channelTitle,
+          thumbnail: (it.snippet.thumbnails.medium || it.snippet.thumbnails.default).url,
+          url: `https://www.youtube.com/watch?v=${it.id.videoId}`,
+        }));
+      return { ok: true, items };
+    } catch (e) {
+      return { ok: false, reason: "network", items: [] };
+    }
+  }
+
+  function youtubeSearchFallbackUrl(query) {
+    return `https://www.youtube.com/results?search_query=${encodeURIComponent(query + " balança")}`;
+  }
+
+  function renderYoutubeSkeleton(grid) {
+    grid.innerHTML = Array.from({ length: 3 })
+      .map(
+        () => `
+      <div class="result-card yt-card">
+        <div class="skeleton yt-skeleton"></div>
+        <div class="yt-card-body">
+          <div class="skeleton" style="height:14px;width:80%;margin-bottom:8px;border-radius:4px"></div>
+          <div class="skeleton" style="height:12px;width:50%;border-radius:4px"></div>
+        </div>
+      </div>`
+      )
+      .join("");
+  }
+
+  function renderYoutubeResults(wrap, grid, query, result) {
+    wrap.hidden = false;
+    if (result.ok && result.items.length) {
+      grid.innerHTML = result.items
+        .map(
+          (v) => `
+        <a class="result-card yt-card" href="${v.url}" target="_blank" rel="noopener">
+          <img class="yt-thumb" src="${v.thumbnail}" alt="${escapeHtml(v.title)}" loading="lazy">
+          <div class="yt-card-body">
+            <span class="tag">YouTube</span>
+            <h4>${escapeHtml(v.title)}</h4>
+            <div class="meta">${escapeHtml(v.channel)}</div>
+          </div>
+        </a>`
+        )
+        .join("");
+      observeReveal(grid);
+      return;
+    }
+    const msg =
+      result.reason === "quota"
+        ? "O limite diário de buscas no YouTube foi atingido."
+        : result.reason === "no-key"
+        ? "Busca de vídeos externos ainda não configurada."
+        : result.ok
+        ? "Nenhum vídeo encontrado no YouTube para essa busca."
+        : "Não foi possível buscar vídeos no YouTube agora.";
+    grid.innerHTML = `
+      <div class="yt-fallback" style="grid-column:1/-1">
+        <p>${msg}</p>
+        <a class="btn btn--outline btn--sm" href="${youtubeSearchFallbackUrl(query)}" target="_blank" rel="noopener">${icon(
+      "search"
+    )} Buscar "${escapeHtml(query)}" no YouTube</a>
+      </div>`;
+  }
+
+  function triggerYoutubeSearch(query) {
+    const wrap = qs("#youtubeResultsWrap");
+    const grid = qs("#youtubeResultsGrid");
+    if (!wrap || !grid) return;
+    clearTimeout(ytDebounceTimer);
+    const q = query.trim();
+    if (!q) {
+      wrap.hidden = true;
+      grid.innerHTML = "";
+      return;
+    }
+    ytDebounceTimer = setTimeout(async () => {
+      const myToken = ++ytRequestToken;
+      if (ytCache.has(q)) {
+        renderYoutubeResults(wrap, grid, q, ytCache.get(q));
+        return;
+      }
+      wrap.hidden = false;
+      renderYoutubeSkeleton(grid);
+      const result = await fetchYoutubeVideos(q);
+      ytCache.set(q, result);
+      if (myToken !== ytRequestToken) return; // uma busca mais nova já está em andamento
+      renderYoutubeResults(wrap, grid, q, result);
+    }, 600);
+  }
+
+  /* ------------------------------------------------------------------ */
   /* Balanceiros.html                                                   */
   /* ------------------------------------------------------------------ */
   function renderBalanceirosPage() {
@@ -733,7 +859,9 @@
         visibleManuals = 6;
         visibleVideos = 6;
         paintAll();
+        triggerYoutubeSearch(query);
       });
+      if (searchInput.value) triggerYoutubeSearch(searchInput.value);
     }
 
     const manualsMoreBtn = qs("#manualsLoadMore button");
