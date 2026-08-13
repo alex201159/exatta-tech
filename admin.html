@@ -181,18 +181,22 @@
       <div class="admin-list" id="list-manuals"></div>
 
       <form class="admin-form" id="form-manuals" data-section="manuals">
-        <h3 data-form-title>Adicionar manual</h3>
-        <div class="form-grid">
-          <div class="field"><label>Fabricante</label><input name="brand" required placeholder="Ex: Toledo" list="brandOptions"></div>
-          <div class="field"><label>Modelo</label><input name="model" required placeholder="Ex: Prix 4 Uno"></div>
-          <div class="field"><label>Tipo de equipamento</label><input name="type" placeholder="Ex: Indicador digital"></div>
-          <div class="field full"><label>Descrição</label><input name="desc" placeholder="O que o manual cobre"></div>
-          <div class="field"><label>Link do PDF (URL)</label><input name="url" required placeholder="https://..."></div>
-          <div class="field"><label>Link da fonte original (opcional)</label><input name="sourceUrl" placeholder="https://..."></div>
+        <h3 data-form-title>Adicionar manuais</h3>
+        <div class="field">
+          <label>Fabricante</label>
+          <input name="brand" required placeholder="Ex: Toledo" list="brandOptions">
         </div>
+        <p class="admin-field-hint" style="margin-top:14px;margin-bottom:10px">
+          Escolha a marca uma vez e adicione quantos modelos/manuais quiser abaixo — tudo é publicado junto, num commit só.
+        </p>
+
+        <div id="manualRows"></div>
+
+        <button type="button" class="btn btn--outline btn--sm" id="addManualRow"><i data-icon="file"></i>Adicionar outro modelo</button>
+
         <datalist id="brandOptions"></datalist>
         <div style="display:flex;gap:10px;margin-top:16px">
-          <button type="submit" class="btn btn--primary" data-submit-label>Publicar manual</button>
+          <button type="submit" class="btn btn--primary" data-submit-label>Publicar manuais</button>
           <button type="button" class="btn btn--ghost" data-cancel-edit hidden>Cancelar edição</button>
         </div>
         <p class="admin-status" data-status="manuals"></p>

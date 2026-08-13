@@ -70,6 +70,11 @@
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* Garante que o atributo [hidden] sempre vença, mesmo em elementos cuja
+   classe (ex: .btn, .admin-gate) define display explicitamente — sem isso,
+   a especificidade empatada deixa o elemento "escondido" visível mesmo assim. */
+[hidden] { display: none !important; }
+
 html { scroll-behavior: smooth; overflow-x: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -846,7 +851,6 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
   display: flex; align-items: center; justify-content: center;
   padding: 24px;
 }
-.admin-gate[hidden], .admin-app[hidden] { display: none; }
 .admin-gate-card {
   width: 100%; max-width: 420px;
   background: var(--grad-card), var(--surface);
@@ -926,6 +930,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 .admin-image-preview { width: 96px; height: 96px; border-radius: var(--radius-md); object-fit: cover; margin-top: 10px; border: 1px solid var(--border-strong); display: none; }
 .admin-image-preview.is-visible { display: block; }
 .admin-field-hint { font-size: 12px; color: var(--text-muted); margin-top: -4px; }
+.admin-manual-row {
+  border: 1px solid var(--border); border-radius: var(--radius-md);
+  padding: 20px; margin-bottom: 14px; background: var(--bg-elevated);
+}
+.admin-manual-row .remove-row { margin-top: 12px; }
 .admin-status { font-size: 13px; color: var(--text-muted); margin-top: 12px; min-height: 18px; }
 .admin-status.is-busy { color: var(--cyan); }
 .admin-status.is-error { color: var(--danger); }

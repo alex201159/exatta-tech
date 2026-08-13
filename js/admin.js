@@ -26,7 +26,7 @@
   const SUBMIT_LABEL = {
     apps: "Publicar aplicativo",
     downloads: "Publicar arquivo",
-    manuals: "Publicar manual",
+    manuals: "Publicar manuais",
     videos: "Publicar vídeo",
     products: "Publicar produto",
     manufacturers: "Publicar fabricante",
@@ -34,7 +34,7 @@
   const FORM_TITLE = {
     apps: "Adicionar aplicativo",
     downloads: "Adicionar arquivo",
-    manuals: "Adicionar manual",
+    manuals: "Adicionar manuais",
     videos: "Adicionar vídeo",
     products: "Adicionar produto",
     manufacturers: "Adicionar fabricante",
@@ -499,14 +499,6 @@
         form.url.value = item.url || "";
         form.current.checked = !!item.current;
         break;
-      case "manuals":
-        form.brand.value = item.brand || "";
-        form.model.value = item.model || "";
-        form.type.value = item.type || "";
-        form.desc.value = item.desc || "";
-        form.url.value = item.url || "";
-        form.sourceUrl.value = item.sourceUrl || "";
-        break;
       case "videos":
         form.brand.value = item.brand || "";
         form.model.value = item.model || "";
@@ -562,6 +554,10 @@
   function startEdit(section, id) {
     const item = findItem(section, id);
     if (!item) return;
+    if (section === "manuals") {
+      startEditManual(item);
+      return;
+    }
     const form = formEl(section);
     fillForm(section, item);
     form.dataset.editingId = id;
@@ -582,10 +578,137 @@
     if (form.querySelector('[name="current"]')) form.current.checked = true;
     if (form.querySelector('[name="hasDownload"]')) form.hasDownload.checked = true;
     if (SUPPORTS_IMAGE[section]) updateImagePreview(section, "");
+    if (section === "manuals") {
+      resetManualRows();
+      document.getElementById("addManualRow").hidden = false;
+    }
   }
 
   qsa("[data-cancel-edit]").forEach((btn) => {
     btn.addEventListener("click", () => cancelEdit(btn.closest("form").getAttribute("data-section")));
+  });
+
+  /* ------------------------------------------------------------------ */
+  /* Manuais — marca única + várias linhas de modelo/manual de uma vez  */
+  /* ------------------------------------------------------------------ */
+  function createManualRow(prefill) {
+    const row = document.createElement("div");
+    row.className = "admin-manual-row";
+    row.innerHTML = `
+      <div class="form-grid">
+        <div class="field"><label>Modelo</label><input class="f-model" required placeholder="Ex: Prix 4 Uno"></div>
+        <div class="field"><label>Tipo de equipamento</label><input class="f-type" placeholder="Ex: Indicador digital"></div>
+        <div class="field full"><label>Descrição</label><input class="f-desc" placeholder="O que o manual cobre"></div>
+        <div class="field"><label>Link do PDF</label><input class="f-url" required placeholder="https://..."></div>
+        <div class="field"><label>Link da fonte (opcional)</label><input class="f-sourceUrl" placeholder="https://..."></div>
+      </div>
+      <button type="button" class="btn btn--ghost btn--sm remove-row">Remover esta linha</button>
+    `;
+    if (prefill) {
+      row.querySelector(".f-model").value = prefill.model || "";
+      row.querySelector(".f-type").value = prefill.type || "";
+      row.querySelector(".f-desc").value = prefill.desc || "";
+      row.querySelector(".f-url").value = prefill.url || "";
+      row.querySelector(".f-sourceUrl").value = prefill.sourceUrl || "";
+    }
+    row.querySelector(".remove-row").addEventListener("click", () => {
+      const rows = qsa(".admin-manual-row", document.getElementById("manualRows"));
+      if (rows.length > 1) row.remove();
+    });
+    return row;
+  }
+
+  function addManualRow(prefill) {
+    document.getElementById("manualRows").appendChild(createManualRow(prefill));
+  }
+
+  function resetManualRows() {
+    const container = document.getElementById("manualRows");
+    container.innerHTML = "";
+    addManualRow();
+  }
+
+  const addManualRowBtn = document.getElementById("addManualRow");
+  if (addManualRowBtn) addManualRowBtn.addEventListener("click", () => addManualRow());
+  if (document.getElementById("manualRows")) resetManualRows();
+
+  function startEditManual(item) {
+    const form = formEl("manuals");
+    form.querySelector('[name="brand"]').value = item.brand || "";
+    const container = document.getElementById("manualRows");
+    container.innerHTML = "";
+    container.appendChild(createManualRow(item));
+    document.getElementById("addManualRow").hidden = true;
+    form.dataset.editingId = item.id;
+    qs("[data-form-title]", form).textContent = `Editando: ${item.brand} — ${item.model}`;
+    qs("[data-submit-label]", form).textContent = "Salvar alterações";
+    qs("[data-cancel-edit]", form).hidden = false;
+    setStatus(qs("[data-status]", form), "", "");
+    form.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  qs("#form-manuals").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const statusEl = qs("[data-status]", form);
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const brand = form.querySelector('[name="brand"]').value.trim();
+    const editingId = form.dataset.editingId || null;
+
+    if (!brand) {
+      setStatus(statusEl, "Informe o fabricante.", "error");
+      return;
+    }
+
+    const rows = qsa(".admin-manual-row", document.getElementById("manualRows"));
+    const items = [];
+    for (const row of rows) {
+      const model = row.querySelector(".f-model").value.trim();
+      const url = row.querySelector(".f-url").value.trim();
+      if (!model || !url) continue;
+      items.push({
+        id: editingId || shortId("m", model),
+        brand,
+        model,
+        type: row.querySelector(".f-type").value.trim(),
+        desc: row.querySelector(".f-desc").value.trim(),
+        url,
+        sourceUrl: row.querySelector(".f-sourceUrl").value.trim(),
+      });
+    }
+
+    if (!items.length) {
+      setStatus(statusEl, "Preencha ao menos um modelo com o link do PDF.", "error");
+      return;
+    }
+
+    submitBtn.disabled = true;
+    setStatus(statusEl, editingId ? "Salvando alterações..." : `Publicando ${items.length} manual(is)...`, "busy");
+
+    const arr = STATE.overrides.manuals;
+    const snapshot = arr.slice();
+    items.forEach((item) => {
+      const idx = arr.findIndex((i) => i.id === item.id);
+      if (idx !== -1) arr[idx] = item;
+      else arr.push(item);
+    });
+
+    try {
+      const message = editingId
+        ? `Admin: edita ${brand} — ${items[0].model} (manuals)`
+        : `Admin: adiciona ${items.length} manual(is) de ${brand}`;
+      const sha = await ghPutOverrides(STATE.cfg, STATE.overrides, STATE.sha, message);
+      STATE.sha = sha;
+      setStatus(statusEl, "Publicado! O site deve atualizar em ~1 minuto.", "success");
+      cancelEdit("manuals");
+      renderList("manuals");
+      populateBrandDatalists();
+    } catch (err) {
+      STATE.overrides.manuals = snapshot;
+      setStatus(statusEl, "Erro ao publicar: " + err.message, "error");
+    } finally {
+      submitBtn.disabled = false;
+    }
   });
 
   /* ------------------------------------------------------------------ */
@@ -620,15 +743,6 @@
           current: fd.get("current") === "on",
           url: fd.get("url"),
         });
-      case "manuals":
-        return Object.assign(carry, {
-          brand: fd.get("brand"),
-          model: fd.get("model"),
-          type: fd.get("type") || "",
-          desc: fd.get("desc") || "",
-          url: fd.get("url"),
-          sourceUrl: fd.get("sourceUrl") || "",
-        });
       case "videos":
         return Object.assign(carry, {
           brand: fd.get("brand"),
@@ -662,8 +776,6 @@
         return shortId("app", fd.get("name"));
       case "downloads":
         return shortId("dl", fd.get("name"));
-      case "manuals":
-        return shortId("m", fd.get("model"));
       case "videos":
         return shortId("v", fd.get("model"));
       case "products":
@@ -675,7 +787,7 @@
     }
   }
 
-  qsa(".admin-form").forEach((form) => {
+  qsa('.admin-form:not(#form-manuals)').forEach((form) => {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const section = form.getAttribute("data-section");

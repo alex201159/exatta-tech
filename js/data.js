@@ -10,10 +10,10 @@
 
 const EXATTA_CONFIG = {
   brand: "Exatta Tech",
-  whatsappNumber: "5511999999999", // TODO: substituir pelo número real da empresa
+  whatsappNumber: "5537998466711",
   whatsappDefaultMsg: "Olá! Vim pelo site da Exatta Tech e gostaria de falar com o suporte.",
-  email: "contato@exattatech.com.br",
-  phone: "+55 (11) 4000-0000",
+  email: "alexjunior201159@gmail.com",
+  phone: "+55 (37) 99846-6711",
   address: "Atendimento remoto em todo o Brasil",
   // Preenchido depois de criar o repositório no GitHub — usado pelo painel admin (admin.html)
   // para saber onde gravar data/overrides.json. Pode ser preenchido aqui ou direto na tela do painel.
@@ -23,6 +23,10 @@ const EXATTA_CONFIG = {
     branch: "main",
   },
 };
+// `const` no nível superior de um <script> não vira propriedade de `window`
+// (ver nota mais abaixo) — main.js lê window.EXATTA_CONFIG para montar os
+// links de WhatsApp, então essa atribuição precisa existir.
+window.EXATTA_CONFIG = EXATTA_CONFIG;
 
 /* ---------------------------------------------------------------------- */
 /* Aplicativos                                                            */
@@ -320,10 +324,13 @@ const COMMUNITY_QUESTIONS = [
   { id: "q4", brand: "Alfa", model: "TI400", question: "Como faço para exportar o histórico de pesagens para PDF?", answers: 3 },
 ];
 
-const BALANCEIROS_STATS = [
-  { value: 180, suffix: "+", label: "Manuais cadastrados" },
-  { value: 11, suffix: "+", label: "Fabricantes" },
-  { value: 40, suffix: "+", label: "Vídeos técnicos" },
+// Calculado a partir dos dados reais (não é mais um número fixo) — ver
+// window.exattaGetBalanceirosStats() logo abaixo, chamada depois que os
+// itens do painel admin já foram somados aos arrays.
+let BALANCEIROS_STATS = [
+  { value: 0, suffix: "+", label: "Manuais cadastrados" },
+  { value: 0, suffix: "+", label: "Fabricantes" },
+  { value: 0, suffix: "+", label: "Vídeos técnicos" },
   { value: 1, suffix: "", label: "Comunidade ativa", customLabel: "Comunidade" },
 ];
 
