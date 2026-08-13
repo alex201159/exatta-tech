@@ -397,8 +397,12 @@
   function initAppModal() {
     const overlay = qs("#appModal");
     if (!overlay) return;
-    qsa("[data-open-app]").forEach((btn) => {
-      btn.addEventListener("click", () => openAppModal(btn.getAttribute("data-open-app")));
+    // Delegação no document: os cartões são recriados a cada busca/filtro,
+    // então ligar o clique direto nos botões antigos os deixaria mortos
+    // depois da primeira busca.
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-open-app]");
+      if (btn) openAppModal(btn.getAttribute("data-open-app"));
     });
     qsa("[data-modal-close]", overlay).forEach((el) => el.addEventListener("click", closeAppModal));
     overlay.addEventListener("click", (e) => {
@@ -474,6 +478,7 @@
             </div>
           </div>
           <p>${d.desc}</p>
+          <button class="card-link" data-open-download="${d.id}">Ver descrição completa ${icon("arrowRight")}</button>
           <div class="dl-meta">
             <span><b>Versão</b> ${d.version}</span>
             <span><b>Tamanho</b> ${d.size}</span>
@@ -499,6 +504,9 @@
           }, 2600);
         });
       });
+      qsa("[data-open-download]", grid).forEach((btn) => {
+        btn.addEventListener("click", () => openDownloadModal(btn.getAttribute("data-open-download")));
+      });
     }
 
     chips.forEach((chip) => {
@@ -511,6 +519,47 @@
     });
 
     paint();
+    initDownloadModal();
+  }
+
+  function initDownloadModal() {
+    const overlay = qs("#downloadModal");
+    if (!overlay || overlay.dataset.bound) return;
+    overlay.dataset.bound = "1";
+    qsa("[data-modal-close]", overlay).forEach((el) => el.addEventListener("click", closeDownloadModal));
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) closeDownloadModal();
+    });
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeDownloadModal();
+    });
+  }
+
+  function openDownloadModal(id) {
+    const overlay = qs("#downloadModal");
+    const d = DOWNLOADS.find((x) => x.id === id);
+    if (!overlay || !d) return;
+    const iconFor = { android: "android", windows: "windows", pdf: "pdf", tool: "tool" };
+    qs("#downloadModalMedia", overlay).innerHTML = d.image
+      ? `<img src="${d.image}" alt="${d.name}" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">`
+      : icon(iconFor[d.type]);
+    qs("#downloadModalTitle", overlay).textContent = d.name;
+    qs("#downloadModalPlatform", overlay).textContent = d.platform || "";
+    qs("#downloadModalDesc", overlay).textContent = d.desc || "";
+    qs("#downloadModalVersion", overlay).textContent = `Versão ${d.version || "-"}`;
+    qs("#downloadModalSize", overlay).textContent = d.size || "-";
+    qs("#downloadModalDate", overlay).textContent = d.date || "-";
+    const dlBtn = qs("#downloadModalDownload", overlay);
+    if (dlBtn) dlBtn.href = d.url || "#";
+    overlay.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeDownloadModal() {
+    const overlay = qs("#downloadModal");
+    if (!overlay) return;
+    overlay.classList.remove("is-open");
+    document.body.style.overflow = "";
   }
 
   /* ------------------------------------------------------------------ */

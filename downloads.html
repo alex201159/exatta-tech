@@ -92,6 +92,35 @@
   </section>
 </main>
 
+<!-- MODAL DE DOWNLOAD -->
+<div class="modal-overlay" id="downloadModal">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="downloadModalTitle">
+    <div class="modal-head">
+      <div>
+        <h3 id="downloadModalTitle">Nome do arquivo</h3>
+        <span class="tag tag--blue" id="downloadModalPlatform">Plataforma</span>
+      </div>
+      <button class="modal-close" data-modal-close aria-label="Fechar"><i data-icon="close"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-media" id="downloadModalMedia"></div>
+
+      <div class="modal-section">
+        <h4>Sobre o arquivo</h4>
+        <p id="downloadModalDesc"></p>
+      </div>
+
+      <div class="modal-section">
+        <h4>Detalhes</h4>
+        <p><span id="downloadModalVersion"></span> · <span id="downloadModalSize"></span> · <span id="downloadModalDate"></span></p>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <a href="#" id="downloadModalDownload" class="btn btn--primary btn--block" target="_blank" rel="noopener"><i data-icon="download"></i>Baixar</a>
+    </div>
+  </div>
+</div>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
