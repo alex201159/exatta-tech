@@ -758,6 +758,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 }
 .form-toast.is-visible { display: flex; }
 .form-toast svg { width: 20px; height: 20px; flex-shrink: 0; }
+.form-toast.is-error { background: rgba(240,96,95,0.1); border-color: rgba(240,96,95,0.3); color: var(--danger); }
 
 /* ---------- Contact split ---------- */
 .contact-split { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 40px; align-items: start; }

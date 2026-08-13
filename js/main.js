@@ -1116,17 +1116,62 @@
 
       const data = Object.fromEntries(new FormData(form).entries());
       const toast = qs("#formToast");
-      if (toast) {
-        toast.classList.add("is-visible");
-        toast.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-      form.reset();
+      const toastIcon = toast ? toast.querySelector("i, svg") : null;
+      const toastText = toast ? toast.querySelector("span") : null;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const cfg = window.EXATTA_CONFIG || {};
 
       const waBtn = qs("#sendWhatsapp");
       if (waBtn) {
         const msg = `Olá! Meu nome é ${data.nome || ""}. Assunto: ${data.assunto || "Contato pelo site"}. Mensagem: ${data.mensagem || ""}`;
         waBtn.href = waLink(msg);
       }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Enviando...";
+      }
+
+      fetch(`https://formsubmit.co/ajax/${encodeURIComponent(cfg.email || "")}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          Nome: data.nome || "",
+          Empresa: data.empresa || "-",
+          Telefone: data.telefone || "",
+          "E-mail para resposta": data.email || "",
+          Assunto: data.assunto || "Contato pelo site",
+          Mensagem: data.mensagem || "",
+          _subject: `Novo contato pelo site: ${data.assunto || "Contato"}`,
+          _template: "table",
+          _captcha: "false",
+        }),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error("Falha ao enviar");
+          if (toast) {
+            if (toastIcon) toastIcon.outerHTML = icon("check");
+            if (toastText) toastText.textContent = "Mensagem enviada para nossa equipe! Você também pode falar pelo WhatsApp para uma resposta mais rápida.";
+            toast.classList.remove("is-error");
+            toast.classList.add("is-visible");
+            toast.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+          form.reset();
+        })
+        .catch(() => {
+          if (toast) {
+            if (toastIcon) toastIcon.outerHTML = icon("alert");
+            if (toastText) toastText.textContent = "Não deu para enviar por e-mail agora. Fale pelo WhatsApp para garantir a resposta.";
+            toast.classList.add("is-visible", "is-error");
+            toast.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        })
+        .finally(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Enviar mensagem";
+          }
+        });
     });
   }
 })();
