@@ -598,9 +598,17 @@
       return matchBrand && matchQuery;
     }
 
+    function updateTabCount(name, count) {
+      const el = qs(`[data-tab-count="${name}"]`);
+      if (!el) return;
+      el.textContent = String(count);
+      el.classList.toggle("has-results", query.trim().length > 0 && count > 0);
+    }
+
     function paintManuals() {
       if (!manualsGrid) return;
       const list = MANUALS.filter((m) => matches(m, "brand", "model"));
+      updateTabCount("manuais", list.length);
       if (!list.length) {
         manualsGrid.innerHTML = emptyState("Nenhum manual encontrado", "Tente buscar por outro fabricante ou modelo.");
         qs("#manualsLoadMore") && (qs("#manualsLoadMore").style.display = "none");
@@ -642,6 +650,7 @@
     function paintVideos() {
       if (!videosGrid) return;
       const list = MANUAL_VIDEOS.filter((m) => matches(m, "brand", "model"));
+      updateTabCount("videos", list.length);
       if (!list.length) {
         videosGrid.innerHTML = emptyState("Nenhum vídeo encontrado", "Tente buscar por outro fabricante ou modelo.");
         return;
@@ -675,6 +684,7 @@
     function paintQuestions() {
       if (!questionsGrid) return;
       const list = COMMUNITY_QUESTIONS.filter((m) => matches(m, "brand", "model"));
+      updateTabCount("perguntas", list.length);
       if (!list.length) {
         questionsGrid.innerHTML = emptyState("Nenhuma pergunta encontrada", "Seja o primeiro a perguntar sobre esse equipamento.");
         return;
