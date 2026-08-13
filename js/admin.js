@@ -412,17 +412,8 @@
   }
   const KIND_LABEL = { base: "Padrão", edited: "Editado", new: "Novo" };
 
-  function renderList(section) {
-    const el = document.getElementById("list-" + section);
-    if (!el) return;
-    const entries = effectiveList(section);
-    if (!entries.length) {
-      el.innerHTML = `<p class="admin-empty">Nenhum item nesta seção.</p>`;
-      return;
-    }
-    el.innerHTML = entries
-      .map(
-        ({ item, kind }) => `
+  function rowHtml(section, item, kind) {
+    return `
       <div class="admin-row">
         <div>
           <strong>${escapeHtml(itemLabel(section, item))}</strong>
@@ -433,15 +424,54 @@
           <button type="button" class="btn btn--outline btn--sm" data-edit="${escapeHtml(item.id)}">Editar</button>
           <button type="button" class="btn btn--ghost btn--sm" data-remove="${escapeHtml(item.id)}">Remover</button>
         </div>
-      </div>`
-      )
-      .join("");
+      </div>`;
+  }
+
+  function bindRowActions(section, el) {
     qsa("[data-edit]", el).forEach((btn) => {
       btn.addEventListener("click", () => startEdit(section, btn.getAttribute("data-edit")));
     });
     qsa("[data-remove]", el).forEach((btn) => {
       btn.addEventListener("click", () => removeItem(section, btn.getAttribute("data-remove"), btn));
     });
+  }
+
+  function renderList(section) {
+    const el = document.getElementById("list-" + section);
+    if (!el) return;
+    const entries = effectiveList(section);
+    if (!entries.length) {
+      el.innerHTML = `<p class="admin-empty">Nenhum item nesta seção.</p>`;
+      return;
+    }
+
+    if (section === "manuals") {
+      // Agrupado por marca (aberto/fechado com <details>) — uma lista só
+      // fica ilegível quando há muitos manuais.
+      const groups = new Map();
+      entries.forEach((entry) => {
+        const brand = entry.item.brand || "Sem marca";
+        if (!groups.has(brand)) groups.set(brand, []);
+        groups.get(brand).push(entry);
+      });
+      const brands = Array.from(groups.keys()).sort((a, b) => a.localeCompare(b, "pt-BR"));
+      el.innerHTML = brands
+        .map((brand) => {
+          const items = groups.get(brand);
+          const rows = items.map(({ item, kind }) => rowHtml(section, item, kind)).join("");
+          return `
+        <details class="admin-brand-group">
+          <summary>${escapeHtml(brand)} <span class="count">(${items.length})</span></summary>
+          <div class="admin-brand-group-body">${rows}</div>
+        </details>`;
+        })
+        .join("");
+      bindRowActions(section, el);
+      return;
+    }
+
+    el.innerHTML = entries.map(({ item, kind }) => rowHtml(section, item, kind)).join("");
+    bindRowActions(section, el);
   }
 
   async function removeItem(section, id, btn) {
