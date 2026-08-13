@@ -501,7 +501,8 @@
       "prod-integracao-personalizada",
       "prod-suporte-premium",
       "prod-instalacao",
-      "prod-lc-peso-licenca"
+      "prod-lc-peso-licenca",
+      "prod-lc-agro-licenca"
     ],
     "manufacturers": []
   }
