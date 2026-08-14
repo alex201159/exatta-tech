@@ -465,6 +465,87 @@
       "desc": "Manual do usuário",
       "url": "https://stportalcorporativoprd.blob.core.windows.net/blobappportalc63534e8570/wp-content/uploads/2024/07/87_pt_manual_1710504955.pdf",
       "sourceUrl": ""
+    },
+    {
+      "id": "m-wt420",
+      "brand": "Weightech",
+      "model": "Conversor WT 420 – 4 a 20 mA",
+      "type": "Conversor de sinal",
+      "desc": "Ficha técnica",
+      "url": "https://primaxbalancas.com.br/wp-content/uploads/WT-420-ficha-tecnica.pdf",
+      "sourceUrl": "https://primaxbalancas.com.br/downloads/manuais/"
+    },
+    {
+      "id": "m-wt21cs",
+      "brand": "Weightech",
+      "model": "WT 21CS",
+      "type": "Indicador digital",
+      "desc": "Manual técnico",
+      "url": "https://primaxbalancas.com.br/wp-content/uploads/Manual-técnico-WT-21-CS.pdf",
+      "sourceUrl": "https://primaxbalancas.com.br/downloads/manuais/"
+    },
+    {
+      "id": "m-wt1000-led",
+      "brand": "Weightech",
+      "model": "WT1000 LED",
+      "type": "Indicador digital",
+      "desc": "Manual técnico",
+      "url": "https://primaxbalancas.com.br/wp-content/uploads/Manual-tecnico-WT-1000-LED.pdf",
+      "sourceUrl": "https://primaxbalancas.com.br/downloads/manuais/"
+    },
+    {
+      "id": "m-wt21-csi",
+      "brand": "Weightech",
+      "model": "WT21 CSI",
+      "type": "Indicador digital",
+      "desc": "Manual técnico",
+      "url": "https://primaxbalancas.com.br/wp-content/uploads/Manual-tecnico-WT-21-CSI.pdf",
+      "sourceUrl": "https://primaxbalancas.com.br/downloads/manuais/"
+    },
+    {
+      "id": "m-wt21-lcd",
+      "brand": "Weightech",
+      "model": "WT21 LCD",
+      "type": "Indicador digital",
+      "desc": "Manual técnico",
+      "url": "https://primaxbalancas.com.br/wp-content/uploads/Manual-técnico-WT-21-LCD.pdf",
+      "sourceUrl": "https://primaxbalancas.com.br/downloads/manuais/"
+    },
+    {
+      "id": "m-wt21-i",
+      "brand": "Weightech",
+      "model": "WT21-I",
+      "type": "Indicador digital",
+      "desc": "Manual técnico",
+      "url": "https://primaxbalancas.com.br/wp-content/uploads/Manual-técnico-WT-21-I.pdf",
+      "sourceUrl": "https://primaxbalancas.com.br/downloads/manuais/"
+    },
+    {
+      "id": "m-wt21-p",
+      "brand": "Weightech",
+      "model": "WT21-P",
+      "type": "Indicador digital",
+      "desc": "Manual técnico",
+      "url": "https://primaxbalancas.com.br/wp-content/uploads/Manual-técnico-WT-21-Painel.pdf",
+      "sourceUrl": "https://primaxbalancas.com.br/downloads/manuais/"
+    },
+    {
+      "id": "m-wt21-p-modbus",
+      "brand": "Weightech",
+      "model": "WT21-P MODBUS",
+      "type": "Indicador digital",
+      "desc": "Manual técnico",
+      "url": "https://primaxbalancas.com.br/wp-content/uploads/Manual-técnico-WT-21-ModBus.pdf",
+      "sourceUrl": "https://primaxbalancas.com.br/downloads/manuais/"
+    },
+    {
+      "id": "m-wt27-r",
+      "brand": "Weightech",
+      "model": "WT27-R",
+      "type": "Indicador digital",
+      "desc": "Manual técnico",
+      "url": "https://primaxbalancas.com.br/wp-content/uploads/Manual-técnico-WT-27-R.pdf",
+      "sourceUrl": "https://primaxbalancas.com.br/downloads/manuais/"
     }
   ],
   "videos": [],
