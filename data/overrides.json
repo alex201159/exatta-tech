@@ -42,7 +42,7 @@
         }
       ],
       "hasDownload": true,
-      "image": ""
+      "image": "assets/uploads/apps-lc-peso.jpg?v=1786734466283"
     }
   ],
   "downloads": [
@@ -3024,6 +3024,7 @@
       "videos": []
     }
   ],
+  "questions": [],
   "manufacturers": [],
   "youtubeApiKey": "AIzaSyCYV9YPFxEPcALqtmDqhwhomO27g-vPsPE",
   "removed": {
@@ -3058,6 +3059,7 @@
       "prod-lc-peso-licenca",
       "prod-lc-agro-licenca"
     ],
+    "questions": [],
     "manufacturers": []
   }
 }
