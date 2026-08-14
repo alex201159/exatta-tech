@@ -770,6 +770,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 /* ---------- Contact split ---------- */
 .contact-split { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 40px; align-items: start; }
 .contact-panel { background: var(--grad-card), var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 36px; }
+.ask-question-box { background: var(--grad-card), var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; margin-top: 36px; }
 .contact-info-list { display: flex; flex-direction: column; gap: 22px; margin-top: 24px; }
 .contact-info-item { display: flex; gap: 14px; align-items: flex-start; }
 .contact-info-item .ico { width: 42px; height: 42px; border-radius: 11px; background: var(--surface-2); color: var(--cyan); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }

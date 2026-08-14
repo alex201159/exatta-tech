@@ -76,6 +76,7 @@
     initSmoothAnchors();
     renderHelpPage();
     initContactForm();
+    initQuestionForm();
 
     // Junta os itens adicionados pelo painel admin (data/overrides.json) antes
     // de renderizar qualquer coisa que dependa de APPS/DOWNLOADS/MANUALS/etc.
@@ -1222,6 +1223,76 @@
           if (submitBtn) {
             submitBtn.disabled = false;
             submitBtn.textContent = "Enviar mensagem";
+          }
+        });
+    });
+  }
+
+  function initQuestionForm() {
+    const form = qs("#questionForm");
+    if (!form) return;
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let valid = true;
+      qsa("[required]", form).forEach((input) => {
+        const field = input.closest(".field");
+        const ok = input.value.trim().length > 0;
+        field.classList.toggle("has-error", !ok);
+        if (!ok) valid = false;
+      });
+      if (!valid) return;
+
+      const data = Object.fromEntries(new FormData(form).entries());
+      const toast = qs("#questionToast");
+      const toastIcon = toast ? toast.querySelector("i, svg") : null;
+      const toastText = toast ? toast.querySelector("span") : null;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const cfg = window.EXATTA_CONFIG || {};
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Enviando...";
+      }
+
+      fetch(`https://formsubmit.co/ajax/${encodeURIComponent(cfg.email || "")}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          Nome: data.nome || "",
+          "Contato (WhatsApp/e-mail)": data.contato || "-",
+          Fabricante: data.brand || "",
+          Modelo: data.model || "",
+          Pergunta: data.question || "",
+          _subject: `Nova pergunta na Central dos Balanceiros: ${data.brand || ""} — ${data.model || ""}`,
+          _template: "table",
+          _captcha: "false",
+        }),
+      })
+        .then((res) => res.json().then((body) => ({ ok: res.ok, body })))
+        .then(({ ok, body }) => {
+          if (!ok || (body && body.success === "false")) throw new Error((body && body.message) || "Falha ao enviar");
+          if (toast) {
+            if (toastIcon) toastIcon.outerHTML = icon("check");
+            if (toastText) toastText.textContent = "Pergunta enviada! Nossa equipe vai responder e publicar aqui nesta aba assim que possível.";
+            toast.classList.remove("is-error");
+            toast.classList.add("is-visible");
+            toast.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+          form.reset();
+        })
+        .catch(() => {
+          if (toast) {
+            if (toastIcon) toastIcon.outerHTML = icon("alert");
+            if (toastText) toastText.textContent = "Não deu para enviar agora. Tente novamente ou fale pelo WhatsApp.";
+            toast.classList.add("is-visible", "is-error");
+            toast.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        })
+        .finally(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Enviar pergunta";
           }
         });
     });

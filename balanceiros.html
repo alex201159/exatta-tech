@@ -104,8 +104,43 @@
 
       <div class="tab-panel" data-tab-panel="perguntas">
         <div class="result-grid" id="questionsGrid"></div>
-        <div style="text-align:center;margin-top:32px">
-          <a href="contato.html?assunto=Pergunta%20t%C3%A9cnica" class="btn btn--primary">Fazer uma pergunta</a>
+
+        <div class="ask-question-box" data-reveal>
+          <h3 style="font-size:18px;margin-bottom:6px">Fazer uma pergunta</h3>
+          <p style="color:var(--text-secondary);font-size:14px;margin-bottom:20px">Nossa equipe recebe sua pergunta e publica a resposta aqui nesta aba assim que possível.</p>
+          <form id="questionForm" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="qNome">Seu nome</label>
+                <input type="text" id="qNome" name="nome" placeholder="Seu nome" required>
+                <span class="field-error">Informe seu nome.</span>
+              </div>
+              <div class="field">
+                <label for="qContato">WhatsApp ou e-mail (opcional)</label>
+                <input type="text" id="qContato" name="contato" placeholder="Caso queira uma resposta direta">
+              </div>
+              <div class="field">
+                <label for="qBrand">Fabricante</label>
+                <input type="text" id="qBrand" name="brand" placeholder="Ex: Toledo" required>
+                <span class="field-error">Informe o fabricante.</span>
+              </div>
+              <div class="field">
+                <label for="qModel">Modelo</label>
+                <input type="text" id="qModel" name="model" placeholder="Ex: Prix 4 Uno" required>
+                <span class="field-error">Informe o modelo.</span>
+              </div>
+              <div class="field full">
+                <label for="qQuestion">Pergunta</label>
+                <textarea id="qQuestion" name="question" placeholder="Descreva sua dúvida com o máximo de detalhes" required></textarea>
+                <span class="field-error">Escreva sua pergunta.</span>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary" style="margin-top:18px">Enviar pergunta</button>
+            <div class="form-toast" id="questionToast">
+              <i data-icon="check"></i>
+              <span>Pergunta enviada!</span>
+            </div>
+          </form>
         </div>
       </div>
 
