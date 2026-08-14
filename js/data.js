@@ -314,22 +314,9 @@ const MANUALS = [
   { id: "m18", brand: "Weightech", model: "WT-1000", type: "Terminal de pesagem", desc: "Configuração de comunicação serial do terminal WT-1000.", url: "", sourceUrl: "" },
 ];
 
-const MANUAL_VIDEOS = [
-  // url = link do vídeo (YouTube, Drive, etc.)
-  { id: "v1", brand: "Toledo", model: "Prix 4 Uno", desc: "Vídeo passo a passo de calibração do Prix 4 Uno.", url: "" },
-  { id: "v2", brand: "Urano", model: "UDC 4000", desc: "Como configurar a comunicação serial do UDC 4000.", url: "" },
-  { id: "v3", brand: "Filizola", model: "CSP-10A", desc: "Manutenção preventiva da CSP-10A.", url: "" },
-  { id: "v4", brand: "Balmak", model: "Rodoviária 60T", desc: "Checklist de calibração de balanças rodoviárias.", url: "" },
-  { id: "v5", brand: "Alfa", model: "TI400", desc: "Resolvendo os erros mais comuns do TI400.", url: "" },
-  { id: "v6", brand: "Systel", model: "SY-500", desc: "Ajuste fino de sensibilidade no SY-500.", url: "" },
-];
+const MANUAL_VIDEOS = [];
 
-const COMMUNITY_QUESTIONS = [
-  { id: "q1", brand: "Toledo", model: "Prix 4 Uno", question: "Indicador trava ao ligar, mostrando apenas os traços na tela. O que pode ser?", answers: 4 },
-  { id: "q2", brand: "Urano", model: "US 15/30", question: "Qual o procedimento correto para recalibrar após troca de célula de carga?", answers: 2 },
-  { id: "q3", brand: "Filizola", model: "CSP-10A", question: "Balança apresenta peso instável mesmo sem carga. Já verifiquei nivelamento.", answers: 6 },
-  { id: "q4", brand: "Alfa", model: "TI400", question: "Como faço para exportar o histórico de pesagens para PDF?", answers: 3 },
-];
+const COMMUNITY_QUESTIONS = [];
 
 // Calculado a partir dos dados reais (não é mais um número fixo) — ver
 // exattaRecomputeStats() mais abaixo, chamada depois que os itens do
