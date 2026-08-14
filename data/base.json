@@ -1,0 +1,493 @@
+{
+  "apps": [
+    {
+      "id": "lc-peso",
+      "name": "LC Peso",
+      "icon": "scale",
+      "category": "Balanças",
+      "filters": [
+        "balancas",
+        "tecnico"
+      ],
+      "shortDesc": "Controle de pesagem conectado a balanças e indicadores via Bluetooth, BLE e Serial.",
+      "fullDesc": "O LC Peso conecta o seu smartphone diretamente a balanças e indicadores comerciais, industriais e agrícolas, capturando o peso em tempo real e organizando cada pesagem em relatórios prontos para exportação. Criado para operações que não podem parar, funciona mesmo em campo, com pouca conectividade.",
+      "features": [
+        "Leitura em tempo real via Bluetooth / BLE",
+        "Suporte a comunicação Serial e RS-232",
+        "Geração de relatórios em PDF",
+        "Histórico completo de pesagens",
+        "Modo offline com sincronização posterior",
+        "Cadastro de produtos e clientes"
+      ],
+      "tech": [
+        "Flutter",
+        "Bluetooth LE",
+        "SQLite",
+        "REST API"
+      ],
+      "compatibility": "Android 8.0 ou superior",
+      "version": "1.4.2",
+      "changelog": [
+        {
+          "v": "1.4.2",
+          "d": "Correções de estabilidade na leitura Bluetooth."
+        },
+        {
+          "v": "1.4.0",
+          "d": "Novo layout de relatórios em PDF."
+        },
+        {
+          "v": "1.3.0",
+          "d": "Suporte a protocolo Serial adicionado."
+        }
+      ],
+      "hasDownload": true
+    },
+    {
+      "id": "lc-agro",
+      "name": "LC Agro",
+      "icon": "leaf",
+      "category": "Gestão",
+      "filters": [
+        "gestao",
+        "producao"
+      ],
+      "shortDesc": "Gestão e pesagem para operações do setor agropecuário, do talhão ao silo.",
+      "fullDesc": "O LC Agro organiza a pesagem e a movimentação de safras, insumos e animais, integrando balanças rodoviárias e de plataforma com o controle de estoque e produção da propriedade. Pensado para operar em áreas rurais, com sincronização inteligente de dados.",
+      "features": [
+        "Pesagem de cargas e talhões",
+        "Integração com balanças rodoviárias",
+        "Controle de estoque de insumos e safra",
+        "Relatórios de produtividade",
+        "Funciona sem sinal de internet",
+        "Múltiplos usuários por propriedade"
+      ],
+      "tech": [
+        "Flutter",
+        "Bluetooth LE",
+        "Cloud Sync",
+        "REST API"
+      ],
+      "compatibility": "Android 8.0 ou superior",
+      "version": "2.1.0",
+      "changelog": [
+        {
+          "v": "2.1.0",
+          "d": "Novo módulo de relatórios de produtividade."
+        },
+        {
+          "v": "2.0.0",
+          "d": "Suporte a múltiplas propriedades na mesma conta."
+        }
+      ],
+      "hasDownload": true
+    },
+    {
+      "id": "coletador-rbc",
+      "name": "Coletador RBC",
+      "icon": "database",
+      "category": "Técnico",
+      "filters": [
+        "tecnico",
+        "producao"
+      ],
+      "shortDesc": "Coleta de dados em campo para processos de pesagem e produção industrial.",
+      "fullDesc": "O Coletador RBC foi desenvolvido para técnicos e equipes de produção que precisam registrar dados de pesagem diretamente na linha, com leitura automática de indicadores e exportação estruturada para os sistemas da empresa.",
+      "features": [
+        "Leitura automática de indicadores digitais",
+        "Exportação em CSV e PDF",
+        "Cadastro rápido de lotes e operadores",
+        "Sincronização com sistemas internos",
+        "Interface otimizada para uso em campo",
+        "Alertas de leitura fora do padrão"
+      ],
+      "tech": [
+        "Flutter",
+        "Serial / RS-232",
+        "REST API"
+      ],
+      "compatibility": "Android 8.0 ou superior",
+      "version": "1.0.6",
+      "changelog": [
+        {
+          "v": "1.0.6",
+          "d": "Ajustes de desempenho na leitura serial."
+        },
+        {
+          "v": "1.0.0",
+          "d": "Primeira versão pública."
+        }
+      ],
+      "hasDownload": true
+    }
+  ],
+  "downloads": [
+    {
+      "id": "dl-lc-peso-apk",
+      "name": "LC Peso",
+      "platform": "Android",
+      "type": "android",
+      "version": "1.4.2",
+      "size": "24 MB",
+      "date": "10/07/2026",
+      "desc": "Aplicativo completo de pesagem com integração Bluetooth/BLE e Serial.",
+      "current": true,
+      "url": ""
+    },
+    {
+      "id": "dl-lc-agro-apk",
+      "name": "LC Agro",
+      "platform": "Android",
+      "type": "android",
+      "version": "2.1.0",
+      "size": "31 MB",
+      "date": "02/07/2026",
+      "desc": "Gestão e pesagem para operações do agronegócio.",
+      "current": true,
+      "url": ""
+    },
+    {
+      "id": "dl-coletador-apk",
+      "name": "Coletador RBC",
+      "platform": "Android",
+      "type": "android",
+      "version": "1.0.6",
+      "size": "18 MB",
+      "date": "28/06/2026",
+      "desc": "Coleta de dados em campo para pesagem industrial.",
+      "current": true,
+      "url": ""
+    },
+    {
+      "id": "dl-driver-serial",
+      "name": "Driver de Comunicação Serial",
+      "platform": "Windows",
+      "type": "windows",
+      "version": "3.2.1",
+      "size": "6 MB",
+      "date": "14/05/2026",
+      "desc": "Driver para leitura de indicadores via porta serial/RS-232 em desktop.",
+      "current": false,
+      "url": ""
+    },
+    {
+      "id": "dl-manual-instalacao",
+      "name": "Manual de Instalação Exatta Tech",
+      "platform": "PDF",
+      "type": "pdf",
+      "version": "1.3",
+      "size": "2 MB",
+      "date": "20/04/2026",
+      "desc": "Guia completo de instalação e primeira configuração dos aplicativos.",
+      "current": false,
+      "url": ""
+    },
+    {
+      "id": "dl-config-tool",
+      "name": "Exatta Config Tool",
+      "platform": "Windows",
+      "type": "tool",
+      "version": "1.0.4",
+      "size": "9 MB",
+      "date": "03/03/2026",
+      "desc": "Ferramenta para configuração avançada de indicadores e protocolos.",
+      "current": false,
+      "url": ""
+    }
+  ],
+  "manuals": [
+    {
+      "id": "m1",
+      "brand": "Toledo",
+      "model": "Prix 4 Uno",
+      "type": "Balança comercial",
+      "desc": "Manual de operação, calibração e códigos de erro do indicador Prix 4 Uno.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m2",
+      "brand": "Toledo",
+      "model": "Prix 3 Fit",
+      "type": "Balança comercial",
+      "desc": "Guia de instalação e configuração de rede para o modelo Prix 3 Fit.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m3",
+      "brand": "Toledo",
+      "model": "8217",
+      "type": "Indicador digital",
+      "desc": "Manual técnico completo do indicador de pesagem Toledo 8217.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m4",
+      "brand": "Urano",
+      "model": "UDC 4000",
+      "type": "Terminal de pesagem",
+      "desc": "Configuração de protocolo serial e parâmetros de calibração do UDC 4000.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m5",
+      "brand": "Urano",
+      "model": "Platina",
+      "type": "Balança comercial",
+      "desc": "Manual do usuário da linha Platina, com procedimentos de manutenção.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m6",
+      "brand": "Urano",
+      "model": "US 15/30",
+      "type": "Balança rodoviária",
+      "desc": "Instalação e calibração de balanças rodoviárias Urano US 15/30.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m7",
+      "brand": "Filizola",
+      "model": "CSP-10A",
+      "type": "Balança comercial",
+      "desc": "Manual técnico de operação e manutenção do modelo CSP-10A.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m8",
+      "brand": "Filizola",
+      "model": "Platform BP",
+      "type": "Balança de plataforma",
+      "desc": "Guia rápido de instalação e nivelamento da plataforma BP.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m9",
+      "brand": "Balmak",
+      "model": "BK 150",
+      "type": "Balança comercial",
+      "desc": "Manual de operação e limpeza da balança comercial BK 150.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m10",
+      "brand": "Balmak",
+      "model": "Rodoviária 60T",
+      "type": "Balança rodoviária",
+      "desc": "Procedimentos de calibração da balança rodoviária de 60 toneladas.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m11",
+      "brand": "Alfa",
+      "model": "TI400",
+      "type": "Indicador digital",
+      "desc": "Manual técnico do indicador Alfa TI400, com tabela de erros.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m12",
+      "brand": "Alfa",
+      "model": "AS-2000",
+      "type": "Balança comercial",
+      "desc": "Configuração inicial e uso diário da balança AS-2000.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m13",
+      "brand": "UPX",
+      "model": "Print 1000",
+      "type": "Impressora de etiquetas",
+      "desc": "Instalação de driver e configuração de etiquetas para o Print 1000.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m14",
+      "brand": "Ramuza",
+      "model": "RZ-30",
+      "type": "Balança de checkout",
+      "desc": "Manual de operação da balança de checkout Ramuza RZ-30.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m15",
+      "brand": "Systel",
+      "model": "SY-500",
+      "type": "Indicador digital",
+      "desc": "Guia de calibração e ajuste fino do indicador SY-500.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m16",
+      "brand": "Elgin",
+      "model": "EL-200",
+      "type": "Balança comercial",
+      "desc": "Manual do usuário e resolução de problemas comuns do EL-200.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m17",
+      "brand": "Celmi",
+      "model": "C-Series",
+      "type": "Balança analítica",
+      "desc": "Procedimentos de calibração de precisão da linha C-Series.",
+      "url": "",
+      "sourceUrl": ""
+    },
+    {
+      "id": "m18",
+      "brand": "Weightech",
+      "model": "WT-1000",
+      "type": "Terminal de pesagem",
+      "desc": "Configuração de comunicação serial do terminal WT-1000.",
+      "url": "",
+      "sourceUrl": ""
+    }
+  ],
+  "videos": [],
+  "products": [
+    {
+      "id": "prod-lc-peso-licenca",
+      "name": "LC Peso — Licença Anual",
+      "category": "Licença de software",
+      "icon": "scale",
+      "price": null,
+      "priceLabel": "Consultar preço",
+      "desc": "Licenciamento anual do aplicativo LC Peso com atualizações e suporte incluídos.",
+      "availability": "available"
+    },
+    {
+      "id": "prod-lc-agro-licenca",
+      "name": "LC Agro — Licença Anual",
+      "category": "Licença de software",
+      "icon": "leaf",
+      "price": null,
+      "priceLabel": "Consultar preço",
+      "desc": "Licenciamento anual do aplicativo LC Agro para propriedades e cooperativas.",
+      "availability": "available"
+    },
+    {
+      "id": "prod-kit-bluetooth",
+      "name": "Kit de Comunicação Bluetooth",
+      "category": "Equipamento",
+      "icon": "bluetooth",
+      "price": null,
+      "priceLabel": "Consultar preço",
+      "desc": "Módulo Bluetooth/BLE para conectar indicadores antigos aos aplicativos Exatta Tech.",
+      "availability": "low"
+    },
+    {
+      "id": "prod-instalacao",
+      "name": "Instalação e Configuração",
+      "category": "Serviço",
+      "icon": "wrench",
+      "price": null,
+      "priceLabel": "Solicitar orçamento",
+      "desc": "Instalação, configuração e treinamento inicial da equipe para uso dos aplicativos.",
+      "availability": "available"
+    },
+    {
+      "id": "prod-suporte-premium",
+      "name": "Suporte Técnico Premium",
+      "category": "Serviço",
+      "icon": "headset",
+      "price": null,
+      "priceLabel": "Consultar preço",
+      "desc": "Atendimento prioritário com SLA reduzido para operações críticas.",
+      "availability": "available"
+    },
+    {
+      "id": "prod-integracao-personalizada",
+      "name": "Integração Personalizada",
+      "category": "Sistema sob medida",
+      "icon": "cpu",
+      "price": null,
+      "priceLabel": "Solicitar orçamento",
+      "desc": "Desenvolvimento de integração específica entre seu sistema e equipamentos de pesagem.",
+      "availability": "available"
+    }
+  ],
+  "manufacturers": [
+    {
+      "id": "toledo",
+      "name": "Toledo",
+      "count": 66
+    },
+    {
+      "id": "urano",
+      "name": "Urano",
+      "count": 61
+    },
+    {
+      "id": "balmak",
+      "name": "Balmak",
+      "count": 10
+    },
+    {
+      "id": "alfa",
+      "name": "Alfa",
+      "count": 8
+    },
+    {
+      "id": "filizola",
+      "name": "Filizola",
+      "count": 7
+    },
+    {
+      "id": "upx",
+      "name": "UPX",
+      "count": 7
+    },
+    {
+      "id": "ramuza",
+      "name": "Ramuza",
+      "count": 6
+    },
+    {
+      "id": "systel",
+      "name": "Systel",
+      "count": 5
+    },
+    {
+      "id": "elgin",
+      "name": "Elgin",
+      "count": 4
+    },
+    {
+      "id": "celmi",
+      "name": "Celmi",
+      "count": 3
+    },
+    {
+      "id": "weightech",
+      "name": "Weightech",
+      "count": 3
+    },
+    {
+      "id": "lider",
+      "name": "Líder",
+      "count": 30
+    },
+    {
+      "id": "outros",
+      "name": "Outros fabricantes",
+      "count": 9
+    }
+  ],
+  "questions": []
+}
