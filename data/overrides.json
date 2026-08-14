@@ -2517,6 +2517,222 @@
       "desc": "A balança contadora CRB CL 6kg da Ramuza é ideal para quem busca precisão e praticidade na contagem de peças, especialmente em ambientes externos.",
       "url": "https://drive.google.com/file/d/1dUahQjYzDQ4JiwW8b13J9U2FNGSbHvx7/view",
       "sourceUrl": "https://drive.google.com/drive/folders/1ERqSPd6OAui-yugnjf7eDdmNrg_om0Q8"
+    },
+    {
+      "id": "m-alfa-mesa-roletes-mod-a",
+      "brand": "Alfa",
+      "model": "Mesa de roletes para balança Mod. A",
+      "type": "Balança industrial",
+      "desc": "Desenho dimensional",
+      "url": "https://alfainstrumentos.com.br/wp-content/uploads/2017/03/0485CM02-MESA-DE-ROLETES-PARA-BALAN%C3%87AS-MOD.-A.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-de-downloads-balancas/"
+    },
+    {
+      "id": "m-alfa-contramarco-mod-a",
+      "brand": "Alfa",
+      "model": "Contramarco para plataforma Mod. A",
+      "type": "Balança industrial",
+      "desc": "Guia de instalação",
+      "url": "https://alfainstrumentos.com.br/wp-content/uploads/2019/09/0595CM01-CONTRAMARCO-PARA-PLATAFORMA-MOD.-A-GUIA-DE-INSTALA%C3%87%C3%83O.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-de-downloads-balancas/"
+    },
+    {
+      "id": "m-alfa-plataforma-mod-a",
+      "brand": "Alfa",
+      "model": "Balança de piso Mod. A",
+      "type": "Balança industrial",
+      "desc": "Desenho dimensional da plataforma",
+      "url": "https://cdn.alfainstrumentos.com.br/wp-content/uploads/2017/04/0303CM03-PLATAFORMA-MOD-A.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-de-downloads-balancas/"
+    },
+    {
+      "id": "m-alfa-rampas-mod-a",
+      "brand": "Alfa",
+      "model": "Rampas para balança Mod. A",
+      "type": "Balança industrial",
+      "desc": "Desenho dimensional",
+      "url": "https://alfainstrumentos.com.br/wp-content/uploads/2020/05/0040CM03.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-de-downloads-balancas/"
+    },
+    {
+      "id": "m-alfa-carro-pedestal",
+      "brand": "Alfa",
+      "model": "Carro com pedestal CP e CPI",
+      "type": "Balança industrial",
+      "desc": "Desenho dimensional",
+      "url": "https://alfainstrumentos.com.br/wp-content/uploads/2020/07/0084CM03-CARRO-COM-PEDESTAL-CP-E-CPI.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-de-downloads-balancas/"
+    },
+    {
+      "id": "m-alfa-catalogo-piso",
+      "brand": "Alfa",
+      "model": "Balança de piso Mod. A",
+      "type": "Balança industrial",
+      "desc": "Catálogo do produto",
+      "url": "https://alfainstrumentos.com.br/wp-content/uploads/2024/06/WEB0002CL.01_BALANCA_PISO.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-de-downloads-balancas/"
+    },
+    {
+      "id": "m-alfa-dimensional-mod-b",
+      "brand": "Alfa",
+      "model": "Balança de bancada Mod. B",
+      "type": "Balança comercial",
+      "desc": "Desenho dimensional",
+      "url": "https://alfainstrumentos.com.br/wp-content/uploads/2016/09/0446CM01.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-de-downloads-balancas/"
+    },
+    {
+      "id": "m-alfa-catalogo-bancada",
+      "brand": "Alfa",
+      "model": "Balança de bancada Mod. B",
+      "type": "Balança comercial",
+      "desc": "Catálogo do produto",
+      "url": "https://alfainstrumentos.com.br/wp-content/uploads/2024/06/WEB0013CL.01_BALANCA_BANCADA.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-de-downloads-balancas/"
+    },
+    {
+      "id": "m-alfa-catalogo-geral",
+      "brand": "Alfa",
+      "model": "Catálogo geral de produtos Alfa",
+      "type": "Catálogo",
+      "desc": "Catálogo geral de produtos",
+      "url": "https://alfainstrumentos.com.br/wp-content/uploads/2024/05/0020CL00-CATALOGO-GERAL-DE-PRODUTOS.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-de-downloads-balancas/"
+    },
+    {
+      "id": "m-upx-ea-15",
+      "brand": "UPX",
+      "model": "EA-15",
+      "type": "Balança comercial",
+      "desc": "Manual do usuário",
+      "url": "https://upxsolution.com.br/wp-content/uploads/2026/04/Manual_Usurio_EA-15_r4.pdf",
+      "sourceUrl": "https://upxsolution.com.br/produto/balanca-comercial-ea-15/"
+    },
+    {
+      "id": "m-upx-ea-20",
+      "brand": "UPX",
+      "model": "EA-20",
+      "type": "Balança comercial",
+      "desc": "Manual do usuário",
+      "url": "https://upxsolution.com.br/wp-content/uploads/2026/04/Manual_Usuario_EA-20.pdf",
+      "sourceUrl": "https://upxsolution.com.br/produto/balanca-comercial-ea-20/"
+    },
+    {
+      "id": "m-upx-ea-32",
+      "brand": "UPX",
+      "model": "EA-32",
+      "type": "Balança comercial",
+      "desc": "Manual do usuário",
+      "url": "https://upxsolution.com.br/wp-content/uploads/2026/04/Manual_Usuario_EA32.pdf",
+      "sourceUrl": "https://upxsolution.com.br/produto/balanca-comercial-ea-32/"
+    },
+    {
+      "id": "m-upx-acqua-15",
+      "brand": "UPX",
+      "model": "Acqua 15",
+      "type": "Balança comercial",
+      "desc": "Manual do usuário",
+      "url": "https://upxsolution.com.br/wp-content/uploads/2026/04/Manual_do_Usuario_Acqua15.pdf",
+      "sourceUrl": "https://upxsolution.com.br/produto/balanca-comercial-acqua-15/"
+    },
+    {
+      "id": "m-upx-acqua-30",
+      "brand": "UPX",
+      "model": "Acqua 30",
+      "type": "Balança comercial",
+      "desc": "Manual do usuário",
+      "url": "https://upxsolution.com.br/wp-content/uploads/2026/04/Manual_do_Usuario_Acqua30.pdf",
+      "sourceUrl": "https://upxsolution.com.br/produto/balanca-comercial-acqua-30/"
+    },
+    {
+      "id": "m-upx-wind-d3",
+      "brand": "UPX",
+      "model": "Wind D3",
+      "type": "Balança comercial",
+      "desc": "Manual do usuário",
+      "url": "https://upxsolution.com.br/wp-content/uploads/2026/04/Manual_Usuario_WindD3.pdf",
+      "sourceUrl": "https://upxsolution.com.br/produto/balanca-comercial-wind-d3/"
+    },
+    {
+      "id": "m-systel-cuora-neo",
+      "brand": "Systel",
+      "model": "Cuora Neo",
+      "type": "Balança comercial",
+      "desc": "Manual do usuário",
+      "url": "https://systel-global.com/downloads/Manual-Cuora-Neo-br.pdf",
+      "sourceUrl": "https://systel-global.com/brasil/balancas/cuora-neo/"
+    },
+    {
+      "id": "m-systel-cuora-max",
+      "brand": "Systel",
+      "model": "Cuora Max",
+      "type": "Balança comercial",
+      "desc": "Manual do usuário",
+      "url": "https://drive.google.com/file/d/1M-vPorb9LE6cDwavkWIfsmz_K772PlDF/view",
+      "sourceUrl": "https://systel-global.com/brasil/balancas/cuora-max/"
+    },
+    {
+      "id": "m-systel-passer",
+      "brand": "Systel",
+      "model": "Passer",
+      "type": "Balança comercial",
+      "desc": "Manual do usuário",
+      "url": "https://drive.google.com/file/d/12KsI_p96nCZaZ3JZ25bwhDVaCHeDG8cT/view",
+      "sourceUrl": "https://systel-global.com/brasil/balancas/passer/"
+    },
+    {
+      "id": "m-systel-passer-checkout",
+      "brand": "Systel",
+      "model": "Passer Check-Out",
+      "type": "Balança comercial",
+      "desc": "Manual do usuário",
+      "url": "https://drive.google.com/file/d/1WOhFs1SP9sYBAuYF5AU1SQ4owm7p_f-P/view",
+      "sourceUrl": "https://systel-global.com/brasil/balancas/passer-check-out/"
+    },
+    {
+      "id": "m-systel-clipse",
+      "brand": "Systel",
+      "model": "Clipse",
+      "type": "Balança comercial",
+      "desc": "Manual do usuário",
+      "url": "https://systel-global.com/downloads/34516-08-Manual-Clipse-BRA.pdf",
+      "sourceUrl": "https://systel-global.com/brasil/balancas/clipse/"
+    },
+    {
+      "id": "m-elgin-linha-dp",
+      "brand": "Elgin",
+      "model": "Balança Computadora Linha DP",
+      "type": "Balança comercial",
+      "desc": "Manual do usuário",
+      "url": "http://elgin.imagenet.eti.br/imagenet/DownloadCenter/2018-12-20_11-05-280_64370600.pdf",
+      "sourceUrl": "https://www.elgin.com.br/Produtos/automacao/balancas"
+    },
+    {
+      "id": "m-elgin-el250",
+      "brand": "Elgin",
+      "model": "EL250",
+      "type": "Balança comercial",
+      "desc": "Manual do usuário",
+      "url": "http://elgin.imagenet.eti.br/imagenet/DownloadCenter/2020-08-25_18-16-280_95048500.pdf",
+      "sourceUrl": "https://www.elgin.com.br/Produtos/automacao/balancas"
+    },
+    {
+      "id": "m-elgin-sa-110",
+      "brand": "Elgin",
+      "model": "SA-110",
+      "type": "Balança comercial",
+      "desc": "Manual de serviços",
+      "url": "http://elgin.imagenet.eti.br/imagenet/DownloadPublico/Automacao/Balancas/SA110/Manual%20de%20Servicos%20SA-110.pdf",
+      "sourceUrl": "https://www.elgin.com.br/Produtos/automacao/balancas"
+    },
+    {
+      "id": "m-filizola-suspensa-iwb",
+      "brand": "Filizola",
+      "model": "Balança Suspensa mod. IWB",
+      "type": "Balança industrial",
+      "desc": "Manual do usuário",
+      "url": "https://www.oswaldofilizola.com.br/pdf/Manual%20Balan%C3%A7a%20Suspensa%20mod.%20IWB%20rev%20out17.pdf",
+      "sourceUrl": "https://www.oswaldofilizola.com.br/"
     }
   ],
   "videos": [],
