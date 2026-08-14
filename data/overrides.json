@@ -3032,7 +3032,8 @@
     "downloads": [
       "dl-config-tool",
       "dl-manual-instalacao",
-      "dl-driver-serial"
+      "dl-driver-serial",
+      "dl-coletador-apk"
     ],
     "manuals": [
       "m4",
