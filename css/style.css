@@ -3,8 +3,6 @@
    Tecnologia, precisão e engenharia aplicadas a pesagem industrial.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
-
 :root {
   /* Cores base */
   --bg: #090c12;
@@ -26,7 +24,7 @@
   /* Texto */
   --text: #f4f7fb;
   --text-secondary: #9aa7bd;
-  --text-muted: #6c7891;
+  --text-muted: #7c88a1;
 
   /* Estado */
   --success: #2ecc8f;
