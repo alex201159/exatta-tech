@@ -43,7 +43,7 @@
     manufacturers: "Adicionar fabricante",
   };
   const SUPPORTS_IMAGE = { apps: true, downloads: true, products: true };
-  const SUPPORTS_GALLERY = { products: true };
+  const SUPPORTS_GALLERY = { apps: true, products: true };
   const SUPPORTS_FILE = { downloads: true };
   const MAX_IMAGE_BYTES = 3 * 1024 * 1024;
   const MAX_DOWNLOAD_BYTES = 40 * 1024 * 1024;
@@ -566,6 +566,9 @@
         form.fullDesc.value = item.fullDesc || "";
         form.features.value = (item.features || []).join("\n");
         form.hasDownload.checked = !!item.hasDownload;
+        form.videoUrls.value = (item.videos || []).join("\n");
+        form.galleryUrls.value = (item.gallery || []).join("\n");
+        updateGalleryPreview("apps", item.gallery || []);
         break;
       case "downloads":
         form.name.value = item.name || "";
@@ -870,6 +873,7 @@
           compatibility: fd.get("compatibility") || "",
           version: fd.get("version") || "1.0.0",
           hasDownload: fd.get("hasDownload") === "on",
+          videos: linesToArray(fd.get("videoUrls")),
         });
       case "downloads":
         return Object.assign(carry, {

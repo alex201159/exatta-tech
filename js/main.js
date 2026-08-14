@@ -414,13 +414,23 @@
     });
   }
 
+  function appMediaImages(app) {
+    return [app.image, ...(app.gallery || [])].filter(Boolean);
+  }
+
+  function setAppModalMedia(overlay, src, iconName) {
+    qs("#modalMedia", overlay).innerHTML = src
+      ? `<img src="${src}" alt="" style="width:100%;height:100%;object-fit:contain;border-radius:inherit">`
+      : icon(iconName);
+    qsa(".gallery-thumbs img", overlay).forEach((t) => t.classList.toggle("is-active", t.getAttribute("data-src") === src));
+  }
+
   function openAppModal(id) {
     const overlay = qs("#appModal");
     const app = APPS.find((a) => a.id === id);
     if (!overlay || !app) return;
-    qs("#modalMedia", overlay).innerHTML = app.image
-      ? `<img src="${app.image}" alt="${app.name}" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">`
-      : icon(app.icon);
+    const images = appMediaImages(app);
+
     qs("#modalTitle", overlay).textContent = app.name;
     qs("#modalCategory", overlay).textContent = app.category;
     qs("#modalVersion", overlay).textContent = `Versão ${app.version}`;
@@ -433,6 +443,19 @@
     qs("#modalChangelog", overlay).innerHTML = app.changelog
       .map((c) => `<p><strong>v${c.v}</strong> — ${c.d}</p>`)
       .join("");
+
+    setAppModalMedia(overlay, images[0] || "", app.icon);
+    const thumbsEl = qs("#modalThumbs", overlay);
+    thumbsEl.innerHTML =
+      images.length > 1
+        ? images.map((src) => `<img src="${src}" data-src="${src}" alt="" class="${src === images[0] ? "is-active" : ""}">`).join("")
+        : "";
+    qsa("img", thumbsEl).forEach((thumb) => {
+      thumb.addEventListener("click", () => setAppModalMedia(overlay, thumb.getAttribute("data-src"), app.icon));
+    });
+
+    qs("#modalVideoWrap", overlay).innerHTML = videosEmbedHtml(app.videos || []);
+
     const dlBtn = qs("#modalDownload", overlay);
     if (dlBtn) dlBtn.href = `downloads.html#${app.id}`;
     overlay.classList.add("is-open");

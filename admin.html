@@ -118,11 +118,23 @@
           <div class="field"><label>Tecnologias (separadas por vírgula)</label><input name="tech" placeholder="Flutter, Bluetooth LE"></div>
           <div class="field"><label>Filtros da página Apps (separados por vírgula)</label><input name="filters" placeholder="balancas, gestao, tecnico, producao, licencas"></div>
           <div class="field full">
-            <label>Foto do app (opcional)</label>
+            <label>Foto de capa (opcional)</label>
             <input type="file" name="imageFile" accept="image/*" data-image-input="apps">
             <p class="admin-field-hint">Escolher um arquivo aqui tem prioridade. Até 3 MB. Ou cole um link abaixo:</p>
             <input type="url" name="imageUrl" placeholder="https://... (link de uma imagem já hospedada)" style="margin-top:8px">
             <img class="admin-image-preview" data-image-preview="apps" alt="Prévia">
+          </div>
+          <div class="field full">
+            <label>Mais fotos do app (opcional, aparecem em "Conhecer")</label>
+            <input type="file" name="galleryFiles" accept="image/*" multiple data-gallery-input="apps">
+            <p class="admin-field-hint">Pode escolher várias fotos de uma vez. Até 3 MB cada. Ou cole links abaixo, um por linha:</p>
+            <textarea name="galleryUrls" rows="3" placeholder="https://...&#10;https://..." style="margin-top:8px"></textarea>
+            <div class="admin-gallery-preview" data-gallery-preview="apps"></div>
+          </div>
+          <div class="field full">
+            <label>Vídeos do app (opcional)</label>
+            <textarea name="videoUrls" rows="3" placeholder="https://youtube.com/...&#10;https://vimeo.com/...&#10;https://.../video.mp4"></textarea>
+            <p class="admin-field-hint">Pode colar vários links, um por linha. YouTube, Vimeo e links diretos de vídeo (.mp4) tocam embutido em "Conhecer"; qualquer outro link aparece como um botão para assistir.</p>
           </div>
           <div class="field full"><label>Descrição curta (aparece no card)</label><input name="shortDesc" required placeholder="Frase curta"></div>
           <div class="field full"><label>Descrição completa</label><textarea name="fullDesc" placeholder="Texto completo, aparece ao clicar em Conhecer"></textarea></div>
