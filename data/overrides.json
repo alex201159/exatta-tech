@@ -3030,7 +3030,9 @@
   "manufacturers": [],
   "youtubeApiKey": "AIzaSyCYV9YPFxEPcALqtmDqhwhomO27g-vPsPE",
   "removed": {
-    "apps": [],
+    "apps": [
+      "coletador-rbc"
+    ],
     "downloads": [
       "dl-config-tool",
       "dl-manual-instalacao",
