@@ -2733,6 +2733,276 @@
       "desc": "Manual do usuário",
       "url": "https://www.oswaldofilizola.com.br/pdf/Manual%20Balan%C3%A7a%20Suspensa%20mod.%20IWB%20rev%20out17.pdf",
       "sourceUrl": "https://www.oswaldofilizola.com.br/"
+    },
+    {
+      "id": "m-lider-balanca-b140-ld1050",
+      "brand": "Líder",
+      "model": "Balança B140-LD1050",
+      "type": "Balança",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/balanca-b140-ld1050.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-balanca-b150-ld1050",
+      "brand": "Líder",
+      "model": "Balança B150-LD1050",
+      "type": "Balança",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/balanca-b150-ld1050.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-balanca-b160-ld1050",
+      "brand": "Líder",
+      "model": "Balança B160-LD1050",
+      "type": "Balança",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/balanca-b160-ld1050.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-balanca-b180-ld1050",
+      "brand": "Líder",
+      "model": "Balança B180-LD1050",
+      "type": "Balança",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/balanca-b180-ld1050.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-balanca-b530-ld1050",
+      "brand": "Líder",
+      "model": "Balança B530-LD1050",
+      "type": "Balança",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/balanca-b530-ld1050.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-balanca-comercial-ld230",
+      "brand": "Líder",
+      "model": "Balança Comercial LD230",
+      "type": "Balança",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/f3bd80cd02e05bbe89ed723170c31a26.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-balanca-p150c-ld1050",
+      "brand": "Líder",
+      "model": "Balança P150C-LD1050",
+      "type": "Balança",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/balanca-p150c-ld1050.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-balanca-p180c-ld1050",
+      "brand": "Líder",
+      "model": "Balança P180C-LD1050",
+      "type": "Balança",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/balanca-p180c-ld1050.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-balanca-p200c-ld1050",
+      "brand": "Líder",
+      "model": "Balança P200C-LD1050",
+      "type": "Balança",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/balanca-p200c-ld1050.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-balanca-p300c-ld1050",
+      "brand": "Líder",
+      "model": "Balança P300C-LD1050",
+      "type": "Balança",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/balanca-p300c-ld1050.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-ld235-baby",
+      "brand": "Líder",
+      "model": "Ld235-baby",
+      "type": "Balança",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/080a39a42bbd4e173860228bd8b83efd.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-p150-180-200m",
+      "brand": "Líder",
+      "model": "P150 - 180 - 200M",
+      "type": "Balança",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/p150-180-200m.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-impressor-remoto-cr31",
+      "brand": "Líder",
+      "model": "Impressor Remoto CR31",
+      "type": "Indicador digital",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/1021aa385d6dfa9fdb06a93d4e175a05.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-indicador-digital-ld1050",
+      "brand": "Líder",
+      "model": "Indicador digital LD1050",
+      "type": "Indicador digital",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/62c999768d0269622d43cdfb0483c520.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-indicador-digital-ld2000-system",
+      "brand": "Líder",
+      "model": "Indicador Digital LD2000 System",
+      "type": "Indicador digital",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/25f4128e3e188d475f3640f5bb5a5003.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-indicador-digital-ld2051",
+      "brand": "Líder",
+      "model": "Indicador digital LD2051",
+      "type": "Indicador digital",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/442604077.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-indicador-digital-ld6000",
+      "brand": "Líder",
+      "model": "Indicador digital LD6000",
+      "type": "Indicador digital",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/dd61d57441b7dd5e0ecd0f9e2179a998.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-empilhadeira-ep-8000",
+      "brand": "Líder",
+      "model": "Empilhadeira EP 8000",
+      "type": "Transpaleteira",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/ee21b6b8536ed4cdb00cc26f3bafa4ab.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-empilhadeira-ep5000",
+      "brand": "Líder",
+      "model": "Empilhadeira EP5000",
+      "type": "Transpaleteira",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/919c468e4f604e4bb5efd8fbec39c0b7.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-transpaleteira-ld1052",
+      "brand": "Líder",
+      "model": "TRANSPALETEIRA LD1052",
+      "type": "Transpaleteira",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/10b924dcd0a16caadc42045194431842.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-transpaleteira-ld1053",
+      "brand": "Líder",
+      "model": "Transpaleteira LD1053",
+      "type": "Transpaleteira",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/084c307448f28ea9d6f6eac34dba10a4.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-tensiometro-pr20",
+      "brand": "Líder",
+      "model": "Tensiômetro PR20",
+      "type": "Dinamômetro",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/tensiometro-pr20.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-dinamometro-pr30",
+      "brand": "Líder",
+      "model": "Dinamômetro PR30",
+      "type": "Dinamômetro",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/dinamometro-pr30.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-medidor-de-tensao-tcf",
+      "brand": "Líder",
+      "model": "Medidor de Tensão – TCF",
+      "type": "Tensiômetro",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/medidor-de-tensao-tcf.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-tensiometro-dp30-40-50",
+      "brand": "Líder",
+      "model": "Tensiômetro DP30/40/50",
+      "type": "Tensiômetro",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/tensiometro-dp30-40-50.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-drive-de-recepcao-de-peso-drp",
+      "brand": "Líder",
+      "model": "Drive de recepção de peso DRP",
+      "type": "Software",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/drive-de-recepcao-de-peso-drp.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-gerenciamento-de-peso-rodoviario-gpr",
+      "brand": "Líder",
+      "model": "Gerenciamento de peso rodoviário GPR",
+      "type": "Software",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/gerenciamento-de-peso-rodoviario-gpr.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-display-remoto-dp400",
+      "brand": "Líder",
+      "model": "DISPLAY REMOTO DP400",
+      "type": "Display",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/display-remoto-dp400.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-controle-para-testes-tc310",
+      "brand": "Líder",
+      "model": "Controle para Testes TC310",
+      "type": "Testador de células",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/controle-para-testes-tc310.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-lider-balancas-agropecuarias",
+      "brand": "Líder",
+      "model": "Balanças Agropecuárias",
+      "type": "Balança agropecuária",
+      "desc": "Manual do usuário",
+      "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/3c309f6e21ab7e76c873f97f92005b5b.pdf",
+      "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
     }
   ],
   "videos": [],

@@ -279,6 +279,7 @@ const MANUFACTURERS = [
   { id: "elgin", name: "Elgin", count: 4 },
   { id: "celmi", name: "Celmi", count: 3 },
   { id: "weightech", name: "Weightech", count: 3 },
+  { id: "lider", name: "Líder", count: 30 },
   { id: "outros", name: "Outros fabricantes", count: 9 },
 ];
 
