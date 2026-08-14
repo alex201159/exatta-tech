@@ -546,6 +546,969 @@
       "desc": "Manual técnico",
       "url": "https://primaxbalancas.com.br/wp-content/uploads/Manual-técnico-WT-27-R.pdf",
       "sourceUrl": "https://primaxbalancas.com.br/downloads/manuais/"
+    },
+    {
+      "id": "m-urano-abafador-de-som",
+      "brand": "Urano",
+      "model": "Abafador de som",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Abafador_Som_11503020265_1.1.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-adaptador-serial-ttl-usb",
+      "brand": "Urano",
+      "model": "Adaptador serial TTL/USB",
+      "type": "Comercial, Industrial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Adaptador_Serial_TTL-USB_11503020350_1.1.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-aquecedor-de-sopa-e-feijoada",
+      "brand": "Urano",
+      "model": "Aquecedor de sopa e feijoada",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Aquecedor_Sopa_Feijoada_R_1.4_11503020250.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-analitica-ua-220k-linha-urano-la",
+      "brand": "Urano",
+      "model": "Balança analítica UA 220K (Linha Urano Lab – com calibração externa)",
+      "type": "Analítica e de Precisão",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_URANO_LAB_220k_calibracao_externa_11503020374_1.2.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-analitica-ua-220k-linha-urano-la-2",
+      "brand": "Urano",
+      "model": "Balança analítica UA 220K (Linha Urano Lab – com calibração interna)",
+      "type": "Analítica e de Precisão",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_URANO_LAB_220k_com_calibracao_interna_111503020376_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-b35",
+      "brand": "Urano",
+      "model": "Balança computadora B35",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_B35_1.1_11503020370.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-b35c-b35c-t",
+      "brand": "Urano",
+      "model": "Balança computadora B35C / B35C-T",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_B35C_11503020372_1.1.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-b40",
+      "brand": "Urano",
+      "model": "Balança computadora B40",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_B40_11503020375_1.0.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-pop-s-4v-com-saida-u",
+      "brand": "Urano",
+      "model": "Balança computadora POP-S 4V com saída USB",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_US_POP_S_4V_USB_11503020386_1.0.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-pop-z-eco-4v",
+      "brand": "Urano",
+      "model": "Balança computadora POP-Z ECO 4V",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_US_31x2_POPLIGHT+_11503020371_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-pop-z-eco-4v-guia-ra",
+      "brand": "Urano",
+      "model": "Balança computadora POP-Z ECO 4V – Guia rápido",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Guia_Rapido_BAL_ECO-22.0-v1.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-pop-z-new-4v",
+      "brand": "Urano",
+      "model": "Balança computadora POP-Z NEW 4V",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_US_POP_Z_NEW_4V_11503020368_1.4.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-pop-z-new-connect-us",
+      "brand": "Urano",
+      "model": "Balança computadora POP-Z New Connect - USB",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_US_POP_Z_4V_New_Connect_11503020383_1.1.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-top",
+      "brand": "Urano",
+      "model": "Balança computadora TOP",
+      "type": "Automação Comercial, Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_TOP_11503020127_1.6.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-topmax-ii",
+      "brand": "Urano",
+      "model": "Balança computadora TOPMAX-II",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_Topmax-II_11503020284_1.6.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-topmax-s",
+      "brand": "Urano",
+      "model": "Balança computadora TOPMAX-S",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_TopmaxS_11503020282_1.4.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-topmax-ss",
+      "brand": "Urano",
+      "model": "Balança computadora TOPMAX-SS",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_TopmaxSS_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-topmax-ss-plus",
+      "brand": "Urano",
+      "model": "Balança computadora TOPMAX-SS Plus",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_TopmaxSS_Plus_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-topmax-ss-plus-mobil",
+      "brand": "Urano",
+      "model": "Balança computadora TOPMAX-SS Plus Mobile",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_TopmaxSS_Plus_Mobile_1.1.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-topmax-maximus-iv",
+      "brand": "Urano",
+      "model": "Balança computadora TOPMAX/Maximus IV",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_USMSMD_MAXIMUS_IV_11503020130_1.4.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-us-multi-30-2",
+      "brand": "Urano",
+      "model": "Balança computadora US Multi 30/2",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_US-MULTI-30-2-SM_11503020281_1.5.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-us-pop-s-4v",
+      "brand": "Urano",
+      "model": "Balança computadora US POP-S 4V",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_US_POPS_ 4V_11503020366_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-us-pop-s-6v",
+      "brand": "Urano",
+      "model": "Balança computadora US POP-S 6V",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Bal_US_POP-S_6v_11503020121_2.0.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-us-pop-z-4v",
+      "brand": "Urano",
+      "model": "Balança computadora US POP-Z 4V",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_US-POP-Z_4V_11503020379_1.0.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-computadora-us-pop-z-6v",
+      "brand": "Urano",
+      "model": "Balança computadora US POP-Z 6V",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_US-POP-Z_6v_11503020226_1.6.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-de-cozinha-uc-2",
+      "brand": "Urano",
+      "model": "Balança de cozinha UC 2",
+      "type": "Personal",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_Cozinha_UC-2_11503020543_1.4.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-para-checkout-com-scanner-strato",
+      "brand": "Urano",
+      "model": "Balança para checkout com scanner Stratos",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_UDC_CO_E_SCN_11503020275_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-para-checkout-udc-co-e",
+      "brand": "Urano",
+      "model": "Balança para checkout UDC CO E",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_UDCCO_COE_YS_11503020273_1.5.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-para-pesar-pessoas-pp180-180-a",
+      "brand": "Urano",
+      "model": "Balança para pesar pessoas PP180/180-A",
+      "type": "Médico Hospitalar",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Bal_PP180-PP180A_11503020234_1.4.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-pediatrica-ubb",
+      "brand": "Urano",
+      "model": "Balança pediátrica UBB",
+      "type": "Médico Hospitalar",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_UBB_11503020236_1.8.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-personal-up-150",
+      "brand": "Urano",
+      "model": "Balança personal UP 150",
+      "type": "Personal",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_UP150_11503020544_1.5.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-personal-up-150-s",
+      "brand": "Urano",
+      "model": "Balança personal UP 150-S",
+      "type": "Personal",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_UP150S_11503020237_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-personal-upc-150",
+      "brand": "Urano",
+      "model": "Balança personal UPC 150",
+      "type": "Personal",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_UPC_150_11503020546_1.4.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-personal-upp-0300",
+      "brand": "Urano",
+      "model": "Balança personal UPP 0300",
+      "type": "Personal",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_UPP0300_11503020238_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-pesadora-e-contadora-de-pecas-cp",
+      "brand": "Urano",
+      "model": "Balança pesadora e contadora de peças CP POP",
+      "type": "Industrial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_CP-POP_11503020172_2.0.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-pesadora-e-contadora-de-pecas-cp-2",
+      "brand": "Urano",
+      "model": "Balança pesadora e contadora de peças CP POP+ 4V",
+      "type": "Industrial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_CPPOP+_11503020369_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-pesadora-uc5",
+      "brand": "Urano",
+      "model": "Balança pesadora UC5",
+      "type": "Industrial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_UC5_11503020248_1.5.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-pesadora-udc-6000-1s",
+      "brand": "Urano",
+      "model": "Balança pesadora UDC 6000/1S",
+      "type": "Industrial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_UDC_6000-1_11503020215_1.8.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-pesadora-udc-co",
+      "brand": "Urano",
+      "model": "Balança pesadora UDC CO",
+      "type": "Industrial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_UDCCO_COE_YS_11503020273_1.5.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-pesadora-udc-pop-4v",
+      "brand": "Urano",
+      "model": "Balança pesadora UDC POP 4V",
+      "type": "Industrial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_UDC_POP_4V_11503020384_1.1.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-pesadora-udc-pop-6v-abaixo-de-15",
+      "brand": "Urano",
+      "model": "Balança pesadora UDC POP 6V (abaixo de 15kg)",
+      "type": "Industrial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_UDC_POP_11503020170_1.9.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-pesadora-udc-pop-6v-de-15-e-20kg",
+      "brand": "Urano",
+      "model": "Balança pesadora UDC POP 6V (de 15 e 20kg)",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Bal_UDC_POP_res_11503020235_1.6.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-pesadora-udc-premium",
+      "brand": "Urano",
+      "model": "Balança pesadora UDC Premium",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_UDC_PREMIUM_LIGHT_11503020119_1.6.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-semianalitica-ua-310k-linha-uran",
+      "brand": "Urano",
+      "model": "Balança semianalítica UA 310K (Linha Urano Lab – com calibração externa)",
+      "type": "Analítica e de Precisão",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_URANO_LAB_ 310k_calibracao_externa_11503020380_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-semianalitica-ua-5100k-linha-ura",
+      "brand": "Urano",
+      "model": "Balança semianalítica UA 5100K (Linha Urano Lab – com calibração externa)",
+      "type": "Analítica e de Precisão",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_URANO_LAB_5100K_calibracao_externa)_11503020381_1.4.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-semianalitica-ud-1500-0-1-ud-min",
+      "brand": "Urano",
+      "model": "Balança semianalítica UD 1500/0,1 (UD Mini)",
+      "type": "Analítica e de Precisão",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_UD_1500_LE_11503020219_1.5.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balanca-ur-10-000-light-300-100",
+      "brand": "Urano",
+      "model": "Balança UR 10.000 Light 300/100",
+      "type": "Médico Hospitalar",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal-UR10000_LIGHT_300-100_11503020306_1.1.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balancas-analitica-e-semianaliticas-ua-2",
+      "brand": "Urano",
+      "model": "Balanças analítica e semianalíticas UA 220, 420 e 5200 (Linha Urano Lab com botão de calibração interna)",
+      "type": "Analítica e de Precisão",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_URANO_LAB_com_Botao_Calibracao_11503020300_1.4.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balancas-analitica-e-semianaliticas-ua-2-2",
+      "brand": "Urano",
+      "model": "Balanças analítica e semianalíticas UA 220, 420 e 5200 (Linha Urano Lab)",
+      "type": "Analítica e de Precisão",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Man_Bal_URANO_LAB_220-420-5200_11503020296%20_1.4.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balancas-de-plataforma-w-com-encosto",
+      "brand": "Urano",
+      "model": "Balanças de Plataforma W com encosto",
+      "type": "Industrial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_bal_plataf_W_encosto_11503020389_1.0.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-balancas-pesadoras-udc-10000-1-e-e-udc-2",
+      "brand": "Urano",
+      "model": "Balanças pesadoras UDC 10000/1 – E e UDC 20000/2 - E",
+      "type": "Comercial, Industrial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_UDC_10000_20000_11.50.302.0378_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-comando-pesador-e-contador-de-pecas-ur-1",
+      "brand": "Urano",
+      "model": "Comando Pesador e Contador de Peças UR 10.000 Pro (para balanças de plataforma)",
+      "type": "Industrial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Comando_UR10000_PRO_11503020390_1.0.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-comando-pesador-ur-10-000-light-para-bal",
+      "brand": "Urano",
+      "model": "Comando pesador UR 10.000 Light (para balanças de plataforma)",
+      "type": "Industrial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Comando_UR-LIGHT_11503020118_1.8.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-comando-pesador-contador-de-pecas-ur-10-",
+      "brand": "Urano",
+      "model": "Comando pesador/contador de peças UR 10.000 (para balanças de plataforma)",
+      "type": "Industrial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Comando_UR10000_11503020194_1.8.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-conversor-de-protocolo-pz-p3",
+      "brand": "Urano",
+      "model": "Conversor de protocolo PZ-P3",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Conversor_protocolo_PZ-P3_11503020351_1.1.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-descascador-de-batatas",
+      "brand": "Urano",
+      "model": "Descascador de batatas",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Descascador_Batatas_11503020258_1.4.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-dispositivo-de-conferencia-de-peso-urano",
+      "brand": "Urano",
+      "model": "Dispositivo de Conferência de Peso Urano Self Checkout",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Urano_Self_checkout.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-extrator-de-sucos",
+      "brand": "Urano",
+      "model": "Extrator de sucos",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Extrator_Sucos_UJE_203_11503020257_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-fatiador-de-frios-sm-300",
+      "brand": "Urano",
+      "model": "Fatiador de frios SM 300",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Fatiador_Frios_SM300_11503020379_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-fatiador-de-frios-usm1-195",
+      "brand": "Urano",
+      "model": "Fatiador de frios USM1 195",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_USM1_195_11503020252_1.1.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-fatiador-de-frios-usm1-320",
+      "brand": "Urano",
+      "model": "Fatiador de frios USM1 320",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Cortador_USM1_320_11503020230_2.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-fatiador-de-frios-usm1-350",
+      "brand": "Urano",
+      "model": "Fatiador de frios USM1 350",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Cortador_USM1_350_11503020249_1.4.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-fatiador-de-tomates",
+      "brand": "Urano",
+      "model": "Fatiador de tomates",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_fatiador_tomates_11503020247_1.1.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-fatiadores-de-frios-usm1-220-e-300",
+      "brand": "Urano",
+      "model": "Fatiadores de frios USM1 220 e 300",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Cortador_USM1_220_300_11503020227_1.5.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-fatiadores-de-frios-usm2",
+      "brand": "Urano",
+      "model": "Fatiadores de frios USM2",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Cortador_Carne_USM2_11503020232_1.6.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-gaveta-para-cedulas-e-moedas-gcmp-170",
+      "brand": "Urano",
+      "model": "Gaveta para cédulas e moedas GCMP 170",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Gaveta_GCMP170_11503020354_1.2.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-guia-de-instalacao-do-defletor-do-fatiad",
+      "brand": "Urano",
+      "model": "Guia de instalação do Defletor do Fatiador de frios SM 300",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Guia_instalacao_def_SM%20300_11503010253_1.0.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-guia-rapido-da-balanca-pesadora-e-contad",
+      "brand": "Urano",
+      "model": "Guia rápido da Balança pesadora e contadora de peças CP POP+ 4V",
+      "type": "Industrial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/GUIA_RAPIDO_CPPOP+_4V.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-guia-rapido-das-balancas-b35c-b35c-t",
+      "brand": "Urano",
+      "model": "Guia rápido das balanças B35C / B35C-T",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/GUIA_RAPIDO_(Bal%20B35C-CT).pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-guia-rapido-das-balancas-da-linha-ba37",
+      "brand": "Urano",
+      "model": "Guia Rápido das balanças da Linha BA37",
+      "type": "Automação Comercial, Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/GUIA_RAPIDO_DA_BALANCAS_LINHA_BA37.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-impressora-de-cupom-zk-300-ues-qr",
+      "brand": "Urano",
+      "model": "Impressora de cupom ZK 300 UES-QR",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Imp_ZK300_UESQR_11503020304_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-impressora-de-cupom-zk-50-e",
+      "brand": "Urano",
+      "model": "Impressora de cupom ZK 50-E",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Imp_ZK50E_11503020259_1.2.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-impressora-de-cupom-zp-160-wi-fi",
+      "brand": "Urano",
+      "model": "Impressora de cupom ZP 160 Wi-Fi",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Imp_Cupom_ZP160_11503020358_1.2.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-impressora-de-cupom-zp-200-eu",
+      "brand": "Urano",
+      "model": "Impressora de cupom ZP 200 EU",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Imp_ZP200EU_rev1.2.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-impressora-de-cupom-zp-220-ubt",
+      "brand": "Urano",
+      "model": "Impressora de cupom ZP 220 UBT",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Imp_Portatil_ZP220_UBT_11503020305_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-impressora-de-cupom-zp-250-use",
+      "brand": "Urano",
+      "model": "Impressora de cupom ZP 250 USE",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Imp_Cupom_ZP250_USE_11503020361_1.2.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-impressora-de-cupom-zp-250-e-250-us-qr",
+      "brand": "Urano",
+      "model": "Impressora de cupom ZP 250-E/250 US-QR",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Imp_ZP250_USQR_USQR_ETHERNET_1.2.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-impressora-de-cupom-zp-300-ues-qr",
+      "brand": "Urano",
+      "model": "Impressora de cupom ZP 300 UES-QR",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Imp_ZP300USE_11503020302_1.4.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-impressora-de-cupom-zp-50-bt",
+      "brand": "Urano",
+      "model": "Impressora de cupom ZP 50-BT",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Imp_ZP50BT_11503020269_1.2.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-impressora-de-cupom-zp-80-ubt",
+      "brand": "Urano",
+      "model": "Impressora de cupom ZP 80 UBT",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Imp_Portatil_ZP80UBT_11503020303_1.2.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-impressora-fiscal-termica-1-fit-logger-i",
+      "brand": "Urano",
+      "model": "Impressora fiscal térmica 1 FIT LOGGER II",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Imp_1FITLOGGER-03-02-00_11503020538_1.2.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-impressora-fiscal-termica-zpm-200",
+      "brand": "Urano",
+      "model": "Impressora fiscal térmica ZPM 200",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/11.50.302.0548_1.1%20(Man%20Inst%20para%20o%20usuario%20ZPM-200%20(MAN025).pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-impressora-fiscal-termica-zpm-500",
+      "brand": "Urano",
+      "model": "Impressora fiscal térmica ZPM 500",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/MAN011%20-%20MANUAL%20DO%20USUARIO%20ZPM-500%20R10.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-impressora-use-cb-ii",
+      "brand": "Urano",
+      "model": "Impressora USE-CB II",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Imp_USE_CBII_11503020120_1.7.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-impressora-use-cb-iii",
+      "brand": "Urano",
+      "model": "Impressora USE-CB III",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Imp_USE_CBIII_11503020117_1.7.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-indicador-wt-27r",
+      "brand": "Urano",
+      "model": "Indicador WT-27R",
+      "type": "Rodoviária",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/11.50.302.0360%20Manual%20Tecnico%20WT-27R%20(firmware%201.7)%20.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-linha-de-balancas-ba37",
+      "brand": "Urano",
+      "model": "Linha de Balanças BA37",
+      "type": "Automação Comercial, Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_BA37_BA37C_BA37T_11503020373_rev.1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-liquidificador-u-cb-060b",
+      "brand": "Urano",
+      "model": "Liquidificador U-CB-060B",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Liquidificador_UCB060B_1150302.0256_1.1.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-liquidificador-u-cb-950a",
+      "brand": "Urano",
+      "model": "Liquidificador U-CB-950A",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Liquidificador_UCB950A_11503020253_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-manual-da-balanca-pop-z-mira",
+      "brand": "Urano",
+      "model": "Manual da Balança POP-Z Mira",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_POP_Z_MIRA_11.50.302.0387_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-manual-da-balanca-pop-z-mira-pro",
+      "brand": "Urano",
+      "model": "Manual da Balança POP-Z Mira Pro",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Bal_POP_Z_MIRA_PRO_11.50.302.0388_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-maquina-de-lavar-pratos-lavarapido",
+      "brand": "Urano",
+      "model": "Máquina de lavar pratos – LAVARÁPIDO",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_MAQ_LAVAR_LAVARAPIDO_11503020267_1.2.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-maquinas-de-fazer-gelo-gelo-rapido",
+      "brand": "Urano",
+      "model": "Máquinas de fazer gelo – GELO RÁPIDO",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Gelo_Rapido_11503020547_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-moedor-de-carnes",
+      "brand": "Urano",
+      "model": "Moedor de Carnes",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Moedor_Carne_UMM1_11503020229_1.7.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-montagem-da-balanca-para-checkout-com-sc",
+      "brand": "Urano",
+      "model": "Montagem da balança para checkout com scanner Stratos",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Montagem_BAL_UDC_CO-E_SCN_11503020278_1.1.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-montagem-de-pedestal-para-scanner",
+      "brand": "Urano",
+      "model": "Montagem de pedestal para scanner",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/11.50.302.0295_1.1%20(Man%20de%20Montagem%20do%20Suporte%20do%20Scanner%20USHM-U).pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-pesonet",
+      "brand": "Urano",
+      "model": "Pesonet",
+      "type": "Rodoviária",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Pesonet_11503020293_1.2.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-processador-de-alimentos",
+      "brand": "Urano",
+      "model": "Processador de Alimentos",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Proces_Alim_UMF1300_11503020228_1.5.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-protocolo-de-comunicacao-pop-s-pop-z",
+      "brand": "Urano",
+      "model": "Protocolo de Comunicação POP-S/POP-Z",
+      "type": "Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Protocolo%20Serial%20US%20POP%20Light%20-%20%20POP-S%20-%20POP-Z.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-protocolo-de-comunicacao-udc-co-udc-co-e",
+      "brand": "Urano",
+      "model": "Protocolo de Comunicação UDC CO/UDC CO E",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Protocolo%20Serial%20UDC%20CO-E%20e%20UDC%20CO.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-rechaud",
+      "brand": "Urano",
+      "model": "Rechaud",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Rechauds_11503020268_1.1.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-refresqueira",
+      "brand": "Urano",
+      "model": "Refresqueira",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Refresqueira_11503020251_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-sat-ur",
+      "brand": "Urano",
+      "model": "SAT UR",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_SATUR_11503020355_1.2.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-scanner-de-mao-laser-com-pedestal-ua2mb-",
+      "brand": "Urano",
+      "model": "Scanner de mão laser com pedestal UA2MB-U",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Scanner_UA2MB-U.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-scanner-de-mao-laser-com-pedestalushm-u-",
+      "brand": "Urano",
+      "model": "Scanner de mão laser com pedestalUSHM-U Black",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Scanner_USHMU_11503020362_1.2.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-serra-fita",
+      "brand": "Urano",
+      "model": "Serra-Fita",
+      "type": "Gastronomia",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_Serra-Fita_11503020266_1.3.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
+    },
+    {
+      "id": "m-urano-u-s-t",
+      "brand": "Urano",
+      "model": "U-S@T",
+      "type": "Automação Comercial",
+      "desc": "Manual do usuário",
+      "url": "https://www.urano.com.br/media/wysiwyg/manuais/Manual_U-S@T_11503020359_1.0.pdf",
+      "sourceUrl": "https://www.urano.com.br/manuais/"
     }
   ],
   "videos": [],
