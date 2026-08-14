@@ -86,6 +86,7 @@
       <button class="admin-tab" data-admin-tab="manuals">Manuais</button>
       <button class="admin-tab" data-admin-tab="videos">Vídeos</button>
       <button class="admin-tab" data-admin-tab="products">Produtos (Vendas)</button>
+      <button class="admin-tab" data-admin-tab="questions">Perguntas</button>
       <button class="admin-tab" data-admin-tab="manufacturers">Fabricantes</button>
       <button class="admin-tab" data-admin-tab="settings">Configurações</button>
     </nav>
@@ -288,6 +289,28 @@
           <button type="button" class="btn btn--ghost" data-cancel-edit hidden>Cancelar edição</button>
         </div>
         <p class="admin-status" data-status="products"></p>
+      </form>
+    </section>
+
+    <!-- PERGUNTAS -->
+    <section class="admin-panel" data-admin-panel="questions">
+      <div class="admin-panel-head"><h2>Perguntas</h2></div>
+      <div class="admin-list" id="list-questions"></div>
+
+      <form class="admin-form" id="form-questions" data-section="questions">
+        <h3 data-form-title>Adicionar pergunta</h3>
+        <div class="form-grid">
+          <div class="field"><label>Fabricante</label><input name="brand" required placeholder="Ex: Toledo" list="brandOptions3"></div>
+          <div class="field"><label>Modelo</label><input name="model" required placeholder="Ex: Prix 4 Uno"></div>
+          <div class="field full"><label>Pergunta</label><textarea name="question" required placeholder="Pergunta feita pelo cliente/técnico"></textarea></div>
+          <div class="field full"><label>Resposta (opcional)</label><textarea name="answer" placeholder="Deixe em branco para publicar como 'ainda sem resposta'"></textarea></div>
+        </div>
+        <datalist id="brandOptions3"></datalist>
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <button type="submit" class="btn btn--primary" data-submit-label>Publicar pergunta</button>
+          <button type="button" class="btn btn--ghost" data-cancel-edit hidden>Cancelar edição</button>
+        </div>
+        <p class="admin-status" data-status="questions"></p>
       </form>
     </section>
 

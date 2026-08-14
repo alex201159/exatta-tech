@@ -430,6 +430,7 @@ window.MANUALS = MANUALS;
 window.MANUAL_VIDEOS = MANUAL_VIDEOS;
 window.PRODUCTS = PRODUCTS;
 window.MANUFACTURERS = MANUFACTURERS;
+window.COMMUNITY_QUESTIONS = COMMUNITY_QUESTIONS;
 
 function exattaMergeSection(baseArr, overrideItems, removedIds) {
   if (Array.isArray(removedIds) && removedIds.length) {
@@ -467,6 +468,7 @@ window.exattaLoadOverrides = async function exattaLoadOverrides() {
     exattaMergeSection(MANUAL_VIDEOS, extra.videos, removed.videos);
     exattaMergeSection(PRODUCTS, extra.products, removed.products);
     exattaMergeSection(MANUFACTURERS, extra.manufacturers, removed.manufacturers);
+    exattaMergeSection(COMMUNITY_QUESTIONS, extra.questions, removed.questions);
     if (extra.youtubeApiKey) EXATTA_CONFIG.youtubeApiKey = extra.youtubeApiKey;
   } catch (e) {
     console.warn("Não foi possível carregar data/overrides.json — usando apenas os dados padrão.", e);

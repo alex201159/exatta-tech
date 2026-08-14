@@ -14,13 +14,14 @@
   const GH_API = "https://api.github.com";
   const FILE_PATH = "data/overrides.json";
 
-  const SECTIONS = ["apps", "downloads", "manuals", "videos", "products", "manufacturers"];
+  const SECTIONS = ["apps", "downloads", "manuals", "videos", "products", "questions", "manufacturers"];
   const BASE_VAR = {
     apps: "APPS",
     downloads: "DOWNLOADS",
     manuals: "MANUALS",
     videos: "MANUAL_VIDEOS",
     products: "PRODUCTS",
+    questions: "COMMUNITY_QUESTIONS",
     manufacturers: "MANUFACTURERS",
   };
   const SUBMIT_LABEL = {
@@ -29,6 +30,7 @@
     manuals: "Publicar manuais",
     videos: "Publicar vídeo",
     products: "Publicar produto",
+    questions: "Publicar pergunta",
     manufacturers: "Publicar fabricante",
   };
   const FORM_TITLE = {
@@ -37,6 +39,7 @@
     manuals: "Adicionar manuais",
     videos: "Adicionar vídeo",
     products: "Adicionar produto",
+    questions: "Adicionar pergunta",
     manufacturers: "Adicionar fabricante",
   };
   const SUPPORTS_IMAGE = { apps: true, downloads: true, products: true };
@@ -61,9 +64,10 @@
       manuals: [],
       videos: [],
       products: [],
+      questions: [],
       manufacturers: [],
       youtubeApiKey: "",
-      removed: { apps: [], downloads: [], manuals: [], videos: [], products: [], manufacturers: [] },
+      removed: { apps: [], downloads: [], manuals: [], videos: [], products: [], questions: [], manufacturers: [] },
     };
   }
 
@@ -403,7 +407,7 @@
       .sort()
       .map((n) => `<option value="${escapeHtml(n)}">`)
       .join("");
-    ["brandOptions", "brandOptions2"].forEach((id) => {
+    ["brandOptions", "brandOptions2", "brandOptions3"].forEach((id) => {
       const el = document.getElementById(id);
       if (el) el.innerHTML = optionsHtml;
     });
@@ -442,7 +446,7 @@
   /* Listas por seção                                                   */
   /* ------------------------------------------------------------------ */
   function itemLabel(section, item) {
-    if (section === "manuals" || section === "videos") return `${item.brand} — ${item.model}`;
+    if (section === "manuals" || section === "videos" || section === "questions") return `${item.brand} — ${item.model}`;
     if (section === "manufacturers") return `${item.name} (${item.count})`;
     return item.name;
   }
@@ -452,6 +456,7 @@
     if (section === "manuals") return item.type || "";
     if (section === "videos") return item.desc || "";
     if (section === "products") return item.category || "";
+    if (section === "questions") return item.question || "";
     return "";
   }
   const KIND_LABEL = { base: "Padrão", edited: "Editado", new: "Novo" };
@@ -590,6 +595,12 @@
         form.videoUrls.value = (item.videos || (item.videoUrl ? [item.videoUrl] : [])).join("\n");
         form.galleryUrls.value = (item.gallery || []).join("\n");
         updateGalleryPreview("products", item.gallery || []);
+        break;
+      case "questions":
+        form.brand.value = item.brand || "";
+        form.model.value = item.model || "";
+        form.question.value = item.question || "";
+        form.answer.value = item.answer || "";
         break;
       case "manufacturers":
         form.name.value = item.name || "";
@@ -889,6 +900,13 @@
           availability: fd.get("availability") || "available",
           videos: linesToArray(fd.get("videoUrls")),
         });
+      case "questions":
+        return Object.assign(carry, {
+          brand: fd.get("brand"),
+          model: fd.get("model"),
+          question: fd.get("question"),
+          answer: fd.get("answer") || "",
+        });
       case "manufacturers":
         return Object.assign(carry, {
           name: fd.get("name"),
@@ -909,6 +927,8 @@
         return shortId("v", fd.get("model"));
       case "products":
         return shortId("prod", fd.get("name"));
+      case "questions":
+        return shortId("q", fd.get("model"));
       case "manufacturers":
         return slugify(fd.get("name")) || shortId("brand", fd.get("name"));
       default:
@@ -999,7 +1019,7 @@
         setStatus(statusEl, "Publicado! O site deve atualizar em ~1 minuto.", "success");
         cancelEdit(section);
         renderList(section);
-        if (section === "manuals" || section === "videos" || section === "manufacturers") populateBrandDatalists();
+        if (section === "manuals" || section === "videos" || section === "questions" || section === "manufacturers") populateBrandDatalists();
       } catch (err) {
         if (idxInOverrides !== -1) arr[idxInOverrides] = prevOverrideSnapshot;
         else arr.pop();

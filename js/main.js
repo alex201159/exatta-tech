@@ -955,18 +955,20 @@
       questionsGrid.innerHTML = list
         .map(
           (m) => `
-        <div class="result-card" data-reveal style="grid-column: span 1;">
+        <div class="result-card qa-card" data-reveal style="grid-column: span 1;">
           <div class="result-card-head">
             <div class="ico">${icon("question")}</div>
             <div>
               <h4>${m.brand} — ${m.model}</h4>
-              <div class="meta">${m.answers} respostas</div>
+              <div class="meta">Pergunta</div>
             </div>
           </div>
           <p>${m.question}</p>
-          <div class="result-card-actions">
-            <button class="btn btn--outline btn--sm btn--block">Ver discussão</button>
-          </div>
+          ${
+            m.answer
+              ? `<div class="qa-answer"><strong>Resposta</strong><p>${m.answer}</p></div>`
+              : `<div class="qa-answer qa-answer--pending">Ainda sem resposta publicada.</div>`
+          }
         </div>`
         )
         .join("");

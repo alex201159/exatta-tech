@@ -599,6 +599,13 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 .result-card .meta { font-size: 12px; color: var(--text-muted); }
 .result-card p { font-size: 13.5px; color: var(--text-secondary); margin-bottom: 14px; }
 .result-card-actions { display: flex; gap: 8px; }
+
+/* ---------- Perguntas & respostas ---------- */
+.qa-card p { margin-bottom: 0; }
+.qa-answer { margin-top: 14px; padding: 14px 16px; border-radius: var(--radius-md); background: var(--surface-2); border-left: 3px solid var(--cyan); }
+.qa-answer strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--cyan); margin-bottom: 6px; }
+.qa-answer p { font-size: 13.5px; color: var(--text-secondary); margin-bottom: 0; }
+.qa-answer--pending { font-size: 13px; color: var(--text-muted); font-style: italic; }
 .result-card-actions .btn { flex: 1; }
 
 .load-more-wrap { text-align: center; margin-top: 32px; }
