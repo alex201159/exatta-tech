@@ -563,66 +563,99 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
   .dev-banner-actions .btn { flex: 1; min-width: 180px; }
 }
 
-/* ---------- Banner de promoção (Vendas) ---------- */
-.promo-banner {
+/* ---------- Card de promoção "combo" (Vendas) ---------- */
+.promo-combo {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: stretch;
   width: 100%;
   border: none;
   font: inherit;
   cursor: pointer;
-  text-align: center;
-  text-decoration: none;
+  text-align: left;
   color: #fff;
-  background: linear-gradient(135deg, #ff7a45 0%, #f0605f 55%, #d6336c 100%);
+  background: linear-gradient(120deg, #ff7a45 0%, #f0605f 50%, #d6336c 100%);
   border-radius: var(--radius-lg);
-  padding: 44px 36px 30px;
   overflow: hidden;
   isolation: isolate;
+  box-shadow: 0 0 0 0 rgba(240,96,95,0.5), var(--shadow-lg);
   animation: promo-glow 2.6s ease-in-out infinite;
 }
-.promo-banner-shine {
+.promo-combo-shine {
   position: absolute; inset: 0;
-  background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,0.35) 50%, transparent 60%);
-  animation: shimmer 3.2s ease-in-out infinite;
+  background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,0.3) 50%, transparent 60%);
+  animation: shimmer 3.4s ease-in-out infinite;
   pointer-events: none;
 }
-.promo-banner-badge {
+.promo-combo-photos {
   position: relative;
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  flex-shrink: 0;
+  width: 300px;
+  padding: 28px;
+  background: rgba(0,0,0,0.12);
+}
+.promo-combo-photo {
+  position: relative;
+  width: 108px; height: 108px;
+  border-radius: 18px;
+  background: linear-gradient(160deg, #f8f9fc, #e7ebf3);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+.promo-combo-photo img { width: 100%; height: 100%; object-fit: cover; }
+.promo-combo-plus {
+  flex-shrink: 0;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: #fff; color: #b8232f;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+.promo-combo-plus svg { width: 16px; height: 16px; transform: rotate(45deg); }
+.promo-combo-photo--bonus { overflow: visible; }
+.promo-combo-free {
+  position: absolute; left: 50%; bottom: -12px; transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;
+  background: #ffe27a; color: #7a1c00;
+  padding: 4px 9px; border-radius: var(--radius-full);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+.promo-combo-body {
+  position: relative;
+  flex: 1;
+  padding: 30px 34px 26px;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+}
+.promo-combo-badge {
   display: inline-flex; align-items: center; gap: 8px;
-  font-size: 12.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
   color: #7a1c00;
   background: #ffe27a;
-  padding: 7px 16px 7px 12px;
+  padding: 6px 14px 6px 10px;
   border-radius: var(--radius-full);
-  margin-bottom: 20px;
   animation: promo-bounce 2s ease-in-out infinite;
 }
-.promo-banner-badge svg { width: 15px; height: 15px; color: #7a1c00; }
-.promo-banner-title {
-  position: relative;
-  font-family: var(--font-display);
-  font-size: clamp(24px, 3.4vw, 34px);
-  line-height: 1.28;
-  margin: 0 auto 14px;
-  max-width: 720px;
-}
-.promo-banner-title span { color: #fff59d; text-decoration: underline; text-decoration-color: rgba(255,245,157,0.5); text-underline-offset: 4px; }
-.promo-banner-text { position: relative; font-size: 15.5px; color: rgba(255,255,255,0.92); max-width: 620px; margin: 0 auto 26px; }
-.promo-banner-cta {
-  position: relative;
+.promo-combo-badge svg { width: 13px; height: 13px; color: #7a1c00; }
+.promo-combo-title { font-family: var(--font-display); font-size: clamp(20px, 2.4vw, 27px); line-height: 1.28; }
+.promo-combo-title span { color: #fff59d; text-decoration: underline; text-decoration-color: rgba(255,245,157,0.5); text-underline-offset: 4px; }
+.promo-combo-text { font-size: 14.5px; color: rgba(255,255,255,0.92); max-width: 560px; }
+.promo-combo-cta {
   display: inline-flex; align-items: center; gap: 8px;
   background: #fff; color: #b8232f;
-  font-weight: 700; font-size: 15px;
-  padding: 14px 28px;
+  font-weight: 700; font-size: 14.5px;
+  padding: 12px 24px;
   border-radius: var(--radius-full);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
   transition: transform var(--t-fast), box-shadow var(--t-fast);
+  margin-top: 4px;
 }
-.promo-banner-cta svg { width: 17px; height: 17px; transition: transform var(--t-fast); }
-.promo-banner:hover .promo-banner-cta { transform: translateY(-2px) scale(1.03); box-shadow: 0 14px 34px rgba(0,0,0,0.32); }
-.promo-banner:hover .promo-banner-cta svg { transform: translateX(4px); }
-.promo-banner-fine { position: relative; display: block; font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 20px; }
+.promo-combo-cta svg { width: 16px; height: 16px; transition: transform var(--t-fast); }
+.promo-combo:hover .promo-combo-cta { transform: translateY(-2px) scale(1.03); box-shadow: 0 14px 30px rgba(0,0,0,0.32); }
+.promo-combo:hover .promo-combo-cta svg { transform: translateX(4px); }
+.promo-combo-fine { display: block; font-size: 11.5px; color: rgba(255,255,255,0.7); margin-top: 4px; }
 
 @keyframes promo-glow {
   0%, 100% { box-shadow: 0 0 0 0 rgba(240,96,95,0.5), var(--shadow-lg); }
@@ -633,63 +666,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
   50% { transform: translateY(-3px); }
 }
 
-@media (max-width: 640px) {
-  .promo-banner { padding: 34px 20px 24px; }
-}
-
-/* Trilhos laterais da promoção — teste: em telas bem largas a promoção sai
-   do fluxo (banner normal escondido) e vira dois cartões fixos grudados
-   nas bordas esquerda/direita. Estreita o container do <main> só nessa
-   condição, pra garantir espaço de sobra sem sobrepor a grade. */
-.promo-rail {
-  display: none;
-  position: fixed;
-  top: 0; bottom: 0;
-  height: 100vh;
-  z-index: 45;
-  width: 168px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 18px;
-  padding: 32px 16px;
-  border: none;
-  color: #fff;
-  text-align: left;
-  cursor: pointer;
-  background: linear-gradient(180deg, #ff7a45, #f0605f 45%, #d6336c 100%);
-  box-shadow: 0 0 40px rgba(0,0,0,0.4);
-  overflow: hidden;
-}
-.promo-rail::before {
-  content: "";
-  position: absolute; inset: 0;
-  background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,0.3) 50%, transparent 60%);
-  animation: shimmer 3.4s ease-in-out infinite;
-  pointer-events: none;
-}
-.promo-rail--left { left: 0; }
-.promo-rail--right { right: 0; align-items: flex-end; text-align: right; }
-.promo-rail-badge {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 10px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase;
-  background: #ffe27a; color: #7a1c00;
-  padding: 4px 10px; border-radius: var(--radius-full);
-}
-.promo-rail-badge svg { width: 11px; height: 11px; }
-.promo-rail-title { font-family: var(--font-display); font-size: 14.5px; line-height: 1.35; }
-.promo-rail-cta {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: 12.5px; font-weight: 700;
-  background: #fff; color: #b8232f;
-  padding: 8px 13px; border-radius: var(--radius-full);
-}
-.promo-rail-cta svg { width: 13px; height: 13px; }
-
-@media (min-width: 1680px) {
-  .promo-rail { display: flex; }
-  .promo-banner-wrap { display: none; }
-  .promo-rail ~ main .container { max-width: min(1360px, 78vw); }
+@media (max-width: 760px) {
+  .promo-combo { flex-direction: column; }
+  .promo-combo-photos { width: 100%; padding: 26px; }
+  .promo-combo-body { padding: 26px 22px 24px; }
 }
 
 /* ---------- Balanceiros highlight / search ---------- */
