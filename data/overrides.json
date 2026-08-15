@@ -166,7 +166,7 @@
     {
       "id": "testador",
       "name": "Testador",
-      "icon": "gauge",
+      "icon": "scale",
       "category": "Técnico",
       "filters": [
         "tecnico"
@@ -195,8 +195,10 @@
           "d": "Versão atual, com testes de calibração, desgaste e display remoto."
         }
       ],
-      "hasDownload": false,
-      "image": "assets/uploads/apps-testador.svg?v=1786755848646"
+      "hasDownload": true,
+      "image": "assets/uploads/apps-testador.svg?v=1786755848646",
+      "videos": [],
+      "gallery": []
     },
     {
       "id": "balanca-tech",
