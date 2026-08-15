@@ -359,19 +359,6 @@
   ],
   "downloads": [
     {
-      "name": "CALIBRA PRO",
-      "platform": "EXE",
-      "type": "windows",
-      "version": "7,1",
-      "size": "10 MB",
-      "date": "",
-      "desc": "Sistema completo para **emissão e gerenciamento de certificados técnicos**, desenvolvido para centralizar e otimizar os processos da empresa.  Permite realizar o **cadastro de clientes, equipamentos e técnicos**, controlar **Ordens de Serviço (OS)**, registrar atendimentos e serviços executados, emitir **certificados e relatórios técnicos**, além de manter todo o histórico dos equipamentos e documentos de forma organizada.  O sistema também conta com **gestão financeira integrada**, permitindo registrar entradas, serviços realizados, valores, pagamentos e movimentações vinculadas às Ordens de Serviço.  ### Principais recursos:  * Emissão e gerenciamento de certificados * Cadastro de clientes * Cadastro e histórico de equipamentos * Cadastro de técnicos * Controle de Ordens de Serviço (OS) * Registro dos serviços e atendimentos realizados * Gestão e acompanhamento financeiro * Histórico de certificados e serviços * Consulta e organização de documentos * Geração de relatórios * Centralização das informações técnicas e administrativas  Uma solução desenvolvida para proporcionar **mais organização, agilidade, rastreabilidade e controle**, integrando em um único sistema a gestão **técnica, operacional e financeira** da empresa.",
-      "current": true,
-      "id": "dl-calibra-pro-bb5gn",
-      "image": "assets/uploads/downloads-dl-calibra-pro-bb5gn-icon.png?v=1786737220875",
-      "url": "assets/uploads/downloads-dl-calibra-pro-bb5gn.png?v=1786653472406"
-    },
-    {
       "id": "dl-lc-carga-atual-apk",
       "name": "LC Carga Atual",
       "platform": "Android",
@@ -3459,7 +3446,8 @@
       "dl-config-tool",
       "dl-manual-instalacao",
       "dl-driver-serial",
-      "dl-coletador-apk"
+      "dl-coletador-apk",
+      "dl-calibra-pro-bb5gn"
     ],
     "manuals": [
       "m4",
