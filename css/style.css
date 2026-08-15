@@ -813,6 +813,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
   display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px;
   margin-bottom: 8px;
 }
+.trust-bar--tight { margin-bottom: 22px; }
 .trust-item {
   display: flex; align-items: center; gap: 12px;
   padding: 16px 18px;
@@ -1096,6 +1097,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 
 /* ---------- Page hero (inner pages) ---------- */
 .page-hero { padding: calc(var(--header-h) + 40px) 0 40px; text-align: center; }
+.page-hero--compact { padding-bottom: 8px; }
+.section--flush-top { padding-top: 16px; }
 .page-hero .section-head { max-width: 720px; margin: 0 auto; }
 
 /* ---------- Skeleton loading ---------- */
