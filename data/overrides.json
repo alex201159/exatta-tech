@@ -45,6 +45,188 @@
       "image": "assets/uploads/apps-lc-peso.jpg?v=1786737380104",
       "gallery": [],
       "videos": []
+    },
+    {
+      "id": "lc-agro",
+      "name": "LC Agro",
+      "icon": "leaf",
+      "category": "Gestão",
+      "filters": [
+        "gestao",
+        "producao"
+      ],
+      "shortDesc": "Gestão e pesagem para operações do setor agropecuário, do talhão ao silo.",
+      "fullDesc": "O LC Agro organiza a pesagem e a movimentação de safras, insumos e animais, integrando balanças rodoviárias e de plataforma com o controle de estoque e produção da propriedade. Pensado para operar em áreas rurais, com sincronização inteligente de dados.",
+      "features": [
+        "Pesagem de cargas e talhões",
+        "Integração com balanças rodoviárias",
+        "Controle de estoque de insumos e safra",
+        "Relatórios de produtividade",
+        "Funciona sem sinal de internet",
+        "Múltiplos usuários por propriedade"
+      ],
+      "tech": [
+        "Flutter",
+        "Bluetooth LE",
+        "Cloud Sync",
+        "REST API"
+      ],
+      "compatibility": "Android 8.0 ou superior",
+      "version": "2.1.0",
+      "changelog": [
+        {
+          "v": "2.1.0",
+          "d": "Novo módulo de relatórios de produtividade."
+        },
+        {
+          "v": "2.0.0",
+          "d": "Suporte a múltiplas propriedades na mesma conta."
+        }
+      ],
+      "hasDownload": true,
+      "image": "assets/uploads/apps-lc-agro.jpg?v=1786755848646"
+    },
+    {
+      "id": "lc-carga-atual",
+      "name": "LC Carga Atual",
+      "icon": "scale",
+      "category": "Balanças",
+      "filters": [
+        "balancas",
+        "producao"
+      ],
+      "shortDesc": "Pesagem rodoviária de cargas via Bluetooth, com cadastro de clientes, histórico e relatórios em PDF.",
+      "fullDesc": "O LC Carga Atual conecta o smartphone a indicadores de balança rodoviária via Bluetooth para pesar cargas de caminhões em tempo real. Organiza o cadastro de clientes, mantém histórico completo de pesagens e gera relatórios em PDF prontos para impressão ou envio, com backup interno dos dados para não perder nenhum registro.",
+      "features": [
+        "Conexão Bluetooth com indicadores de balança rodoviária",
+        "Cadastro de clientes",
+        "Histórico completo de pesagens",
+        "Geração de relatórios em PDF",
+        "Backup interno dos dados",
+        "Login com controle de acesso"
+      ],
+      "tech": [
+        "Flutter",
+        "Bluetooth",
+        "PDF"
+      ],
+      "compatibility": "Android 8.0 ou superior",
+      "version": "1.2.6",
+      "changelog": [
+        {
+          "v": "1.2.6",
+          "d": "Versão estável, com backup interno e relatórios em PDF."
+        }
+      ],
+      "hasDownload": false,
+      "image": "assets/uploads/apps-lc-carga-atual.jpg?v=1786755848646"
+    },
+    {
+      "id": "lc-trato",
+      "name": "LC Trato",
+      "icon": "leaf",
+      "category": "Gestão",
+      "filters": [
+        "gestao",
+        "producao"
+      ],
+      "shortDesc": "Controle de carregamento de trato (ração) do rebanho, com receitas do veterinário e pesagem via Bluetooth.",
+      "fullDesc": "O LC Trato controla o carregamento e a descarga do vagão misturador de ração, conectado por Bluetooth/BLE à balança do equipamento. Segue as receitas cadastradas pelo veterinário, acompanha em tempo real o peso de cada ingrediente carregado, controla o estoque de produtos e gera relatórios e alertas para operadores, técnicos e veterinários.",
+      "features": [
+        "Conexão via Bluetooth/BLE com a balança do misturador",
+        "Receitas de trato cadastradas pelo veterinário",
+        "Monitoramento em tempo real de carga e descarga",
+        "Controle de estoque de produtos e ingredientes",
+        "Alertas sonoros e avisos durante a operação",
+        "Relatórios de carregamento com histórico salvo",
+        "Perfis de acesso para operador, técnico e veterinário"
+      ],
+      "tech": [
+        "Flutter",
+        "Bluetooth LE",
+        "Firebase",
+        "Cloud Firestore"
+      ],
+      "compatibility": "Android 8.0 ou superior",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "v": "1.0.0",
+          "d": "Primeira versão: receitas, carga/descarga via BLE e relatórios."
+        }
+      ],
+      "hasDownload": false,
+      "image": "assets/uploads/apps-lc-trato.jpg?v=1786755848646"
+    },
+    {
+      "id": "testador",
+      "name": "Testador",
+      "icon": "gauge",
+      "category": "Técnico",
+      "filters": [
+        "tecnico"
+      ],
+      "shortDesc": "Ferramenta técnica para testar, calibrar e diagnosticar indicadores de balança via Bluetooth e Serial.",
+      "fullDesc": "O Testador é uma ferramenta de bancada para técnicos: conecta via Bluetooth/BLE ou Serial a indicadores de balança para testar leitura de peso, calibração, ajuste de seção e desgaste de componentes, além de simular o display remoto. Gera relatórios de teste em PDF e mantém um histórico dos relatórios salvos para acompanhar o equipamento ao longo do tempo.",
+      "features": [
+        "Conexão via Bluetooth/BLE e Serial",
+        "Teste de calibração e ajuste de seção",
+        "Diagnóstico de desgaste de componentes",
+        "Simulação de display remoto",
+        "Exportação de relatórios em PDF",
+        "Histórico de relatórios salvos"
+      ],
+      "tech": [
+        "Flutter",
+        "Bluetooth LE",
+        "Serial",
+        "PDF"
+      ],
+      "compatibility": "Android 8.0 ou superior",
+      "version": "7.1.0",
+      "changelog": [
+        {
+          "v": "7.1.0",
+          "d": "Versão atual, com testes de calibração, desgaste e display remoto."
+        }
+      ],
+      "hasDownload": false,
+      "image": "assets/uploads/apps-testador.svg?v=1786755848646"
+    },
+    {
+      "id": "balanca-tech",
+      "name": "Balança Tech",
+      "icon": "pdf",
+      "category": "Técnico",
+      "filters": [
+        "tecnico",
+        "balancas"
+      ],
+      "shortDesc": "Busca manuais em PDF e vídeos técnicos de balanças pelo modelo do equipamento, com download para uso offline.",
+      "fullDesc": "O Balança Tech ajuda técnicos a encontrar rapidamente o manual e vídeos de um equipamento de pesagem: basta digitar o modelo (ex.: \"Toledo Prix 4 Uno\") para buscar manuais em PDF nos principais fabricantes e repositórios técnicos, além de vídeos relacionados no YouTube com player embutido. Os manuais baixados ficam salvos no aparelho para consulta sem internet em campo.",
+      "features": [
+        "Busca de manuais por modelo do equipamento",
+        "Download de manuais em PDF para uso offline",
+        "Busca de vídeos técnicos via YouTube",
+        "Player de vídeo embutido no app",
+        "Biblioteca de manuais salvos no dispositivo",
+        "Visualizador de PDF integrado"
+      ],
+      "tech": [
+        "Flutter",
+        "YouTube Data API",
+        "Hive",
+        "WebView"
+      ],
+      "compatibility": "Android 8.0 ou superior",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "v": "1.0.0",
+          "d": "Primeira versão: busca de manuais em PDF e vídeos técnicos por modelo."
+        }
+      ],
+      "hasDownload": false
     }
   ],
   "downloads": [
