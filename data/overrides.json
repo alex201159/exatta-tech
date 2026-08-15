@@ -399,7 +399,7 @@
     },
     {
       "id": "dl-testador-apk",
-      "name": "Testador",
+      "name": "LC TESTE",
       "platform": "Android",
       "type": "android",
       "version": "7.1.0",
@@ -407,7 +407,7 @@
       "date": "10/08/2026",
       "desc": "O Testador conecta via Bluetooth/BLE ou porta Serial a indicadores de balança para testar e calibrar o equipamento em bancada. Tem telas dedicadas para ajuste de seção, calibração, teste de desgaste de componentes e um modo de display remoto que recebe o peso do indicador pela serial e retransmite em frames para um visor à parte — útil pra levar o peso a uma tela longe do indicador. Cada teste pode ser salvo, revisado na lista de relatórios salvos e exportado, com um manual de consulta rápida embutido no próprio app.",
       "current": true,
-      "url": "https://vj8nd-my.sharepoint.com/:u:/g/personal/offcell_vj8nd_onmicrosoft_com/IQC0n63cddHRSrZFb9LmKgUQAchsA6pO5vCB92Vd5y1yEXo?e=PKotYE",
+      "url": "assets/uploads/downloads-dl-testador-apk.png?v=1786834297724",
       "image": "assets/uploads/apps-testador.svg?v=1786757023504"
     },
     {
