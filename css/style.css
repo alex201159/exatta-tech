@@ -644,23 +644,32 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 .promo-rail {
   display: none;
   position: fixed;
-  top: 50%; transform: translateY(-50%);
+  top: 0; bottom: 0;
+  height: 100vh;
   z-index: 45;
   width: 168px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
-  padding: 20px 16px;
+  justify-content: center;
+  gap: 18px;
+  padding: 32px 16px;
   border: none;
   color: #fff;
   text-align: left;
   cursor: pointer;
-  background: linear-gradient(165deg, #ff7a45, #d6336c);
-  box-shadow: 0 16px 34px rgba(0,0,0,0.4);
-  animation: promo-glow 2.6s ease-in-out infinite;
+  background: linear-gradient(180deg, #ff7a45, #f0605f 45%, #d6336c 100%);
+  box-shadow: 0 0 40px rgba(0,0,0,0.4);
+  overflow: hidden;
 }
-.promo-rail--left { left: 0; border-radius: 0 18px 18px 0; }
-.promo-rail--right { right: 0; border-radius: 18px 0 0 18px; align-items: flex-end; text-align: right; }
+.promo-rail::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,0.3) 50%, transparent 60%);
+  animation: shimmer 3.4s ease-in-out infinite;
+  pointer-events: none;
+}
+.promo-rail--left { left: 0; }
+.promo-rail--right { right: 0; align-items: flex-end; text-align: right; }
 .promo-rail-badge {
   display: inline-flex; align-items: center; gap: 5px;
   font-size: 10px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase;
