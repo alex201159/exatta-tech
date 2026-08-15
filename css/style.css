@@ -55,7 +55,7 @@
   --font-display: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
 
   /* Layout */
-  --container: 1360px;
+  --container: min(1680px, 94vw);
   --header-h: 76px;
 
   /* Transição */
