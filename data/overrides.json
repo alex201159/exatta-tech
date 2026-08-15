@@ -3284,6 +3284,39 @@
         "assets/uploads/products-prod-lc-teste-7ayd4-gallery-1786651659404-0.png?v=1786651661245"
       ],
       "videos": []
+    },
+    {
+      "id": "prod-calibrapro-rbc",
+      "name": "CalibraPro RBC",
+      "category": "Sistema desktop",
+      "icon": "shield",
+      "price": null,
+      "priceLabel": "Consultar preço",
+      "desc": "Sistema de gestão para laboratórios de calibração acreditados, com emissão de certificados no padrão RBC/Cgcre (ISO/IEC 17025). Reúne cadastro de clientes e equipamentos, ordens de serviço, gestão de massas padrão e cadeia de rastreabilidade, análise estatística de deriva entre calibrações, controle financeiro, alertas de vencimento e trilha de auditoria — com backup e sincronização entre estações de trabalho.",
+      "availability": "available",
+      "image": "assets/uploads/products-calibrapro-rbc.png?v=1786759613062"
+    },
+    {
+      "id": "prod-calibrapro-normal",
+      "name": "CalibraPro Padrão",
+      "category": "Sistema desktop",
+      "icon": "shield",
+      "price": null,
+      "priceLabel": "Consultar preço",
+      "desc": "Versão padrão do sistema de gestão para laboratórios de calibração, sem o módulo de certificação acreditada RBC. Inclui cadastro de clientes e equipamentos, ordens de serviço, emissão de certificados, controle de estoque, gestão financeira, relatórios e trilha de auditoria — com backup e sincronização entre estações de trabalho.",
+      "availability": "available",
+      "image": "assets/uploads/products-calibrapro-normal.png?v=1786759613062"
+    },
+    {
+      "id": "prod-lc-carga-desktop",
+      "name": "LC Carga Desktop",
+      "category": "Sistema desktop",
+      "icon": "scale",
+      "price": null,
+      "priceLabel": "Consultar preço",
+      "desc": "Sistema desktop para pesagem rodoviária em estações fixas: conexão com balanças via porta serial ou rede, controle de entrada e saída de veículos, captura de foto do veículo na pesagem, consulta de placa, emissão de tíquetes, cadastro de usuários, relatórios e backup automático com agendamento.",
+      "availability": "available",
+      "image": "assets/uploads/products-lc-carga-desktop.jpg?v=1786759613062"
     }
   ],
   "questions": [],
