@@ -332,9 +332,71 @@
   /* ------------------------------------------------------------------ */
   /* Apps.html                                                          */
   /* ------------------------------------------------------------------ */
+  const APP_ACCENTS = {
+    Balanças: { cls: "blue", chipIcon: "scale" },
+    Gestão: { cls: "green", chipIcon: "leaf" },
+    Técnico: { cls: "purple", chipIcon: "tool" },
+    Produção: { cls: "cyan", chipIcon: "cpu" },
+    Licenças: { cls: "pink", chipIcon: "shield" },
+  };
+  function appAccent(app) {
+    return APP_ACCENTS[app.category] || { cls: "blue", chipIcon: "package" };
+  }
+
+  function renderAppSpotlight(app) {
+    const el = qs("#appSpotlight");
+    if (!el) return;
+    if (!app) {
+      el.innerHTML = "";
+      return;
+    }
+    const accent = appAccent(app);
+    el.innerHTML = `
+      <button type="button" class="app-spotlight app-spotlight--${accent.cls}" data-reveal data-open-app="${app.id}">
+        <div class="app-spotlight-visual">
+          <span class="app-spotlight-glow"></span>
+          <div class="app-spotlight-icon">${app.image ? `<img src="${app.image}" alt="${app.name}" loading="lazy">` : icon(app.icon)}</div>
+          <span class="app-spotlight-chip app-spotlight-chip--1">${icon(accent.chipIcon)}${app.category}</span>
+          <span class="app-spotlight-chip app-spotlight-chip--2">${icon("check")}v${app.version}</span>
+        </div>
+        <div class="app-spotlight-body">
+          <span class="app-spotlight-badge">${icon("star")}App em destaque</span>
+          <h2>${app.name}</h2>
+          <p>${app.shortDesc}</p>
+          <div class="tech-pills">${app.tech.slice(0, 4).map((t) => `<span class="tech-pill">${t}</span>`).join("")}</div>
+          <div class="app-spotlight-actions">
+            <span class="btn btn--primary btn--sm">Conhecer o app${icon("arrowRight")}</span>
+            ${app.hasDownload ? `<a class="btn btn--outline btn--sm" href="downloads.html#${app.id}">${icon("download")}Download</a>` : ""}
+          </div>
+        </div>
+      </button>`;
+    observeReveal(el);
+  }
+
+  function renderAppStats(spotlightId) {
+    const el = qs("#appStatsStrip");
+    if (!el || typeof APPS === "undefined") return;
+    const total = APPS.length;
+    const categories = new Set(APPS.map((a) => a.category)).size;
+    const techs = new Set(APPS.flatMap((a) => a.tech || [])).size;
+    const downloadable = APPS.filter((a) => a.hasDownload).length;
+    el.innerHTML = [
+      { n: total, l: "aplicativos" },
+      { n: categories, l: "categorias" },
+      { n: techs, l: "tecnologias diferentes" },
+      { n: downloadable, l: "com download direto" },
+    ]
+      .map((s) => `<div class="app-stat"><strong>${s.n}</strong><span>${s.l}</span></div>`)
+      .join("");
+  }
+
   function renderAppsPage() {
     const grid = qs("#appsGrid");
     if (!grid || typeof APPS === "undefined") return;
+
+    const spotlightApp = APPS[0];
+    renderAppSpotlight(spotlightApp);
+    renderAppStats();
 
     const searchInput = qs("#appsSearch");
     const chips = qsa("[data-filter]");
@@ -344,6 +406,7 @@
     function paint() {
       const q = query.trim().toLowerCase();
       const list = APPS.filter((app) => {
+        if (spotlightApp && app.id === spotlightApp.id) return false;
         const matchFilter = activeFilter === "all" || app.filters.includes(activeFilter);
         const matchQuery = !q || app.name.toLowerCase().includes(q) || app.shortDesc.toLowerCase().includes(q);
         return matchFilter && matchQuery;
@@ -360,24 +423,23 @@
       }
 
       grid.innerHTML = list
-        .map(
-          (app, i) => `
-        <article class="app-card" data-reveal data-reveal-delay="${(i % 3) + 1}" id="${app.id}">
-          ${appMediaIcon(app)}
-          <div class="app-card-body">
-            <div class="app-card-top">
-              <h3>${app.name}</h3>
-              <span class="tag tag--blue">${app.category}</span>
-            </div>
-            <p class="desc">${app.shortDesc}</p>
-            <div class="tech-pills">${app.tech.map((t) => `<span class="tech-pill">${t}</span>`).join("")}</div>
-            <div class="app-card-actions">
-              <button class="btn btn--outline btn--sm" data-open-app="${app.id}">Conhecer</button>
-              ${app.hasDownload ? `<a class="btn btn--primary btn--sm" href="downloads.html#${app.id}">Download</a>` : ""}
-            </div>
+        .map((app, i) => {
+          const accent = appAccent(app);
+          return `
+        <article class="app-tile app-tile--${accent.cls}" data-reveal data-reveal-delay="${(i % 3) + 1}" id="${app.id}">
+          <div class="app-tile-top">
+            <div class="app-tile-icon">${app.image ? `<img src="${app.image}" alt="${app.name}" loading="lazy">` : icon(app.icon)}</div>
+            <span class="tag app-tile-tag">${app.category}</span>
           </div>
-        </article>`
-        )
+          <h3>${app.name}</h3>
+          <p class="desc">${app.shortDesc}</p>
+          <div class="tech-pills">${app.tech.slice(0, 3).map((t) => `<span class="tech-pill">${t}</span>`).join("")}</div>
+          <div class="app-tile-actions">
+            <button class="btn btn--outline btn--sm" data-open-app="${app.id}">Conhecer</button>
+            ${app.hasDownload ? `<a class="btn btn--primary btn--sm" href="downloads.html#${app.id}">Download</a>` : ""}
+          </div>
+        </article>`;
+        })
         .join("");
       observeReveal(grid);
     }
