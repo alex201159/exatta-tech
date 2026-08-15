@@ -1931,7 +1931,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 .page-hero { padding: calc(var(--header-h) + 18px) 0 28px; text-align: center; }
 .page-hero--compact { padding-bottom: 0; }
 .section--flush-top { padding-top: 6px; }
-.page-hero .section-head { max-width: 720px; margin: 0 auto; }
+.page-hero .section-head { max-width: min(1120px, 100%); margin: 0 auto; }
+@media (min-width: 960px) {
+  .page-hero .section-title { white-space: nowrap; }
+}
 
 /* ---------- Skeleton loading ---------- */
 .skeleton { position: relative; overflow: hidden; background: var(--surface); border-radius: var(--radius-md); }
