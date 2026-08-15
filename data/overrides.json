@@ -242,6 +242,57 @@
       "id": "dl-calibra-pro-bb5gn",
       "image": "assets/uploads/downloads-dl-calibra-pro-bb5gn-icon.png?v=1786737220875",
       "url": "assets/uploads/downloads-dl-calibra-pro-bb5gn.png?v=1786653472406"
+    },
+    {
+      "id": "dl-lc-carga-atual-apk",
+      "name": "LC Carga Atual",
+      "platform": "Android",
+      "type": "android",
+      "version": "1.2.6",
+      "size": "22.6 MB",
+      "date": "06/07/2026",
+      "desc": "Pesagem rodoviária de cargas via Bluetooth, com cadastro de clientes, histórico e relatórios em PDF.",
+      "current": true,
+      "url": "",
+      "image": "assets/uploads/apps-lc-carga-atual.jpg?v=1786757023504"
+    },
+    {
+      "id": "dl-lc-trato-apk",
+      "name": "LC Trato",
+      "platform": "Android",
+      "type": "android",
+      "version": "1.0.0",
+      "size": "25.6 MB",
+      "date": "30/06/2026",
+      "desc": "Controle de carregamento de trato (ração) do rebanho, com receitas do veterinário e pesagem via Bluetooth.",
+      "current": true,
+      "url": "",
+      "image": "assets/uploads/apps-lc-trato.jpg?v=1786757023504"
+    },
+    {
+      "id": "dl-testador-apk",
+      "name": "Testador",
+      "platform": "Android",
+      "type": "android",
+      "version": "7.1.0",
+      "size": "20.5 MB",
+      "date": "10/08/2026",
+      "desc": "Ferramenta técnica para testar, calibrar e diagnosticar indicadores de balança via Bluetooth e Serial.",
+      "current": true,
+      "url": "",
+      "image": "assets/uploads/apps-testador.svg?v=1786757023504"
+    },
+    {
+      "id": "dl-balanca-tech-apk",
+      "name": "Balança Tech",
+      "platform": "Android",
+      "type": "android",
+      "version": "1.0.0",
+      "size": "37.3 MB",
+      "date": "26/07/2026",
+      "desc": "Busca manuais em PDF e vídeos técnicos de balanças pelo modelo do equipamento, com download para uso offline.",
+      "current": true,
+      "url": ""
     }
   ],
   "manuals": [
