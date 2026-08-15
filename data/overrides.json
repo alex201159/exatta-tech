@@ -3292,7 +3292,7 @@
       "icon": "shield",
       "price": null,
       "priceLabel": "Consultar preço",
-      "desc": "Sistema de gestão para laboratórios de calibração acreditados, com emissão de certificados no padrão RBC/Cgcre (ISO/IEC 17025). Reúne cadastro de clientes e equipamentos, ordens de serviço, gestão de massas padrão e cadeia de rastreabilidade, análise estatística de deriva entre calibrações, controle financeiro, alertas de vencimento e trilha de auditoria — com backup e sincronização entre estações de trabalho.",
+      "desc": "O CalibraPro RBC é um sistema desktop completo para laboratórios de calibração acreditados pela Rede Brasileira de Calibração (RBC/Cgcre, ISO/IEC 17025). Cobre todo o fluxo: cadastro de clientes, técnicos, equipamentos e massas padrão; abertura e acompanhamento de Ordens de Serviço com orçamento, aprovação e histórico; emissão de certificados de calibração no formato oficial acreditado, com cálculo de erro, tolerância, incerteza e TUR por ponto de teste, testes de excentricidade, repetibilidade e sensibilidade, e controle dos padrões de temperatura, pressão e umidade exigidos pela acreditação. Gera PDFs de certificados e ordens de serviço com a identidade visual do laboratório, mantém cadeia de rastreabilidade dos padrões utilizados e análise estatística de deriva entre calibrações, controla estoque, financeiro (receitas, despesas e comissões por técnico) e alerta sobre certificados a vencer. Conta ainda com perfis de acesso, trilha de auditoria completa e backup com sincronização entre estações de trabalho.",
       "availability": "available",
       "image": "assets/uploads/products-calibrapro-rbc.png?v=1786759613062"
     },
@@ -3303,7 +3303,7 @@
       "icon": "shield",
       "price": null,
       "priceLabel": "Consultar preço",
-      "desc": "Versão padrão do sistema de gestão para laboratórios de calibração, sem o módulo de certificação acreditada RBC. Inclui cadastro de clientes e equipamentos, ordens de serviço, emissão de certificados, controle de estoque, gestão financeira, relatórios e trilha de auditoria — com backup e sincronização entre estações de trabalho.",
+      "desc": "O CalibraPro Padrão é a versão do sistema de gestão para laboratórios de calibração sem o módulo de certificação acreditada RBC/Cgcre — indicado para laboratórios que não operam sob acreditação formal. Mantém todo o fluxo operacional: cadastro de clientes, técnicos, equipamentos e massas padrão; Ordens de Serviço com orçamento, aprovação e histórico; emissão de certificados com pontos de teste, cálculo de erro, tolerância, incerteza e TUR, testes adicionais e geração de PDF com a identidade visual do laboratório; controle de estoque, financeiro completo com comissões por técnico, relatórios e alertas de vencimento de certificados. Equipamentos sem movimentação recente são arquivados automaticamente para manter as listas organizadas. Também conta com perfis de acesso, trilha de auditoria e backup com sincronização entre estações de trabalho.",
       "availability": "available",
       "image": "assets/uploads/products-calibrapro-normal.png?v=1786759613062"
     },
@@ -3314,7 +3314,7 @@
       "icon": "scale",
       "price": null,
       "priceLabel": "Consultar preço",
-      "desc": "Sistema desktop para pesagem rodoviária em estações fixas: conexão com balanças via porta serial ou rede, controle de entrada e saída de veículos, captura de foto do veículo na pesagem, consulta de placa, emissão de tíquetes, cadastro de usuários, relatórios e backup automático com agendamento.",
+      "desc": "O LC Carga Desktop é o sistema para estações fixas de pesagem rodoviária, com login por perfil (Administrador, Supervisor e Operador) e atalhos de teclado para agilizar a operação. O painel principal mostra o peso em tempo real vindo da balança — conectada por porta serial ou por rede — ao lado de uma câmera ao vivo (local ou IP) que registra o veículo no momento da pesagem. Controla o ciclo completo de entrada e saída de veículos, mantém a lista de veículos pendentes, imprime tíquetes de pesagem com o cabeçalho da empresa (nome, CNPJ e telefone) e gera relatórios filtráveis de entrada e saída. O acesso a Ajustes, Tabelas de cadastro e ao módulo de usuários é restrito por perfil, e o sistema conta com backup automático agendado. A licença é ativada por hardware, com período de teste de 5 dias e bloqueio automático de recursos quando expira.",
       "availability": "available",
       "image": "assets/uploads/products-lc-carga-desktop.jpg?v=1786759613062"
     }
