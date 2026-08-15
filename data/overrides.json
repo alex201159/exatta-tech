@@ -3300,12 +3300,16 @@
       "id": "prod-calibrapro-normal",
       "name": "CalibraPro Padrão",
       "category": "Sistema desktop",
-      "icon": "shield",
+      "icon": "package",
       "price": null,
       "priceLabel": "Consultar preço",
       "desc": "O CalibraPro Padrão é a versão do sistema de gestão para laboratórios de calibração sem o módulo de certificação acreditada RBC/Cgcre — indicado para laboratórios que não operam sob acreditação formal. Mantém todo o fluxo operacional: cadastro de clientes, técnicos, equipamentos e massas padrão; Ordens de Serviço com orçamento, aprovação e histórico; emissão de certificados com pontos de teste, cálculo de erro, tolerância, incerteza e TUR, testes adicionais e geração de PDF com a identidade visual do laboratório; controle de estoque, financeiro completo com comissões por técnico, relatórios e alertas de vencimento de certificados. Equipamentos sem movimentação recente são arquivados automaticamente para manter as listas organizadas. Também conta com perfis de acesso, trilha de auditoria e backup com sincronização entre estações de trabalho.",
       "availability": "available",
-      "image": "assets/uploads/products-calibrapro-normal.png?v=1786759613062"
+      "image": "assets/uploads/products-calibrapro-normal.png?v=1786759613062",
+      "videos": [
+        "https://www.instagram.com/reel/DWOj-EkmYH9/?igsh=MWI4aG55bnM2bnp0ZA=="
+      ],
+      "gallery": []
     },
     {
       "id": "prod-lc-carga-desktop",
