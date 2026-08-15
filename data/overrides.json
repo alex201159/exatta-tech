@@ -160,8 +160,10 @@
           "d": "Primeira versão: receitas, carga/descarga via BLE e relatórios."
         }
       ],
-      "hasDownload": false,
-      "image": "assets/uploads/apps-lc-trato.jpg?v=1786755848646"
+      "hasDownload": true,
+      "image": "assets/uploads/apps-lc-trato.jpg?v=1786755848646",
+      "videos": [],
+      "gallery": []
     },
     {
       "id": "testador",
