@@ -405,7 +405,7 @@
       "version": "1.0.0",
       "size": "37.3 MB",
       "date": "26/07/2026",
-      "desc": "O Balança Tech busca o manual e vídeos de um equipamento de pesagem a partir do modelo digitado: percorre automaticamente sites de fabricantes e repositórios técnicos, abrindo cada um em uma WebView embutida, e se algum site pedir captcha ou bloquear o acesso, dá pra resolver na hora ou pular pro próximo. Os manuais em PDF encontrados ficam salvos no aparelho, com um visualizador de PDF embutido para abrir sem internet. Também busca vídeos técnicos relacionados no YouTube e toca direto dentro do app, sem precisar sair para o YouTube.",
+      "desc": "O SOS Balanceiros  busca o manual e vídeos de um equipamento de pesagem a partir do modelo digitado: percorre automaticamente sites de fabricantes e repositórios técnicos, abrindo cada um em uma WebView embutida, e se algum site pedir captcha ou bloquear o acesso, dá pra resolver na hora ou pular pro próximo. Os manuais em PDF encontrados ficam salvos no aparelho, com um visualizador de PDF embutido para abrir sem internet. Também busca vídeos técnicos relacionados no YouTube e toca direto dentro do app, sem precisar sair para o YouTube.",
       "current": true,
       "url": "https://vj8nd-my.sharepoint.com/:u:/g/personal/offcell_vj8nd_onmicrosoft_com/IQAhVF5RrPfhQqbXe9Uw31kkAYs5THDqZMJplgML0OClAyQ?e=pgXcJa",
       "image": ""
