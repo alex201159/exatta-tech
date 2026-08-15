@@ -58,6 +58,19 @@
   }
   window.exattaIcon = icon;
 
+  /* ------------------------------------------------------------------ */
+  /* Markdown leve — só ** negrito ** e # títulos, pra descrições longas */
+  /* cadastradas pelo admin não aparecerem com a sintaxe crua no site.  */
+  /* ------------------------------------------------------------------ */
+  function mdLite(text) {
+    if (!text) return "";
+    return String(text)
+      .replace(/#{1,6}\s*/g, "")
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\n{2,}/g, "<br><br>")
+      .replace(/\n/g, "<br>");
+  }
+
   document.addEventListener("DOMContentLoaded", async () => {
     // Substitui elementos <i data-icon="nome"> pelo svg correspondente
     qsa("[data-icon]").forEach((el) => {
@@ -501,7 +514,7 @@
               <div class="plat">${d.platform}</div>
             </div>
           </div>
-          <p>${d.desc}</p>
+          <p>${mdLite(d.desc)}</p>
           <button class="card-link" data-open-download="${d.id}">Ver descrição completa ${icon("arrowRight")}</button>
           <div class="dl-meta">
             <span><b>Versão</b> ${d.version}</span>
@@ -569,7 +582,7 @@
       : icon(iconFor[d.type]);
     qs("#downloadModalTitle", overlay).textContent = d.name;
     qs("#downloadModalPlatform", overlay).textContent = d.platform || "";
-    qs("#downloadModalDesc", overlay).textContent = d.desc || "";
+    qs("#downloadModalDesc", overlay).innerHTML = mdLite(d.desc) || "";
     qs("#downloadModalVersion", overlay).textContent = `Versão ${d.version || "-"}`;
     qs("#downloadModalSize", overlay).textContent = d.size || "-";
     qs("#downloadModalDate", overlay).textContent = d.date || "-";
@@ -614,33 +627,88 @@
     return (videos || []).map(videoEmbedHtml).join("");
   }
 
-  function renderProductsPage() {
-    const grid = qs("#productsGrid");
-    if (!grid || typeof PRODUCTS === "undefined") return;
-
-    grid.innerHTML = PRODUCTS.map(
-      (p, i) => `
+  function productCardHtml(p, i) {
+    const isPromo = p.id === "prod-lc-teste-7ayd4";
+    return `
       <article class="product-card" data-reveal data-reveal-delay="${(i % 3) + 1}">
         <div class="product-media">
           ${p.image ? `<img src="${p.image}" alt="${p.name}" loading="lazy">` : icon(p.icon)}
-          <span class="product-avail ${p.availability === "low" ? "low" : ""}">${
-        p.availability === "low" ? "Estoque limitado" : "Disponível"
-      }</span>
+          ${isPromo ? `<span class="product-tag product-tag--promo">${icon("star")}1 mês grátis de CalibraPro</span>` : ""}
+          ${p.availability === "low" ? `<span class="product-tag product-tag--low">Estoque limitado</span>` : ""}
         </div>
         <div class="product-body">
           <span class="cat">${p.category}</span>
           <h3>${p.name}</h3>
-          <p>${p.desc}</p>
-          <div class="product-price">${p.priceLabel}<small>Valor sob consulta</small></div>
+          <p>${mdLite(p.desc)}</p>
+          <div class="product-price-row">
+            <div class="product-price">${p.priceLabel}<small>Valor sob consulta</small></div>
+          </div>
           <div class="product-actions">
             <button class="btn btn--outline btn--sm" data-open-product="${p.id}">Ver detalhes</button>
             <a class="btn btn--primary btn--sm" data-wa-link data-wa-message="Olá! Tenho interesse em: ${p.name}. Poderiam me passar mais informações?">Solicitar orçamento</a>
           </div>
         </div>
-      </article>`
-    ).join("");
-    observeReveal(grid);
-    initWhatsapp();
+      </article>`;
+  }
+
+  function renderProductsPage() {
+    const grid = qs("#productsGrid");
+    if (!grid || typeof PRODUCTS === "undefined") return;
+
+    const chipsEl = qs("#productsFilterChips");
+    const searchInput = qs("#productsSearch");
+    const categories = Array.from(new Set(PRODUCTS.map((p) => (p.category || "").trim()).filter(Boolean)));
+    let activeFilter = "all";
+    let query = "";
+
+    if (chipsEl) {
+      chipsEl.innerHTML = [`<button class="chip is-active" data-filter="all">Todos</button>`]
+        .concat(categories.map((c) => `<button class="chip" data-filter="${c}">${c}</button>`))
+        .join("");
+    }
+
+    function paint() {
+      const q = query.trim().toLowerCase();
+      const list = PRODUCTS.filter((p) => {
+        const matchFilter = activeFilter === "all" || (p.category || "").trim() === activeFilter;
+        const matchQuery = !q || p.name.toLowerCase().includes(q) || (p.desc || "").toLowerCase().includes(q);
+        return matchFilter && matchQuery;
+      });
+
+      if (!list.length) {
+        grid.innerHTML = `
+          <div class="empty-state" style="grid-column:1/-1">
+            ${icon("search")}
+            <h4>Nenhum produto encontrado</h4>
+            <p>Tente outro termo de busca ou selecione outra categoria.</p>
+          </div>`;
+        return;
+      }
+
+      grid.innerHTML = list.map(productCardHtml).join("");
+      observeReveal(grid);
+      initWhatsapp();
+    }
+
+    if (chipsEl) {
+      qsa("[data-filter]", chipsEl).forEach((chip) => {
+        chip.addEventListener("click", () => {
+          qsa("[data-filter]", chipsEl).forEach((c) => c.classList.remove("is-active"));
+          chip.classList.add("is-active");
+          activeFilter = chip.getAttribute("data-filter");
+          paint();
+        });
+      });
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        query = e.target.value;
+        paint();
+      });
+    }
+
+    paint();
     initProductModal();
 
     const hashId = window.location.hash.replace("#", "");
@@ -652,8 +720,12 @@
   function initProductModal() {
     const overlay = qs("#productModal");
     if (!overlay) return;
-    qsa("[data-open-product]").forEach((btn) => {
-      btn.addEventListener("click", () => openProductModal(btn.getAttribute("data-open-product")));
+    // Delegação no document: a grid de produtos é recriada a cada busca/filtro,
+    // então ligar o clique direto nos botões antigos os deixaria mortos depois
+    // da primeira busca (mesmo padrão usado no modal de apps).
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-open-product]");
+      if (btn) openProductModal(btn.getAttribute("data-open-product"));
     });
     qsa("[data-modal-close]", overlay).forEach((el) => el.addEventListener("click", closeProductModal));
     overlay.addEventListener("click", (e) => {
@@ -679,7 +751,7 @@
 
     qs("#productModalTitle", overlay).textContent = p.name;
     qs("#productModalCategory", overlay).textContent = p.category || "";
-    qs("#productModalDesc", overlay).textContent = p.desc || "";
+    qs("#productModalDesc", overlay).innerHTML = mdLite(p.desc) || "";
     qs("#productModalAvail", overlay).textContent = p.availability === "low" ? "Estoque limitado" : "Disponível";
     qs("#productModalPrice", overlay).textContent = p.priceLabel || "Consultar preço";
 
