@@ -394,7 +394,7 @@
     const grid = qs("#appsGrid");
     if (!grid || typeof APPS === "undefined") return;
 
-    const spotlightApp = APPS[0];
+    const spotlightApp = APPS.find((app) => app.name.trim().toLowerCase() === "lc teste") || APPS[0];
     renderAppSpotlight(spotlightApp);
     renderAppStats();
 
