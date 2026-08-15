@@ -93,25 +93,6 @@ body {
   min-height: 100vh;
 }
 
-/* Teste: fundo bem mais claro, só na tela de Apps por enquanto */
-body.bg-soft {
-  --bg: #eef1f6;
-  --bg-elevated: #ffffff;
-  --surface: #ffffff;
-  --surface-2: #f4f6fa;
-  --surface-hover: #e7ebf2;
-  --border: rgba(15,23,42,0.08);
-  --border-strong: rgba(15,23,42,0.16);
-  --text: #10151f;
-  --text-secondary: #4b5468;
-  --text-muted: #7c8598;
-}
-body.bg-soft .site-header.is-scrolled { background: rgba(255,255,255,0.85); }
-body.bg-soft .nav-desktop a:hover { background: rgba(15,23,42,0.05); }
-body.bg-soft .nav-toggle { background: rgba(15,23,42,0.03); }
-body.bg-soft .back-to-top { background: #fff; }
-body.bg-soft .footer-social a { background: #fff; }
-
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
