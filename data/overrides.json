@@ -9,15 +9,15 @@
         "balancas",
         "tecnico"
       ],
-      "shortDesc": "Controle de pesagem conectado a balanças e indicadores via Bluetooth, BLE e Serial.",
-      "fullDesc": "O LC Peso conecta o seu smartphone diretamente a balanças e indicadores comerciais, industriais e agrícolas, capturando o peso em tempo real e organizando cada pesagem em relatórios prontos para exportação. Criado para operações que não podem parar, funciona mesmo em campo, com pouca conectividade.",
+      "shortDesc": "Pesagem de gado conectada à balança via Bluetooth/BLE ou Serial, com impressão de tíquete e relatório de desempenho.",
+      "fullDesc": "O LC Peso conecta o celular à balança ou indicador de pesagem via Bluetooth clássico, BLE ou Serial, mostrando o peso em tempo real já na tela inicial. Cada pesagem pode ser impressa na hora em uma impressora térmica Bluetooth — com pré-visualização do tíquete antes de imprimir —, fica salva no histórico e alimenta uma página de desempenho com relatório de produção e previsão baseada nas pesagens anteriores. O app tem tela própria de calibração do sinal da balança, configurações para ajustar a conexão conforme o indicador usado em campo, e um backup interno para não perder os dados do aparelho.",
       "features": [
-        "Leitura em tempo real via Bluetooth / BLE",
-        "Suporte a comunicação Serial e RS-232",
-        "Geração de relatórios em PDF",
+        "Conexão com balanças via Bluetooth, BLE ou Serial",
+        "Impressão de tíquete em impressora térmica Bluetooth",
         "Histórico completo de pesagens",
-        "Modo offline com sincronização posterior",
-        "Cadastro de produtos e clientes"
+        "Relatório de desempenho com previsão de produção",
+        "Calibração do sinal da balança",
+        "Backup interno dos dados"
       ],
       "tech": [
         "Flutter",
@@ -55,15 +55,15 @@
         "gestao",
         "producao"
       ],
-      "shortDesc": "Gestão e pesagem para operações do setor agropecuário, do talhão ao silo.",
-      "fullDesc": "O LC Agro organiza a pesagem e a movimentação de safras, insumos e animais, integrando balanças rodoviárias e de plataforma com o controle de estoque e produção da propriedade. Pensado para operar em áreas rurais, com sincronização inteligente de dados.",
+      "shortDesc": "Pesagem agropecuária com cadastro de BIMs (containers com tara própria), relatórios e exportação em CSV.",
+      "fullDesc": "O LC Agro parte da mesma base do LC Peso — conexão com a balança via Bluetooth, BLE ou Serial e impressão de tíquete em impressora térmica — e acrescenta o cadastro de BIMs: containers, bags ou caixas de transporte com número e tara próprios, para o app descontar automaticamente o peso da embalagem e mostrar direto o peso líquido da carga. Mantém histórico de pesagens com exportação em CSV, além de calibração da balança, configurações de conexão e backup interno dos dados — pensado para operações agropecuárias que pesam o mesmo tipo de recipiente repetidas vezes.",
       "features": [
-        "Pesagem de cargas e talhões",
-        "Integração com balanças rodoviárias",
-        "Controle de estoque de insumos e safra",
-        "Relatórios de produtividade",
-        "Funciona sem sinal de internet",
-        "Múltiplos usuários por propriedade"
+        "Conexão com balanças via Bluetooth, BLE ou Serial",
+        "Cadastro de BIMs (containers) com tara para desconto automático",
+        "Impressão de tíquete em impressora térmica Bluetooth",
+        "Histórico de pesagens com exportação em CSV",
+        "Calibração do sinal da balança",
+        "Backup interno dos dados"
       ],
       "tech": [
         "Flutter",
@@ -95,15 +95,15 @@
         "balancas",
         "producao"
       ],
-      "shortDesc": "Pesagem rodoviária de cargas via Bluetooth, com cadastro de clientes, histórico e relatórios em PDF.",
-      "fullDesc": "O LC Carga Atual conecta o smartphone a indicadores de balança rodoviária via Bluetooth para pesar cargas de caminhões em tempo real. Organiza o cadastro de clientes, mantém histórico completo de pesagens e gera relatórios em PDF prontos para impressão ou envio, com backup interno dos dados para não perder nenhum registro.",
+      "shortDesc": "Pesagem rodoviária com cadastro de clientes, conexão Bluetooth, impressão de tíquete e relatórios em PDF.",
+      "fullDesc": "O LC Carga Atual conecta o celular a indicadores de balança rodoviária via Bluetooth para pesar cargas de caminhões, com uma tela de pesagem que já imprime o tíquete na hora em impressora térmica Bluetooth. Tem cadastro completo de clientes — nome, CNPJ, e-mail, telefone e endereço, com busca — histórico de operações e um módulo de relatórios que filtra por período e exporta em PDF. Conta ainda com login próprio, backup interno dos dados e tela de configuração da conexão com a balança.",
       "features": [
         "Conexão Bluetooth com indicadores de balança rodoviária",
-        "Cadastro de clientes",
-        "Histórico completo de pesagens",
-        "Geração de relatórios em PDF",
-        "Backup interno dos dados",
-        "Login com controle de acesso"
+        "Impressão de tíquete de pesagem na hora",
+        "Cadastro e busca de clientes",
+        "Relatórios por período com exportação em PDF",
+        "Histórico de operações",
+        "Backup interno dos dados"
       ],
       "tech": [
         "Flutter",
@@ -130,16 +130,16 @@
         "gestao",
         "producao"
       ],
-      "shortDesc": "Controle de carregamento de trato (ração) do rebanho, com receitas do veterinário e pesagem via Bluetooth.",
-      "fullDesc": "O LC Trato controla o carregamento e a descarga do vagão misturador de ração, conectado por Bluetooth/BLE à balança do equipamento. Segue as receitas cadastradas pelo veterinário, acompanha em tempo real o peso de cada ingrediente carregado, controla o estoque de produtos e gera relatórios e alertas para operadores, técnicos e veterinários.",
+      "shortDesc": "Carregamento de trato do rebanho por receita, com pesagem via Bluetooth/BLE e alerta de estoque baixo.",
+      "fullDesc": "O LC Trato conecta ao vagão misturador de ração por Bluetooth/BLE e conduz o carregamento produto a produto seguindo a receita cadastrada pelo veterinário: o operador escolhe a receita ou define um peso manual, zera a balança direto pelo app antes de iniciar e acompanha em tempo real quanto falta de cada ingrediente, com aviso de estoque baixo quando um produto está acabando. Depois da carga, dá pra comparar a receita planejada com o que realmente foi pesado. O app também controla a descarga, dispara alertas e avisos durante a operação, mantém o estoque de produtos, gera relatórios de carregamento com histórico salvo, e tem telas separadas para operador, técnico e veterinário, cada perfil vendo só o que precisa.",
       "features": [
         "Conexão via Bluetooth/BLE com a balança do misturador",
-        "Receitas de trato cadastradas pelo veterinário",
-        "Monitoramento em tempo real de carga e descarga",
-        "Controle de estoque de produtos e ingredientes",
-        "Alertas sonoros e avisos durante a operação",
+        "Carregamento produto a produto seguindo a receita do veterinário",
+        "Comando de zerar a balança direto pelo app",
+        "Alerta de estoque baixo durante a carga",
+        "Comparação entre receita planejada e peso real",
         "Relatórios de carregamento com histórico salvo",
-        "Perfis de acesso para operador, técnico e veterinário"
+        "Perfis separados para operador, técnico e veterinário"
       ],
       "tech": [
         "Flutter",
@@ -166,15 +166,15 @@
       "filters": [
         "tecnico"
       ],
-      "shortDesc": "Ferramenta técnica para testar, calibrar e diagnosticar indicadores de balança via Bluetooth e Serial.",
-      "fullDesc": "O Testador é uma ferramenta de bancada para técnicos: conecta via Bluetooth/BLE ou Serial a indicadores de balança para testar leitura de peso, calibração, ajuste de seção e desgaste de componentes, além de simular o display remoto. Gera relatórios de teste em PDF e mantém um histórico dos relatórios salvos para acompanhar o equipamento ao longo do tempo.",
+      "shortDesc": "Bancada de testes para indicadores de balança: calibração, desgaste de componentes e display remoto via Bluetooth ou Serial.",
+      "fullDesc": "O Testador conecta via Bluetooth/BLE ou porta Serial a indicadores de balança para testar e calibrar o equipamento em bancada. Tem telas dedicadas para ajuste de seção, calibração, teste de desgaste de componentes e um modo de display remoto que recebe o peso do indicador pela serial e retransmite em frames para um visor à parte — útil pra levar o peso a uma tela longe do indicador. Cada teste pode ser salvo, revisado na lista de relatórios salvos e exportado, com um manual de consulta rápida embutido no próprio app.",
       "features": [
         "Conexão via Bluetooth/BLE e Serial",
         "Teste de calibração e ajuste de seção",
         "Diagnóstico de desgaste de componentes",
-        "Simulação de display remoto",
-        "Exportação de relatórios em PDF",
-        "Histórico de relatórios salvos"
+        "Display remoto: retransmite o peso do indicador para outra tela",
+        "Histórico de relatórios de teste salvos",
+        "Manual de consulta rápida embutido"
       ],
       "tech": [
         "Flutter",
@@ -202,15 +202,15 @@
         "tecnico",
         "balancas"
       ],
-      "shortDesc": "Busca manuais em PDF e vídeos técnicos de balanças pelo modelo do equipamento, com download para uso offline.",
-      "fullDesc": "O Balança Tech ajuda técnicos a encontrar rapidamente o manual e vídeos de um equipamento de pesagem: basta digitar o modelo (ex.: \"Toledo Prix 4 Uno\") para buscar manuais em PDF nos principais fabricantes e repositórios técnicos, além de vídeos relacionados no YouTube com player embutido. Os manuais baixados ficam salvos no aparelho para consulta sem internet em campo.",
+      "shortDesc": "Busca automática de manuais em PDF e vídeos de balanças pelo modelo, com download para consulta offline.",
+      "fullDesc": "O Balança Tech busca o manual e vídeos de um equipamento de pesagem a partir do modelo digitado: percorre automaticamente sites de fabricantes e repositórios técnicos, abrindo cada um em uma WebView embutida, e se algum site pedir captcha ou bloquear o acesso, dá pra resolver na hora ou pular pro próximo. Os manuais em PDF encontrados ficam salvos no aparelho, com um visualizador de PDF embutido para abrir sem internet. Também busca vídeos técnicos relacionados no YouTube e toca direto dentro do app, sem precisar sair para o YouTube.",
       "features": [
-        "Busca de manuais por modelo do equipamento",
+        "Busca automática de manuais em múltiplos sites por modelo",
+        "Resolução manual de captcha durante a busca automática",
         "Download de manuais em PDF para uso offline",
-        "Busca de vídeos técnicos via YouTube",
-        "Player de vídeo embutido no app",
-        "Biblioteca de manuais salvos no dispositivo",
-        "Visualizador de PDF integrado"
+        "Visualizador de PDF embutido",
+        "Busca de vídeos técnicos via YouTube com player embutido",
+        "Biblioteca de manuais salvos no dispositivo"
       ],
       "tech": [
         "Flutter",
@@ -251,7 +251,7 @@
       "version": "1.2.6",
       "size": "22.6 MB",
       "date": "06/07/2026",
-      "desc": "Pesagem rodoviária de cargas via Bluetooth, com cadastro de clientes, histórico e relatórios em PDF.",
+      "desc": "O LC Carga Atual conecta o celular a indicadores de balança rodoviária via Bluetooth para pesar cargas de caminhões, com uma tela de pesagem que já imprime o tíquete na hora em impressora térmica Bluetooth. Tem cadastro completo de clientes — nome, CNPJ, e-mail, telefone e endereço, com busca — histórico de operações e um módulo de relatórios que filtra por período e exporta em PDF. Conta ainda com login próprio, backup interno dos dados e tela de configuração da conexão com a balança.",
       "current": true,
       "url": "https://vj8nd-my.sharepoint.com/:u:/g/personal/offcell_vj8nd_onmicrosoft_com/IQA_2m0xDIjVQ6nxob1wPM_KARYPfvsFDpKlw_N8GFFDkqs?e=2CKi3d",
       "image": "assets/uploads/apps-lc-carga-atual.jpg?v=1786757023504"
@@ -264,7 +264,7 @@
       "version": "1.0.0",
       "size": "25.6 MB",
       "date": "30/06/2026",
-      "desc": "Controle de carregamento de trato (ração) do rebanho, com receitas do veterinário e pesagem via Bluetooth.",
+      "desc": "O LC Trato conecta ao vagão misturador de ração por Bluetooth/BLE e conduz o carregamento produto a produto seguindo a receita cadastrada pelo veterinário: o operador escolhe a receita ou define um peso manual, zera a balança direto pelo app antes de iniciar e acompanha em tempo real quanto falta de cada ingrediente, com aviso de estoque baixo quando um produto está acabando. Depois da carga, dá pra comparar a receita planejada com o que realmente foi pesado. O app também controla a descarga, dispara alertas e avisos durante a operação, mantém o estoque de produtos, gera relatórios de carregamento com histórico salvo, e tem telas separadas para operador, técnico e veterinário, cada perfil vendo só o que precisa.",
       "current": true,
       "url": "https://vj8nd-my.sharepoint.com/:u:/g/personal/offcell_vj8nd_onmicrosoft_com/IQCK0JhMo-V9T75ImiZkwX7LATXAr7h47ptKLdfhCLR9nds?e=Ekz1XR",
       "image": "assets/uploads/apps-lc-trato.jpg?v=1786757023504"
@@ -277,7 +277,7 @@
       "version": "7.1.0",
       "size": "20.5 MB",
       "date": "10/08/2026",
-      "desc": "Ferramenta técnica para testar, calibrar e diagnosticar indicadores de balança via Bluetooth e Serial.",
+      "desc": "O Testador conecta via Bluetooth/BLE ou porta Serial a indicadores de balança para testar e calibrar o equipamento em bancada. Tem telas dedicadas para ajuste de seção, calibração, teste de desgaste de componentes e um modo de display remoto que recebe o peso do indicador pela serial e retransmite em frames para um visor à parte — útil pra levar o peso a uma tela longe do indicador. Cada teste pode ser salvo, revisado na lista de relatórios salvos e exportado, com um manual de consulta rápida embutido no próprio app.",
       "current": true,
       "url": "https://vj8nd-my.sharepoint.com/:u:/g/personal/offcell_vj8nd_onmicrosoft_com/IQC0n63cddHRSrZFb9LmKgUQAchsA6pO5vCB92Vd5y1yEXo?e=PKotYE",
       "image": "assets/uploads/apps-testador.svg?v=1786757023504"
@@ -290,7 +290,7 @@
       "version": "1.0.0",
       "size": "37.3 MB",
       "date": "26/07/2026",
-      "desc": "Busca manuais em PDF e vídeos técnicos de balanças pelo modelo do equipamento, com download para uso offline.",
+      "desc": "O Balança Tech busca o manual e vídeos de um equipamento de pesagem a partir do modelo digitado: percorre automaticamente sites de fabricantes e repositórios técnicos, abrindo cada um em uma WebView embutida, e se algum site pedir captcha ou bloquear o acesso, dá pra resolver na hora ou pular pro próximo. Os manuais em PDF encontrados ficam salvos no aparelho, com um visualizador de PDF embutido para abrir sem internet. Também busca vídeos técnicos relacionados no YouTube e toca direto dentro do app, sem precisar sair para o YouTube.",
       "current": true,
       "url": "https://vj8nd-my.sharepoint.com/:u:/g/personal/offcell_vj8nd_onmicrosoft_com/IQAhVF5RrPfhQqbXe9Uw31kkAYs5THDqZMJplgML0OClAyQ?e=pgXcJa",
       "image": ""
@@ -303,7 +303,7 @@
       "version": "1.4.2",
       "size": "24 MB",
       "date": "10/07/2026",
-      "desc": "Aplicativo completo de pesagem com integração Bluetooth/BLE e Serial.",
+      "desc": "O LC Peso conecta o celular à balança ou indicador de pesagem via Bluetooth clássico, BLE ou Serial, mostrando o peso em tempo real já na tela inicial. Cada pesagem pode ser impressa na hora em uma impressora térmica Bluetooth — com pré-visualização do tíquete antes de imprimir —, fica salva no histórico e alimenta uma página de desempenho com relatório de produção e previsão baseada nas pesagens anteriores. O app tem tela própria de calibração do sinal da balança, configurações para ajustar a conexão conforme o indicador usado em campo, e um backup interno para não perder os dados do aparelho.",
       "current": true,
       "url": "https://vj8nd-my.sharepoint.com/:u:/g/personal/offcell_vj8nd_onmicrosoft_com/IQDg3aWK6ey6Q4kFSDutEdOAARwxnisYrfZs36dZ6WS2l9s?e=4Qm5Pg",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ4IWEDgJ5E8pJURLUiJpvMAh-o7rA4jodis5pvIkDV-JZUNNnl08mw0U&s=10"
@@ -316,7 +316,7 @@
       "version": "2.1.0",
       "size": "31 MB",
       "date": "02/07/2026",
-      "desc": "Gestão e pesagem para operações do agronegócio.",
+      "desc": "O LC Agro parte da mesma base do LC Peso — conexão com a balança via Bluetooth, BLE ou Serial e impressão de tíquete em impressora térmica — e acrescenta o cadastro de BIMs: containers, bags ou caixas de transporte com número e tara próprios, para o app descontar automaticamente o peso da embalagem e mostrar direto o peso líquido da carga. Mantém histórico de pesagens com exportação em CSV, além de calibração da balança, configurações de conexão e backup interno dos dados — pensado para operações agropecuárias que pesam o mesmo tipo de recipiente repetidas vezes.",
       "current": true,
       "url": "https://vj8nd-my.sharepoint.com/:u:/g/personal/offcell_vj8nd_onmicrosoft_com/IQAkkNNZcA2LR6uPWkawI8mYAZW6J04MaqRTyiLR4vB3Ybo?e=d0gXZU",
       "image": "assets/uploads/apps-lc-agro.jpg?v=1786757243939"
