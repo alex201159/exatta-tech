@@ -293,6 +293,32 @@
       "desc": "Busca manuais em PDF e vídeos técnicos de balanças pelo modelo do equipamento, com download para uso offline.",
       "current": true,
       "url": ""
+    },
+    {
+      "id": "dl-lc-peso-apk",
+      "name": "LC Peso",
+      "platform": "Android",
+      "type": "android",
+      "version": "1.4.2",
+      "size": "24 MB",
+      "date": "10/07/2026",
+      "desc": "Aplicativo completo de pesagem com integração Bluetooth/BLE e Serial.",
+      "current": true,
+      "url": "",
+      "image": "assets/uploads/apps-lc-peso.jpg?v=1786757243939"
+    },
+    {
+      "id": "dl-lc-agro-apk",
+      "name": "LC Agro",
+      "platform": "Android",
+      "type": "android",
+      "version": "2.1.0",
+      "size": "31 MB",
+      "date": "02/07/2026",
+      "desc": "Gestão e pesagem para operações do agronegócio.",
+      "current": true,
+      "url": "",
+      "image": "assets/uploads/apps-lc-agro.jpg?v=1786757243939"
     }
   ],
   "manuals": [
