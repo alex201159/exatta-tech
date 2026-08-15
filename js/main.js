@@ -532,7 +532,10 @@
     qs("#modalVideoWrap", overlay).innerHTML = videosEmbedHtml(app.videos || []);
 
     const dlBtn = qs("#modalDownload", overlay);
-    if (dlBtn) dlBtn.href = `downloads.html#${app.id}`;
+    if (dlBtn) {
+      dlBtn.hidden = !app.hasDownload;
+      dlBtn.href = app.hasDownload ? `downloads.html#${app.id}` : "#";
+    }
     overlay.classList.add("is-open");
     document.body.style.overflow = "hidden";
     history.replaceState(null, "", `#${id}`);

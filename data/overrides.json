@@ -239,6 +239,122 @@
       "videos": [],
       "image": "",
       "gallery": []
+    },
+    {
+      "id": "calibrapro-rbc",
+      "name": "CalibraPro RBC",
+      "icon": "package",
+      "category": "Técnico",
+      "filters": [
+        "tecnico",
+        "licencas"
+      ],
+      "shortDesc": "Sistema desktop para gestão completa de laboratórios de calibração acreditados RBC.",
+      "fullDesc": "O CalibraPro RBC é um sistema desktop para laboratórios de calibração acreditados pela RBC/Cgcre, reunindo clientes, técnicos, equipamentos, massas padrão, ordens de serviço, certificados, rastreabilidade, financeiro, relatórios, permissões de acesso e auditoria em um único ambiente. Foi pensado para dar mais organização, controle técnico e segurança documental para laboratórios que precisam seguir processos mais rigorosos.",
+      "features": [
+        "Gestão de clientes, técnicos e equipamentos",
+        "Ordens de Serviço com fluxo completo",
+        "Emissão de certificados RBC",
+        "Controle de massas padrão e rastreabilidade",
+        "Financeiro com receitas, despesas e comissões",
+        "Relatórios, auditoria e permissões por perfil"
+      ],
+      "tech": [
+        "Desktop",
+        "Gestão",
+        "Certificados",
+        "Financeiro"
+      ],
+      "compatibility": "Windows",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "v": "1.0.0",
+          "d": "Versão comercial com gestão técnica, certificados RBC e financeiro integrado."
+        }
+      ],
+      "hasDownload": false,
+      "image": "assets/uploads/products-calibrapro-rbc.png?v=1786759613062",
+      "videos": [],
+      "gallery": []
+    },
+    {
+      "id": "calibrapro-padrao",
+      "name": "CalibraPro Padrão",
+      "icon": "package",
+      "category": "Técnico",
+      "filters": [
+        "tecnico",
+        "licencas"
+      ],
+      "shortDesc": "Sistema desktop para gestão de laboratórios de calibração sem acreditação RBC.",
+      "fullDesc": "O CalibraPro Padrão utiliza a mesma base de gestão do CalibraPro, voltada para laboratórios e empresas que precisam organizar calibrações, clientes, técnicos, equipamentos, ordens de serviço, certificados, estoque, financeiro e relatórios, mas não operam sob acreditação RBC. É uma solução para centralizar a rotina técnica e administrativa em um sistema mais simples de acompanhar.",
+      "features": [
+        "Cadastro de clientes, técnicos e equipamentos",
+        "Controle de Ordens de Serviço",
+        "Emissão de certificados e relatórios",
+        "Histórico e rastreabilidade dos equipamentos",
+        "Controle financeiro e estoque",
+        "Perfis de acesso e backup dos dados"
+      ],
+      "tech": [
+        "Desktop",
+        "Gestão",
+        "Certificados",
+        "Relatórios"
+      ],
+      "compatibility": "Windows",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "v": "1.0.0",
+          "d": "Versão comercial para gestão de laboratórios e emissão de certificados padrão."
+        }
+      ],
+      "hasDownload": false,
+      "image": "assets/uploads/products-calibrapro-normal.png?v=1786759613062",
+      "videos": [
+        "https://www.instagram.com/reel/DWOj-EkmYH9/?igsh=MWI4aG55bnM2bnp0ZA=="
+      ],
+      "gallery": []
+    },
+    {
+      "id": "lc-carga-desktop",
+      "name": "LC Carga Desktop",
+      "icon": "scale",
+      "category": "Produção",
+      "filters": [
+        "producao",
+        "balancas"
+      ],
+      "shortDesc": "Sistema desktop para estações fixas de pesagem rodoviária com entrada, saída e relatórios.",
+      "fullDesc": "O LC Carga Desktop é um sistema para computador criado para estações fixas de pesagem rodoviária. Ele organiza entrada e saída de veículos, captura o peso da balança, registra dados do caminhão, motorista, cliente, fornecedor, produto e destino, calcula peso bruto e líquido, imprime tíquetes e gera relatórios por período e filtros operacionais. Também conta com perfis de usuário, configurações de câmera, porta serial, backup e licença por hardware.",
+      "features": [
+        "Pesagem de entrada e saída de veículos",
+        "Leitura de peso via serial ou rede",
+        "Cadastro de clientes, fornecedores, produtos e transportadoras",
+        "Impressão de tíquete de pesagem",
+        "Relatórios por período e operação",
+        "Backup, permissões e ativação por licença"
+      ],
+      "tech": [
+        "Desktop",
+        "Serial",
+        "Relatórios",
+        "Câmera IP"
+      ],
+      "compatibility": "Windows",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "v": "1.0.0",
+          "d": "Versão comercial para operação fixa de balança rodoviária."
+        }
+      ],
+      "hasDownload": false,
+      "image": "assets/uploads/products-lc-carga-desktop.jpg?v=1786759613062",
+      "videos": [],
+      "gallery": []
     }
   ],
   "downloads": [
