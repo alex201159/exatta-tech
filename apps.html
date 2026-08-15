@@ -71,25 +71,27 @@
 
   <section class="section section--tight section--flush-top">
     <div class="container">
-      <div id="appSpotlight"><!-- preenchido via js/main.js --></div>
+      <div class="apps-panel" data-reveal>
+        <div id="appSpotlight"><!-- preenchido via js/main.js --></div>
 
-      <div class="filter-bar" data-reveal>
-        <div class="filter-chips">
-          <button class="chip is-active" data-filter="all">Todos</button>
-          <button class="chip" data-filter="balancas">Balanças</button>
-          <button class="chip" data-filter="gestao">Gestão</button>
-          <button class="chip" data-filter="tecnico">Técnico</button>
-          <button class="chip" data-filter="producao">Produção</button>
-          <button class="chip" data-filter="licencas">Licenças</button>
+        <div class="filter-bar apps-panel-filter">
+          <div class="filter-chips">
+            <button class="chip is-active" data-filter="all">Todos</button>
+            <button class="chip" data-filter="balancas">Balanças</button>
+            <button class="chip" data-filter="gestao">Gestão</button>
+            <button class="chip" data-filter="tecnico">Técnico</button>
+            <button class="chip" data-filter="producao">Produção</button>
+            <button class="chip" data-filter="licencas">Licenças</button>
+          </div>
+          <div class="filter-search">
+            <i data-icon="search"></i>
+            <input type="text" id="appsSearch" placeholder="Buscar aplicativo...">
+          </div>
         </div>
-        <div class="filter-search">
-          <i data-icon="search"></i>
-          <input type="text" id="appsSearch" placeholder="Buscar aplicativo...">
-        </div>
-      </div>
 
-      <div class="app-grid app-tile-grid" id="appsGrid">
-        <!-- preenchido via js/main.js -->
+        <div class="app-grid app-tile-grid" id="appsGrid">
+          <!-- preenchido via js/main.js -->
+        </div>
       </div>
     </div>
   </section>
