@@ -437,6 +437,77 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
   font-size: 18px;
   margin-bottom: 28px;
 }
+.home-quote-highlight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 630px;
+  margin: -12px 0 24px;
+  padding: 15px 16px;
+  border: 1px solid rgba(34,211,238,0.28);
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(135deg, rgba(47,111,237,0.18), rgba(34,211,238,0.08)),
+    rgba(255,255,255,0.035);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.18);
+  transition: transform var(--t-fast), border-color var(--t-fast), background var(--t-fast);
+}
+.home-quote-highlight:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34,211,238,0.5);
+  background:
+    linear-gradient(135deg, rgba(47,111,237,0.24), rgba(34,211,238,0.12)),
+    rgba(255,255,255,0.05);
+}
+.home-quote-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--grad-brand);
+  color: #06101f;
+  box-shadow: var(--glow-blue);
+}
+.home-quote-icon svg {
+  width: 22px;
+  height: 22px;
+}
+.home-quote-copy {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.home-quote-copy strong {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.25;
+}
+.home-quote-copy small {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.35;
+}
+.home-quote-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.home-quote-action svg {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--t-fast);
+}
+.home-quote-highlight:hover .home-quote-action svg {
+  transform: translateX(3px);
+}
 .home-trust-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -652,6 +723,15 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
   transform: translateY(-3px);
   border-color: var(--border-accent);
   background: var(--surface);
+}
+.home-route--quote {
+  border-color: rgba(34,211,238,0.26);
+  background:
+    linear-gradient(145deg, rgba(47,111,237,0.18), rgba(34,211,238,0.07)),
+    rgba(13,18,32,0.84);
+}
+.home-route--quote:hover {
+  border-color: rgba(34,211,238,0.52);
 }
 .home-route svg {
   width: 24px;
@@ -2034,6 +2114,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
   .home-capability-grid,
   .balance-home-stats .stats-row { grid-template-columns: 1fr; }
   .home-trust-list span { min-height: auto; }
+  .home-quote-highlight {
+    align-items: flex-start;
+    margin-top: -4px;
+  }
+  .home-quote-action { display: none; }
   .home-stats-strip { gap: 20px; }
   .home-stats-strip .app-stat { min-width: calc(50% - 10px); }
   .home-showcase {
