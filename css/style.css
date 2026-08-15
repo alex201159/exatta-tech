@@ -637,6 +637,52 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
   .promo-banner { padding: 34px 20px 24px; }
 }
 
+/* Trilhos laterais da promoção — teste: em telas bem largas a promoção sai
+   do fluxo (banner normal escondido) e vira dois cartões fixos grudados
+   nas bordas esquerda/direita. Estreita o container do <main> só nessa
+   condição, pra garantir espaço de sobra sem sobrepor a grade. */
+.promo-rail {
+  display: none;
+  position: fixed;
+  top: 50%; transform: translateY(-50%);
+  z-index: 45;
+  width: 168px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 20px 16px;
+  border: none;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  background: linear-gradient(165deg, #ff7a45, #d6336c);
+  box-shadow: 0 16px 34px rgba(0,0,0,0.4);
+  animation: promo-glow 2.6s ease-in-out infinite;
+}
+.promo-rail--left { left: 0; border-radius: 0 18px 18px 0; }
+.promo-rail--right { right: 0; border-radius: 18px 0 0 18px; align-items: flex-end; text-align: right; }
+.promo-rail-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase;
+  background: #ffe27a; color: #7a1c00;
+  padding: 4px 10px; border-radius: var(--radius-full);
+}
+.promo-rail-badge svg { width: 11px; height: 11px; }
+.promo-rail-title { font-family: var(--font-display); font-size: 14.5px; line-height: 1.35; }
+.promo-rail-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12.5px; font-weight: 700;
+  background: #fff; color: #b8232f;
+  padding: 8px 13px; border-radius: var(--radius-full);
+}
+.promo-rail-cta svg { width: 13px; height: 13px; }
+
+@media (min-width: 1680px) {
+  .promo-rail { display: flex; }
+  .promo-banner-wrap { display: none; }
+  .promo-rail ~ main .container { max-width: min(1360px, 78vw); }
+}
+
 /* ---------- Balanceiros highlight / search ---------- */
 .search-hero {
   background: var(--grad-card), var(--surface);
