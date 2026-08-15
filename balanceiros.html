@@ -55,7 +55,7 @@
 </nav>
 
 <main id="main">
-  <section class="page-hero">
+  <section class="page-hero page-hero--compact">
     <div class="container">
       <div class="section-head center" data-reveal>
         <span class="eyebrow">Central dos Balanceiros</span>
@@ -63,94 +63,96 @@
         <p class="section-sub">Manuais, vídeos e informações técnicas organizadas por fabricante e modelo.</p>
       </div>
 
-      <div class="search-hero" data-reveal data-reveal-delay="1" style="max-width:860px;margin:0 auto">
-        <div class="search-box" style="margin-top:0">
-          <i data-icon="search"></i>
-          <input type="text" id="balSearch" placeholder="Ex: Prix 4 Uno, CSP-10A, TI400, Platina...">
-        </div>
-        <div class="chip-row" id="brandChips"><!-- preenchido via js/main.js --></div>
+      <div class="bal-search" data-reveal data-reveal-delay="1">
+        <i data-icon="search"></i>
+        <input type="text" id="balSearch" placeholder="Ex: Prix 4 Uno, CSP-10A, TI400, Platina...">
       </div>
 
-      <div class="stats-row" id="balStats" style="margin-top:36px"><!-- preenchido via js/main.js --></div>
+      <div class="stats-row" id="balStats" style="margin-top:32px"><!-- preenchido via js/main.js --></div>
     </div>
   </section>
 
-  <section class="section section--tight">
+  <section class="section section--tight section--flush-top">
     <div class="container">
-      <div class="tabs" data-reveal>
-        <button class="tab-btn is-active" data-tab-target="manuais"><i data-icon="pdf"></i>Manuais<span class="tab-count" data-tab-count="manuais"></span></button>
-        <button class="tab-btn" data-tab-target="videos"><i data-icon="video"></i>Vídeos<span class="tab-count" data-tab-count="videos"></span></button>
-        <button class="tab-btn" data-tab-target="perguntas"><i data-icon="question"></i>Perguntas<span class="tab-count" data-tab-count="perguntas"></span></button>
-        <button class="tab-btn" data-tab-target="comunidade"><i data-icon="users"></i>Comunidade</button>
-      </div>
-
-      <div class="tab-panel is-active" data-tab-panel="manuais">
-        <div class="result-grid" id="manualsGrid"></div>
-        <div class="load-more-wrap" id="manualsLoadMore" style="display:none">
-          <button class="btn btn--outline">Carregar mais manuais</button>
+      <div class="bal-panel" data-reveal>
+        <div class="bal-panel-head">
+          <div class="chip-row" id="brandChips"><!-- preenchido via js/main.js --></div>
         </div>
-      </div>
 
-      <div class="tab-panel" data-tab-panel="videos">
-        <div class="result-grid" id="videosGrid"></div>
+        <div class="tabs" data-reveal>
+          <button class="tab-btn is-active" data-tab-target="manuais"><i data-icon="pdf"></i>Manuais<span class="tab-count" data-tab-count="manuais"></span></button>
+          <button class="tab-btn" data-tab-target="videos"><i data-icon="video"></i>Vídeos<span class="tab-count" data-tab-count="videos"></span></button>
+          <button class="tab-btn" data-tab-target="perguntas"><i data-icon="question"></i>Perguntas<span class="tab-count" data-tab-count="perguntas"></span></button>
+        </div>
 
-        <div id="youtubeResultsWrap" class="yt-section" hidden>
-          <div class="yt-section-head">
-            <i data-icon="video"></i>
-            <h4>Vídeos do YouTube</h4>
+        <div class="tab-panel is-active" data-tab-panel="manuais">
+          <div class="result-grid" id="manualsGrid"></div>
+          <div class="load-more-wrap" id="manualsLoadMore" style="display:none">
+            <button class="btn btn--outline">Carregar mais manuais</button>
           </div>
-          <div class="result-grid" id="youtubeResultsGrid"></div>
         </div>
-      </div>
 
-      <div class="tab-panel" data-tab-panel="perguntas">
-        <div class="result-grid" id="questionsGrid"></div>
+        <div class="tab-panel" data-tab-panel="videos">
+          <div class="result-grid" id="videosGrid"></div>
 
-        <div class="ask-question-box" data-reveal>
-          <h3 style="font-size:18px;margin-bottom:6px">Fazer uma pergunta</h3>
-          <p style="color:var(--text-secondary);font-size:14px;margin-bottom:20px">Nossa equipe recebe sua pergunta e publica a resposta aqui nesta aba assim que possível.</p>
-          <form id="questionForm" novalidate>
-            <div class="form-grid">
-              <div class="field">
-                <label for="qNome">Seu nome</label>
-                <input type="text" id="qNome" name="nome" placeholder="Seu nome" required>
-                <span class="field-error">Informe seu nome.</span>
-              </div>
-              <div class="field">
-                <label for="qContato">WhatsApp ou e-mail (opcional)</label>
-                <input type="text" id="qContato" name="contato" placeholder="Caso queira uma resposta direta">
-              </div>
-              <div class="field">
-                <label for="qBrand">Fabricante</label>
-                <input type="text" id="qBrand" name="brand" placeholder="Ex: Toledo" required>
-                <span class="field-error">Informe o fabricante.</span>
-              </div>
-              <div class="field">
-                <label for="qModel">Modelo</label>
-                <input type="text" id="qModel" name="model" placeholder="Ex: Prix 4 Uno" required>
-                <span class="field-error">Informe o modelo.</span>
-              </div>
-              <div class="field full">
-                <label for="qQuestion">Pergunta</label>
-                <textarea id="qQuestion" name="question" placeholder="Descreva sua dúvida com o máximo de detalhes" required></textarea>
-                <span class="field-error">Escreva sua pergunta.</span>
-              </div>
+          <div id="youtubeResultsWrap" class="yt-section" hidden>
+            <div class="yt-section-head">
+              <i data-icon="video"></i>
+              <h4>Vídeos do YouTube</h4>
             </div>
-            <button type="submit" class="btn btn--primary" style="margin-top:18px">Enviar pergunta</button>
-            <div class="form-toast" id="questionToast">
-              <i data-icon="check"></i>
-              <span>Pergunta enviada!</span>
-            </div>
-          </form>
+            <div class="result-grid" id="youtubeResultsGrid"></div>
+          </div>
         </div>
-      </div>
 
-      <div class="tab-panel" data-tab-panel="comunidade">
-        <div class="search-hero">
-          <div class="card-icon" style="margin:0 auto 20px"><i data-icon="users"></i></div>
-          <h3 class="section-title" style="font-size:24px">Postar material técnico</h3>
-          <p class="section-sub" style="max-width:520px;margin:0 auto 24px">Contribua com manuais, vídeos, dicas e procedimentos técnicos para ajudar outros balanceiros da comunidade.</p>
-          <a href="contato.html?assunto=Postar%20material%20t%C3%A9cnico" class="btn btn--primary">Enviar material</a>
+        <div class="tab-panel" data-tab-panel="perguntas">
+          <div class="result-grid" id="questionsGrid"></div>
+
+          <div class="ask-question-box" data-reveal>
+            <h3>Fazer uma pergunta</h3>
+            <p>Nossa equipe recebe sua pergunta e publica a resposta aqui nesta aba assim que possível.</p>
+            <form id="questionForm" novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="qNome">Seu nome</label>
+                  <input type="text" id="qNome" name="nome" placeholder="Seu nome" required>
+                  <span class="field-error">Informe seu nome.</span>
+                </div>
+                <div class="field">
+                  <label for="qContato">WhatsApp ou e-mail (opcional)</label>
+                  <input type="text" id="qContato" name="contato" placeholder="Caso queira uma resposta direta">
+                </div>
+                <div class="field">
+                  <label for="qBrand">Fabricante</label>
+                  <input type="text" id="qBrand" name="brand" placeholder="Ex: Toledo" required>
+                  <span class="field-error">Informe o fabricante.</span>
+                </div>
+                <div class="field">
+                  <label for="qModel">Modelo</label>
+                  <input type="text" id="qModel" name="model" placeholder="Ex: Prix 4 Uno" required>
+                  <span class="field-error">Informe o modelo.</span>
+                </div>
+                <div class="field full">
+                  <label for="qQuestion">Pergunta</label>
+                  <textarea id="qQuestion" name="question" placeholder="Descreva sua dúvida com o máximo de detalhes" required></textarea>
+                  <span class="field-error">Escreva sua pergunta.</span>
+                </div>
+              </div>
+              <button type="submit" class="btn btn--primary" style="margin-top:18px">Enviar pergunta</button>
+              <div class="form-toast" id="questionToast">
+                <i data-icon="check"></i>
+                <span>Pergunta enviada!</span>
+              </div>
+            </form>
+          </div>
+
+          <div class="bal-contribute" data-reveal>
+            <div class="bal-contribute-ico"><i data-icon="users"></i></div>
+            <div class="bal-contribute-body">
+              <h3>Tem um manual, vídeo ou dica pra compartilhar?</h3>
+              <p>Contribua com material técnico para ajudar outros balanceiros da comunidade.</p>
+            </div>
+            <a href="contato.html?assunto=Postar%20material%20t%C3%A9cnico" class="btn btn--outline btn--sm">Enviar material</a>
+          </div>
         </div>
       </div>
     </div>

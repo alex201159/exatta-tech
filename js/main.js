@@ -954,7 +954,12 @@
     function matches(item, brandKey, modelKey) {
       const q = query.trim().toLowerCase();
       const matchBrand = activeBrand === "all" || item[brandKey] === activeBrand;
-      const matchQuery = !q || item[brandKey].toLowerCase().includes(q) || item[modelKey].toLowerCase().includes(q);
+      const extra = [item.type, item.desc, item.question].filter(Boolean).join(" ").toLowerCase();
+      const matchQuery =
+        !q ||
+        item[brandKey].toLowerCase().includes(q) ||
+        item[modelKey].toLowerCase().includes(q) ||
+        extra.includes(q);
       return matchBrand && matchQuery;
     }
 
