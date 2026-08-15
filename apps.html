@@ -58,7 +58,7 @@
 </nav>
 
 <main id="main">
-  <section class="page-hero">
+  <section class="page-hero page-hero--compact">
     <div class="container">
       <div class="section-head" data-reveal>
         <span class="eyebrow">Aplicativos Exatta Tech</span>
@@ -68,25 +68,27 @@
     </div>
   </section>
 
-  <section class="section section--tight">
+  <section class="section section--tight section--flush-top">
     <div class="container">
-      <div class="filter-bar" data-reveal>
-        <div class="filter-chips">
-          <button class="chip is-active" data-filter="all">Todos</button>
-          <button class="chip" data-filter="balancas">Balanças</button>
-          <button class="chip" data-filter="gestao">Gestão</button>
-          <button class="chip" data-filter="tecnico">Técnico</button>
-          <button class="chip" data-filter="producao">Produção</button>
-          <button class="chip" data-filter="licencas">Licenças</button>
+      <div class="apps-panel" data-reveal>
+        <div class="apps-panel-head">
+          <div class="filter-chips">
+            <button class="chip is-active" data-filter="all">Todos</button>
+            <button class="chip" data-filter="balancas">Balanças</button>
+            <button class="chip" data-filter="gestao">Gestão</button>
+            <button class="chip" data-filter="tecnico">Técnico</button>
+            <button class="chip" data-filter="producao">Produção</button>
+            <button class="chip" data-filter="licencas">Licenças</button>
+          </div>
+          <div class="filter-search">
+            <i data-icon="search"></i>
+            <input type="text" id="appsSearch" placeholder="Buscar aplicativo...">
+          </div>
         </div>
-        <div class="filter-search">
-          <i data-icon="search"></i>
-          <input type="text" id="appsSearch" placeholder="Buscar aplicativo...">
-        </div>
-      </div>
 
-      <div class="app-grid" id="appsGrid">
-        <!-- preenchido via js/main.js -->
+        <div class="app-grid" id="appsGrid">
+          <!-- preenchido via js/main.js -->
+        </div>
       </div>
     </div>
   </section>
