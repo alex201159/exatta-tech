@@ -629,6 +629,7 @@
 
   function productCardHtml(p, i) {
     const isPromo = p.id === "prod-lc-teste-7ayd4";
+    const genericPrice = ["consultar preço", "mensalidade"].includes((p.priceLabel || "").trim().toLowerCase());
     return `
       <article class="product-card" data-reveal data-reveal-delay="${(i % 3) + 1}">
         <div class="product-media">
@@ -641,7 +642,7 @@
           <h3>${p.name}</h3>
           <p>${mdLite(p.desc)}</p>
           <div class="product-price-row">
-            <div class="product-price">${p.priceLabel}<small>Valor sob consulta</small></div>
+            <div class="product-price">${p.priceLabel}${genericPrice ? `<small>Valor sob consulta</small>` : `<small>à vista ou combinado</small>`}</div>
           </div>
           <div class="product-actions">
             <button class="btn btn--outline btn--sm" data-open-product="${p.id}">Ver detalhes</button>
