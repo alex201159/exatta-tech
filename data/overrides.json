@@ -201,7 +201,7 @@
     {
       "id": "balanca-tech",
       "name": "Balança Tech",
-      "icon": "pdf",
+      "icon": "scale",
       "category": "Técnico",
       "filters": [
         "tecnico",
@@ -231,7 +231,10 @@
           "d": "Primeira versão: busca de manuais em PDF e vídeos técnicos por modelo."
         }
       ],
-      "hasDownload": false
+      "hasDownload": true,
+      "videos": [],
+      "image": "",
+      "gallery": []
     }
   ],
   "downloads": [
