@@ -3289,12 +3289,14 @@
       "id": "prod-calibrapro-rbc",
       "name": "CalibraPro RBC",
       "category": "Sistema desktop",
-      "icon": "shield",
+      "icon": "package",
       "price": null,
-      "priceLabel": "Consultar preço",
+      "priceLabel": "Mensalidade ",
       "desc": "O CalibraPro RBC é um sistema desktop completo de gestão para laboratórios de calibração acreditados pela Rede Brasileira de Calibração (RBC/Cgcre, conforme a norma ISO/IEC 17025), cobrindo toda a operação do laboratório em um único lugar, da ponta técnica à financeira. O cadastro reúne clientes (com busca automática de dados por CNPJ), técnicos, equipamentos por cliente — com campos metrológicos como capacidade, resolução, classe, série e tag — e massas padrão avulsas ou por kit, com certificado, validade e incerteza de cada peso. As Ordens de Serviço acompanham todo o ciclo: abertura, execução, testes, entrega e encerramento, com controle de orçamento (pendente, enviado, aprovado ou reprovado), produtos e serviços vinculados com cálculo automático de subtotal e desconto, anexos, histórico de eventos e assinatura do cliente. Na emissão do certificado, o técnico preenche os pontos de teste com cálculo de erro, tolerância, incerteza e TUR, seleciona as massas padrão usadas em cada ponto e registra testes adicionais de excentricidade, repetibilidade e sensibilidade, além das condições ambientais — aqui entra o diferencial da versão RBC: um módulo próprio para os padrões de temperatura, pressão e umidade (termômetro, barômetro e higrômetro) exigidos pela acreditação, e um gerador de PDF que segue o layout oficial do certificado acreditado, com histórico automático de revisões. O sistema também gera PDF de Ordem de Serviço com a identidade visual do laboratório, mantém uma cadeia de rastreabilidade completa dos padrões utilizados em cada calibração e um módulo de análise estatística de deriva entre calibrações sucessivas do mesmo equipamento. No financeiro, controla receitas e despesas com categorias, forma de pagamento, vencimento, recorrência e parcelamento, calcula comissão por técnico e apresenta um dashboard com indicadores e gráficos. Os relatórios cobrem período, cliente e técnico, com alertas de certificados próximos do vencimento, críticos ou vencidos para apoiar a renovação comercial. Por fim, o acesso é dividido em perfis (Master, Admin e Padrão) com restrição a áreas sensíveis como financeiro e configurações, toda ação crítica fica registrada em uma trilha de auditoria consultável por usuário, ação e período, e os dados podem ser exportados/importados em backup completo e sincronizados entre estações via pasta compartilhada.",
       "availability": "available",
-      "image": "assets/uploads/products-calibrapro-rbc.png?v=1786759613062"
+      "image": "assets/uploads/products-calibrapro-rbc.png?v=1786759613062",
+      "videos": [],
+      "gallery": []
     },
     {
       "id": "prod-calibrapro-normal",
