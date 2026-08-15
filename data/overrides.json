@@ -167,7 +167,7 @@
     },
     {
       "id": "testador",
-      "name": "Testador",
+      "name": "LC TESTE",
       "icon": "scale",
       "category": "Técnico",
       "filters": [
@@ -198,7 +198,7 @@
         }
       ],
       "hasDownload": true,
-      "image": "assets/uploads/apps-testador.svg?v=1786755848646",
+      "image": "assets/uploads/apps-testador.png?v=1786831205008",
       "videos": [],
       "gallery": []
     },
