@@ -2838,15 +2838,6 @@
       "sourceUrl": "https://www.alfainstrumentos.com.br/central-de-downloads-balancas/"
     },
     {
-      "id": "m-alfa-catalogo-bancada",
-      "brand": "Alfa",
-      "model": "Balança de bancada Mod. B",
-      "type": "Balança comercial",
-      "desc": "Catálogo do produto",
-      "url": "https://alfainstrumentos.com.br/wp-content/uploads/2024/06/WEB0013CL.01_BALANCA_BANCADA.pdf",
-      "sourceUrl": "https://www.alfainstrumentos.com.br/central-de-downloads-balancas/"
-    },
-    {
       "id": "m-alfa-catalogo-geral",
       "brand": "Alfa",
       "model": "Catálogo geral de produtos Alfa",
@@ -3348,7 +3339,8 @@
       "m16",
       "m17",
       "m18",
-      "m-alfa-dimensional-mod-b"
+      "m-alfa-dimensional-mod-b",
+      "m-alfa-catalogo-bancada"
     ],
     "videos": [],
     "products": [
