@@ -1928,9 +1928,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 26px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); flex-wrap: wrap; gap: 12px; }
 
 /* ---------- Page hero (inner pages) ---------- */
-.page-hero { padding: calc(var(--header-h) + 40px) 0 40px; text-align: center; }
-.page-hero--compact { padding-bottom: 8px; }
-.section--flush-top { padding-top: 16px; }
+.page-hero { padding: calc(var(--header-h) + 18px) 0 28px; text-align: center; }
+.page-hero--compact { padding-bottom: 0; }
+.section--flush-top { padding-top: 6px; }
 .page-hero .section-head { max-width: 720px; margin: 0 auto; }
 
 /* ---------- Skeleton loading ---------- */
@@ -2104,6 +2104,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
   .section { padding: 44px 0; }
   .card-grid, .app-grid, .download-grid, .result-grid, .footer-grid, .contact-type-grid { grid-template-columns: 1fr; }
   .hero { padding-top: calc(var(--header-h) + 32px); }
+  .page-hero { padding: calc(var(--header-h) + 14px) 0 22px; }
+  .page-hero--compact { padding-bottom: 0; }
+  .section--flush-top { padding-top: 4px; }
   .home-hero { padding-top: calc(var(--header-h) + 30px); }
   .home-hero .hero-title { font-size: 34px; line-height: 1.12; }
   .home-hero .hero-sub { font-size: 16px; }
