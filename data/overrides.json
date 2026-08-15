@@ -3308,6 +3308,19 @@
       "desc": "O LC Carga Desktop é o sistema para estações fixas de pesagem rodoviária — a versão para computador que fica na balança, pensada para o fluxo clássico de pesagem de entrada e saída de veículos. O acesso é por login com três níveis de perfil (Administrador, Supervisor e Operador), cada um vendo só o que pode operar, e a tela principal reúne três painéis lado a lado: os botões de ação rápida (Entrada de Veículo, Saída de Veículo, Veículos Pendentes, Relatório Entrada/Saída e Fim de Operação, com atalhos de teclado F1, F2 e F3), o peso em tempo real recebido da balança — conectada por porta serial ou por rede, com indicação visual de conectado, peso estável e peso com carga — e uma câmera ao vivo (local ou por IP) que fotografa o veículo no momento da pesagem. Na Entrada de Veículo, o operador registra número e hora do tíquete, placa do cavalo e da carreta, motorista, cliente, fornecedor, transportadora, produto, origem/destino, armazém, condição, peso de tara/entrada e observações; na Saída, o sistema faz a segunda pesagem na balança, calcula peso bruto e líquido a partir da pesagem de entrada, permite lançar descontos e fecha o tíquete, que sai impresso já com o cabeçalho da empresa (nome, CNPJ e telefone). A lista de Veículos Pendentes mostra quem já deu entrada e ainda não saiu. Em Tabelas ficam os cadastros de apoio — transportadoras, clientes, fornecedores, produtos, condição, descontos, armazéns e destinos —, e em Relatórios dá para tirar listagens e resumos por período, armazém, destino, cliente/fornecedor, transportadora ou produto. Em Ajustes (restrito a Supervisor e Administrador) ficam a configuração geral, da câmera, da porta serial (baud rate e paridade), backup e restauração, e ajustes de impressão; e em Balanceiro (só Administrador) fica o cadastro de usuários e suas permissões. O sistema roda com backup automático agendado e a licença é ativada por hardware, com período de teste de 5 dias, bloqueio automático de recursos quando expira e detecção de tentativa de burlar o teste adiantando o relógio do computador.",
       "availability": "available",
       "image": "assets/uploads/products-lc-carga-desktop.jpg?v=1786759613062"
+    },
+    {
+      "id": "prod-kit-bluetooth",
+      "name": "Kit de Comunicação Bluetooth",
+      "category": "Equipamento",
+      "icon": "bluetooth",
+      "price": null,
+      "priceLabel": "600",
+      "desc": "Módulo Bluetooth/BLE para conectar indicadores antigos aos aplicativos Exatta Tech.",
+      "availability": "low",
+      "videos": [],
+      "image": "",
+      "gallery": []
     }
   ],
   "questions": [],
