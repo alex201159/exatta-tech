@@ -121,8 +121,10 @@
           "d": "Versão estável, com backup interno e relatórios em PDF."
         }
       ],
-      "hasDownload": false,
-      "image": "assets/uploads/apps-lc-carga-atual.jpg?v=1786755848646"
+      "hasDownload": true,
+      "image": "assets/uploads/apps-lc-carga-atual.jpg?v=1786755848646",
+      "videos": [],
+      "gallery": []
     },
     {
       "id": "lc-trato",
