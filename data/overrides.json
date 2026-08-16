@@ -4136,6 +4136,222 @@
       "desc": "Manual de usuário em inglês para terminais IND439check, IND439xx check e BBA439check.",
       "url": "https://www.nefton.gr/files/pdf/IND-BBA439check-User%20Manual-EN.pdf",
       "sourceUrl": "https://www.mt.com/us/en/home/library/user-manuals.html"
+    },
+    {
+      "id": "m-intelimaq-iq6601-v4",
+      "brand": "Intelimaq",
+      "model": "IQ6601 V4 / IQ 66",
+      "type": "Manual do usuário",
+      "desc": "Manual de operação e qualificação da máquina envasadora/contadora de cápsulas e comprimidos IQ6601 V4, revisão 06/2025, encontrado em acervo externo.",
+      "url": "https://pt.scribd.com/document/950957434/Manual-Iq66-Revisao-06-2025",
+      "sourceUrl": "https://pt.scribd.com/document/950957434/Manual-Iq66-Revisao-06-2025"
+    },
+    {
+      "id": "m-intelimaq-iq50-99v3",
+      "brand": "Intelimaq",
+      "model": "IQ50 99V3",
+      "type": "Manual do usuário",
+      "desc": "Manual de operação da envasadora IQ50 99V3, revisão 2025, para envase de pós em pequenas quantidades.",
+      "url": "https://pt.scribd.com/document/1039551659/MANUAL-IQ50-99V3-REVISAO-2025",
+      "sourceUrl": "https://pt.scribd.com/document/1039551659/MANUAL-IQ50-99V3-REVISAO-2025"
+    },
+    {
+      "id": "m-intelimaq-iq44-manual",
+      "brand": "Intelimaq",
+      "model": "IQ44",
+      "type": "Manual de operação",
+      "desc": "Manual de operação da envasadora de pós IQ44, com instruções de funcionamento, programação e ajustes.",
+      "url": "https://pt.scribd.com/document/690359866/MANUAL-DE-OPERACAO-IQ4499",
+      "sourceUrl": "https://pt.scribd.com/document/690359866/MANUAL-DE-OPERACAO-IQ4499"
+    },
+    {
+      "id": "m-intelimaq-iq8605-v2",
+      "brand": "Intelimaq",
+      "model": "IQ8605 / IQ86",
+      "type": "Manual de operação",
+      "desc": "Manual de operação da rosqueadeira IQ8605 V2, relacionado à linha IQ86 de rosqueadeiras Intelimaq.",
+      "url": "https://pt.scribd.com/document/690359966/MANUAL-DE-OPERACAO-IQ8605-com-capa-V2",
+      "sourceUrl": "https://pt.scribd.com/document/690359966/MANUAL-DE-OPERACAO-IQ8605-com-capa-V2"
+    },
+    {
+      "id": "m-intelimaq-iq66-oficial",
+      "brand": "Intelimaq",
+      "model": "IQ 66",
+      "type": "Página técnica oficial",
+      "desc": "Página oficial da envasadora/contadora para comprimidos, drágeas, cápsulas duras e gelatinosas moles.",
+      "url": "https://intelimaq.com.br/wp/iq66/",
+      "sourceUrl": "https://intelimaq.com.br/wp/iq66/"
+    },
+    {
+      "id": "m-intelimaq-iq50-oficial",
+      "brand": "Intelimaq",
+      "model": "IQ 50",
+      "type": "Página técnica oficial",
+      "desc": "Página oficial da envasadora em inox para pós até 20 g, com célula de carga e dosagem automática.",
+      "url": "https://intelimaq.com.br/wp/iq50/",
+      "sourceUrl": "https://intelimaq.com.br/wp/iq50/"
+    },
+    {
+      "id": "m-intelimaq-iq44-oficial",
+      "brand": "Intelimaq",
+      "model": "IQ 44",
+      "type": "Página técnica oficial",
+      "desc": "Página oficial da envasadora de pós na faixa de 10 a 200 g, com envase por peso e alarme de tolerância.",
+      "url": "https://intelimaq.com.br/wp/iq44/",
+      "sourceUrl": "https://intelimaq.com.br/wp/iq44/"
+    },
+    {
+      "id": "m-intelimaq-iq87b",
+      "brand": "Intelimaq",
+      "model": "IQ 87B",
+      "type": "Página técnica oficial",
+      "desc": "Página oficial da envasadora para pós de 100 g a 2 kg, com rosca transportadora, inversor e célula de carga.",
+      "url": "https://intelimaq.com.br/wp/iq87b/",
+      "sourceUrl": "https://intelimaq.com.br/wp/iq87b/"
+    },
+    {
+      "id": "m-intelimaq-iq40",
+      "brand": "Intelimaq",
+      "model": "IQ 40",
+      "type": "Página técnica oficial",
+      "desc": "Página oficial da envasadora de líquidos até 200 g, com válvula eletromagnética e célula de carga.",
+      "url": "https://intelimaq.com.br/wp/iq40/",
+      "sourceUrl": "https://intelimaq.com.br/wp/iq40/"
+    },
+    {
+      "id": "m-intelimaq-iq54",
+      "brand": "Intelimaq",
+      "model": "IQ 54",
+      "type": "Página técnica oficial",
+      "desc": "Página oficial da envasadora de líquidos até 2 kg, com operação por gravidade e compensação por peso.",
+      "url": "https://intelimaq.com.br/wp/iq54/",
+      "sourceUrl": "https://intelimaq.com.br/wp/iq54/"
+    },
+    {
+      "id": "m-intelimaq-iq56",
+      "brand": "Intelimaq",
+      "model": "IQ 56",
+      "type": "Página técnica oficial",
+      "desc": "Página oficial da envasadora de líquidos ou viscosos para 20 kg, 50 kg ou volumes especiais.",
+      "url": "https://intelimaq.com.br/wp/iq56/",
+      "sourceUrl": "https://intelimaq.com.br/wp/iq56/"
+    },
+    {
+      "id": "m-intelimaq-iq65",
+      "brand": "Intelimaq",
+      "model": "IQ 65",
+      "type": "Página técnica oficial",
+      "desc": "Página oficial da envasadora para mel ou viscosos até 2 kg, com válvula eletromagnética e alta precisão.",
+      "url": "https://intelimaq.com.br/wp/iq65/",
+      "sourceUrl": "https://intelimaq.com.br/wp/iq65/"
+    },
+    {
+      "id": "m-intelimaq-iq94m-e",
+      "brand": "Intelimaq",
+      "model": "IQ 94M / IQ 94E",
+      "type": "Página técnica oficial",
+      "desc": "Página oficial das envasadoras pneumáticas para líquidos viscosos, mel e cremes.",
+      "url": "https://intelimaq.com.br/wp/iq94m_e/",
+      "sourceUrl": "https://intelimaq.com.br/wp/iq94m_e/"
+    },
+    {
+      "id": "m-intelimaq-iq86",
+      "brand": "Intelimaq",
+      "model": "IQ 86",
+      "type": "Página técnica oficial",
+      "desc": "Página oficial da rosqueadeira IQ86 para tampas em frascos, com embreagem ajustável.",
+      "url": "https://intelimaq.com.br/wp/iq86/",
+      "sourceUrl": "https://intelimaq.com.br/wp/iq86/"
+    },
+    {
+      "id": "m-intelimaq-iq75",
+      "brand": "Intelimaq",
+      "model": "IQ 75",
+      "type": "Página técnica oficial",
+      "desc": "Página oficial da recravadeira IQ75 para lacres, frascos ampola e válvulas pump.",
+      "url": "https://intelimaq.com.br/wp/iq75/",
+      "sourceUrl": "https://intelimaq.com.br/wp/iq75/"
+    },
+    {
+      "id": "m-intelimaq-iq92",
+      "brand": "Intelimaq",
+      "model": "IQ 92",
+      "type": "Página técnica oficial",
+      "desc": "Página oficial da batocadeira IQ92 para batoques e tampas, com acionamento pneumático.",
+      "url": "https://intelimaq.com.br/wp/iq92/",
+      "sourceUrl": "https://intelimaq.com.br/wp/iq92/"
+    },
+    {
+      "id": "m-intelimaq-iq68",
+      "brand": "Intelimaq",
+      "model": "IQ 68",
+      "type": "Página técnica oficial",
+      "desc": "Página oficial dos tanques IQ68 para fabricação, armazenagem e mistura, com acabamento sanitário.",
+      "url": "https://intelimaq.com.br/wp/iq68/",
+      "sourceUrl": "https://intelimaq.com.br/wp/iq68/"
+    },
+    {
+      "id": "m-intelimaq-iq91d",
+      "brand": "Intelimaq",
+      "model": "IQ 91D",
+      "type": "Página técnica oficial",
+      "desc": "Página oficial do misturador Ribbon Blender IQ91D para pós, com volume interno de 150 litros.",
+      "url": "https://intelimaq.com.br/wp/iq91d/",
+      "sourceUrl": "https://intelimaq.com.br/wp/iq91d/"
+    },
+    {
+      "id": "m-intelimaq-iq91y",
+      "brand": "Intelimaq",
+      "model": "IQ 91Y",
+      "type": "Página técnica oficial",
+      "desc": "Página oficial do misturador em Y IQ91Y para mistura de pós em bancada.",
+      "url": "https://intelimaq.com.br/wp/iq91y/",
+      "sourceUrl": "https://intelimaq.com.br/wp/iq91y/"
+    },
+    {
+      "id": "m-intelimaq-pos-categoria",
+      "brand": "Intelimaq",
+      "model": "Envasadoras de Pós",
+      "type": "Catálogo oficial",
+      "desc": "Página oficial da categoria de envasadoras de pós, reunindo modelos IQ44, IQ50 e relacionados.",
+      "url": "https://intelimaq.com.br/wp/pos/",
+      "sourceUrl": "https://intelimaq.com.br/wp/pos/"
+    },
+    {
+      "id": "m-intelimaq-liquidos-categoria",
+      "brand": "Intelimaq",
+      "model": "Envasadoras de Líquidos",
+      "type": "Catálogo oficial",
+      "desc": "Página oficial da categoria de envasadoras de líquidos, incluindo modelos para própolis, perfumes e outros líquidos.",
+      "url": "https://intelimaq.com.br/wp/liquidos/",
+      "sourceUrl": "https://intelimaq.com.br/wp/liquidos/"
+    },
+    {
+      "id": "m-intelimaq-viscosos-categoria",
+      "brand": "Intelimaq",
+      "model": "Líquidos Viscosos",
+      "type": "Catálogo oficial",
+      "desc": "Página oficial da categoria de equipamentos para líquidos viscosos, com IQ65, IQ94M, IQ68 e modelos relacionados.",
+      "url": "https://intelimaq.com.br/wp/viscosos/",
+      "sourceUrl": "https://intelimaq.com.br/wp/viscosos/"
+    },
+    {
+      "id": "m-intelimaq-misturadores-categoria",
+      "brand": "Intelimaq",
+      "model": "Misturadores de pós",
+      "type": "Catálogo oficial",
+      "desc": "Página oficial da categoria de misturadores de pós, incluindo IQ91D, IQ91B e IQ91Y.",
+      "url": "https://intelimaq.com.br/wp/misturadores/",
+      "sourceUrl": "https://intelimaq.com.br/wp/misturadores/"
+    },
+    {
+      "id": "m-intelimaq-rosqueadeira-categoria",
+      "brand": "Intelimaq",
+      "model": "Rosqueadeiras, batocadeiras e recravadeiras",
+      "type": "Catálogo oficial",
+      "desc": "Página oficial da categoria de fechamento, com rosqueadeira IQ86, recravadeira IQ75 e batocadeira IQ92.",
+      "url": "https://intelimaq.com.br/wp/rosqueadeira_batocadeira_recravadeira/",
+      "sourceUrl": "https://intelimaq.com.br/wp/rosqueadeira_batocadeira_recravadeira/"
     }
   ],
   "videos": [],
@@ -4235,6 +4451,11 @@
       "id": "mettler-toledo",
       "name": "Mettler Toledo",
       "count": 3
+    },
+    {
+      "id": "intelimaq",
+      "name": "Intelimaq",
+      "count": 24
     }
   ],
   "youtubeApiKey": "AIzaSyCYV9YPFxEPcALqtmDqhwhomO27g-vPsPE",
