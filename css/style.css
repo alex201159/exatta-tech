@@ -1357,7 +1357,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 }
 .promo-combo-badge svg { width: 13px; height: 13px; color: #7a1c00; }
 .promo-combo-title { font-family: var(--font-display); font-size: clamp(20px, 2.4vw, 27px); line-height: 1.28; }
-.promo-combo-title span { color: #fff59d; text-decoration: underline; text-decoration-color: rgba(255,245,157,0.5); text-underline-offset: 4px; }
+.promo-combo-title span, .promo-combo-title strong { color: #fff59d; text-decoration: underline; text-decoration-color: rgba(255,245,157,0.5); text-underline-offset: 4px; font-weight: inherit; }
 .promo-combo-text { font-size: 14.5px; color: rgba(255,255,255,0.92); max-width: 560px; }
 .promo-combo-cta {
   display: inline-flex; align-items: center; gap: 8px;

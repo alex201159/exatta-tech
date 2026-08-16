@@ -3478,5 +3478,17 @@
     ],
     "questions": [],
     "manufacturers": []
+  },
+  "featuredAppId": "testador",
+  "promo": {
+    "enabled": true,
+    "productId": "prod-lc-teste-7ayd4",
+    "bonusProductId": "prod-calibrapro-rbc",
+    "bonusLabel": "Grátis por 30 dias",
+    "badge": "Oferta por tempo limitado",
+    "title": "Compre o **LC TESTE** e ganhe **1 mês grátis** do CalibraPro",
+    "text": "O CalibraPro é o sistema completo para emissão de certificados de calibração e gestão do laboratório. Teste sem pagar nada nos primeiros 30 dias — se curtir, é só continuar, a mensalidade só entra depois do mês de teste. Não gostou? Sem compromisso nenhum.",
+    "cta": "Quero essa promoção",
+    "fine": "*Promoção válida na compra do LC TESTE. Após os 30 dias gratuitos do CalibraPro, a mensalidade é cobrada normalmente caso você opte por continuar."
   }
 }

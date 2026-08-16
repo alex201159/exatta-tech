@@ -470,6 +470,8 @@ window.exattaLoadOverrides = async function exattaLoadOverrides() {
     exattaMergeSection(MANUFACTURERS, extra.manufacturers, removed.manufacturers);
     exattaMergeSection(COMMUNITY_QUESTIONS, extra.questions, removed.questions);
     if (extra.youtubeApiKey) EXATTA_CONFIG.youtubeApiKey = extra.youtubeApiKey;
+    window.EXATTA_FEATURED_APP_ID = extra.featuredAppId || null;
+    window.EXATTA_PROMO = extra.promo || null;
   } catch (e) {
     console.warn("Não foi possível carregar data/overrides.json — usando apenas os dados padrão.", e);
   } finally {

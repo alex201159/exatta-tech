@@ -97,6 +97,7 @@
 
     renderHomeApps();
     renderHomeStats();
+    renderAppStats();
     renderAppsPage();
     renderDownloadsPage();
     renderProductsPage();
@@ -291,24 +292,23 @@
     const el = qs("#homeAppsGrid");
     if (!el || typeof APPS === "undefined") return;
     el.innerHTML = APPS.slice(0, 3)
-      .map(
-        (app, i) => `
-      <article class="app-card" data-reveal data-reveal-delay="${i + 1}">
-        ${appMediaIcon(app)}
-        <div class="app-card-body">
-          <div class="app-card-top">
-            <h3>${app.name}</h3>
-            <span class="tag tag--blue">${app.category}</span>
-          </div>
-          <p class="desc">${app.shortDesc}</p>
-          <div class="tech-pills">${app.tech.slice(0, 3).map((t) => `<span class="tech-pill">${t}</span>`).join("")}</div>
-          <div class="app-card-actions">
-            <a class="btn btn--outline btn--sm" href="apps.html#${app.id}">Conhecer</a>
-            ${app.hasDownload ? `<a class="btn btn--primary btn--sm" href="downloads.html#${app.id}">Download</a>` : ""}
-          </div>
+      .map((app, i) => {
+        const accent = appAccent(app);
+        return `
+      <article class="app-tile app-tile--${accent.cls}" data-reveal data-reveal-delay="${i + 1}">
+        <div class="app-tile-top">
+          <div class="app-tile-icon">${app.image ? `<img src="${app.image}" alt="${app.name}" loading="lazy">` : icon(app.icon)}</div>
+          <span class="tag app-tile-tag">${app.category}</span>
         </div>
-      </article>`
-      )
+        <h3>${app.name}</h3>
+        <p class="desc">${app.shortDesc}</p>
+        <div class="tech-pills">${app.tech.slice(0, 3).map((t) => `<span class="tech-pill">${t}</span>`).join("")}</div>
+        <div class="app-tile-actions">
+          <a class="btn btn--outline btn--sm" href="apps.html#${app.id}">Conhecer</a>
+          ${app.hasDownload ? `<a class="btn btn--primary btn--sm" href="downloads.html#${app.id}">Download</a>` : ""}
+        </div>
+      </article>`;
+      })
       .join("");
     observeReveal(el);
   }
@@ -373,14 +373,14 @@
     observeReveal(el);
   }
 
-  function renderAppStats(spotlightId) {
-    const el = qs("#appStatsStrip");
-    if (!el || typeof APPS === "undefined") return;
+  function renderAppStats() {
+    const targets = qsa(".app-stats-strip");
+    if (!targets.length || typeof APPS === "undefined") return;
     const total = APPS.length;
     const categories = new Set(APPS.map((a) => a.category)).size;
     const techs = new Set(APPS.flatMap((a) => a.tech || [])).size;
     const downloadable = APPS.filter((a) => a.hasDownload).length;
-    el.innerHTML = [
+    const html = [
       { n: total, l: "aplicativos" },
       { n: categories, l: "categorias" },
       { n: techs, l: "tecnologias diferentes" },
@@ -388,15 +388,19 @@
     ]
       .map((s) => `<div class="app-stat"><strong>${s.n}</strong><span>${s.l}</span></div>`)
       .join("");
+    targets.forEach((el) => (el.innerHTML = html));
   }
 
   function renderAppsPage() {
     const grid = qs("#appsGrid");
     if (!grid || typeof APPS === "undefined") return;
 
-    const spotlightApp = APPS.find((app) => app.name.trim().toLowerCase() === "lc teste") || APPS[0];
+    const featuredId = window.EXATTA_FEATURED_APP_ID;
+    const spotlightApp =
+      (featuredId && APPS.find((app) => app.id === featuredId)) ||
+      APPS.find((app) => app.name.trim().toLowerCase() === "lc teste") ||
+      APPS[0];
     renderAppSpotlight(spotlightApp);
-    renderAppStats();
 
     const searchInput = qs("#appsSearch");
     const chips = qsa("[data-filter]");
@@ -717,9 +721,55 @@
       </article>`;
   }
 
+  /* ------------------------------------------------------------------ */
+  /* Promoção em destaque (Vendas) — data-driven via overrides.json.    */
+  /* Some sozinha se não houver promoção ativa, ou se o produto ligado  */
+  /* a ela tiver sido removido.                                        */
+  /* ------------------------------------------------------------------ */
+  function renderVendasPromo() {
+    const el = qs("#vendasPromo");
+    if (!el) return;
+    const promo = window.EXATTA_PROMO;
+    const mainProduct =
+      promo && promo.enabled !== false && typeof PRODUCTS !== "undefined"
+        ? PRODUCTS.find((p) => p.id === promo.productId)
+        : null;
+    if (!promo || promo.enabled === false || !mainProduct) {
+      el.innerHTML = "";
+      return;
+    }
+    const bonusProduct = promo.bonusProductId ? PRODUCTS.find((p) => p.id === promo.bonusProductId) : null;
+    el.innerHTML = `
+      <button type="button" class="promo-combo" data-open-product="${mainProduct.id}">
+        <span class="promo-combo-shine"></span>
+        <div class="promo-combo-photos">
+          <div class="promo-combo-photo">${
+            mainProduct.image ? `<img src="${mainProduct.image}" alt="${mainProduct.name}" loading="lazy">` : icon(mainProduct.icon)
+          }</div>
+          ${
+            bonusProduct
+              ? `<span class="promo-combo-plus">${icon("close")}</span>
+          <div class="promo-combo-photo promo-combo-photo--bonus">
+            ${bonusProduct.image ? `<img src="${bonusProduct.image}" alt="${bonusProduct.name}" loading="lazy">` : icon(bonusProduct.icon)}
+            ${promo.bonusLabel ? `<span class="promo-combo-free">${promo.bonusLabel}</span>` : ""}
+          </div>`
+              : ""
+          }
+        </div>
+        <div class="promo-combo-body">
+          ${promo.badge ? `<span class="promo-combo-badge">${icon("star")}${promo.badge}</span>` : ""}
+          <h2 class="promo-combo-title">${mdLite(promo.title || mainProduct.name)}</h2>
+          ${promo.text ? `<p class="promo-combo-text">${mdLite(promo.text)}</p>` : ""}
+          <span class="promo-combo-cta">${promo.cta || "Ver oferta"} ${icon("arrowRight")}</span>
+          ${promo.fine ? `<span class="promo-combo-fine">${promo.fine}</span>` : ""}
+        </div>
+      </button>`;
+  }
+
   function renderProductsPage() {
     const grid = qs("#productsGrid");
     if (!grid || typeof PRODUCTS === "undefined") return;
+    renderVendasPromo();
 
     const chipsEl = qs("#productsFilterChips");
     const searchInput = qs("#productsSearch");
