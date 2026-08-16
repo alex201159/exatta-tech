@@ -212,7 +212,7 @@
         "balancas"
       ],
       "shortDesc": "Busca automática de manuais em PDF e vídeos de balanças pelo modelo, com download para consulta offline.",
-      "fullDesc": "O Balança Tech busca o manual e vídeos de um equipamento de pesagem a partir do modelo digitado: percorre automaticamente sites de fabricantes e repositórios técnicos, abrindo cada um em uma WebView embutida, e se algum site pedir captcha ou bloquear o acesso, dá pra resolver na hora ou pular pro próximo. Os manuais em PDF encontrados ficam salvos no aparelho, com um visualizador de PDF embutido para abrir sem internet. Também busca vídeos técnicos relacionados no YouTube e toca direto dentro do app, sem precisar sair para o YouTube.",
+      "fullDesc": "O SOS Balanceiros busca o manual e vídeos de um equipamento de pesagem a partir do modelo digitado: percorre automaticamente sites de fabricantes e repositórios técnicos, abrindo cada um em uma WebView embutida, e se algum site pedir captcha ou bloquear o acesso, dá pra resolver na hora ou pular pro próximo. Os manuais em PDF encontrados ficam salvos no aparelho, com um visualizador de PDF embutido para abrir sem internet. Também busca vídeos técnicos relacionados no YouTube e toca direto dentro do app, sem precisar sair para o YouTube.",
       "features": [
         "Busca automática de manuais em múltiplos sites por modelo",
         "Resolução manual de captcha durante a busca automática",
