@@ -4354,7 +4354,379 @@
       "sourceUrl": "https://intelimaq.com.br/wp/rosqueadeira_batocadeira_recravadeira/"
     }
   ],
-  "videos": [],
+  "videos": [
+    {
+      "id": "v-toledo-prix-4-uno-sensor",
+      "brand": "Toledo",
+      "model": "Prix 4 Uno",
+      "desc": "Calibração do sensor da balança Prix 4 Uno em vídeo da Toledo do Brasil.",
+      "url": "https://vimeo.com/176635483"
+    },
+    {
+      "id": "v-toledo-prix-4-uno-operacoes",
+      "brand": "Toledo",
+      "model": "Prix 4 Uno",
+      "desc": "Playlist com operações da Prix 4 Uno, incluindo configuração, filtros e rotinas de uso.",
+      "url": "https://www.youtube.com/playlist?list=PL_Gla1oc5AgqinmAG_Yvz-31sNRglLGqa"
+    },
+    {
+      "id": "v-toledo-prix-calibracao-blog",
+      "brand": "Toledo",
+      "model": "Balanças Prix",
+      "desc": "Vídeo/artigo técnico da Toledo sobre calibração do sensor das balanças Prix.",
+      "url": "https://www.toledobrasil.com/blog/como-calibrar-o-sensor-da-sua-balanca-prix/"
+    },
+    {
+      "id": "v-urano-udc-co-eduardo",
+      "brand": "Urano",
+      "model": "UDC-CO / UDC-CO-E",
+      "desc": "Vídeo de calibração da balança Urano UDC-CO / UDC-CO-E no canal Eduardo Da Balança.",
+      "url": "https://www.youtube.com/channel/UCzkf_geoyMdWoliKBtru7iQ/videos"
+    },
+    {
+      "id": "v-urano-ur10000-tech",
+      "brand": "Urano",
+      "model": "UR10000 Light",
+      "desc": "Playlist de calibrações com vídeo da balança Urano UR10000 Light.",
+      "url": "https://www.youtube.com/playlist?list=PLcRVooZp1H-JifUsXZ8WqehtA-cSGU_F6"
+    },
+    {
+      "id": "v-urano-canal-oficial",
+      "brand": "Urano",
+      "model": "Linha Urano",
+      "desc": "Canal oficial Urano Tecnologia com vídeos técnicos e institucionais da linha.",
+      "url": "https://www.youtube.com/user/Uranotecnologia"
+    },
+    {
+      "id": "v-ramuza-playlist-calibracao",
+      "brand": "Ramuza",
+      "model": "Indicadores e balanças Ramuza",
+      "desc": "Playlist oficial Ramuza com vídeos de calibração de indicadores e balanças.",
+      "url": "https://www.youtube.com/playlist?list=PLEQWmG63tOVWPV0Zm0TtEqJcIyBkn-jh6"
+    },
+    {
+      "id": "v-ramuza-canal-oficial",
+      "brand": "Ramuza",
+      "model": "Atena / DCR / IDR",
+      "desc": "Canal oficial Ramuza com vídeos de calibração e assistência técnica.",
+      "url": "https://www.youtube.com/c/ramuza"
+    },
+    {
+      "id": "v-lider-ld1050-tech",
+      "brand": "Líder",
+      "model": "LD1050",
+      "desc": "Playlist TECH Pesagens com vídeo de calibração da balança Líder LD1050.",
+      "url": "https://www.youtube.com/playlist?list=PLcRVooZp1H-JifUsXZ8WqehtA-cSGU_F6"
+    },
+    {
+      "id": "v-lider-canal-shorts",
+      "brand": "Líder",
+      "model": "Linha Líder",
+      "desc": "Canal da Líder Balanças com vídeos curtos de manutenção, calibração e serviços.",
+      "url": "https://www.youtube.com/@liderbalancas/shorts"
+    },
+    {
+      "id": "v-lider-servico-calibracao",
+      "brand": "Líder",
+      "model": "Calibração de balanças",
+      "desc": "Página oficial da Líder sobre calibração de balanças e massas, útil como referência técnica.",
+      "url": "https://liderbalancas.com.br/servicos/calibracao-de-balancas"
+    },
+    {
+      "id": "v-alfa-3100c-calibracao",
+      "brand": "Alfa",
+      "model": "3100C / 3100CS",
+      "desc": "Canal oficial Alfa Instrumentos com procedimento de ajuste e calibração dos indicadores 3100C e 3100CS.",
+      "url": "https://www.youtube.com/channel/UC-XXgozU86gxIu51-L2GSzw/videos"
+    },
+    {
+      "id": "v-alfa-indicadores-downloads",
+      "brand": "Alfa",
+      "model": "Indicadores Alfa",
+      "desc": "Central oficial de indicadores Alfa com materiais de calibração/metrologia para apoio aos vídeos.",
+      "url": "https://www.alfainstrumentos.com.br/central-downloads-indicadores/"
+    },
+    {
+      "id": "v-filizola-bp6-tech",
+      "brand": "Filizola",
+      "model": "BP6",
+      "desc": "Playlist de calibrações com vídeo da balança Filizola BP6.",
+      "url": "https://www.youtube.com/playlist?list=PLcRVooZp1H-JifUsXZ8WqehtA-cSGU_F6"
+    },
+    {
+      "id": "v-filizola-cs15-tech",
+      "brand": "Filizola",
+      "model": "CS15 LED",
+      "desc": "Playlist de calibrações com vídeo da balança Filizola CS15 LED.",
+      "url": "https://www.youtube.com/playlist?list=PLcRVooZp1H-JifUsXZ8WqehtA-cSGU_F6"
+    },
+    {
+      "id": "v-filizola-cs15-eduardo",
+      "brand": "Filizola",
+      "model": "CS-15",
+      "desc": "Canal Eduardo Da Balança com vídeos práticos sobre Filizola CS-15 e rotinas técnicas.",
+      "url": "https://www.youtube.com/channel/UCzkf_geoyMdWoliKBtru7iQ/videos"
+    },
+    {
+      "id": "v-elgin-tech-calibracao",
+      "brand": "Elgin",
+      "model": "DP / SM",
+      "desc": "Playlist de calibrações com vídeo de balanças Elgin.",
+      "url": "https://www.youtube.com/playlist?list=PLcRVooZp1H-JifUsXZ8WqehtA-cSGU_F6"
+    },
+    {
+      "id": "v-elgin-dp15-eduardo",
+      "brand": "Elgin",
+      "model": "DP 15 Plus",
+      "desc": "Canal Eduardo Da Balança com vídeo de calibração da Elgin DP 15 Plus.",
+      "url": "https://www.youtube.com/channel/UCzkf_geoyMdWoliKBtru7iQ/videos"
+    },
+    {
+      "id": "v-elgin-dp3005-config",
+      "brand": "Elgin",
+      "model": "DP-3005",
+      "desc": "Guia técnico de configuração da balança Elgin DP-3005.",
+      "url": "https://treinamentosdesistema.freshdesk.com/pt-BR/support/solutions/articles/150000217591-configura%C3%A7%C3%A3o-da-balan%C3%A7a-elgin-dp-3005"
+    },
+    {
+      "id": "v-upx-ea15-eduardo",
+      "brand": "UPX",
+      "model": "EA-15",
+      "desc": "Canal Eduardo Da Balança com vídeo de calibração da UPX EA-15.",
+      "url": "https://www.youtube.com/channel/UCzkf_geoyMdWoliKBtru7iQ"
+    },
+    {
+      "id": "v-upx-ea32-config",
+      "brand": "UPX",
+      "model": "EA-32",
+      "desc": "Procedimento técnico de configuração da UPX EA-32, útil para parametrização em campo.",
+      "url": "https://www.projetoacbr.com.br/forum/topic/81486-configurar-balan%C3%A7a-upx-ea-32/"
+    },
+    {
+      "id": "v-upx-ea32-eduardo",
+      "brand": "UPX",
+      "model": "EA-32",
+      "desc": "Canal Eduardo Da Balança com vídeo de calibração da UPX EA-32.",
+      "url": "https://www.youtube.com/c/EduardoCordeirodoNascimento/videos"
+    },
+    {
+      "id": "v-balmak-k300-eduardo",
+      "brand": "Balmak",
+      "model": "K-300",
+      "desc": "Canal Eduardo Da Balança com vídeo de calibração da Balmak K-300.",
+      "url": "https://www.youtube.com/channel/UCzkf_geoyMdWoliKBtru7iQ"
+    },
+    {
+      "id": "v-balmak-calibracao-playlist",
+      "brand": "Balmak",
+      "model": "BK-300 / Orion / Eline",
+      "desc": "Playlist de calibração de balanças com vídeos de Balmak BK-300, Orion e Eline.",
+      "url": "https://www.youtube.com/playlist?list=PL3PoCUrszHvc98XHkLsyt6_dwcbrgS5a3"
+    },
+    {
+      "id": "v-balmak-hashtag",
+      "brand": "Balmak",
+      "model": "Linha Balmak",
+      "desc": "Página de vídeos marcados com Balmak, útil para localizar calibração e reset de fábrica.",
+      "url": "https://www.youtube.com/hashtag/balmak"
+    },
+    {
+      "id": "v-systel-brasil-canal",
+      "brand": "Systel",
+      "model": "Clipse / Cuora / Quo",
+      "desc": "Canal oficial Systel Brasil com vídeos de configuração das balanças Clipse, Cuora e Quo.",
+      "url": "https://www.youtube.com/channel/UC1YsvufflHV2X6yOe6TbkNA/videos"
+    },
+    {
+      "id": "v-systel-clipse-playlist",
+      "brand": "Systel",
+      "model": "Clipse",
+      "desc": "Playlist oficial Balança Clipse com configurações de impressão, produto e operação.",
+      "url": "https://www.youtube.com/playlist?list=PL_lHi1hsHekFGvavvNVLLXqy5DvqrvAM2"
+    },
+    {
+      "id": "v-systel-cuora-neo",
+      "brand": "Systel",
+      "model": "Cuora Neo",
+      "desc": "Vídeos oficiais da Systel Brasil com configuração da Cuora Neo e etiquetas.",
+      "url": "https://www.youtube.com/channel/UC1YsvufflHV2X6yOe6TbkNA"
+    },
+    {
+      "id": "v-weightech-wt1000-led",
+      "brand": "Weightech",
+      "model": "WT1000 LED",
+      "desc": "Playlist oficial com parametrização e calibração do indicador WT1000 LED.",
+      "url": "https://www.youtube.com/playlist?list=PLbJ98BCelZ8-8Qp_ps4Srt0rZAKNZvyj7"
+    },
+    {
+      "id": "v-weightech-wt3000-ir",
+      "brand": "Weightech",
+      "model": "WT3000-iR",
+      "desc": "Playlist oficial com parametrização e calibração do indicador WT3000-iR.",
+      "url": "https://www.youtube.com/playlist?list=PLbJ98BCelZ89yUXTJ9478VDaybWPsDGH2"
+    },
+    {
+      "id": "v-weightech-wt21-cs",
+      "brand": "Weightech",
+      "model": "WT21-CS / CSi",
+      "desc": "Playlist oficial com parametrização básica e calibração do WT21-CS/CSi.",
+      "url": "https://www.youtube.com/playlist?list=PLbJ98BCelZ8_GJ6YHUyX4tkSFD3F8lGhu"
+    },
+    {
+      "id": "v-weightech-wt21-p",
+      "brand": "Weightech",
+      "model": "WT21-P",
+      "desc": "Playlist oficial com calibração do indicador de pesagem WT21-P.",
+      "url": "https://www.youtube.com/playlist?list=PLbJ98BCelZ89jEgd63zUaBGGfMcTfiUkm"
+    },
+    {
+      "id": "v-celmi-canal-oficial",
+      "brand": "Celmi",
+      "model": "CSP-10A / CSP-10B",
+      "desc": "Canal oficial Celmi com vídeos de produtos e aplicações de pesagem industrial/agroindustrial.",
+      "url": "https://www.youtube.com/channel/UCKpMB-rE-M4tHj_DeE2vX_g/videos"
+    },
+    {
+      "id": "v-celmi-csp10a-procedimento",
+      "brand": "Celmi",
+      "model": "CSP-10A",
+      "desc": "Procedimento de calibração do indicador Celmi CSP-10A em acervo técnico.",
+      "url": "https://pt.scribd.com/document/482407203/CALIBRACAO-INDICADOR-CELMI-CSP"
+    },
+    {
+      "id": "v-celmi-csp10a-manual-calibracao",
+      "brand": "Celmi",
+      "model": "CSP-10A",
+      "desc": "Manual técnico CSP-10A com capítulo de procedimento de calibração.",
+      "url": "https://pt.scribd.com/document/584547067/Manual-Te-cnico-CSP10A"
+    },
+    {
+      "id": "v-rice-lake-scaletalk",
+      "brand": "Rice Lake",
+      "model": "ScaleTalk / Indicadores",
+      "desc": "Playlist oficial ScaleTalk da Rice Lake com vídeos de setup e calibração.",
+      "url": "https://www.youtube.com/playlist?list=PL-sxvzPiNJb3l8BLykDfQuaOEIfOFJT3K"
+    },
+    {
+      "id": "v-rice-lake-880",
+      "brand": "Rice Lake",
+      "model": "880 Performance",
+      "desc": "Vídeo/resultado de configuração e calibração da série 880 Performance.",
+      "url": "https://www.youtube.com/results?search_query=880+Performance+Series+Calibration+and+Configuration+Rice+Lake"
+    },
+    {
+      "id": "v-rice-lake-480-manual",
+      "brand": "Rice Lake",
+      "model": "480 Legend",
+      "desc": "Manual oficial 480 Legend com procedimento de recalibração e menu de teste.",
+      "url": "https://www.ricelake.com/resources/manuals/480-legend-series-digital-weight-indicator-operation-manual-163374"
+    },
+    {
+      "id": "v-avery-zm303",
+      "brand": "Avery Weigh-Tronix",
+      "model": "ZM303",
+      "desc": "Vídeo de calibração do indicador Avery Weigh-Tronix ZM303.",
+      "url": "https://www.youtube.com/watch?v=INx2hs-Tixg"
+    },
+    {
+      "id": "v-avery-640-scaletec",
+      "brand": "Avery Weigh-Tronix",
+      "model": "Model 640",
+      "desc": "Página Scale-Tec com vídeo e instruções de calibração do indicador Avery 640.",
+      "url": "https://support.scale-tec.com/portal/en/kb/articles/640-indicator-calibration"
+    },
+    {
+      "id": "v-avery-calibration-playlist",
+      "brand": "Avery Weigh-Tronix",
+      "model": "Indicadores Avery",
+      "desc": "Playlist com vídeos de calibração de indicadores Avery Weigh-Tronix.",
+      "url": "https://www.youtube.com/playlist?list=PL2M8V7x8I-F0XWtny4xXTHDJqeIWyiN4A"
+    },
+    {
+      "id": "v-avery-official-channel",
+      "brand": "Avery Weigh-Tronix",
+      "model": "Treinamento técnico",
+      "desc": "Canal oficial Avery Weigh-Tronix com vídeos técnicos e treinamentos.",
+      "url": "https://www.youtube.com/user/Averyweightronix"
+    },
+    {
+      "id": "v-ohaus-indicators",
+      "brand": "Ohaus",
+      "model": "Indicadores Ohaus",
+      "desc": "Playlist oficial OHAUS How to: Indicators, com calibração de span e linearidade.",
+      "url": "https://www.youtube.com/playlist?list=PLKXAeXP0GjjreEGije-EXHBnQjUgEEjds"
+    },
+    {
+      "id": "v-ohaus-defender-5000",
+      "brand": "Ohaus",
+      "model": "Defender 5000",
+      "desc": "Playlist oficial OHAUS Defender 5000 com tutoriais da linha D52.",
+      "url": "https://www.youtube.com/playlist?list=PLKXAeXP0Gjjrgfrg7cvXAmQz4xVMaw0-X"
+    },
+    {
+      "id": "v-ohaus-ranger-3000",
+      "brand": "Ohaus",
+      "model": "Ranger 3000",
+      "desc": "Playlist oficial OHAUS Ranger 3000 com tutoriais de operação e configuração.",
+      "url": "https://www.youtube.com/playlist?list=PLKXAeXP0GjjpvuQCPZcALmdUInRGmDf6x"
+    },
+    {
+      "id": "v-ohaus-valor-4000",
+      "brand": "Ohaus",
+      "model": "Valor 4000",
+      "desc": "Playlist OHAUS Valor 4000 com vídeos de operação e calibração da linha Valor.",
+      "url": "https://www.youtube.com/playlist?list=PLp6HYo2yvuuwc_dnvLpHCFdToPObfp4wk"
+    },
+    {
+      "id": "v-mettler-calibracion-playlist",
+      "brand": "Mettler Toledo",
+      "model": "IND / BPA / balanças",
+      "desc": "Playlist com vídeos de calibração de balanças e terminais Mettler Toledo.",
+      "url": "https://www.youtube.com/playlist?list=PL7JgLkTM6gUti89JPayA6kRYDG5AfriJ8"
+    },
+    {
+      "id": "v-mettler-ind320-short",
+      "brand": "Mettler Toledo",
+      "model": "IND 320",
+      "desc": "Vídeo curto com processo de calibração do indicador Mettler Toledo IND 320.",
+      "url": "https://www.youtube.com/source/FG5eCqHuqqM/shorts?bp=8gVDCjYSJwoLRkc1ZUNxSHVxcU0SC0ZHNWVDcUh1cXFNGgtGRzVlQ3FIdXFxTRoLRkc1ZUNxSHVxcU0onvbYpri--e7CAQ%253D%253D"
+    },
+    {
+      "id": "v-mettler-terminal-playlist",
+      "brand": "Mettler Toledo",
+      "model": "Terminais de pesagem",
+      "desc": "Playlist internacional com ajuste/calibração de terminais e balanças Mettler Toledo.",
+      "url": "https://www.youtube.com/playlist?list=PL7ybycPNtX6gOkAA4GEdtoVTzUeINEPHG"
+    },
+    {
+      "id": "v-intelimaq-iq50-playlist",
+      "brand": "Intelimaq",
+      "model": "IQ50 99V3",
+      "desc": "Playlist Intelimaq IQ50 com QR code, quando calibrar, limpeza, abastecimento e ajustes de operação.",
+      "url": "https://www.youtube.com/playlist?list=PL5dSsolRWpIooMBgjXzSOY6a4GiH6erw4"
+    },
+    {
+      "id": "v-intelimaq-canal-oficial",
+      "brand": "Intelimaq",
+      "model": "Envasadoras e equipamentos",
+      "desc": "Canal oficial Intelimaq com vídeos de envasadoras, contadoras e equipamentos de fechamento.",
+      "url": "https://www.youtube.com/channel/UCmJwHujFRs6d6-WhxoFhGwA"
+    },
+    {
+      "id": "v-intelimaq-iq66-oficial",
+      "brand": "Intelimaq",
+      "model": "IQ66",
+      "desc": "Página oficial da envasadora/contadora IQ66 para cápsulas, comprimidos e drágeas.",
+      "url": "https://intelimaq.com.br/wp/iq66/"
+    },
+    {
+      "id": "v-intelimaq-iq44-instagram",
+      "brand": "Intelimaq",
+      "model": "IQ44",
+      "desc": "Vídeo/publicação oficial da Intelimaq sobre a envasadora IQ44 para pós.",
+      "url": "https://www.instagram.com/p/C-GYX6ItvIY/"
+    }
+  ],
   "products": [
     {
       "name": "LC TESTE",
