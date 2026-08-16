@@ -3362,6 +3362,780 @@
       "desc": "Manual do usuário",
       "url": "https://www.liderbalancas.com.br/wp-content/uploads/produtos/manual/3c309f6e21ab7e76c873f97f92005b5b.pdf",
       "sourceUrl": "https://www.liderbalancas.com.br/manuais-download/"
+    },
+    {
+      "id": "m-systel-clipse-bra",
+      "brand": "Systel",
+      "model": "Clipse",
+      "type": "Manual do usuário",
+      "desc": "Manual em português para operação da balança comercial Clipse, disponibilizado pela Systel do Brasil.",
+      "url": "https://systel-global.com/downloads/34516-08-Manual-Clipse-BRA.pdf",
+      "sourceUrl": "https://systel-global.com/brasil/produto/clipse/"
+    },
+    {
+      "id": "m-systel-detect-esp",
+      "brand": "Systel",
+      "model": "Detect",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol da linha Detect, útil para operação e suporte técnico.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/DETECT-manual-ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-micra",
+      "brand": "Systel",
+      "model": "Micra",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial da balança Micra publicado na central internacional de suporte Systel.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/MICRA.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-passer-ck-out",
+      "brand": "Systel",
+      "model": "Passer CK-Out",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol para a linha Passer CK-Out.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/PASSER-CK-OUT-manual_ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-bumer",
+      "brand": "Systel",
+      "model": "Bumer",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol para operação da balança Bumer.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/BUMER-manual_ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-cuora-max-rev6",
+      "brand": "Systel",
+      "model": "Cuora Max Rev. 6",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol da Cuora Max Rev. 6.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/CUORA-MAX-Rev_6-manual_ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-cuora-esp",
+      "brand": "Systel",
+      "model": "Cuora",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol da linha Cuora.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/CUORA-manual_ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-cuora-eng",
+      "brand": "Systel",
+      "model": "Cuora",
+      "type": "User manual",
+      "desc": "Manual oficial em inglês da linha Cuora para consultas internacionais.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/CUORA-manual_ENG.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-cuora-max-st",
+      "brand": "Systel",
+      "model": "Cuora Max-ST",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol para o modelo Cuora Max-ST.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/Cuora-MAX-ST-manual_ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-eco2-por",
+      "brand": "Systel",
+      "model": "ECO2",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em português para a linha ECO2.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/ECO2-manual_POR.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-eco2-esp",
+      "brand": "Systel",
+      "model": "ECO2",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol para a linha ECO2.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/ECO2-manual_ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-flaier-plus",
+      "brand": "Systel",
+      "model": "Flaier Plus",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol para Flaier Plus.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/FLAIER-PLUS-manual_ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-komba-nexa",
+      "brand": "Systel",
+      "model": "Komba Nexa",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol para Komba Nexa.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/KOMBA-NEXA-manual_ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-maya",
+      "brand": "Systel",
+      "model": "Maya",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol para a balança Maya.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/MAYA-manual_ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-pilon",
+      "brand": "Systel",
+      "model": "Pilon",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol para Pilon.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/PILON-manual_ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-quo",
+      "brand": "Systel",
+      "model": "Quo",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol para Quo.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/QUO-manual_ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-urbe2",
+      "brand": "Systel",
+      "model": "Urbe2",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol para Urbe2.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/URBE2-manual_ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-vita",
+      "brand": "Systel",
+      "model": "Vita",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol para Vita.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/VITA-manual_ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-cf330",
+      "brand": "Systel",
+      "model": "CF330",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol para CF330.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/CF330-manual_ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-systel-clipse-croma",
+      "brand": "Systel",
+      "model": "Clipse Croma",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial em espanhol para Clipse Croma.",
+      "url": "https://soporte.systel-global.com/downloads/Manuales-de-usuario/Manuales-Usuario-Systel/CLIPSE-CROMA-manual_ESP.pdf",
+      "sourceUrl": "https://soporte.systel-global.com/manuales-de-usuario/"
+    },
+    {
+      "id": "m-weightech-wt1000-led-manual",
+      "brand": "Weightech",
+      "model": "WT1000 LED",
+      "type": "Manual técnico",
+      "desc": "Manual técnico oficial do indicador WT1000 LED, com recursos de comunicação e impressão.",
+      "url": "https://drive.google.com/file/d/1w0l2Ys00Sm2Nds6Ids0X_01nvfJvSdX1/view?usp=sharing",
+      "sourceUrl": "https://www.weightech.com.br/indicador-de-pesagem-wt1000-led"
+    },
+    {
+      "id": "m-weightech-wt1000-led-guia",
+      "brand": "Weightech",
+      "model": "WT1000 LED",
+      "type": "Guia de operações",
+      "desc": "Guia de operações oficial para uso em campo do WT1000 LED.",
+      "url": "https://drive.google.com/file/d/1sC0eif8169r7mPu38OZXuJiAnv8my7-g/view?usp=sharing",
+      "sourceUrl": "https://www.weightech.com.br/indicador-de-pesagem-wt1000-led"
+    },
+    {
+      "id": "m-weightech-wt3000-ipro-manual",
+      "brand": "Weightech",
+      "model": "WT3000-i-PRO",
+      "type": "Manual técnico",
+      "desc": "Manual técnico oficial do indicador WT3000-i-PRO.",
+      "url": "https://drive.google.com/file/d/1-4SlN2N72obK1fbj4athmqa_q-Y8k46k/view?usp=sharing",
+      "sourceUrl": "https://www.weightech.com.br/wt3000-i-pro"
+    },
+    {
+      "id": "m-weightech-wt3000-ipro-guia",
+      "brand": "Weightech",
+      "model": "WT3000-i-PRO",
+      "type": "Guia de operações",
+      "desc": "Guia operacional oficial do indicador WT3000-i-PRO.",
+      "url": "https://drive.google.com/file/d/1VJoc-juPK8qdENMpG2Y73vivNQEDO_BL/view?usp=sharing",
+      "sourceUrl": "https://www.weightech.com.br/wt3000-i-pro"
+    },
+    {
+      "id": "m-weightech-wt3000-ir-manual",
+      "brand": "Weightech",
+      "model": "WT3000-iR",
+      "type": "Manual técnico",
+      "desc": "Manual técnico oficial do indicador WT3000-iR.",
+      "url": "https://drive.google.com/file/d/1TLTaYO5K4-wMfLjTNH8xEVmm4MX3Xw-g/view?usp=sharing",
+      "sourceUrl": "https://www.weightech.com.br/indicador-de-pesagem-wt3000-ir"
+    },
+    {
+      "id": "m-weightech-wt3000-ir-guia",
+      "brand": "Weightech",
+      "model": "WT3000-iR",
+      "type": "Guia de operações",
+      "desc": "Guia operacional oficial do indicador WT3000-iR.",
+      "url": "https://drive.google.com/file/d/11CYV7GbgolsopHZMt0cecw9F8ZLb02yN/view?usp=sharing",
+      "sourceUrl": "https://www.weightech.com.br/indicador-de-pesagem-wt3000-ir"
+    },
+    {
+      "id": "m-weightech-wt21-p-plus-manual",
+      "brand": "Weightech",
+      "model": "WT21-P Plus",
+      "type": "Manual técnico",
+      "desc": "Manual técnico oficial do indicador WT21-P Plus.",
+      "url": "https://drive.google.com/file/d/1eFsgw6vRWulPueuanBNUeDxGWx2qn8l8/view?usp=sharing",
+      "sourceUrl": "https://www.weightech.com.br/wt21-p-plus"
+    },
+    {
+      "id": "m-weightech-w100-manual",
+      "brand": "Weightech",
+      "model": "W100",
+      "type": "Manual técnico",
+      "desc": "Manual técnico oficial do módulo W100 disponibilizado pela Weightech.",
+      "url": "https://drive.google.com/drive/folders/13wdSOBW7wwWe5tvDyBunzyB6SKPEYAxX?usp=sharing",
+      "sourceUrl": "https://www.weightech.com.br/w100"
+    },
+    {
+      "id": "m-weightech-w100-config",
+      "brand": "Weightech",
+      "model": "W100",
+      "type": "Material de configuração",
+      "desc": "Material oficial de apoio para configuração e uso do W100.",
+      "url": "https://drive.google.com/file/d/144JqrxhwbNmPOHxmX55rPyEuJKpuuZG9/view?usp=sharing",
+      "sourceUrl": "https://www.weightech.com.br/w100"
+    },
+    {
+      "id": "m-weightech-downloads-geral",
+      "brand": "Weightech",
+      "model": "Central de Downloads",
+      "type": "Biblioteca oficial",
+      "desc": "Página oficial com softwares, aplicativos, etiquetas e materiais de suporte Weightech.",
+      "url": "https://www.weightech.com.br/downloads",
+      "sourceUrl": "https://www.weightech.com.br/downloads"
+    },
+    {
+      "id": "m-upx-ea15",
+      "brand": "UPX",
+      "model": "EA 15",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial da balança computadora EA 15.",
+      "url": "https://upxsolution.com.br/wp-content/uploads/2026/04/Manual_Usurio_EA-15_r4.pdf",
+      "sourceUrl": "https://upxsolution.com.br/"
+    },
+    {
+      "id": "m-upx-ea20",
+      "brand": "UPX",
+      "model": "EA 20",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial da balança computadora EA 20.",
+      "url": "https://upxsolution.com.br/wp-content/uploads/2026/04/Manual_Usuario_EA-20.pdf",
+      "sourceUrl": "https://upxsolution.com.br/"
+    },
+    {
+      "id": "m-upx-combo-impressor-restaurante",
+      "brand": "UPX",
+      "model": "Combo Impressor Restaurante",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial do combo de balança e impressor para restaurante.",
+      "url": "https://upxsolution.com.br/wp-content/uploads/2026/04/Manual_Combo_Impressor_Restaurante.pdf",
+      "sourceUrl": "https://upxsolution.com.br/"
+    },
+    {
+      "id": "m-upx-ea32-produto",
+      "brand": "UPX",
+      "model": "EA 32",
+      "type": "Página técnica",
+      "desc": "Página oficial do produto EA 32 para consulta de especificações e suporte.",
+      "url": "https://upxsolution.com.br/produto/balanca-comercial-ea-32/",
+      "sourceUrl": "https://upxsolution.com.br/"
+    },
+    {
+      "id": "m-upx-ea32-manual-scribd",
+      "brand": "UPX",
+      "model": "EA 32",
+      "type": "Manual do usuário",
+      "desc": "Manual encontrado em acervo externo para consulta técnica do modelo EA 32.",
+      "url": "https://pt.scribd.com/document/555562579/Manual-Usuario-EA-32",
+      "sourceUrl": "https://pt.scribd.com/document/555562579/Manual-Usuario-EA-32"
+    },
+    {
+      "id": "m-upx-wind-d3-manual",
+      "brand": "UPX",
+      "model": "Wind D3",
+      "type": "Manual do usuário",
+      "desc": "Manual encontrado em acervo externo para consulta do modelo Wind D3.",
+      "url": "https://fr.scribd.com/document/635222987/Manual-Usuario-WindD3",
+      "sourceUrl": "https://fr.scribd.com/document/635222987/Manual-Usuario-WindD3"
+    },
+    {
+      "id": "m-upx-thunder-torre",
+      "brand": "UPX",
+      "model": "Thunder Torre 15/30",
+      "type": "Manual do usuário",
+      "desc": "Manual encontrado em acervo externo para balanças Thunder Torre 15/30.",
+      "url": "https://pt.scribd.com/document/824909812/Manual-do-Usuario-ThunderTorre",
+      "sourceUrl": "https://pt.scribd.com/document/824909812/Manual-do-Usuario-ThunderTorre"
+    },
+    {
+      "id": "m-alfa-2712-manual",
+      "brand": "Alfa",
+      "model": "2712",
+      "type": "Manual técnico",
+      "desc": "Manual oficial do transmissor de pesagem automática modelo 2712.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2026/07/0141MN.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-de-downloads/"
+    },
+    {
+      "id": "m-alfa-2711-comandos",
+      "brand": "Alfa",
+      "model": "2711",
+      "type": "Manual de comandos",
+      "desc": "Manual oficial de comandos para transmissor de pesagem 2711.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2025/10/0078MN-Manual-Comandos-2711.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-de-downloads/"
+    },
+    {
+      "id": "m-alfa-711-manual",
+      "brand": "Alfa",
+      "model": "711",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial do transmissor/indicador 711.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2024/05/Manual_Usuario-_711.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-de-downloads/"
+    },
+    {
+      "id": "m-alfa-3101c",
+      "brand": "Alfa",
+      "model": "3101C",
+      "type": "Manual técnico",
+      "desc": "Manual oficial do indicador de pesagem 3101C.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2025/11/3101C.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-downloads-indicadores/"
+    },
+    {
+      "id": "m-alfa-3102c",
+      "brand": "Alfa",
+      "model": "3102C",
+      "type": "Manual técnico",
+      "desc": "Manual oficial do indicador de pesagem 3102C.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2025/11/3102C.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-downloads-indicadores/"
+    },
+    {
+      "id": "m-alfa-3103c",
+      "brand": "Alfa",
+      "model": "3103C",
+      "type": "Manual técnico",
+      "desc": "Manual oficial do indicador de pesagem 3103C.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2025/11/3103C.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-downloads-indicadores/"
+    },
+    {
+      "id": "m-alfa-3104c",
+      "brand": "Alfa",
+      "model": "3104C",
+      "type": "Manual técnico",
+      "desc": "Manual oficial do indicador de pesagem 3104C.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2025/11/3104C.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-downloads-indicadores/"
+    },
+    {
+      "id": "m-alfa-3105c",
+      "brand": "Alfa",
+      "model": "3105C",
+      "type": "Manual técnico",
+      "desc": "Manual oficial do indicador de pesagem 3105C.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2025/11/MANUAL3105C-1.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-downloads-indicadores/"
+    },
+    {
+      "id": "m-alfa-3107c",
+      "brand": "Alfa",
+      "model": "3107C",
+      "type": "Manual técnico",
+      "desc": "Manual oficial do indicador de pesagem 3107C.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2025/11/3107C.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-downloads-indicadores/"
+    },
+    {
+      "id": "m-alfa-3109c-repetidor",
+      "brand": "Alfa",
+      "model": "3109C",
+      "type": "Manual técnico",
+      "desc": "Manual oficial do repetidor de pesagem 3109C e 3109C.S.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2024/06/Repetidor-de-Pesagem-3109C-e-3109C.S.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-downloads-indicadores/"
+    },
+    {
+      "id": "m-alfa-3101cs",
+      "brand": "Alfa",
+      "model": "3101C.S",
+      "type": "Manual técnico",
+      "desc": "Manual oficial do indicador de pesagem 3101C.S.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2025/11/3101CS.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-downloads-indicadores/"
+    },
+    {
+      "id": "m-alfa-3102cs",
+      "brand": "Alfa",
+      "model": "3102C.S",
+      "type": "Manual técnico",
+      "desc": "Manual oficial do indicador de pesagem 3102C.S.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2025/11/3102CS.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-downloads-indicadores/"
+    },
+    {
+      "id": "m-alfa-3103cs",
+      "brand": "Alfa",
+      "model": "3103C.S",
+      "type": "Manual técnico",
+      "desc": "Manual oficial do indicador de pesagem 3103C.S.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2025/11/3103CS.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-downloads-indicadores/"
+    },
+    {
+      "id": "m-alfa-3104cs",
+      "brand": "Alfa",
+      "model": "3104C.S",
+      "type": "Manual técnico",
+      "desc": "Manual oficial do indicador de pesagem 3104C.S.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2025/11/3104CS.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-downloads-indicadores/"
+    },
+    {
+      "id": "m-alfa-3105cs",
+      "brand": "Alfa",
+      "model": "3105C.S",
+      "type": "Manual técnico",
+      "desc": "Manual oficial do indicador de pesagem 3105C.S.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2025/11/3105CS.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-downloads-indicadores/"
+    },
+    {
+      "id": "m-alfa-3107cs",
+      "brand": "Alfa",
+      "model": "3107C.S",
+      "type": "Manual técnico",
+      "desc": "Manual oficial do indicador de pesagem 3107C.S.",
+      "url": "https://www.alfainstrumentos.com.br/wp-content/uploads/2025/11/3107CS.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-downloads-indicadores/"
+    },
+    {
+      "id": "m-alfa-tetracell",
+      "brand": "Alfa",
+      "model": "Tetracell",
+      "type": "Manual técnico",
+      "desc": "Manual oficial da balança integradora Tetracell.",
+      "url": "https://cdn.alfainstrumentos.com.br/wp-content/uploads/2016/07/Manual_Tetracell.pdf",
+      "sourceUrl": "https://www.alfainstrumentos.com.br/central-de-downloads-balancas/"
+    },
+    {
+      "id": "m-elgin-dp30t",
+      "brand": "Elgin",
+      "model": "DP30-T2",
+      "type": "Manual do usuário",
+      "desc": "Manual oficial da balança DP30-T2 publicado pela Elgin.",
+      "url": "https://content.elgin.com.br/assets/arquivos/portal-apoio-novo/4f0e7dae-795c-49a5-ab06-3c684f5d999f.pdf",
+      "sourceUrl": "https://content.elgin.com.br/assets/arquivos/portal-apoio-novo/4f0e7dae-795c-49a5-ab06-3c684f5d999f.pdf"
+    },
+    {
+      "id": "m-elgin-dp3005",
+      "brand": "Elgin",
+      "model": "DP-3005",
+      "type": "Manual do usuário",
+      "desc": "Manual encontrado em acervo externo para consulta do modelo DP-3005.",
+      "url": "https://pt.scribd.com/document/541857607/manual-balanca-elgin-dp3005-1",
+      "sourceUrl": "https://pt.scribd.com/document/541857607/manual-balanca-elgin-dp3005-1"
+    },
+    {
+      "id": "m-elgin-dp3005-config",
+      "brand": "Elgin",
+      "model": "DP-3005",
+      "type": "Configuração rápida",
+      "desc": "Guia externo de configuração rápida para balanças Elgin DP-3005.",
+      "url": "https://pt.scribd.com/document/735247630/Configuracao-Rapida-para-balancas-Elgin-1",
+      "sourceUrl": "https://pt.scribd.com/document/735247630/Configuracao-Rapida-para-balancas-Elgin-1"
+    },
+    {
+      "id": "m-elgin-dp30ck",
+      "brand": "Elgin",
+      "model": "DP30CK",
+      "type": "Manual do usuário",
+      "desc": "Manual encontrado em acervo externo para consulta técnica do DP30CK.",
+      "url": "https://pt.scribd.com/document/719341218/MU-ELGIN-DP30CK",
+      "sourceUrl": "https://pt.scribd.com/document/719341218/MU-ELGIN-DP30CK"
+    },
+    {
+      "id": "m-elgin-dp15-plus-calibracao",
+      "brand": "Elgin",
+      "model": "DP15 Plus",
+      "type": "Manual de calibração",
+      "desc": "Procedimento de calibração encontrado em acervo externo para DP15 Plus.",
+      "url": "https://pt.scribd.com/document/603071206/Calibracao-DP-15-Plus-3-PONTOS",
+      "sourceUrl": "https://pt.scribd.com/document/603071206/Calibracao-DP-15-Plus-3-PONTOS"
+    },
+    {
+      "id": "m-filizola-reparos-geral",
+      "brand": "Filizola",
+      "model": "Platina / BP / CS / MF",
+      "type": "Manual de reparos",
+      "desc": "Manual de reparos em acervo externo com calibração, configuração e reparo de modelos Filizola antigos.",
+      "url": "https://pt.slideshare.net/slideshow/75706727-manualdereparosfilizola/63302407",
+      "sourceUrl": "https://pt.slideshare.net/slideshow/75706727-manualdereparosfilizola/63302407"
+    },
+    {
+      "id": "m-filizola-cs15",
+      "brand": "Filizola",
+      "model": "CS-15",
+      "type": "Manual do usuário",
+      "desc": "Manual da balança Filizola CS-15 encontrado em acervo externo.",
+      "url": "https://pt.scribd.com/document/96996196/Manual-CS",
+      "sourceUrl": "https://pt.scribd.com/document/96996196/Manual-CS"
+    },
+    {
+      "id": "m-filizola-cs15-bateria",
+      "brand": "Filizola",
+      "model": "CS-15 Bateria",
+      "type": "Manual do usuário",
+      "desc": "Manual de usuário da Filizola CS-15 com bateria, disponível em acervo externo.",
+      "url": "https://pt.scribd.com/document/407948408/Manual-do-usuario-Filizola-CS-15-Bateria-WWW-DRBALANCA-COM-BR-pdf",
+      "sourceUrl": "https://pt.scribd.com/document/407948408/Manual-do-usuario-Filizola-CS-15-Bateria-WWW-DRBALANCA-COM-BR-pdf"
+    },
+    {
+      "id": "m-filizola-cs15-config-basico",
+      "brand": "Filizola",
+      "model": "CS-15",
+      "type": "Configuração básica",
+      "desc": "Manual básico de configuração da balança Filizola CS-15 em acervo técnico externo.",
+      "url": "https://www.maxibyte.com.br/web/file.php?file=download%2F02--Manuais_e_Dicas_Maxibyte%2FX_Arquivos_+Anteriores%2FEquipamentos%2FApostilas%2FBalancas%2FFilizola%2FManual+Basico+de+Configura%C3%A7%C3%A3o+da+Balan%C3%A7a+Filizola+CS15.pdf",
+      "sourceUrl": "https://www.maxibyte.com.br/"
+    },
+    {
+      "id": "m-filizola-config-avancado",
+      "brand": "Filizola",
+      "model": "Balanças Filizola",
+      "type": "Configuração avançada",
+      "desc": "Manual avançado de configuração de balanças Filizola em acervo técnico externo.",
+      "url": "https://www.maxibyte.com.br/web/file.php?file=download%2F02--Manuais_e_Dicas_Maxibyte%2FX_Arquivos_+Anteriores%2FEquipamentos%2FApostilas%2FBalancas%2FFilizola%2FManual+Avan%C3%A7ado+de+Configura%C3%A7%C3%A3o+da+Balan%C3%A7a+Filizola.pdf",
+      "sourceUrl": "https://www.maxibyte.com.br/"
+    },
+    {
+      "id": "m-celmi-portal-treinamentos",
+      "brand": "Celmi",
+      "model": "Portal de Treinamentos",
+      "type": "Biblioteca oficial",
+      "desc": "Portal oficial da Celmi com guia técnico, manual dos produtos e certificado.",
+      "url": "https://www.celmi.com.br/portal-treinamentos",
+      "sourceUrl": "https://www.celmi.com.br/portal-treinamentos"
+    },
+    {
+      "id": "m-celmi-csp10a",
+      "brand": "Celmi",
+      "model": "CSP-10A",
+      "type": "Página técnica",
+      "desc": "Página oficial do indicador de pesagem CSP-10A, usado em plataformas, barras, tanques e silos.",
+      "url": "https://www.celmi.com.br/index.php?id=101&option=com_sppagebuilder&view=page",
+      "sourceUrl": "https://www.celmi.com.br/index.php?id=101&option=com_sppagebuilder&view=page"
+    },
+    {
+      "id": "m-celmi-csp10b",
+      "brand": "Celmi",
+      "model": "CSP-10B",
+      "type": "Página técnica",
+      "desc": "Página oficial do indicador sem fio CSP-10B.",
+      "url": "https://www.celmi.com.br/index.php?id=102&option=com_sppagebuilder&view=page",
+      "sourceUrl": "https://www.celmi.com.br/index.php?id=102&option=com_sppagebuilder&view=page"
+    },
+    {
+      "id": "m-celmi-truck-modular",
+      "brand": "Celmi",
+      "model": "Truck Modular",
+      "type": "Página técnica",
+      "desc": "Página oficial da balança rodoviária Truck Modular com especificações e itens do sistema.",
+      "url": "https://celmi.com.br/produtos/balanca-rodoviaria/balanca-rodoviaria-truck-modular",
+      "sourceUrl": "https://celmi.com.br/produtos/balanca-rodoviaria/balanca-rodoviaria-truck-modular"
+    },
+    {
+      "id": "m-celmi-csp10seed",
+      "brand": "Celmi",
+      "model": "CSP-10Seed",
+      "type": "Página técnica",
+      "desc": "Página oficial do contador de sementes CSP-10Seed.",
+      "url": "https://celmi.com.br/produtos/contadores/contador-de-sementes-csp-10seed",
+      "sourceUrl": "https://celmi.com.br/produtos/contadores/contador-de-sementes-csp-10seed"
+    },
+    {
+      "id": "m-rice-lake-manuals",
+      "brand": "Rice Lake",
+      "model": "Biblioteca de manuais",
+      "type": "Biblioteca oficial",
+      "desc": "Biblioteca oficial Rice Lake com centenas de manuais técnicos e de operação.",
+      "url": "https://www.ricelake.com/resources/manuals",
+      "sourceUrl": "https://www.ricelake.com/resources/manuals"
+    },
+    {
+      "id": "m-rice-lake-150-10-5",
+      "brand": "Rice Lake",
+      "model": "150-10-5",
+      "type": "Operation manual",
+      "desc": "Manual oficial de operação da balança digital 150-10-5.",
+      "url": "https://cms-prod.ricelake.com//media/35sm1zgm/m_126150_150-10-5_op_enus_revi.pdf",
+      "sourceUrl": "https://www.ricelake.com/resources/manuals"
+    },
+    {
+      "id": "m-rice-lake-250-10-2-tech",
+      "brand": "Rice Lake",
+      "model": "250-10-2",
+      "type": "Technical manual",
+      "desc": "Manual técnico oficial da balança bariátrica 250-10-2.",
+      "url": "https://www.ricelake.com/resources/manuals/250-10-2-bariatric-handrail-scale-technical-manual-114659",
+      "sourceUrl": "https://www.ricelake.com/resources/manuals"
+    },
+    {
+      "id": "m-rice-lake-380-synergy",
+      "brand": "Rice Lake",
+      "model": "380/380X/381 Synergy",
+      "type": "Technical manual",
+      "desc": "Manual técnico oficial da série de indicadores digitais 380/380X/381 Synergy.",
+      "url": "https://www.ricelake.com/resources/manuals/380380x381-synergy-series-indicator-technical-manual-201481",
+      "sourceUrl": "https://www.ricelake.com/resources/manuals"
+    },
+    {
+      "id": "m-rice-lake-880",
+      "brand": "Rice Lake",
+      "model": "880 Performance",
+      "type": "Operation manual",
+      "desc": "Manual de operação da série 880 Performance para indicadores/controladores de pesagem.",
+      "url": "https://www.ricelake.com/resources/manuals/880-performance-series-operation-manual-152240",
+      "sourceUrl": "https://www.ricelake.com/resources/manuals"
+    },
+    {
+      "id": "m-avery-docs",
+      "brand": "Avery Weigh-Tronix",
+      "model": "Biblioteca de documentos",
+      "type": "Biblioteca oficial",
+      "desc": "Página oficial com documentos, manuais e recursos técnicos Avery Weigh-Tronix.",
+      "url": "https://www.averyweigh-tronix.com/docs/",
+      "sourceUrl": "https://www.averyweigh-tronix.com/docs/"
+    },
+    {
+      "id": "m-avery-640",
+      "brand": "Avery Weigh-Tronix",
+      "model": "Model 640",
+      "type": "User instructions",
+      "desc": "Manual de instruções para indicadores Model 640, 640XL, 640M e displays remotos.",
+      "url": "https://www.agscales.com/wp-content/uploads/2021/12/640_u_en_43108_0019.pdf",
+      "sourceUrl": "https://www.averyweigh-tronix.com/docs/"
+    },
+    {
+      "id": "m-avery-2060",
+      "brand": "Avery Weigh-Tronix",
+      "model": "2060",
+      "type": "Operators manual",
+      "desc": "Manual de operação do indicador Avery Weigh-Tronix 2060, via acervo técnico Scale-Tec.",
+      "url": "https://support.scale-tec.com/portal/en/kb/articles/avery-weigh-tronix-2060-manuals",
+      "sourceUrl": "https://support.scale-tec.com/portal/en/kb/articles/avery-weigh-tronix-2060-manuals"
+    },
+    {
+      "id": "m-avery-1310",
+      "brand": "Avery Weigh-Tronix",
+      "model": "Model 1310",
+      "type": "Service manual",
+      "desc": "Manual de serviço do indicador Model 1310 encontrado em acervo externo.",
+      "url": "https://www.scribd.com/document/653217672/Avery-Weigh-Tronix-Model-1310-Service-Manual",
+      "sourceUrl": "https://www.scribd.com/document/653217672/Avery-Weigh-Tronix-Model-1310-Service-Manual"
+    },
+    {
+      "id": "m-ohaus-product-support",
+      "brand": "Ohaus",
+      "model": "Product Support",
+      "type": "Biblioteca oficial",
+      "desc": "Página oficial Ohaus para busca de suporte e manuais por produto.",
+      "url": "https://www.ohaus.com/Support/Support-Find-Product/Product-Support",
+      "sourceUrl": "https://www.ohaus.com/Support/Support-Find-Product/Product-Support"
+    },
+    {
+      "id": "m-ohaus-defender-3000",
+      "brand": "Ohaus",
+      "model": "Defender 3000 i-DT33P/i-DT33XW",
+      "type": "Instruction manual",
+      "desc": "Manual de instruções para indicadores Defender 3000 i-DT33P e i-DT33XW.",
+      "url": "https://www.weighsouth.com/wp-content/uploads/2024/06/Ohaus-Defender-3000-Washdown-Instruction-Manual.pdf",
+      "sourceUrl": "https://www.ohaus.com/Support/Support-Find-Product/Product-Support"
+    },
+    {
+      "id": "m-ohaus-defender-5000-td52",
+      "brand": "Ohaus",
+      "model": "Defender 5000 TD52",
+      "type": "Instruction manual",
+      "desc": "Manual de instruções para indicadores Defender 5000 TD52P e TD52XW.",
+      "url": "https://www.weighsouth.com/wp-content/uploads/2019/04/Ohaus-TD52-Indicator-Instruction-Manual.pdf",
+      "sourceUrl": "https://www.ohaus.com/Support/Support-Find-Product/Product-Support"
+    },
+    {
+      "id": "m-ohaus-ranger-count-3000",
+      "brand": "Ohaus",
+      "model": "Ranger Count 3000",
+      "type": "Instruction manual",
+      "desc": "Manual de instruções da série Ranger Count 3000.",
+      "url": "https://www.myflukestore.ca/pdfs/cache/www.myflukestore.ca/rc31p30/manual/rc31p30-manual.pdf",
+      "sourceUrl": "https://www.ohaus.com/Support/Support-Find-Product/Product-Support"
+    },
+    {
+      "id": "m-ohaus-valor-4000",
+      "brand": "Ohaus",
+      "model": "Valor 4000",
+      "type": "Página oficial",
+      "desc": "Página oficial da linha Valor 4000 com área de documentos do produto.",
+      "url": "https://us.ohaus.com/en-us/valor4000",
+      "sourceUrl": "https://www.ohaus.com/Support/Support-Find-Product/Product-Support"
+    },
+    {
+      "id": "m-mettler-user-manuals",
+      "brand": "Mettler Toledo",
+      "model": "Biblioteca de manuais",
+      "type": "Biblioteca oficial",
+      "desc": "Biblioteca oficial Mettler Toledo para manuais de balanças industriais, comerciais e laboratoriais.",
+      "url": "https://www.mt.com/us/en/home/library/user-manuals.html",
+      "sourceUrl": "https://www.mt.com/us/en/home/library/user-manuals.html"
+    },
+    {
+      "id": "m-mettler-retail-library",
+      "brand": "Mettler Toledo",
+      "model": "Retail weighing",
+      "type": "Biblioteca oficial",
+      "desc": "Biblioteca oficial de manuais para balanças de varejo, etiquetadoras e equipamentos antigos.",
+      "url": "https://www.mt.com/us/en/home/perm-lp/product-organizations/retail/usermanuals1.html",
+      "sourceUrl": "https://www.mt.com/us/en/home/library/user-manuals.html"
+    },
+    {
+      "id": "m-mettler-ind439",
+      "brand": "Mettler Toledo",
+      "model": "IND439 / BBA439check",
+      "type": "User manual",
+      "desc": "Manual de usuário em inglês para terminais IND439check, IND439xx check e BBA439check.",
+      "url": "https://www.nefton.gr/files/pdf/IND-BBA439check-User%20Manual-EN.pdf",
+      "sourceUrl": "https://www.mt.com/us/en/home/library/user-manuals.html"
     }
   ],
   "videos": [],
@@ -3436,7 +4210,33 @@
     }
   ],
   "questions": [],
-  "manufacturers": [],
+  "manufacturers": [
+    {
+      "id": "celmi",
+      "name": "Celmi",
+      "count": 5
+    },
+    {
+      "id": "rice-lake",
+      "name": "Rice Lake",
+      "count": 5
+    },
+    {
+      "id": "avery-weigh-tronix",
+      "name": "Avery Weigh-Tronix",
+      "count": 4
+    },
+    {
+      "id": "ohaus",
+      "name": "Ohaus",
+      "count": 5
+    },
+    {
+      "id": "mettler-toledo",
+      "name": "Mettler Toledo",
+      "count": 3
+    }
+  ],
   "youtubeApiKey": "AIzaSyCYV9YPFxEPcALqtmDqhwhomO27g-vPsPE",
   "removed": {
     "apps": [

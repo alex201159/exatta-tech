@@ -1039,12 +1039,16 @@
 
     // Chips de fabricantes — contagem real de manuais cadastrados por marca,
     // não o número fixo de exemplo que ficava em MANUFACTURERS[].count.
+    const manufacturersWithManuals = MANUFACTURERS.map((m) => ({
+      ...m,
+      realCount: MANUALS.filter((man) => man.brand === m.name).length,
+    })).filter((m) => m.realCount > 0);
+
     brandChips.innerHTML =
       `<button class="chip is-active" data-brand="all">Todos <span class="count">(${MANUALS.length})</span></button>` +
-      MANUFACTURERS.map((m) => {
-        const count = MANUALS.filter((man) => man.brand === m.name).length;
-        return `<button class="chip" data-brand="${m.name}">${m.name} <span class="count">(${count})</span></button>`;
-      }).join("");
+      manufacturersWithManuals
+        .map((m) => `<button class="chip" data-brand="${m.name}">${m.name} <span class="count">(${m.realCount})</span></button>`)
+        .join("");
 
     // Stats
     const statsEl = qs("#balStats");
@@ -1085,6 +1089,11 @@
     function updateTabCount(name, count) {
       const el = qs(`[data-tab-count="${name}"]`);
       if (!el) return;
+      if (!count && !query.trim()) {
+        el.textContent = "";
+        el.classList.remove("has-results");
+        return;
+      }
       el.textContent = String(count);
       el.classList.toggle("has-results", query.trim().length > 0 && count > 0);
     }

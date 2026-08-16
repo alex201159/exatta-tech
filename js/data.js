@@ -448,9 +448,10 @@ function exattaMergeSection(baseArr, overrideItems, removedIds) {
 }
 
 function exattaRecomputeStats() {
+  const activeManufacturers = new Set(MANUALS.map((manual) => manual.brand)).size;
   BALANCEIROS_STATS = [
     { value: MANUALS.length, suffix: "+", label: "Manuais cadastrados" },
-    { value: MANUFACTURERS.length, suffix: "+", label: "Fabricantes" },
+    { value: activeManufacturers, suffix: "+", label: "Fabricantes" },
     { value: MANUAL_VIDEOS.length, suffix: "+", label: "Vídeos técnicos" },
     { value: 1, suffix: "", label: "Comunidade ativa", customLabel: "Comunidade" },
   ];
