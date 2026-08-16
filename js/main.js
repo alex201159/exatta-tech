@@ -1172,6 +1172,8 @@
         )
         .join("");
       observeReveal(videosGrid);
+      const moreWrap = qs("#videosLoadMore");
+      if (moreWrap) moreWrap.style.display = list.length > shown.length ? "block" : "none";
     }
 
     function paintQuestions() {
@@ -1238,6 +1240,14 @@
       manualsMoreBtn.addEventListener("click", () => {
         visibleManuals += 6;
         paintManuals();
+      });
+    }
+
+    const videosMoreBtn = qs("#videosLoadMore button");
+    if (videosMoreBtn) {
+      videosMoreBtn.addEventListener("click", () => {
+        visibleVideos += 6;
+        paintVideos();
       });
     }
 

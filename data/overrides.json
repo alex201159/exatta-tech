@@ -4412,13 +4412,6 @@
       "url": "https://www.youtube.com/c/ramuza"
     },
     {
-      "id": "v-lider-ld1050-tech",
-      "brand": "Líder",
-      "model": "LD1050",
-      "desc": "Playlist TECH Pesagens com vídeo de calibração da balança Líder LD1050.",
-      "url": "https://www.youtube.com/playlist?list=PLcRVooZp1H-JifUsXZ8WqehtA-cSGU_F6"
-    },
-    {
       "id": "v-lider-canal-shorts",
       "brand": "Líder",
       "model": "Linha Líder",
@@ -4447,41 +4440,6 @@
       "url": "https://www.alfainstrumentos.com.br/central-downloads-indicadores/"
     },
     {
-      "id": "v-filizola-bp6-tech",
-      "brand": "Filizola",
-      "model": "BP6",
-      "desc": "Playlist de calibrações com vídeo da balança Filizola BP6.",
-      "url": "https://www.youtube.com/playlist?list=PLcRVooZp1H-JifUsXZ8WqehtA-cSGU_F6"
-    },
-    {
-      "id": "v-filizola-cs15-tech",
-      "brand": "Filizola",
-      "model": "CS15 LED",
-      "desc": "Playlist de calibrações com vídeo da balança Filizola CS15 LED.",
-      "url": "https://www.youtube.com/playlist?list=PLcRVooZp1H-JifUsXZ8WqehtA-cSGU_F6"
-    },
-    {
-      "id": "v-filizola-cs15-eduardo",
-      "brand": "Filizola",
-      "model": "CS-15",
-      "desc": "Canal Eduardo Da Balança com vídeos práticos sobre Filizola CS-15 e rotinas técnicas.",
-      "url": "https://www.youtube.com/channel/UCzkf_geoyMdWoliKBtru7iQ/videos"
-    },
-    {
-      "id": "v-elgin-tech-calibracao",
-      "brand": "Elgin",
-      "model": "DP / SM",
-      "desc": "Playlist de calibrações com vídeo de balanças Elgin.",
-      "url": "https://www.youtube.com/playlist?list=PLcRVooZp1H-JifUsXZ8WqehtA-cSGU_F6"
-    },
-    {
-      "id": "v-elgin-dp15-eduardo",
-      "brand": "Elgin",
-      "model": "DP 15 Plus",
-      "desc": "Canal Eduardo Da Balança com vídeo de calibração da Elgin DP 15 Plus.",
-      "url": "https://www.youtube.com/channel/UCzkf_geoyMdWoliKBtru7iQ/videos"
-    },
-    {
       "id": "v-elgin-dp3005-config",
       "brand": "Elgin",
       "model": "DP-3005",
@@ -4508,13 +4466,6 @@
       "model": "EA-32",
       "desc": "Canal Eduardo Da Balança com vídeo de calibração da UPX EA-32.",
       "url": "https://www.youtube.com/c/EduardoCordeirodoNascimento/videos"
-    },
-    {
-      "id": "v-balmak-k300-eduardo",
-      "brand": "Balmak",
-      "model": "K-300",
-      "desc": "Canal Eduardo Da Balança com vídeo de calibração da Balmak K-300.",
-      "url": "https://www.youtube.com/channel/UCzkf_geoyMdWoliKBtru7iQ"
     },
     {
       "id": "v-balmak-calibracao-playlist",
@@ -4725,6 +4676,1539 @@
       "model": "IQ44",
       "desc": "Vídeo/publicação oficial da Intelimaq sobre a envasadora IQ44 para pós.",
       "url": "https://www.instagram.com/p/C-GYX6ItvIY/"
+    },
+    {
+      "id": "v-yt-0Mx3oukG5dw",
+      "brand": "Toledo",
+      "model": "Prix 5W",
+      "desc": "COMO CONFIGURAR AS BALANÇAS PRIX 5 PLUS NAS REDES VIA CABO E WIFI. Canal: RK Solutions.",
+      "url": "https://www.youtube.com/watch?v=0Mx3oukG5dw"
+    },
+    {
+      "id": "v-yt-ZYR0-zEO3uY",
+      "brand": "Toledo",
+      "model": "Prix 5W",
+      "desc": "WI-FI CONFIGURATION - TOLEDO PRIX 5 PLUS. Canal: Doutor Balança.",
+      "url": "https://www.youtube.com/watch?v=ZYR0-zEO3uY"
+    },
+    {
+      "id": "v-yt-lX6cC51MmrA",
+      "brand": "Toledo",
+      "model": "Prix 5W",
+      "desc": "Prix 5 W Plus 300 kg | Balança computadora com impressora integrada. Canal: Digimaq Automação.",
+      "url": "https://www.youtube.com/watch?v=lX6cC51MmrA"
+    },
+    {
+      "id": "v-yt-_q4nk5cWHuc",
+      "brand": "Toledo",
+      "model": "Prix 3 Fit",
+      "desc": "Calibração Balança Toledo Prinx3 Fit. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=_q4nk5cWHuc"
+    },
+    {
+      "id": "v-yt-_0D-rz5wMgU",
+      "brand": "Toledo",
+      "model": "Prix 3 Fit",
+      "desc": "Calibrando Balança Digital Toledo Prix3 Plus Placa Nova. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=_0D-rz5wMgU"
+    },
+    {
+      "id": "v-yt--klLGtwT6xk",
+      "brand": "Toledo",
+      "model": "Prix 3 Fit",
+      "desc": "Calibração - Balança TOLEDO - PRIX3 | #26. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=-klLGtwT6xk"
+    },
+    {
+      "id": "v-yt-t4TJZ20cSgQ",
+      "brand": "Toledo",
+      "model": "Prix 3 Fit",
+      "desc": "Calibração Balança Toledo Prix3 plus. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=t4TJZ20cSgQ"
+    },
+    {
+      "id": "v-yt-elRT-IKuvZA",
+      "brand": "Toledo",
+      "model": "8217",
+      "desc": "Calibrando Balança Digital Toledo Prix 8217. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=elRT-IKuvZA"
+    },
+    {
+      "id": "v-yt-RpR3ZcBYsro",
+      "brand": "Toledo",
+      "model": "8217",
+      "desc": "calibracion de balanza prix 8217. Canal: Miguel Vera.",
+      "url": "https://www.youtube.com/watch?v=RpR3ZcBYsro"
+    },
+    {
+      "id": "v-yt-bFeCPEecMB8",
+      "brand": "Toledo",
+      "model": "8217",
+      "desc": "Weight fluctuation at checkout scale 8217 Toledo: how to reduce it.. Canal: automatiza tudo.",
+      "url": "https://www.youtube.com/watch?v=bFeCPEecMB8"
+    },
+    {
+      "id": "v-yt-ntFv2AWNpgk",
+      "brand": "Toledo",
+      "model": "8217",
+      "desc": "INSTALAR BALANCA TOLEDO 8217 WINDOWS 10. Canal: MJ SOLUCAO.",
+      "url": "https://www.youtube.com/watch?v=ntFv2AWNpgk"
+    },
+    {
+      "id": "v-yt-x9dTQ3eAaLg",
+      "brand": "Toledo",
+      "model": "Prix 4 Uno",
+      "desc": "Calibração Balança Toledo Prix 4 Uno. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=x9dTQ3eAaLg"
+    },
+    {
+      "id": "v-yt-S91yXDRGGmw",
+      "brand": "Toledo",
+      "model": "Prix 4 Uno",
+      "desc": "Prix 4 Uno - Calibração de Sensor. Canal: Toledo do Brasil.",
+      "url": "https://www.youtube.com/watch?v=S91yXDRGGmw"
+    },
+    {
+      "id": "v-yt-1J1BOwpo3Go",
+      "brand": "Toledo",
+      "model": "Prix 4 Uno",
+      "desc": "Calibração - Balança Toledo - PRIX 4 DUE | #16. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=1J1BOwpo3Go"
+    },
+    {
+      "id": "v-yt-XeA478XbLqg",
+      "brand": "Toledo",
+      "model": "Prix 4 Uno",
+      "desc": "Balança Toledo Prix 4 e Prix 5 - Aferição e calibração. Canal: Treinamentos KCMS - Hardwares.",
+      "url": "https://www.youtube.com/watch?v=XeA478XbLqg"
+    },
+    {
+      "id": "v-yt-LC7ryVN4p7w",
+      "brand": "Toledo",
+      "model": "Prix 4 Due",
+      "desc": "Prix 4 Due - Ajuste de etiquetas. Canal: Toledo do Brasil.",
+      "url": "https://www.youtube.com/watch?v=LC7ryVN4p7w"
+    },
+    {
+      "id": "v-yt-nL8oQHBKL-k",
+      "brand": "Toledo",
+      "model": "Prix 4 Due",
+      "desc": "TUTORIAL - CONFIGURAR BALANÇA TOLEDO PRIX 4 DUE NA REDE VIA CABO RJ45.. Canal: AF BALANÇAS DIGITAIS.",
+      "url": "https://www.youtube.com/watch?v=nL8oQHBKL-k"
+    },
+    {
+      "id": "v-yt-uTSuRWASvEU",
+      "brand": "Toledo",
+      "model": "Prix 4 Due",
+      "desc": "Toledo Prix 4 scale calibration, version 1.02 +. Canal: Eduardo Da Balança.",
+      "url": "https://www.youtube.com/watch?v=uTSuRWASvEU"
+    },
+    {
+      "id": "v-yt-7u_jh6MkgCs",
+      "brand": "Toledo",
+      "model": "9096-H",
+      "desc": "Calibração - Balança Toledo - 9096/2124 | #18. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=7u_jh6MkgCs"
+    },
+    {
+      "id": "v-yt-jxac2Dqui34",
+      "brand": "Toledo",
+      "model": "9096-H",
+      "desc": "Calibração indicador Toledo 2096-H. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=jxac2Dqui34"
+    },
+    {
+      "id": "v-yt-vogXjBjFP3c",
+      "brand": "Toledo",
+      "model": "9096-H",
+      "desc": "Calibração - Balança TOLEDO PRIX - 9098 | #31. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=vogXjBjFP3c"
+    },
+    {
+      "id": "v-yt-OmSBVwOj_SE",
+      "brand": "Toledo",
+      "model": "9096-H",
+      "desc": "Calibração - Balança Toledo 9091/2090 | #5. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=OmSBVwOj_SE"
+    },
+    {
+      "id": "v-yt-9Vwv3VIcGHo",
+      "brand": "Urano",
+      "model": "POP-Z",
+      "desc": "Calibrando Balança digital Urano Popz 31kg. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=9Vwv3VIcGHo"
+    },
+    {
+      "id": "v-yt-pd4MeSD9kcY",
+      "brand": "Urano",
+      "model": "POP-Z",
+      "desc": "Calibrando Balança Digital Urano POPz Eco. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=pd4MeSD9kcY"
+    },
+    {
+      "id": "v-yt-8DnSqvzoPCc",
+      "brand": "Urano",
+      "model": "POP-Z",
+      "desc": "Calibração Balança Urano Us20/2 POPz. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=8DnSqvzoPCc"
+    },
+    {
+      "id": "v-yt-Hh9W9VvINDo",
+      "brand": "Urano",
+      "model": "POP-Z",
+      "desc": "Calibração - Balança URANO - US20/2 POP-S | #32. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=Hh9W9VvINDo"
+    },
+    {
+      "id": "v-yt-6bhBjb6_K1M",
+      "brand": "Urano",
+      "model": "UDC-CO",
+      "desc": "Calibração balança Urano UDC-CO / UDC-CO-E. Canal: Eduardo Da Balança.",
+      "url": "https://www.youtube.com/watch?v=6bhBjb6_K1M"
+    },
+    {
+      "id": "v-yt-JvtwuiVNbgo",
+      "brand": "Urano",
+      "model": "UDC-CO",
+      "desc": "Calibrando Urano UDC CO 30 10. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=JvtwuiVNbgo"
+    },
+    {
+      "id": "v-yt-CEzBvfg6aWo",
+      "brand": "Urano",
+      "model": "UDC-CO",
+      "desc": "Calibração balança URANO UDC6000. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=CEzBvfg6aWo"
+    },
+    {
+      "id": "v-yt-DDH7Qn6Os5s",
+      "brand": "Urano",
+      "model": "UDC-CO",
+      "desc": "Calibrando balança digital Urano premium US25/5. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=DDH7Qn6Os5s"
+    },
+    {
+      "id": "v-yt-CEPtYrsaGto",
+      "brand": "Urano",
+      "model": "TOPMAX",
+      "desc": "Calibração da balança digital Urano TopMax Us 30/2 MD. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=CEPtYrsaGto"
+    },
+    {
+      "id": "v-yt-QMv2kNNGHdw",
+      "brand": "Urano",
+      "model": "TOPMAX",
+      "desc": "URANO MAXIMUS / TOP MAX - CADASTRO DE PRODUTOS. Canal: Doutor Balança.",
+      "url": "https://www.youtube.com/watch?v=QMv2kNNGHdw"
+    },
+    {
+      "id": "v-yt-2N4iI1qQrwM",
+      "brand": "Urano",
+      "model": "TOPMAX",
+      "desc": "URANO MAXIMUS - VENDA PRODUTOS SEM CADASTRAR. Canal: Doutor Balança.",
+      "url": "https://www.youtube.com/watch?v=2N4iI1qQrwM"
+    },
+    {
+      "id": "v-yt-hRhbotW0EHA",
+      "brand": "Urano",
+      "model": "TOPMAX",
+      "desc": "Ajuste sensor GAP do mecanismo da Balança Urano TOPMAX. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=hRhbotW0EHA"
+    },
+    {
+      "id": "v-yt-tYNtnunjmPo",
+      "brand": "Urano",
+      "model": "B35",
+      "desc": "Balança B35 Urano. Canal: Uranobalancas.",
+      "url": "https://www.youtube.com/watch?v=tYNtnunjmPo"
+    },
+    {
+      "id": "v-yt-FuCs9pl1YMo",
+      "brand": "Urano",
+      "model": "B35",
+      "desc": "Balança B35C - Ergonomia para o usuário. Canal: Uranobalancas.",
+      "url": "https://www.youtube.com/watch?v=FuCs9pl1YMo"
+    },
+    {
+      "id": "v-yt-gYwJZEZMv90",
+      "brand": "Urano",
+      "model": "B35",
+      "desc": "Balança B35C - Imprime etiquetas com picotes de segurança com perfeição. Canal: Uranobalancas.",
+      "url": "https://www.youtube.com/watch?v=gYwJZEZMv90"
+    },
+    {
+      "id": "v-yt-vgCcMytdn3U",
+      "brand": "Urano",
+      "model": "UDC 3000",
+      "desc": "Calibrando Indicador Urano UR 10000 Ligth. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=vgCcMytdn3U"
+    },
+    {
+      "id": "v-yt-EmKfws8AM6Y",
+      "brand": "Ramuza",
+      "model": "DCL",
+      "desc": "Calibrando Balança Digital Ramuza DCL 6/15/35 Touch. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=EmKfws8AM6Y"
+    },
+    {
+      "id": "v-yt-N94pnVSOyDc",
+      "brand": "Ramuza",
+      "model": "DCL",
+      "desc": "Calibrando Balança digital Ramuza CR CL 30 placa nova. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=N94pnVSOyDc"
+    },
+    {
+      "id": "v-yt-uszTW8q2D5s",
+      "brand": "Ramuza",
+      "model": "DCL",
+      "desc": "Calibrando Balança Digital Pesadora Ramuza DPR. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=uszTW8q2D5s"
+    },
+    {
+      "id": "v-yt-eZomNYwAEfQ",
+      "brand": "Ramuza",
+      "model": "DCL",
+      "desc": "Calibration of Ramuza DXR CL-15 Bat scales. Canal: Mentalidade Lean.",
+      "url": "https://www.youtube.com/watch?v=eZomNYwAEfQ"
+    },
+    {
+      "id": "v-yt-SfcVEEBVpww",
+      "brand": "Ramuza",
+      "model": "DCR",
+      "desc": "Calibração Balança Ramuza DCR CL-30. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=SfcVEEBVpww"
+    },
+    {
+      "id": "v-yt-gjo1J-CmORw",
+      "brand": "Ramuza",
+      "model": "DCR",
+      "desc": "Calibrando Balança Digital Ramuza DCR 15 LED. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=gjo1J-CmORw"
+    },
+    {
+      "id": "v-yt-mZy4Njqf5fQ",
+      "brand": "Ramuza",
+      "model": "DCR",
+      "desc": "Calibration of Ramuza DCR-CL scale (new circuit board) #calibration #scale #ramuza. Canal: Eduardo Da Balança.",
+      "url": "https://www.youtube.com/watch?v=mZy4Njqf5fQ"
+    },
+    {
+      "id": "v-yt-UqkTIwzvg_g",
+      "brand": "Ramuza",
+      "model": "Atena",
+      "desc": "Calibrando Balança Digital Ramuza Atena II. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=UqkTIwzvg_g"
+    },
+    {
+      "id": "v-yt-0CdQs49cweU",
+      "brand": "Ramuza",
+      "model": "Atena",
+      "desc": "Calibração Balança Ramuza Atena 15/30. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=0CdQs49cweU"
+    },
+    {
+      "id": "v-yt-qN6Vjw1109A",
+      "brand": "Ramuza",
+      "model": "Atena",
+      "desc": "Calibração - Balança RAMUZA - IDR 7500 | #29. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=qN6Vjw1109A"
+    },
+    {
+      "id": "v-yt-HWIpdO-c6iA",
+      "brand": "Ramuza",
+      "model": "DCRB",
+      "desc": "Balança Digital Ramuza 15 KG. Canal: Aliança do Comércio.",
+      "url": "https://www.youtube.com/watch?v=HWIpdO-c6iA"
+    },
+    {
+      "id": "v-yt-Ckifekgdj7U",
+      "brand": "Ramuza",
+      "model": "DCRB",
+      "desc": "Working with Fixed or Constant Price. Ramuza DCR-CL #ScaleCalibrationBH. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=Ckifekgdj7U"
+    },
+    {
+      "id": "v-yt-biMF4biF62c",
+      "brand": "Ramuza",
+      "model": "IDR",
+      "desc": "Calibração Indicador Ramuza IDR-7500. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=biMF4biF62c"
+    },
+    {
+      "id": "v-yt-aytXbfIIgms",
+      "brand": "Ramuza",
+      "model": "IDR",
+      "desc": "Calibração Indicador RAMUZA DP-300 IDR - 1000 300kg. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=aytXbfIIgms"
+    },
+    {
+      "id": "v-yt-uriKVnGM-3U",
+      "brand": "Ramuza",
+      "model": "IDR",
+      "desc": "Calibration of the Ramuza IDR-10000 300Kg scale. Canal: Mentalidade Lean.",
+      "url": "https://www.youtube.com/watch?v=uriKVnGM-3U"
+    },
+    {
+      "id": "v-yt-t8WWoLS7vs8",
+      "brand": "Líder",
+      "model": "LD1050",
+      "desc": "Calibração - Balança Lider - LD1050 | #15. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=t8WWoLS7vs8"
+    },
+    {
+      "id": "v-yt-udhFI31c4uI",
+      "brand": "Líder",
+      "model": "LD1050",
+      "desc": "Calibração Balança eletrônica Digital Lider LD1050. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=udhFI31c4uI"
+    },
+    {
+      "id": "v-yt-iNZZudCEp6c",
+      "brand": "Líder",
+      "model": "LD1050",
+      "desc": "Lider LD1050 scale calibration. Canal: Eduardo Da Balança.",
+      "url": "https://www.youtube.com/watch?v=iNZZudCEp6c"
+    },
+    {
+      "id": "v-yt-7at9zWUpOGk",
+      "brand": "Líder",
+      "model": "LD1050",
+      "desc": "Calibração da balança Líder LF1050. Canal: Marcio Gonçalves da Silva.",
+      "url": "https://www.youtube.com/watch?v=7at9zWUpOGk"
+    },
+    {
+      "id": "v-yt-KNqClxw75l4",
+      "brand": "Líder",
+      "model": "LD2051",
+      "desc": "CALIBRAÇÃO BALANÇA LIDER MODELO LD 2051(placa antiga). Canal: Canal do Fit.",
+      "url": "https://www.youtube.com/watch?v=KNqClxw75l4"
+    },
+    {
+      "id": "v-yt-Bh8oa_DU05I",
+      "brand": "Alfa",
+      "model": "3101C",
+      "desc": "Calibration - ALFA Scale - 3101C | #27. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=Bh8oa_DU05I"
+    },
+    {
+      "id": "v-yt-6z9G9t9fnQI",
+      "brand": "Alfa",
+      "model": "3101C",
+      "desc": "Calibração/Ajustes Indicadores Alfa. Canal: Filipe Souto Compartilhando Conhecimento.",
+      "url": "https://www.youtube.com/watch?v=6z9G9t9fnQI"
+    },
+    {
+      "id": "v-yt-rHj3t6Saapo",
+      "brand": "Alfa",
+      "model": "3101C",
+      "desc": "Calibração Indicador ALFA 31xx. Canal: Alexandre Arruda.",
+      "url": "https://www.youtube.com/watch?v=rHj3t6Saapo"
+    },
+    {
+      "id": "v-yt-y-fuw7kjBzw",
+      "brand": "Alfa",
+      "model": "3101C",
+      "desc": "Calibrando Indicador Balança Digital ALFA 3101 C. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=y-fuw7kjBzw"
+    },
+    {
+      "id": "v-yt-qiK7ejyGbW4",
+      "brand": "Alfa",
+      "model": "3105C",
+      "desc": "Calibração ALFA 3101D à 3107D. Canal: Filipe Souto Compartilhando Conhecimento.",
+      "url": "https://www.youtube.com/watch?v=qiK7ejyGbW4"
+    },
+    {
+      "id": "v-yt-2JWvfJ3d-nE",
+      "brand": "Alfa",
+      "model": "3100C",
+      "desc": "Indicadores Alfa Instrumentos linhas 3100C e 3100CS - Procedimento de ajuste e calibração. Canal: Alfa Instrumentos.",
+      "url": "https://www.youtube.com/watch?v=2JWvfJ3d-nE"
+    },
+    {
+      "id": "v-yt-bdQojyDW24g",
+      "brand": "Alfa",
+      "model": "2712",
+      "desc": "Configuração ModBus Indicador de pesagem Alfa.. Canal: Alexandre Arruda.",
+      "url": "https://www.youtube.com/watch?v=bdQojyDW24g"
+    },
+    {
+      "id": "v-yt-Ahv5VQlufB4",
+      "brand": "Alfa",
+      "model": "2712",
+      "desc": "PLC Communicating with an ALFA Scale - CLP Fácil. Canal: clpfacil.",
+      "url": "https://www.youtube.com/watch?v=Ahv5VQlufB4"
+    },
+    {
+      "id": "v-yt-MMTKDXXVvG8",
+      "brand": "Alfa",
+      "model": "2712",
+      "desc": "MODBUS RTU PLC DVPSS2 & Indicator/Weight AlfaInstrumentos 3100C. Canal: Ronildo Araujo.",
+      "url": "https://www.youtube.com/watch?v=MMTKDXXVvG8"
+    },
+    {
+      "id": "v-yt-TtzLuCxzzYg",
+      "brand": "Filizola",
+      "model": "MF-30",
+      "desc": "Calibrando Balança Filizola MF-30. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=TtzLuCxzzYg"
+    },
+    {
+      "id": "v-yt-J7DPP1CcoQ0",
+      "brand": "Filizola",
+      "model": "MF-30",
+      "desc": "#8 Calibração - Balança Filizola MF3. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=J7DPP1CcoQ0"
+    },
+    {
+      "id": "v-yt-Kv6oYWmaihQ",
+      "brand": "Filizola",
+      "model": "MF-30",
+      "desc": "Calibrando Balança Digital FILIZOLA ID-1500. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=Kv6oYWmaihQ"
+    },
+    {
+      "id": "v-yt-gcQo5A2C0U4",
+      "brand": "Filizola",
+      "model": "MF-30",
+      "desc": "Calibrando Balança Digital Filizola MF 100. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=gcQo5A2C0U4"
+    },
+    {
+      "id": "v-yt-V4kTa71X06o",
+      "brand": "Filizola",
+      "model": "Platina",
+      "desc": "Calibrando Balança Filizola Platina. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=V4kTa71X06o"
+    },
+    {
+      "id": "v-yt-vO8O2tnqp2c",
+      "brand": "Filizola",
+      "model": "Platina",
+      "desc": "Calibração balança Filizola Platina. Canal: Eduardo Da Balança.",
+      "url": "https://www.youtube.com/watch?v=vO8O2tnqp2c"
+    },
+    {
+      "id": "v-yt-KrUxqrgZInE",
+      "brand": "Filizola",
+      "model": "Platina",
+      "desc": "#6 Calibração - Balança Filizola Platina 15kg. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=KrUxqrgZInE"
+    },
+    {
+      "id": "v-yt-BXW36bv8X_w",
+      "brand": "Filizola",
+      "model": "Platina",
+      "desc": "Balança Digital Filizola Platina Limpeza Memória. ( Reset ). Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=BXW36bv8X_w"
+    },
+    {
+      "id": "v-yt-3dSE94aw7OE",
+      "brand": "Filizola",
+      "model": "BP6",
+      "desc": "Calibração - Balança Filizola BP6 | #1. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=3dSE94aw7OE"
+    },
+    {
+      "id": "v-yt-ohqRwxlEqks",
+      "brand": "Filizola",
+      "model": "BP6",
+      "desc": "Calibrando Balança Filizola MF-6. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=ohqRwxlEqks"
+    },
+    {
+      "id": "v-yt-yzFT8QgFGmU",
+      "brand": "Filizola",
+      "model": "BP6",
+      "desc": "Calibração Balança Filizola BP 15. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=yzFT8QgFGmU"
+    },
+    {
+      "id": "v-yt-BX6L4JJEkKI",
+      "brand": "Filizola",
+      "model": "CS-15",
+      "desc": "Calibração Balança Filizola Cs-15 Cristal. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=BX6L4JJEkKI"
+    },
+    {
+      "id": "v-yt-h7Oo6pahKCc",
+      "brand": "Filizola",
+      "model": "CS-15",
+      "desc": "Calibração balança Filizola CS - 15. Canal: Eduardo Da Balança.",
+      "url": "https://www.youtube.com/watch?v=h7Oo6pahKCc"
+    },
+    {
+      "id": "v-yt-HRrEFo4K10g",
+      "brand": "Filizola",
+      "model": "CS-15",
+      "desc": "#2 Calibração - Balança Filizola CS15 LED. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=HRrEFo4K10g"
+    },
+    {
+      "id": "v-yt-r43JIjgbRyo",
+      "brand": "Filizola",
+      "model": "CS-15",
+      "desc": "Configurando ponto decimal ou centavos da balança digital Filizola CS-15. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=r43JIjgbRyo"
+    },
+    {
+      "id": "v-yt-vi1re11xgOM",
+      "brand": "Filizola",
+      "model": "ID-M",
+      "desc": "Calibração Indicador/Balança Digital Filizola ID-M 300Kg. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=vi1re11xgOM"
+    },
+    {
+      "id": "v-yt-CW7EQIjug3c",
+      "brand": "Filizola",
+      "model": "ID-M",
+      "desc": "Calibrando Indicador/Balança Digital Filizola ID-M 150Kg. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=CW7EQIjug3c"
+    },
+    {
+      "id": "v-yt-Dkod5iaWEdE",
+      "brand": "Filizola",
+      "model": "ID-M",
+      "desc": "Calibração Balança Filizola Personal ID-M. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=Dkod5iaWEdE"
+    },
+    {
+      "id": "v-yt-UUoJS427HI0",
+      "brand": "Filizola",
+      "model": "ID-M",
+      "desc": "#9 Calibração - Balança Filizola IDM LED. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=UUoJS427HI0"
+    },
+    {
+      "id": "v-yt-U_4JAi6psl4",
+      "brand": "Elgin",
+      "model": "DP-3005",
+      "desc": "Calibração/Ajuste Balanças Elgin-DP. Canal: Filipe Souto Compartilhando Conhecimento.",
+      "url": "https://www.youtube.com/watch?v=U_4JAi6psl4"
+    },
+    {
+      "id": "v-yt-kW-4ObLEIyE",
+      "brand": "Elgin",
+      "model": "DP-3005",
+      "desc": "Calibração Balança Digital Elgin DP 15 Plus Versão nova. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=kW-4ObLEIyE"
+    },
+    {
+      "id": "v-yt-TP2B3bOtQVA",
+      "brand": "Elgin",
+      "model": "DP-3005",
+      "desc": "parte 2 balança ⚖️ Elgin DP-3005. Canal: mm construção.",
+      "url": "https://www.youtube.com/watch?v=TP2B3bOtQVA"
+    },
+    {
+      "id": "v-yt-V3IRUf3_7bQ",
+      "brand": "Elgin",
+      "model": "DP-3005",
+      "desc": "Calibração balança Elgin DP 15 plus.. Canal: Eduardo Da Balança.",
+      "url": "https://www.youtube.com/watch?v=V3IRUf3_7bQ"
+    },
+    {
+      "id": "v-yt-o9gf8synLmY",
+      "brand": "Elgin",
+      "model": "DP30CK",
+      "desc": "Como Calibrar a Balança Digital Elgin DP30CK | Passo a Passo Completo. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=o9gf8synLmY"
+    },
+    {
+      "id": "v-yt-2_JkmG0kVtY",
+      "brand": "Elgin",
+      "model": "DP30CK",
+      "desc": "Resolvido - Balança Elgin DP30CK não funciona. Canal: Sanki Computadores - Tutoriais.",
+      "url": "https://www.youtube.com/watch?v=2_JkmG0kVtY"
+    },
+    {
+      "id": "v-yt-8e9jtIR7Tqw",
+      "brand": "Elgin",
+      "model": "DP30CK",
+      "desc": "Installing an Elgin Checkout DP30 CK scale.. Canal: Sergio Pereira.",
+      "url": "https://www.youtube.com/watch?v=8e9jtIR7Tqw"
+    },
+    {
+      "id": "v-yt-uz5MijUE3Ck",
+      "brand": "Elgin",
+      "model": "DP30CK",
+      "desc": "How to change the speed on an Elgin DP30CK checkout scale.. Canal: Sergio Pereira.",
+      "url": "https://www.youtube.com/watch?v=uz5MijUE3Ck"
+    },
+    {
+      "id": "v-yt-TKeGbPEaxRU",
+      "brand": "Elgin",
+      "model": "DP15 Plus",
+      "desc": "Calibração Balança Digipeso/Elgin DP15 PLUS. Canal: Eduardo Da Balança.",
+      "url": "https://www.youtube.com/watch?v=TKeGbPEaxRU"
+    },
+    {
+      "id": "v-yt-ca9C-Nrg-Fk",
+      "brand": "Elgin",
+      "model": "DP15 Plus",
+      "desc": "Calibração Balança Elgin DP 15 PLUS. Canal: Eduardo Da Balança.",
+      "url": "https://www.youtube.com/watch?v=ca9C-Nrg-Fk"
+    },
+    {
+      "id": "v-yt-43MOVLyRk3M",
+      "brand": "Elgin",
+      "model": "SA-110",
+      "desc": "ELGIN SA-110 Calibração Completa ( corrige Erro2, Erro4, Err06 ). Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=43MOVLyRk3M"
+    },
+    {
+      "id": "v-yt-VxB2qmTu36E",
+      "brand": "Elgin",
+      "model": "SA-110",
+      "desc": "Elgin SA110 Calibration. Canal: Eduardo Da Balança.",
+      "url": "https://www.youtube.com/watch?v=VxB2qmTu36E"
+    },
+    {
+      "id": "v-yt-WXbPQXc-xK0",
+      "brand": "Elgin",
+      "model": "SA-110",
+      "desc": "Calibração da balança Elgin SA-110. Canal: Lucas Ferreira.",
+      "url": "https://www.youtube.com/watch?v=WXbPQXc-xK0"
+    },
+    {
+      "id": "v-yt-qIC3NTrjWjM",
+      "brand": "Elgin",
+      "model": "SA-110",
+      "desc": "Configuração Balança Elgin SA 110. Canal: Jimi Robo.",
+      "url": "https://www.youtube.com/watch?v=qIC3NTrjWjM"
+    },
+    {
+      "id": "v-yt-AwzmyxJic5w",
+      "brand": "Elgin",
+      "model": "SM100",
+      "desc": "Calibração Balança Elgin SM 100. Canal: Eduardo Da Balança.",
+      "url": "https://www.youtube.com/watch?v=AwzmyxJic5w"
+    },
+    {
+      "id": "v-yt-pmB8PqqNKIk",
+      "brand": "Elgin",
+      "model": "SM100",
+      "desc": "Calibrando Balança Digital Elgin SM 100 15Kg. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=pmB8PqqNKIk"
+    },
+    {
+      "id": "v-yt-235c0PmeY54",
+      "brand": "Elgin",
+      "model": "SM100",
+      "desc": "Balança SM 100 Elgin - Alinhamento de Etiqueta. Canal: Elgin Balanças.",
+      "url": "https://www.youtube.com/watch?v=235c0PmeY54"
+    },
+    {
+      "id": "v-yt-Y8x37hLyWvU",
+      "brand": "Elgin",
+      "model": "SM100",
+      "desc": "Como trocar etiqueta da balança Elgin SM100 e calibrar o sensor. Canal: Digimaq Automação.",
+      "url": "https://www.youtube.com/watch?v=Y8x37hLyWvU"
+    },
+    {
+      "id": "v-yt-UXsWR47aFqw",
+      "brand": "UPX",
+      "model": "EA-32",
+      "desc": "Calibrando Balança digital UPX EA32. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=UXsWR47aFqw"
+    },
+    {
+      "id": "v-yt--Us8nWt33VY",
+      "brand": "UPX",
+      "model": "EA-32",
+      "desc": "UPX EA-32 Scale Calibration #calibration #upx #howto #scale #weight. Canal: Eduardo Da Balança.",
+      "url": "https://www.youtube.com/watch?v=-Us8nWt33VY"
+    },
+    {
+      "id": "v-yt-MrkrlI30YrM",
+      "brand": "UPX",
+      "model": "EA-32",
+      "desc": "Como Configurar Balança UPX EA-32 para Comunicação Serial com Aplicações e Computador. Canal: TGY Cyber.",
+      "url": "https://www.youtube.com/watch?v=MrkrlI30YrM"
+    },
+    {
+      "id": "v-yt-jPA4WsruPI4",
+      "brand": "UPX",
+      "model": "EA-32",
+      "desc": "Como Configurar o Kit Balança UPX EA-32 + WI-FI WS1C TGY Cyber para Comunicação via TCP/IP e API. Canal: TGY Cyber.",
+      "url": "https://www.youtube.com/watch?v=jPA4WsruPI4"
+    },
+    {
+      "id": "v-yt-U5x01LLC9fI",
+      "brand": "UPX",
+      "model": "EA-20",
+      "desc": "Calibrando Balança Digital UPX EA-15. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=U5x01LLC9fI"
+    },
+    {
+      "id": "v-yt-lruw7acWmtM",
+      "brand": "UPX",
+      "model": "EA-20",
+      "desc": "Calibrando Balança Digital UPX Ea-15 placa nova. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=lruw7acWmtM"
+    },
+    {
+      "id": "v-yt-JFc9F6PG33I",
+      "brand": "UPX",
+      "model": "EA-20",
+      "desc": "Balança Pesadora 20 Kg - Balança Eletronica UPX EA20 - Balança Eletrônica Computadora Digital 20 Kg. Canal: Topemix Cozinhas Profissionais.",
+      "url": "https://www.youtube.com/watch?v=JFc9F6PG33I"
+    },
+    {
+      "id": "v-yt-o6Kdyl1H5yY",
+      "brand": "UPX",
+      "model": "EA-15",
+      "desc": "Calibração Balança UPX - Aqua30. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=o6Kdyl1H5yY"
+    },
+    {
+      "id": "v-yt-WySDG6CoS60",
+      "brand": "UPX",
+      "model": "EA-15",
+      "desc": "Calibrando Balança Digital UPX Blue One Placa nova Rev4. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=WySDG6CoS60"
+    },
+    {
+      "id": "v-yt-O8gtlaE-tGQ",
+      "brand": "UPX",
+      "model": "Wind D3",
+      "desc": "Calibrando Balança Digital WInd D3. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=O8gtlaE-tGQ"
+    },
+    {
+      "id": "v-yt-rhXstMr2jUQ",
+      "brand": "UPX",
+      "model": "Wind D3",
+      "desc": "Como Configurar Balança UPX Wind D3 para Comunicação Serial com Aplicações. Canal: TGY Cyber.",
+      "url": "https://www.youtube.com/watch?v=rhXstMr2jUQ"
+    },
+    {
+      "id": "v-yt-6wITtcqibqw",
+      "brand": "UPX",
+      "model": "Wind D3",
+      "desc": "Configuração Balaça UPX Wind D3 para Microterminais. Canal: UPX SOLUTION.",
+      "url": "https://www.youtube.com/watch?v=6wITtcqibqw"
+    },
+    {
+      "id": "v-yt-NsHuFN1bt_E",
+      "brand": "UPX",
+      "model": "Wind D3",
+      "desc": "Como configurar balança upx Wind C3 D3 porta com1. Canal: Eu FIZ vc FAZ.",
+      "url": "https://www.youtube.com/watch?v=NsHuFN1bt_E"
+    },
+    {
+      "id": "v-yt-D5mHClrMIs8",
+      "brand": "UPX",
+      "model": "Thunder Torre",
+      "desc": "COMO IMPORTAR E REALIZAR A CARGA NA BALANÇA UPX THUNDER TORRE ⚖️. Canal: ISRAEL BARBOSA.",
+      "url": "https://www.youtube.com/watch?v=D5mHClrMIs8"
+    },
+    {
+      "id": "v-yt-6MUU0GjVpjM",
+      "brand": "Balmak",
+      "model": "K-300",
+      "desc": "Calibration - BALMAK Balance - BK300 | #33. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=6MUU0GjVpjM"
+    },
+    {
+      "id": "v-yt-XbxYqFl4RcQ",
+      "brand": "Balmak",
+      "model": "K-300",
+      "desc": "Calibração Balança #Balmak #Bk-300. Canal: Filipe Rodrigues.",
+      "url": "https://www.youtube.com/watch?v=XbxYqFl4RcQ"
+    },
+    {
+      "id": "v-yt-ctAHGovw9hM",
+      "brand": "Balmak",
+      "model": "K-300",
+      "desc": "CALIBRAÇÃO BALANÇA #BALMAK BK 300. Canal: Filipe Rodrigues.",
+      "url": "https://www.youtube.com/watch?v=ctAHGovw9hM"
+    },
+    {
+      "id": "v-yt-bPeK-jERdhU",
+      "brand": "Balmak",
+      "model": "K-300",
+      "desc": "Calibração Indicador BALMAK BKH-300 balança. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=bPeK-jERdhU"
+    },
+    {
+      "id": "v-yt-R7Jj18QJf7Y",
+      "brand": "Balmak",
+      "model": "BK-50",
+      "desc": "Calibração Balança Balmak, bk-300. Canal: Eduardo Da Balança.",
+      "url": "https://www.youtube.com/watch?v=R7Jj18QJf7Y"
+    },
+    {
+      "id": "v-yt-dKQpKzamZ6Y",
+      "brand": "Balmak",
+      "model": "BK-50",
+      "desc": "Calibração balança Balmak BK 100. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=dKQpKzamZ6Y"
+    },
+    {
+      "id": "v-yt-QSqECkVLy0A",
+      "brand": "Balmak",
+      "model": "BK-50",
+      "desc": "Calibrando Balança Digital Antropométrica Balmak. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=QSqECkVLy0A"
+    },
+    {
+      "id": "v-yt-We8KmqYzfbg",
+      "brand": "Balmak",
+      "model": "Orion",
+      "desc": "Calibração Balança Balmak Órion. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=We8KmqYzfbg"
+    },
+    {
+      "id": "v-yt-lsZX_N7UqWI",
+      "brand": "Balmak",
+      "model": "Orion",
+      "desc": "Ajuste manual Sensor Etiqueta balança Digital Balmak Orion. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=lsZX_N7UqWI"
+    },
+    {
+      "id": "v-yt-X7pR9CrU1z0",
+      "brand": "Balmak",
+      "model": "Orion",
+      "desc": "Reset Configuração de Fábrica Balançao Digital Balmak Orion. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=X7pR9CrU1z0"
+    },
+    {
+      "id": "v-yt-t68sxjvnvqw",
+      "brand": "Balmak",
+      "model": "Eline",
+      "desc": "Calibrando Balmak Elc E-line. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=t68sxjvnvqw"
+    },
+    {
+      "id": "v-yt-yd3PZkcHRFc",
+      "brand": "Balmak",
+      "model": "Eline",
+      "desc": "#10 Calibração - Balança Balmak LBP-2. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=yd3PZkcHRFc"
+    },
+    {
+      "id": "v-yt-vxDq7dHSeHQ",
+      "brand": "Balmak",
+      "model": "Eline",
+      "desc": "calibração da balança balmak one 30Kg. Canal: Mentalidade Lean.",
+      "url": "https://www.youtube.com/watch?v=vxDq7dHSeHQ"
+    },
+    {
+      "id": "v-yt-a2VVWNS-2Bc",
+      "brand": "Balmak",
+      "model": "Eline",
+      "desc": "Calibrando Balança Digital Balmak ELP-25bb. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=a2VVWNS-2Bc"
+    },
+    {
+      "id": "v-yt-DJ8W_IcOwTY",
+      "brand": "Systel",
+      "model": "Quo",
+      "desc": "Configurando a Balança pesadora SYSTEL. Canal: SQG Soluções.",
+      "url": "https://www.youtube.com/watch?v=DJ8W_IcOwTY"
+    },
+    {
+      "id": "v-yt-fG9GlGufDhY",
+      "brand": "Systel",
+      "model": "Quo",
+      "desc": "Balança Clipse e Quo Novo: Configuração MODO ETIQUETA (versão 2024). Canal: Systel Brasil.",
+      "url": "https://www.youtube.com/watch?v=fG9GlGufDhY"
+    },
+    {
+      "id": "v-yt-WItLT9mR2q8",
+      "brand": "Systel",
+      "model": "Quo",
+      "desc": "Balança Clipse e Quo Novo: Configuração MODO TICKET (versão 2024). Canal: Systel Brasil.",
+      "url": "https://www.youtube.com/watch?v=WItLT9mR2q8"
+    },
+    {
+      "id": "v-yt-cefYgVqU1VM",
+      "brand": "Systel",
+      "model": "Cuora",
+      "desc": "Configuração Cuora Max Wi Fi via PC. Canal: Systel Brasil.",
+      "url": "https://www.youtube.com/watch?v=cefYgVqU1VM"
+    },
+    {
+      "id": "v-yt-n7CwxyoGL1k",
+      "brand": "Systel",
+      "model": "ECO2",
+      "desc": "Systel Clipse - Configuração e Comunicação Serial. Canal: Doutor Balança.",
+      "url": "https://www.youtube.com/watch?v=n7CwxyoGL1k"
+    },
+    {
+      "id": "v-yt-iAYnwCw-xcE",
+      "brand": "Systel",
+      "model": "ECO2",
+      "desc": "Calibration of the SYSTEL 15KG scale.. Canal: Mentalidade Lean.",
+      "url": "https://www.youtube.com/watch?v=iAYnwCw-xcE"
+    },
+    {
+      "id": "v-yt-g_CccnJr5LQ",
+      "brand": "Systel",
+      "model": "Clipse",
+      "desc": "Cadastrando Produtos na balança Systel mod Clipse. Canal: Nicacio Geraldo.",
+      "url": "https://www.youtube.com/watch?v=g_CccnJr5LQ"
+    },
+    {
+      "id": "v-yt-44_AhXEM2b0",
+      "brand": "Systel",
+      "model": "Clipse",
+      "desc": "TUTORIAL - Castro e Alteração de itens por Peso ou Unidade na balança Systel Clipse.. Canal: AF BALANÇAS DIGITAIS.",
+      "url": "https://www.youtube.com/watch?v=44_AhXEM2b0"
+    },
+    {
+      "id": "v-yt-1LxtL_6KW1w",
+      "brand": "Systel",
+      "model": "Bumer",
+      "desc": "Configuracion Balanza SYSTEL CLIPSE 31 V2. Canal: MEDIBÁSCULAS ZOMAC S.A.S.",
+      "url": "https://www.youtube.com/watch?v=1LxtL_6KW1w"
+    },
+    {
+      "id": "v-yt-RXHYgHZzhCs",
+      "brand": "Systel",
+      "model": "Bumer",
+      "desc": "Calibración balanza Systel Croma. Canal: kiki.",
+      "url": "https://www.youtube.com/watch?v=RXHYgHZzhCs"
+    },
+    {
+      "id": "v-yt-1wqolD8AHjc",
+      "brand": "Weightech",
+      "model": "WT1000 LED",
+      "desc": "WT1000-LED: Parameterization and calibration. Canal: Weightech Brasil.",
+      "url": "https://www.youtube.com/watch?v=1wqolD8AHjc"
+    },
+    {
+      "id": "v-yt-Zf-CYy64dmM",
+      "brand": "Weightech",
+      "model": "WT1000 LED",
+      "desc": "Calibração Indicador Weightech WtT1000. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=Zf-CYy64dmM"
+    },
+    {
+      "id": "v-yt-EE-osG05JV8",
+      "brand": "Weightech",
+      "model": "WT1000 LED",
+      "desc": "Calibration - WEIGHTECH Scale - WT1000 | #30. Canal: TECH Pesagens.",
+      "url": "https://www.youtube.com/watch?v=EE-osG05JV8"
+    },
+    {
+      "id": "v-yt-ADEzTPdzgjY",
+      "brand": "Weightech",
+      "model": "WT1000 LED",
+      "desc": "Parametrização e calibração do indicador de pesagem Weightech WT1000-LCD. Canal: Weightech Brasil.",
+      "url": "https://www.youtube.com/watch?v=ADEzTPdzgjY"
+    },
+    {
+      "id": "v-yt-XabayDBQ4LE",
+      "brand": "Weightech",
+      "model": "WT3000-i-PRO",
+      "desc": "WT3000-I- PRO PARAMETERIZATION AND CALIBRATION. Canal: Weightech Brasil.",
+      "url": "https://www.youtube.com/watch?v=XabayDBQ4LE"
+    },
+    {
+      "id": "v-yt-gEgMcuGaE8Y",
+      "brand": "Weightech",
+      "model": "WT3000-i-PRO",
+      "desc": "Parametrização e calibração do indicador de pesagem Weightech WT3000-iR. Canal: Weightech Brasil.",
+      "url": "https://www.youtube.com/watch?v=gEgMcuGaE8Y"
+    },
+    {
+      "id": "v-yt-n1rGqKyTkeU",
+      "brand": "Weightech",
+      "model": "WT3000-i-PRO",
+      "desc": "Calibração e Configuração do Weightech WT3000-I. Canal: Filipe Souto Compartilhando Conhecimento.",
+      "url": "https://www.youtube.com/watch?v=n1rGqKyTkeU"
+    },
+    {
+      "id": "v-yt-lo6XVNeDprM",
+      "brand": "Weightech",
+      "model": "WT3000-i-PRO",
+      "desc": "Calibrando Indicador Libratek WT3000-iR. Canal: Daniel Dutra - Calibralança BH.",
+      "url": "https://www.youtube.com/watch?v=lo6XVNeDprM"
+    },
+    {
+      "id": "v-yt-rk8BQikh7_E",
+      "brand": "Weightech",
+      "model": "WT21-P",
+      "desc": "Calibração do indicador de pesagem weightech WT21-P. Canal: Weightech Brasil.",
+      "url": "https://www.youtube.com/watch?v=rk8BQikh7_E"
+    },
+    {
+      "id": "v-yt-rDOEAUjFnk0",
+      "brand": "Weightech",
+      "model": "WT21-P",
+      "desc": "WT21-i - Parametrização básica e calibração. Canal: Weightech Brasil.",
+      "url": "https://www.youtube.com/watch?v=rDOEAUjFnk0"
+    },
+    {
+      "id": "v-yt-IAqTKwOx9iY",
+      "brand": "Weightech",
+      "model": "WT21-P",
+      "desc": "WT21-MODBUS - Parametrização e calibração.. Canal: Weightech Brasil.",
+      "url": "https://www.youtube.com/watch?v=IAqTKwOx9iY"
+    },
+    {
+      "id": "v-yt-NT9B4JZJjcA",
+      "brand": "Weightech",
+      "model": "WT21-CS",
+      "desc": "WT21-CS: Parametrização básica e procedimento de calibração. Canal: Weightech Brasil.",
+      "url": "https://www.youtube.com/watch?v=NT9B4JZJjcA"
+    },
+    {
+      "id": "v-yt-ak3wNRac_Lo",
+      "brand": "Weightech",
+      "model": "WT21-CS",
+      "desc": "01 - Comunicação e Calibração. Canal: Weightech Brasil.",
+      "url": "https://www.youtube.com/watch?v=ak3wNRac_Lo"
+    },
+    {
+      "id": "v-yt-cXbLuI1LryU",
+      "brand": "Weightech",
+      "model": "WT3000-iR",
+      "desc": "WT3000-IR - Configuração e Calibração. Canal: Weightech Brasil.",
+      "url": "https://www.youtube.com/watch?v=cXbLuI1LryU"
+    },
+    {
+      "id": "v-yt--Pp7BmWiuCs",
+      "brand": "Celmi",
+      "model": "CSP-10B",
+      "desc": "Pesagem Dinâmica Celmi. Canal: Celmi - Celso Missias.",
+      "url": "https://www.youtube.com/watch?v=-Pp7BmWiuCs"
+    },
+    {
+      "id": "v-yt-08dcZTuvghc",
+      "brand": "Celmi",
+      "model": "CSP-10B",
+      "desc": "Como Utilizar o APP Celmi. Canal: Celmi.",
+      "url": "https://www.youtube.com/watch?v=08dcZTuvghc"
+    },
+    {
+      "id": "v-yt-rC7KGbyy6r0",
+      "brand": "Rice Lake",
+      "model": "880",
+      "desc": "880 Performance™ Series Calibration and Configuration. Canal: Rice Lake Weighing Systems.",
+      "url": "https://www.youtube.com/watch?v=rC7KGbyy6r0"
+    },
+    {
+      "id": "v-yt-59esgWanySg",
+      "brand": "Rice Lake",
+      "model": "880",
+      "desc": "Analog Output Configuration and Calibration for the 880 Performance™ Series. Canal: Rice Lake Weighing Systems.",
+      "url": "https://www.youtube.com/watch?v=59esgWanySg"
+    },
+    {
+      "id": "v-yt-7TyG2UyIm_w",
+      "brand": "Rice Lake",
+      "model": "480",
+      "desc": "calibration of rice lake 480. Canal: MASTER SCALE TECH.",
+      "url": "https://www.youtube.com/watch?v=7TyG2UyIm_w"
+    },
+    {
+      "id": "v-yt-dLBlDNhdGc0",
+      "brand": "Rice Lake",
+      "model": "480",
+      "desc": "Calibração balança rice lake 480. Canal: Adriano Alexandre.",
+      "url": "https://www.youtube.com/watch?v=dLBlDNhdGc0"
+    },
+    {
+      "id": "v-yt-QF4Ojl2zf_0",
+      "brand": "Rice Lake",
+      "model": "480",
+      "desc": "Calibration of Rice Lake 480 legend... Canal: MASTER SCALE TECH.",
+      "url": "https://www.youtube.com/watch?v=QF4Ojl2zf_0"
+    },
+    {
+      "id": "v-yt-K2pAIpguEEc",
+      "brand": "Rice Lake",
+      "model": "920i",
+      "desc": "Rice lake 920i adjustment calibration. Canal: Calibration from Scales Guys.",
+      "url": "https://www.youtube.com/watch?v=K2pAIpguEEc"
+    },
+    {
+      "id": "v-yt-yr9h7elKsMs",
+      "brand": "Rice Lake",
+      "model": "920i",
+      "desc": "Calibration of Rice Lake 920i Digital Controller. Canal: ECC Packaging Equipment.",
+      "url": "https://www.youtube.com/watch?v=yr9h7elKsMs"
+    },
+    {
+      "id": "v-yt-tFQqsmPkKkM",
+      "brand": "Rice Lake",
+      "model": "920i",
+      "desc": "Rice Lake 920i-EA Calibration. Canal: ABSCO Scales.",
+      "url": "https://www.youtube.com/watch?v=tFQqsmPkKkM"
+    },
+    {
+      "id": "v-yt-xeN5f80Wvek",
+      "brand": "Rice Lake",
+      "model": "920i",
+      "desc": "920i Scale Calibration. Canal: FormPak Group.",
+      "url": "https://www.youtube.com/watch?v=xeN5f80Wvek"
+    },
+    {
+      "id": "v-yt-OqaF7TcJc8g",
+      "brand": "Rice Lake",
+      "model": "1280",
+      "desc": "Calibrating a Scale with the 1280. Canal: Rice Lake Weighing Systems.",
+      "url": "https://www.youtube.com/watch?v=OqaF7TcJc8g"
+    },
+    {
+      "id": "v-yt-tpuxHUNzQq0",
+      "brand": "Rice Lake",
+      "model": "1280",
+      "desc": "Rice Lake 1280 Enterprise Series Indicator Connected to Multiple Devices | SellEton Scales. Canal: SellEton Scales.",
+      "url": "https://www.youtube.com/watch?v=tpuxHUNzQq0"
+    },
+    {
+      "id": "v-yt-WWaI72zks_4",
+      "brand": "Rice Lake",
+      "model": "1280",
+      "desc": "Calibración ricelake 1280. Canal: BASCULAS Y SUMINISTROS S.A.S.",
+      "url": "https://www.youtube.com/watch?v=WWaI72zks_4"
+    },
+    {
+      "id": "v-yt-7BgNBkO4SOc",
+      "brand": "Rice Lake",
+      "model": "1280",
+      "desc": "ScaleTalk: Remote Truck Scale Calibration with the 1280. Canal: Rice Lake Weighing Systems.",
+      "url": "https://www.youtube.com/watch?v=7BgNBkO4SOc"
+    },
+    {
+      "id": "v-yt-cRE2qfZ4Ytg",
+      "brand": "Rice Lake",
+      "model": "380 Synergy",
+      "desc": "ScaleTalk: 380 Synergy Series Setup & Calibration. Canal: Rice Lake Weighing Systems.",
+      "url": "https://www.youtube.com/watch?v=cRE2qfZ4Ytg"
+    },
+    {
+      "id": "v-yt-lx3mBTXwmFM",
+      "brand": "Rice Lake",
+      "model": "380 Synergy",
+      "desc": "ScaleTalk: How to Access the User Menu on the 380 Synergy Series. Canal: Rice Lake Weighing Systems.",
+      "url": "https://www.youtube.com/watch?v=lx3mBTXwmFM"
+    },
+    {
+      "id": "v-yt-h5W_KyqKc90",
+      "brand": "Rice Lake",
+      "model": "380 Synergy",
+      "desc": "ScaleTalk: How to Default the 380 Synergy Series. Canal: Rice Lake Weighing Systems.",
+      "url": "https://www.youtube.com/watch?v=h5W_KyqKc90"
+    },
+    {
+      "id": "v-yt-ouTBfTQI2rc",
+      "brand": "Rice Lake",
+      "model": "380 Synergy",
+      "desc": "ScaleTalk: How to Access the Configuration Menu on the 380 Synergy Series. Canal: Rice Lake Weighing Systems.",
+      "url": "https://www.youtube.com/watch?v=ouTBfTQI2rc"
+    },
+    {
+      "id": "v-yt-29yr5BfMXBs",
+      "brand": "Avery Weigh-Tronix",
+      "model": "ZM303",
+      "desc": "Avery Weight-tronix ZM303 Scale Calibration. Canal: Federico Ramírez Rodríguez.",
+      "url": "https://www.youtube.com/watch?v=29yr5BfMXBs"
+    },
+    {
+      "id": "v-yt-w6aY9SatsTg",
+      "brand": "Avery Weigh-Tronix",
+      "model": "ZM303",
+      "desc": "Zero calibration for Avery Weigh-Tronix ZM303 scale. Canal: Federico Ramírez Rodríguez.",
+      "url": "https://www.youtube.com/watch?v=w6aY9SatsTg"
+    },
+    {
+      "id": "v-yt-TGdFHZSthH4",
+      "brand": "Avery Weigh-Tronix",
+      "model": "ZM303",
+      "desc": "Avery Weigh-Tronix ZM303 Indicator Calibration. Canal: Básculas del inge.",
+      "url": "https://www.youtube.com/watch?v=TGdFHZSthH4"
+    },
+    {
+      "id": "v-yt-D2qW9JzJ-J4",
+      "brand": "Avery Weigh-Tronix",
+      "model": "ZM305",
+      "desc": "Avery Zm305 Calibration. Canal: sanju bhagat.",
+      "url": "https://www.youtube.com/watch?v=D2qW9JzJ-J4"
+    },
+    {
+      "id": "v-yt--I5Lz9Xti_A",
+      "brand": "Avery Weigh-Tronix",
+      "model": "ZM305",
+      "desc": "ZM305 In Motion operation. Canal: Oscar Balderas.",
+      "url": "https://www.youtube.com/watch?v=-I5Lz9Xti_A"
+    },
+    {
+      "id": "v-yt-dpUDA4-nfL0",
+      "brand": "Avery Weigh-Tronix",
+      "model": "Model 640",
+      "desc": "640 Calibration Video # 2. Canal: Central City Scale.",
+      "url": "https://www.youtube.com/watch?v=dpUDA4-nfL0"
+    },
+    {
+      "id": "v-yt-FFUWx3pbH2A",
+      "brand": "Avery Weigh-Tronix",
+      "model": "Model 640",
+      "desc": "Avery 640 Indicator Quick Start Guide. Canal: Hawk Engineering.",
+      "url": "https://www.youtube.com/watch?v=FFUWx3pbH2A"
+    },
+    {
+      "id": "v-yt-SaJlRrHrcIs",
+      "brand": "Avery Weigh-Tronix",
+      "model": "Model 640",
+      "desc": "640 Custom Calibration video # 3. Canal: Central City Scale.",
+      "url": "https://www.youtube.com/watch?v=SaJlRrHrcIs"
+    },
+    {
+      "id": "v-yt-er7w8zgI5Bk",
+      "brand": "Avery Weigh-Tronix",
+      "model": "Model 640",
+      "desc": "Avery 640 Indicator Overview. Canal: Hawk Engineering.",
+      "url": "https://www.youtube.com/watch?v=er7w8zgI5Bk"
+    },
+    {
+      "id": "v-yt-gKH7UPrnjzc",
+      "brand": "Avery Weigh-Tronix",
+      "model": "ZM510",
+      "desc": "Avery Weigh Tronix ZM510 Calibration y Care International Scale. Canal: Care International Scale.",
+      "url": "https://www.youtube.com/watch?v=gKH7UPrnjzc"
+    },
+    {
+      "id": "v-yt-5c8t1jAHolI",
+      "brand": "Avery Weigh-Tronix",
+      "model": "ZM510",
+      "desc": "Indicador Zm510. Canal: videos cobacorp.",
+      "url": "https://www.youtube.com/watch?v=5c8t1jAHolI"
+    },
+    {
+      "id": "v-yt-L5w4hhVweAM",
+      "brand": "Ohaus",
+      "model": "Defender 3000",
+      "desc": "OHAUS DEFENDER 3000 CALIBRATION PROCESS SOFTWERE SETTING. Canal: WeighT MachinE (Sunil Goswami).",
+      "url": "https://www.youtube.com/watch?v=L5w4hhVweAM"
+    },
+    {
+      "id": "v-yt-IeaUQB6xwkc",
+      "brand": "Ohaus",
+      "model": "Defender 3000",
+      "desc": "How to Calibrate Ohaus Defender 3000 Indicators | Step-by-Step Guide. Canal: Liberty Scales, Inc.",
+      "url": "https://www.youtube.com/watch?v=IeaUQB6xwkc"
+    },
+    {
+      "id": "v-yt-CshQ8d-4vAk",
+      "brand": "Ohaus",
+      "model": "Defender 3000",
+      "desc": "Ohaus Defender -3000 Wright Scale calibration And Load Capacity Setting. #weightscale #depender. Canal: Industrial Engineering Automation.",
+      "url": "https://www.youtube.com/watch?v=CshQ8d-4vAk"
+    },
+    {
+      "id": "v-yt-SesPVeUgKvk",
+      "brand": "Avery Weigh-Tronix",
+      "model": "2060",
+      "desc": "Weigh-Tronix 2060, How to enter the calibration number.. Canal: Terry Clarkson.",
+      "url": "https://www.youtube.com/watch?v=SesPVeUgKvk"
+    },
+    {
+      "id": "v-yt-6OwAvy03HAI",
+      "brand": "Avery Weigh-Tronix",
+      "model": "2060",
+      "desc": "How to Calibrate the 2060 Platform Scale and Adjust Settings.. Canal: Central City Scale.",
+      "url": "https://www.youtube.com/watch?v=6OwAvy03HAI"
+    },
+    {
+      "id": "v-yt-HI-lMWN0x48",
+      "brand": "Avery Weigh-Tronix",
+      "model": "2060",
+      "desc": "2060 - From Seed to Grain: One Indicator, Two Seasons. Canal: AgScales.",
+      "url": "https://www.youtube.com/watch?v=HI-lMWN0x48"
+    },
+    {
+      "id": "v-yt-c9vfHaVmLJM",
+      "brand": "Ohaus",
+      "model": "Defender 5000",
+      "desc": "How to calibration ohaus indicator defender 5000. Canal: Truck scale Cambodia.",
+      "url": "https://www.youtube.com/watch?v=c9vfHaVmLJM"
+    },
+    {
+      "id": "v-yt-yevrkDkjIVQ",
+      "brand": "Ohaus",
+      "model": "Defender 5000",
+      "desc": "Ohaus Defender® 5000 Digital Scales. Canal: Uline.",
+      "url": "https://www.youtube.com/watch?v=yevrkDkjIVQ"
+    },
+    {
+      "id": "v-yt-5nVyRMwxLNE",
+      "brand": "Ohaus",
+      "model": "Defender 5000",
+      "desc": "OHAUS Defender 5000 Washdown Bench Scale. Canal: METROLAB.",
+      "url": "https://www.youtube.com/watch?v=5nVyRMwxLNE"
+    },
+    {
+      "id": "v-yt-A6vMv0cG1Hw",
+      "brand": "Ohaus",
+      "model": "Ranger 3000",
+      "desc": "Ohaus Weight Scale Calibration Ranger 3000 /6 Kg weighing Scale Calibration. Canal: Electronics Lab Solution.",
+      "url": "https://www.youtube.com/watch?v=A6vMv0cG1Hw"
+    },
+    {
+      "id": "v-yt-UqjhXYZbnP0",
+      "brand": "Ohaus",
+      "model": "Ranger 3000",
+      "desc": "Ohaus R31P3 RANGER 3000 Weight Scale Calibration. Canal: Tecno'Amigo.",
+      "url": "https://www.youtube.com/watch?v=UqjhXYZbnP0"
+    },
+    {
+      "id": "v-yt-cw1rOlPMkGA",
+      "brand": "Ohaus",
+      "model": "Ranger 3000",
+      "desc": "OHAUS Ranger® 3000 How to Display Hold. Canal: Liberty Scales, Inc.",
+      "url": "https://www.youtube.com/watch?v=cw1rOlPMkGA"
+    },
+    {
+      "id": "v-yt-k4V4tSbg83U",
+      "brand": "Ohaus",
+      "model": "Valor 4000",
+      "desc": "How to Calibrate an OHAUS Valor 4000. Canal: Scales Plus.",
+      "url": "https://www.youtube.com/watch?v=k4V4tSbg83U"
+    },
+    {
+      "id": "v-yt-6IGFeL2-BC4",
+      "brand": "Ohaus",
+      "model": "Valor 4000",
+      "desc": "OHAUS Valor® 4000 Food Scale How to Checkweighin. Canal: Liberty Scales, Inc.",
+      "url": "https://www.youtube.com/watch?v=6IGFeL2-BC4"
+    },
+    {
+      "id": "v-yt-wKXMH7yypS4",
+      "brand": "Ohaus",
+      "model": "Valor 4000",
+      "desc": "OHAUS Valor® 4000 Food Scale How to Manual Accum. Canal: Liberty Scales, Inc.",
+      "url": "https://www.youtube.com/watch?v=wKXMH7yypS4"
+    },
+    {
+      "id": "v-yt-8dC6b-dhwJc",
+      "brand": "Ohaus",
+      "model": "Valor 4000",
+      "desc": "OHAUS Valor® 4000 Food Scale How to Percent Weig. Canal: Liberty Scales, Inc.",
+      "url": "https://www.youtube.com/watch?v=8dC6b-dhwJc"
+    },
+    {
+      "id": "v-yt-8JvB7i5ohn0",
+      "brand": "Mettler Toledo",
+      "model": "IND320",
+      "desc": "METTLER TOLEDO IND320 zero Calibration process. Canal: AK@INST_Tech.",
+      "url": "https://www.youtube.com/watch?v=8JvB7i5ohn0"
+    },
+    {
+      "id": "v-yt-rUV9XR3_vZY",
+      "brand": "Mettler Toledo",
+      "model": "IND320",
+      "desc": "Mettler Toledo IND 320 load cell full calibration. Canal: AK@INST_Tech.",
+      "url": "https://www.youtube.com/watch?v=rUV9XR3_vZY"
+    },
+    {
+      "id": "v-yt-_DY8bc8YxqA",
+      "brand": "Mettler Toledo",
+      "model": "IND320",
+      "desc": "HOW TO ZERO CALIBRATION METTLER TOLEDO IND320 #weigher #loadcell #instrumentation #mettlertoledo. Canal: INS TRONICS.",
+      "url": "https://www.youtube.com/watch?v=_DY8bc8YxqA"
+    },
+    {
+      "id": "v-yt-8f65seB84LY",
+      "brand": "Mettler Toledo",
+      "model": "IND231",
+      "desc": "Calibration adjustment of a Mettler IND236 and IND231. Canal: Scale Tech.",
+      "url": "https://www.youtube.com/watch?v=8f65seB84LY"
+    },
+    {
+      "id": "v-yt-yndDrmFlPHk",
+      "brand": "Mettler Toledo",
+      "model": "IND231",
+      "desc": "Hướng Dẫn Hiệu Chuẩn Calibration Indicator IND 231 Mettler Toledo. Canal: Hoàn Khôi Cân Điện Tử.",
+      "url": "https://www.youtube.com/watch?v=yndDrmFlPHk"
+    },
+    {
+      "id": "v-yt-n9-P0XjDNuE",
+      "brand": "Mettler Toledo",
+      "model": "IND231",
+      "desc": "Calibration of mettler toledo ind 231. Canal: MetrologyCalibration.",
+      "url": "https://www.youtube.com/watch?v=n9-P0XjDNuE"
+    },
+    {
+      "id": "v-yt-O-5tCgC5YWA",
+      "brand": "Mettler Toledo",
+      "model": "IND231",
+      "desc": "calibration ||METTLER TOLEDO IND231. Canal: S.O.S PESAGE.",
+      "url": "https://www.youtube.com/watch?v=O-5tCgC5YWA"
+    },
+    {
+      "id": "v-yt-IgX63QlF80E",
+      "brand": "Mettler Toledo",
+      "model": "IND560",
+      "desc": "Mettler Toledo I IND 560 I How to make Calibration for weighing scale. Canal: Chendur Kumar _ Instrument Info.",
+      "url": "https://www.youtube.com/watch?v=IgX63QlF80E"
+    },
+    {
+      "id": "v-yt-1zdFbkLean4",
+      "brand": "Mettler Toledo",
+      "model": "IND560",
+      "desc": "How to calibration truck scale Mettler toledo IND560?. Canal: Truck scale Cambodia.",
+      "url": "https://www.youtube.com/watch?v=1zdFbkLean4"
+    },
+    {
+      "id": "v-yt-XGmaEWrnEwo",
+      "brand": "Mettler Toledo",
+      "model": "IND560",
+      "desc": "Mettler Toledo IND560 Indicator Calibration. Canal: Filipe Souto Compartilhando Conhecimento.",
+      "url": "https://www.youtube.com/watch?v=XGmaEWrnEwo"
+    },
+    {
+      "id": "v-yt-LQqWAE-6zlo",
+      "brand": "Mettler Toledo",
+      "model": "IND560",
+      "desc": "METTLER TOLEDO ZERO CALIBRATION MODEL IND560. Canal: Dhana Ds.",
+      "url": "https://www.youtube.com/watch?v=LQqWAE-6zlo"
+    },
+    {
+      "id": "v-yt-dlL8oK7kzeE",
+      "brand": "Mettler Toledo",
+      "model": "IND439",
+      "desc": "Calibration of mettler Toledo. Canal: MASTER SCALE TECH.",
+      "url": "https://www.youtube.com/watch?v=dlL8oK7kzeE"
+    },
+    {
+      "id": "v-yt-JUOHkbv2eK0",
+      "brand": "Mettler Toledo",
+      "model": "IND439",
+      "desc": "mettler Toledo weight scale calibration. Canal: Nitin_ Bharatiya_!.",
+      "url": "https://www.youtube.com/watch?v=JUOHkbv2eK0"
+    },
+    {
+      "id": "v-yt-xrQOJENUp6k",
+      "brand": "Mettler Toledo",
+      "model": "IND439",
+      "desc": "Unlocking Mettler Toledo IND 429 for calibration and adjustment. Canal: Calibration Awareness.",
+      "url": "https://www.youtube.com/watch?v=xrQOJENUp6k"
+    },
+    {
+      "id": "v-yt-_fZ5YBL2278",
+      "brand": "Intelimaq",
+      "model": "IQ66",
+      "desc": "iQ5400 - Envasadora de líquidos. Canal: Intelimaq Maquinas Inteligentes LTDA.",
+      "url": "https://www.youtube.com/watch?v=_fZ5YBL2278"
+    },
+    {
+      "id": "v-yt-ygM2wIkpQGU",
+      "brand": "Intelimaq",
+      "model": "IQ66",
+      "desc": "IQ9407M - Envasadora de líquidos. Canal: Intelimaq Maquinas Inteligentes LTDA.",
+      "url": "https://www.youtube.com/watch?v=ygM2wIkpQGU"
+    },
+    {
+      "id": "v-yt-mkNy0pmLA_g",
+      "brand": "Intelimaq",
+      "model": "IQ66",
+      "desc": "IQ4098 - Envasadora de liquidos 5 á 200g. Canal: Intelimaq Maquinas Inteligentes LTDA.",
+      "url": "https://www.youtube.com/watch?v=mkNy0pmLA_g"
     }
   ],
   "products": [
