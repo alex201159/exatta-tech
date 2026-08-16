@@ -1310,6 +1310,12 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 }
 .stat-card .num { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--text); overflow-wrap: anywhere; }
 .stat-card .num .suffix { color: var(--cyan); }
+.stat-card .num .stat-soon {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--cyan);
+}
 .stat-card .label { font-size: 13px; color: var(--text-secondary); margin-top: 6px; }
 
 /* ---------- Banner de desenvolvimento sob medida ---------- */

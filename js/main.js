@@ -319,14 +319,18 @@
     el.innerHTML = BALANCEIROS_STATS.map(
       (s, i) => `
       <div class="stat-card" data-reveal data-reveal-delay="${i + 1}">
-        <div class="num">${
-          s.customLabel ? s.customLabel : `<span data-counter="${s.value}" data-suffix="${s.suffix}">0${s.suffix}</span>`
-        }</div>
+        <div class="num">${statNumberHtml(s)}</div>
         <div class="label">${s.customLabel ? s.label : s.label}</div>
       </div>`
     ).join("");
     observeReveal(el);
     initCounters(el);
+  }
+
+  function statNumberHtml(s) {
+    if (s.customLabel) return s.customLabel;
+    if (!Number(s.value)) return `<span class="stat-soon">${s.emptyLabel || "Em breve"}</span>`;
+    return `<span data-counter="${s.value}" data-suffix="${s.suffix}">0${s.suffix}</span>`;
   }
 
   /* ------------------------------------------------------------------ */
@@ -381,10 +385,10 @@
     const techs = new Set(APPS.flatMap((a) => a.tech || [])).size;
     const downloadable = APPS.filter((a) => a.hasDownload).length;
     const html = [
-      { n: total, l: "aplicativos" },
-      { n: categories, l: "categorias" },
-      { n: techs, l: "tecnologias diferentes" },
-      { n: downloadable, l: "com download direto" },
+      { n: total, l: "aplicativos desenvolvidos" },
+      { n: categories, l: "categorias atendidas" },
+      { n: techs, l: "tecnologias usadas" },
+      { n: downloadable, l: "downloads imediatos" },
     ]
       .map((s) => `<div class="app-stat"><strong>${s.n}</strong><span>${s.l}</span></div>`)
       .join("");
@@ -1048,7 +1052,7 @@
       statsEl.innerHTML = BALANCEIROS_STATS.map(
         (s, i) => `
         <div class="stat-card" data-reveal data-reveal-delay="${i + 1}">
-          <div class="num">${s.customLabel ? s.customLabel : `<span data-counter="${s.value}" data-suffix="${s.suffix}">0${s.suffix}</span>`}</div>
+          <div class="num">${statNumberHtml(s)}</div>
           <div class="label">${s.label}</div>
         </div>`
       ).join("");
