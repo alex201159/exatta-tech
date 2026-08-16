@@ -1357,17 +1357,25 @@
 
     const typeButtons = qsa("[data-contact-type]");
     const subjectField = qs("#assunto");
+    const serviceField = qs("#servico");
     const params = new URLSearchParams(window.location.search);
     const presetSubject = params.get("assunto");
     if (presetSubject && subjectField) subjectField.value = presetSubject;
+    if (presetSubject && serviceField && !serviceField.value) serviceField.value = "Outro / Não sei ainda";
 
     typeButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
         typeButtons.forEach((b) => b.classList.remove("is-active"));
         btn.classList.add("is-active");
-        if (subjectField && !subjectField.value) {
-          subjectField.value = btn.querySelector("span").textContent;
-        }
+        const label = btn.querySelector("span").textContent;
+        const serviceByLabel = {
+          "Aplicativo móvel": "Aplicativo móvel",
+          "Sistema web": "Sistema / Software web",
+          "Solução para pesagem": "Solução para pesagem",
+          "Outro projeto": "Outro / Não sei ainda",
+        };
+        if (subjectField) subjectField.value = label === "Orçamento" ? "Orçamento personalizado" : label;
+        if (serviceField && serviceByLabel[label]) serviceField.value = serviceByLabel[label];
       });
     });
 
@@ -1388,10 +1396,34 @@
       const toastText = toast ? toast.querySelector("span") : null;
       const submitBtn = form.querySelector('button[type="submit"]');
       const cfg = window.EXATTA_CONFIG || {};
+      const fileInput = qs("#arquivo", form);
+      const fileName = fileInput && fileInput.files && fileInput.files.length ? fileInput.files[0].name : "";
+      const payload = new FormData(form);
+      payload.set("Nome", data.nome || "");
+      payload.set("Telefone", data.telefone || "");
+      payload.set("E-mail para resposta", data.email || "");
+      payload.set("Cidade / Estado", data.cidade || "-");
+      payload.set("Tipo de serviço", data.servico || "");
+      payload.set("Preferência de contato", data.preferencia || "WhatsApp");
+      payload.set("Assunto", data.assunto || "Contato pelo site");
+      payload.set("Mensagem", data.mensagem || "");
+      payload.set("Arquivo informado", fileName || "-");
+      payload.set("_subject", `Novo contato pelo site: ${data.assunto || "Contato"}`);
+      payload.set("_template", "table");
+      payload.set("_captcha", "false");
 
       const waBtn = qs("#sendWhatsapp");
       if (waBtn) {
-        const msg = `Olá! Meu nome é ${data.nome || ""}. Assunto: ${data.assunto || "Contato pelo site"}. Mensagem: ${data.mensagem || ""}`;
+        const msg = [
+          `Olá! Meu nome é ${data.nome || ""}.`,
+          `Quero solicitar um orçamento com a Exatta Tech.`,
+          `Serviço: ${data.servico || "Não informado"}.`,
+          data.cidade ? `Cidade/Estado: ${data.cidade}.` : "",
+          `Preferência de contato: ${data.preferencia || "WhatsApp"}.`,
+          `Descrição: ${data.mensagem || ""}`,
+        ]
+          .filter(Boolean)
+          .join("\n");
         waBtn.href = waLink(msg);
       }
 
@@ -1402,25 +1434,15 @@
 
       fetch(`https://formsubmit.co/ajax/${encodeURIComponent(cfg.email || "")}`, {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          Nome: data.nome || "",
-          Empresa: data.empresa || "-",
-          Telefone: data.telefone || "",
-          "E-mail para resposta": data.email || "",
-          Assunto: data.assunto || "Contato pelo site",
-          Mensagem: data.mensagem || "",
-          _subject: `Novo contato pelo site: ${data.assunto || "Contato"}`,
-          _template: "table",
-          _captcha: "false",
-        }),
+        headers: { Accept: "application/json" },
+        body: payload,
       })
         .then((res) => res.json().then((body) => ({ ok: res.ok, body })))
         .then(({ ok, body }) => {
           if (!ok || (body && body.success === "false")) throw new Error((body && body.message) || "Falha ao enviar");
           if (toast) {
             if (toastIcon) toastIcon.outerHTML = icon("check");
-            if (toastText) toastText.textContent = "Mensagem enviada para nossa equipe! Você também pode falar pelo WhatsApp para uma resposta mais rápida.";
+            if (toastText) toastText.textContent = "Solicitação enviada com sucesso! Nossa equipe analisará sua necessidade e responderá em breve com uma proposta personalizada.";
             toast.classList.remove("is-error");
             toast.classList.add("is-visible");
             toast.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -1438,7 +1460,7 @@
         .finally(() => {
           if (submitBtn) {
             submitBtn.disabled = false;
-            submitBtn.textContent = "Enviar mensagem";
+            submitBtn.textContent = "Enviar solicitação de orçamento";
           }
         });
     });
