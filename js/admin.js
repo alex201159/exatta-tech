@@ -67,6 +67,8 @@
       questions: [],
       manufacturers: [],
       youtubeApiKey: "",
+      featuredAppId: "",
+      promo: null,
       removed: { apps: [], downloads: [], manuals: [], videos: [], products: [], questions: [], manufacturers: [] },
     };
   }
@@ -380,6 +382,8 @@
       hideLoadStatus();
       SECTIONS.forEach(renderList);
       populateBrandDatalists();
+      populateFeaturedSelect();
+      populatePromoForm();
       const ytField = qs('#form-settings [name="youtubeApiKey"]');
       if (ytField) ytField.value = STATE.overrides.youtubeApiKey || "";
     } catch (e) {
@@ -415,6 +419,48 @@
 
   function escapeHtml(str) {
     return (str || "").toString().replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* App em destaque (Apps) + Promoção em destaque (Vendas)             */
+  /* ------------------------------------------------------------------ */
+  function populateFeaturedSelect() {
+    const sel = qs("#featuredAppSelect");
+    if (!sel) return;
+    const items = effectiveList("apps")
+      .map((x) => x.item)
+      .sort((a, b) => (a.name || "").localeCompare(b.name || ""));
+    const current = STATE.overrides.featuredAppId || "";
+    sel.innerHTML = items.map((a) => `<option value="${escapeHtml(a.id)}">${escapeHtml(a.name)}</option>`).join("");
+    if (items.some((a) => a.id === current)) sel.value = current;
+  }
+
+  function populatePromoForm() {
+    const productSel = qs("#promoProductSelect");
+    const bonusSel = qs("#promoBonusSelect");
+    const form = qs("#form-promo");
+    if (!productSel || !bonusSel || !form) return;
+    const products = effectiveList("products")
+      .map((x) => x.item)
+      .sort((a, b) => (a.name || "").localeCompare(b.name || ""));
+    const optionsHtml = products.map((p) => `<option value="${escapeHtml(p.id)}">${escapeHtml(p.name)}</option>`).join("");
+    productSel.innerHTML = optionsHtml;
+    bonusSel.innerHTML = `<option value="">Nenhum</option>` + optionsHtml;
+
+    const promo = STATE.overrides.promo;
+    if (promo) {
+      if (products.some((p) => p.id === promo.productId)) productSel.value = promo.productId;
+      bonusSel.value = promo.bonusProductId && products.some((p) => p.id === promo.bonusProductId) ? promo.bonusProductId : "";
+      form.querySelector('[name="bonusLabel"]').value = promo.bonusLabel || "";
+      form.querySelector('[name="badge"]').value = promo.badge || "";
+      form.querySelector('[name="title"]').value = promo.title || "";
+      form.querySelector('[name="text"]').value = promo.text || "";
+      form.querySelector('[name="cta"]').value = promo.cta || "Quero essa promoção";
+      form.querySelector('[name="fine"]').value = promo.fine || "";
+      form.querySelector('[name="enabled"]').checked = promo.enabled !== false;
+    } else {
+      form.reset();
+    }
   }
 
   /* ------------------------------------------------------------------ */
@@ -535,6 +581,8 @@
       const sha = await ghPutOverrides(STATE.cfg, STATE.overrides, STATE.sha, `Admin: remove item de ${section}`);
       STATE.sha = sha;
       renderList(section);
+      if (section === "apps") populateFeaturedSelect();
+      if (section === "products") populatePromoForm();
     } catch (e) {
       if (removedOverrideItem) arr.splice(idx, 0, removedOverrideItem);
       if (!alreadyMarkedRemoved) STATE.overrides.removed[section].pop();
@@ -1024,6 +1072,8 @@
         cancelEdit(section);
         renderList(section);
         if (section === "manuals" || section === "videos" || section === "questions" || section === "manufacturers") populateBrandDatalists();
+        if (section === "apps") populateFeaturedSelect();
+        if (section === "products") populatePromoForm();
       } catch (err) {
         if (idxInOverrides !== -1) arr[idxInOverrides] = prevOverrideSnapshot;
         else arr.pop();
@@ -1060,6 +1110,102 @@
         setStatus(statusEl, "Erro ao salvar: " + err.message, "error");
       } finally {
         submitBtn.disabled = false;
+      }
+    });
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* App em destaque                                                     */
+  /* ------------------------------------------------------------------ */
+  const featuredForm = qs("#form-featured");
+  if (featuredForm) {
+    featuredForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const statusEl = qs("[data-status]", featuredForm);
+      const submitBtn = featuredForm.querySelector('button[type="submit"]');
+      const newId = qs("#featuredAppSelect", featuredForm).value;
+      const prevId = STATE.overrides.featuredAppId || "";
+
+      submitBtn.disabled = true;
+      setStatus(statusEl, "Salvando...", "busy");
+      STATE.overrides.featuredAppId = newId;
+
+      try {
+        const sha = await ghPutOverrides(STATE.cfg, STATE.overrides, STATE.sha, "Admin: define app em destaque");
+        STATE.sha = sha;
+        setStatus(statusEl, "Salvo! O site deve atualizar em ~1 minuto.", "success");
+      } catch (err) {
+        STATE.overrides.featuredAppId = prevId;
+        setStatus(statusEl, "Erro ao salvar: " + err.message, "error");
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* Promoção em destaque (Vendas)                                       */
+  /* ------------------------------------------------------------------ */
+  const promoForm = qs("#form-promo");
+  if (promoForm) {
+    promoForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const statusEl = qs("[data-status]", promoForm);
+      const submitBtn = promoForm.querySelector('button[type="submit"]');
+      const productId = qs("#promoProductSelect", promoForm).value;
+      if (!productId) {
+        setStatus(statusEl, "Escolha o produto principal da promoção.", "error");
+        return;
+      }
+      const prevPromo = STATE.overrides.promo;
+      const newPromo = {
+        enabled: promoForm.querySelector('[name="enabled"]').checked,
+        productId,
+        bonusProductId: qs("#promoBonusSelect", promoForm).value || null,
+        bonusLabel: promoForm.querySelector('[name="bonusLabel"]').value.trim(),
+        badge: promoForm.querySelector('[name="badge"]').value.trim(),
+        title: promoForm.querySelector('[name="title"]').value.trim(),
+        text: promoForm.querySelector('[name="text"]').value.trim(),
+        cta: promoForm.querySelector('[name="cta"]').value.trim() || "Quero essa promoção",
+        fine: promoForm.querySelector('[name="fine"]').value.trim(),
+      };
+
+      submitBtn.disabled = true;
+      setStatus(statusEl, "Salvando...", "busy");
+      STATE.overrides.promo = newPromo;
+
+      try {
+        const sha = await ghPutOverrides(STATE.cfg, STATE.overrides, STATE.sha, "Admin: atualiza promoção (vendas)");
+        STATE.sha = sha;
+        setStatus(statusEl, "Salvo! O site deve atualizar em ~1 minuto.", "success");
+      } catch (err) {
+        STATE.overrides.promo = prevPromo;
+        setStatus(statusEl, "Erro ao salvar: " + err.message, "error");
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  }
+  const removePromoBtn = qs("#removePromoBtn");
+  if (removePromoBtn) {
+    removePromoBtn.addEventListener("click", async () => {
+      if (!STATE.overrides.promo) return;
+      if (!confirm("Remover a promoção do site? Isso publica direto no GitHub.")) return;
+      const statusEl = qs("[data-status]", promoForm);
+      const prevPromo = STATE.overrides.promo;
+      removePromoBtn.disabled = true;
+      setStatus(statusEl, "Removendo...", "busy");
+      STATE.overrides.promo = null;
+      try {
+        const sha = await ghPutOverrides(STATE.cfg, STATE.overrides, STATE.sha, "Admin: remove promoção (vendas)");
+        STATE.sha = sha;
+        setStatus(statusEl, "Promoção removida do site.", "success");
+        promoForm.reset();
+      } catch (err) {
+        STATE.overrides.promo = prevPromo;
+        setStatus(statusEl, "Erro ao remover: " + err.message, "error");
+      } finally {
+        removePromoBtn.disabled = false;
       }
     });
   }

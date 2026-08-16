@@ -251,6 +251,43 @@
       <div class="admin-panel-head"><h2>Produtos (Vendas)</h2></div>
       <div class="admin-list" id="list-products"></div>
 
+      <div class="admin-panel-head" style="margin-top:8px"><h2 style="font-size:18px">Promoção em destaque (topo da grade)</h2></div>
+      <form class="admin-form" id="form-promo" style="margin-bottom:32px">
+        <p class="admin-field-hint" style="margin-bottom:14px">
+          Card grande com as fotos de dois produtos (ex: "compre X e ganhe Y de brinde") que aparece no topo da grade
+          de produtos em <code>vendas.html</code>. Deixe desmarcado "Promoção ativa" ou clique em "Remover promoção"
+          para tirar do site sem apagar o que você digitou aqui.
+        </p>
+        <div class="form-grid">
+          <div class="field">
+            <label>Produto principal (o que o cliente compra)</label>
+            <select name="productId" id="promoProductSelect" required></select>
+          </div>
+          <div class="field">
+            <label>Produto bônus (opcional)</label>
+            <select name="bonusProductId" id="promoBonusSelect">
+              <option value="">Nenhum</option>
+            </select>
+          </div>
+          <div class="field"><label>Selo do bônus</label><input name="bonusLabel" placeholder="Ex: Grátis por 30 dias"></div>
+          <div class="field"><label>Selo da oferta</label><input name="badge" placeholder="Ex: Oferta por tempo limitado"></div>
+          <div class="field full">
+            <label>Título</label>
+            <input name="title" placeholder="Ex: Compre o **LC TESTE** e ganhe **1 mês grátis** do CalibraPro">
+            <p class="admin-field-hint">Coloque ** ao redor de um trecho pra destacar em amarelo, tipo **assim**.</p>
+          </div>
+          <div class="field full"><label>Texto</label><textarea name="text" rows="3" placeholder="Explique a oferta em 1-2 frases"></textarea></div>
+          <div class="field"><label>Texto do botão</label><input name="cta" value="Quero essa promoção"></div>
+          <div class="field full"><label>Letras miúdas (regra da promoção)</label><input name="fine" placeholder="Ex: *Promoção válida na compra de..."></div>
+        </div>
+        <label class="admin-check" style="margin-top:12px"><input type="checkbox" name="enabled" checked>Promoção ativa (aparece no site)</label>
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <button type="submit" class="btn btn--primary">Salvar promoção</button>
+          <button type="button" class="btn btn--outline" id="removePromoBtn">Remover promoção</button>
+        </div>
+        <p class="admin-status" data-status="promo"></p>
+      </form>
+
       <form class="admin-form" id="form-products" data-section="products">
         <h3 data-form-title>Adicionar produto</h3>
         <div class="form-grid">
@@ -349,6 +386,19 @@
     <!-- CONFIGURAÇÕES -->
     <section class="admin-panel" data-admin-panel="settings">
       <div class="admin-panel-head"><h2>Configurações</h2></div>
+
+      <form class="admin-form" id="form-featured" style="margin-bottom:28px">
+        <h3>App em destaque (tela Apps)</h3>
+        <p class="admin-field-hint" style="margin-bottom:14px">
+          É o aplicativo que aparece grande, com foto e badges, no topo da grade em <code>apps.html</code>.
+        </p>
+        <div class="field">
+          <label>Aplicativo em destaque</label>
+          <select name="featuredAppId" id="featuredAppSelect"></select>
+        </div>
+        <button type="submit" class="btn btn--primary" style="margin-top:16px">Salvar destaque</button>
+        <p class="admin-status" data-status="featured"></p>
+      </form>
 
       <form class="admin-form" id="form-settings">
         <h3>Busca de vídeos no YouTube</h3>
