@@ -2207,6 +2207,12 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
   .header-actions .btn--primary { display: none; }
 }
 
+@media (max-width: 1040px) {
+  .nav-desktop { display: none; }
+  .nav-toggle { display: flex; }
+  .header-actions .btn--primary { display: none; }
+}
+
 @media (max-width: 860px) {
   .nav-desktop { display: none; }
   .nav-toggle { display: flex; }
