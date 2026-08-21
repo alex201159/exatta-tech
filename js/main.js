@@ -1223,15 +1223,29 @@
     const videosGrid = qs("#videosGrid");
     const questionsGrid = qs("#questionsGrid");
 
+    // Ignora hífen, espaço, barra e acentos na comparação — pra "3101cs"
+    // encontrar "3101C-S" e "TI 400" encontrar "TI-400", por exemplo.
+    function normalizeSearch(str) {
+      return (str || "")
+        .toString()
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[̀-ͯ]/g, "")
+        .replace(/[^a-z0-9]/g, "");
+    }
+
     function matches(item, brandKey, modelKey) {
       const q = query.trim().toLowerCase();
+      const qNorm = normalizeSearch(q);
       const matchBrand = activeBrand === "all" || item[brandKey] === activeBrand;
       const extra = [item.type, item.desc, item.question].filter(Boolean).join(" ").toLowerCase();
       const matchQuery =
         !q ||
         item[brandKey].toLowerCase().includes(q) ||
         item[modelKey].toLowerCase().includes(q) ||
-        extra.includes(q);
+        extra.includes(q) ||
+        (qNorm.length > 1 &&
+          (normalizeSearch(item[brandKey]).includes(qNorm) || normalizeSearch(item[modelKey]).includes(qNorm)));
       return matchBrand && matchQuery;
     }
 
