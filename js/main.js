@@ -1066,6 +1066,120 @@
   }
 
   /* ------------------------------------------------------------------ */
+  /* Busca de manuais na web (Central dos Balanceiros) — quando o manual */
+  /* não está no acervo, busca resultados reais via Google Custom Search */
+  /* JSON API e mostra como cards, no lugar de só um link externo.       */
+  /* ------------------------------------------------------------------ */
+  const gsCache = new Map();
+  let gsDebounceTimer = null;
+  let gsRequestToken = 0;
+
+  async function fetchManualWebResults(query) {
+    const cfg = window.EXATTA_CONFIG || {};
+    const apiKey = cfg.googleSearchApiKey;
+    const cx = cfg.googleSearchEngineId;
+    if (!apiKey || !cx) return { ok: false, reason: "no-key", items: [] };
+    const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&num=6&q=${encodeURIComponent(
+      query + " manual filetype:pdf"
+    )}`;
+    try {
+      const res = await fetch(url);
+      if (!res.ok) {
+        let reason = "error";
+        try {
+          const errBody = await res.json();
+          if (res.status === 429 || /quota|rateLimitExceeded/i.test(JSON.stringify(errBody))) reason = "quota";
+        } catch (e) {
+          /* corpo de erro não era JSON — mantém reason genérico */
+        }
+        return { ok: false, reason, items: [] };
+      }
+      const data = await res.json();
+      const items = (data.items || []).map((it) => ({
+        title: it.title,
+        link: it.link,
+        snippet: it.snippet,
+        displayLink: it.displayLink,
+      }));
+      return { ok: true, items };
+    } catch (e) {
+      return { ok: false, reason: "network", items: [] };
+    }
+  }
+
+  function manualWebResultsSkeleton() {
+    return Array.from({ length: 3 })
+      .map(
+        () => `
+      <div class="result-card">
+        <div class="skeleton" style="height:16px;width:70%;margin-bottom:10px;border-radius:4px"></div>
+        <div class="skeleton" style="height:12px;width:40%;margin-bottom:16px;border-radius:4px"></div>
+        <div class="skeleton" style="height:34px;width:100%;border-radius:8px"></div>
+      </div>`
+      )
+      .join("");
+  }
+
+  function manualWebResultCard(item) {
+    return `
+      <div class="result-card" data-reveal>
+        <div class="result-card-head">
+          <div class="ico">${icon("pdf")}</div>
+          <div>
+            <h4>${escapeHtml(item.title)}</h4>
+            <div class="meta">${escapeHtml(item.displayLink || "")}</div>
+          </div>
+        </div>
+        <p>${escapeHtml(item.snippet || "")}</p>
+        <div class="result-card-actions">
+          <a class="btn btn--outline btn--sm btn--block" href="${item.link}" target="_blank" rel="noopener">Abrir</a>
+        </div>
+      </div>`;
+  }
+
+  function renderManualWebResults(grid, result) {
+    if (result.ok && result.items.length) {
+      grid.innerHTML = result.items.map(manualWebResultCard).join("");
+      observeReveal(grid);
+      return;
+    }
+    if (!result.ok && (result.reason === "no-key" || result.reason === "network")) {
+      grid.innerHTML = ""; // sem chave configurada ou sem rede: o link "Buscar na web" já cobre isso
+      return;
+    }
+    const msg =
+      result.reason === "quota"
+        ? "O limite diário de buscas na web foi atingido — use o link acima para buscar direto no Google."
+        : "Nenhum resultado encontrado na web para essa busca.";
+    grid.innerHTML = `<div class="yt-fallback" style="grid-column:1/-1"><p>${msg}</p></div>`;
+  }
+
+  function triggerManualWebSearch(query) {
+    const grid = qs("#manualWebResults");
+    if (!grid) return;
+    clearTimeout(gsDebounceTimer);
+    const q = query.trim();
+    if (!q) {
+      grid.innerHTML = "";
+      return;
+    }
+    const cfg = window.EXATTA_CONFIG || {};
+    if (!cfg.googleSearchApiKey || !cfg.googleSearchEngineId) return; // sem chave: fica só o link de busca
+    grid.innerHTML = manualWebResultsSkeleton();
+    gsDebounceTimer = setTimeout(async () => {
+      const myToken = ++gsRequestToken;
+      if (gsCache.has(q)) {
+        renderManualWebResults(grid, gsCache.get(q));
+        return;
+      }
+      const result = await fetchManualWebResults(q);
+      if (myToken !== gsRequestToken) return; // uma busca mais nova já está em andamento
+      gsCache.set(q, result);
+      renderManualWebResults(grid, result);
+    }, 500);
+  }
+
+  /* ------------------------------------------------------------------ */
   /* Balanceiros.html                                                   */
   /* ------------------------------------------------------------------ */
   function renderBalanceirosPage() {
@@ -1141,6 +1255,7 @@
         manualsGrid.innerHTML = manualEmptyState(query);
         qs("#manualsLoadMore") && (qs("#manualsLoadMore").style.display = "none");
         initWhatsapp();
+        triggerManualWebSearch(query);
         return;
       }
       const shown = list.slice(0, visibleManuals);
@@ -1317,7 +1432,8 @@
           <a class="btn btn--outline btn--sm" href="${searchUrl}" target="_blank" rel="noopener">${icon("search")} Buscar na web</a>
           <a class="btn btn--primary btn--sm" data-wa-link data-wa-message="${escapeHtml(waMsg)}">${icon("whatsapp")} Pedir ajuda no WhatsApp</a>
         </div>
-      </div>`;
+      </div>
+      <div class="result-grid" id="manualWebResults" style="grid-column:1/-1;margin-top:6px"></div>`;
   }
 
   /* ------------------------------------------------------------------ */

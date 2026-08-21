@@ -67,6 +67,8 @@
       questions: [],
       manufacturers: [],
       youtubeApiKey: "",
+      googleSearchApiKey: "",
+      googleSearchEngineId: "",
       featuredAppId: "",
       promo: null,
       removed: { apps: [], downloads: [], manuals: [], videos: [], products: [], questions: [], manufacturers: [] },
@@ -386,6 +388,10 @@
       populatePromoForm();
       const ytField = qs('#form-settings [name="youtubeApiKey"]');
       if (ytField) ytField.value = STATE.overrides.youtubeApiKey || "";
+      const gsKeyField = qs('#form-settings [name="googleSearchApiKey"]');
+      if (gsKeyField) gsKeyField.value = STATE.overrides.googleSearchApiKey || "";
+      const gsCxField = qs('#form-settings [name="googleSearchEngineId"]');
+      if (gsCxField) gsCxField.value = STATE.overrides.googleSearchEngineId || "";
     } catch (e) {
       showLoadStatus(
         `<i data-icon="alert"></i><div><strong>Não foi possível conectar ao GitHub.</strong><br>${escapeHtml(
@@ -1095,11 +1101,17 @@
       const statusEl = qs("[data-status]", settingsForm);
       const submitBtn = settingsForm.querySelector('button[type="submit"]');
       const newKey = settingsForm.querySelector('[name="youtubeApiKey"]').value.trim();
+      const newGsKey = settingsForm.querySelector('[name="googleSearchApiKey"]').value.trim();
+      const newGsCx = settingsForm.querySelector('[name="googleSearchEngineId"]').value.trim();
       const prevKey = STATE.overrides.youtubeApiKey || "";
+      const prevGsKey = STATE.overrides.googleSearchApiKey || "";
+      const prevGsCx = STATE.overrides.googleSearchEngineId || "";
 
       submitBtn.disabled = true;
       setStatus(statusEl, "Salvando...", "busy");
       STATE.overrides.youtubeApiKey = newKey;
+      STATE.overrides.googleSearchApiKey = newGsKey;
+      STATE.overrides.googleSearchEngineId = newGsCx;
 
       try {
         const sha = await ghPutOverrides(STATE.cfg, STATE.overrides, STATE.sha, "Admin: atualiza configurações");
@@ -1107,6 +1119,8 @@
         setStatus(statusEl, "Salvo! O site deve atualizar em ~1 minuto.", "success");
       } catch (err) {
         STATE.overrides.youtubeApiKey = prevKey;
+        STATE.overrides.googleSearchApiKey = prevGsKey;
+        STATE.overrides.googleSearchEngineId = prevGsCx;
         setStatus(statusEl, "Erro ao salvar: " + err.message, "error");
       } finally {
         submitBtn.disabled = false;

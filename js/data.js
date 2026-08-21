@@ -29,6 +29,13 @@ const EXATTA_CONFIG = {
   // aqui ou pelo painel admin (aba Configurações) — o painel tem
   // prioridade quando preenchida.
   youtubeApiKey: "",
+  // Chave da Google Custom Search JSON API + ID do mecanismo de pesquisa
+  // (cx), usadas na Central dos Balanceiros para mostrar resultados reais
+  // da web (não só um link) quando um manual não é encontrado no acervo.
+  // Mesma lógica da chave do YouTube: pública, precisa ser restrita ao
+  // domínio no Google Cloud Console. Preenchidas aqui ou pelo painel admin.
+  googleSearchApiKey: "",
+  googleSearchEngineId: "",
 };
 // `const` no nível superior de um <script> não vira propriedade de `window`
 // (ver nota mais abaixo) — main.js lê window.EXATTA_CONFIG para montar os
@@ -548,6 +555,8 @@ window.exattaLoadOverrides = async function exattaLoadOverrides() {
     exattaMergeSection(MANUFACTURERS, extra.manufacturers, removed.manufacturers);
     exattaMergeSection(COMMUNITY_QUESTIONS, extra.questions, removed.questions);
     if (extra.youtubeApiKey) EXATTA_CONFIG.youtubeApiKey = extra.youtubeApiKey;
+    if (extra.googleSearchApiKey) EXATTA_CONFIG.googleSearchApiKey = extra.googleSearchApiKey;
+    if (extra.googleSearchEngineId) EXATTA_CONFIG.googleSearchEngineId = extra.googleSearchEngineId;
     window.EXATTA_FEATURED_APP_ID = extra.featuredAppId || null;
     window.EXATTA_PROMO = extra.promo || null;
   } catch (e) {

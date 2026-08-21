@@ -416,6 +416,28 @@
           (em "Restrições de aplicativo" → HTTP referrers) para <code>exattatech.com/*</code> e
           <code>alex201159.github.io/*</code> — assim ninguém mais consegue usar sua chave.
         </p>
+
+        <h3 style="margin-top:28px">Busca de manuais na web</h3>
+        <p class="admin-field-hint" style="margin-bottom:14px">
+          Com essas duas chaves preenchidas, quando alguém procurar um manual que ainda não está no acervo, a
+          Central do Balanceiro mostra resultados reais da web (título, trecho e link) em vez de só um botão de
+          busca. Sem elas, continua funcionando normalmente, só com o botão de busca externa.
+        </p>
+        <div class="field">
+          <label>Chave da Google Custom Search JSON API</label>
+          <input name="googleSearchApiKey" placeholder="AIzaSy...">
+        </div>
+        <div class="field" style="margin-top:14px">
+          <label>ID do mecanismo de pesquisa (cx)</label>
+          <input name="googleSearchEngineId" placeholder="Ex: a1b2c3d4e5f6g7h8i">
+        </div>
+        <p class="admin-gate-note" style="margin-top:10px">
+          Crie o mecanismo em <strong>programmablesearchengine.google.com</strong> (pode deixar "pesquisar em toda
+          a web" ativado) e copie o <strong>ID do mecanismo de pesquisa</strong>. Para a chave, ative a
+          <strong>Custom Search API</strong> no mesmo projeto do Google Cloud usado acima e crie (ou reaproveite)
+          uma chave de API — restrinja ela do mesmo jeito, para <code>exattatech.com/*</code> e
+          <code>alex201159.github.io/*</code>. O plano gratuito cobre 100 buscas por dia.
+        </p>
         <button type="submit" class="btn btn--primary" style="margin-top:16px">Salvar configuração</button>
         <p class="admin-status" data-status="settings"></p>
       </form>
