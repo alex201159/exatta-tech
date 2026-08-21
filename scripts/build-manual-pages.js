@@ -95,7 +95,7 @@ function esc(str) {
 function relatedVideos(manual) {
   return MANUAL_VIDEOS.filter(
     (v) => slugify(v.brand) === manual.brandSlug && (slugify(v.model) === manual.modelSlug || (v.model || "").toLowerCase().includes((manual.model || "").toLowerCase()))
-  ).slice(0, 4);
+  );
 }
 
 function videoEmbed(url) {
@@ -263,13 +263,29 @@ function pageTemplate(manual) {
 
       ${
         videos.length
-          ? `<div class="section-head" data-reveal style="margin-top:36px">
+          ? (() => {
+              const videoCard = (v) =>
+                `<div>${videoEmbed(v.url)}<p style="font-size:13px;color:var(--text-secondary);margin-top:8px">${esc(v.desc || "")}</p></div>`;
+              const shown = videos.slice(0, 4);
+              const rest = videos.slice(4);
+              return `<div class="section-head" data-reveal style="margin-top:36px">
         <span class="eyebrow">Vídeos técnicos</span>
         <h2 class="section-title" style="font-size:24px">Vídeos sobre ${esc(manual.brand)} ${esc(manual.model)}</h2>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px" data-reveal>
-        ${videos.map((v) => `<div>${videoEmbed(v.url)}<p style="font-size:13px;color:var(--text-secondary);margin-top:8px">${esc(v.desc || "")}</p></div>`).join("")}
+        ${shown.map(videoCard).join("")}
+      </div>
+      ${
+        rest.length
+          ? `<div id="videosExtra" hidden style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:20px">
+        ${rest.map(videoCard).join("")}
+      </div>
+      <div style="text-align:center;margin-top:20px">
+        <button type="button" class="btn btn--outline" onclick="document.getElementById('videosExtra').hidden=false;this.hidden=true;">Carregar mais vídeos (${rest.length})</button>
       </div>`
+          : ""
+      }`;
+            })()
           : ""
       }
 
