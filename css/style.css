@@ -1601,6 +1601,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 .bal-panel .empty-state { color: #5b6478; }
 .bal-panel .empty-state svg { color: #9aa3b5; }
 .bal-panel .empty-state h4 { color: #10151f; }
+.bal-panel .empty-state .btn--outline { border-color: rgba(15,23,42,0.3); color: #10151f; font-weight: 600; }
+.bal-panel .empty-state .btn--outline:hover { border-color: var(--blue); color: var(--blue); }
+.bal-panel .empty-state .btn--outline svg { color: inherit; }
 
 .bal-panel .ask-question-box {
   background: #fff;

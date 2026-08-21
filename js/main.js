@@ -1138,8 +1138,9 @@
       const list = MANUALS.filter((m) => matches(m, "brand", "model"));
       updateTabCount("manuais", list.length);
       if (!list.length) {
-        manualsGrid.innerHTML = emptyState("Nenhum manual encontrado", "Tente buscar por outro fabricante ou modelo.");
+        manualsGrid.innerHTML = manualEmptyState(query);
         qs("#manualsLoadMore") && (qs("#manualsLoadMore").style.display = "none");
+        initWhatsapp();
         return;
       }
       const shown = list.slice(0, visibleManuals);
@@ -1297,6 +1298,26 @@
 
   function emptyState(title, sub) {
     return `<div class="empty-state" style="grid-column:1/-1">${icon("search")}<h4>${title}</h4><p>${sub}</p></div>`;
+  }
+
+  // Quando a busca de manuais não encontra nada no acervo, oferece buscar
+  // o manual na web (Google, filtrado a PDFs) ou pedir ajuda no WhatsApp,
+  // em vez de simplesmente dizer "não encontrado".
+  function manualEmptyState(query) {
+    const q = (query || "").trim();
+    if (!q) return emptyState("Nenhum manual encontrado", "Tente buscar por outro fabricante ou modelo.");
+    const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(q + " manual filetype:pdf")}`;
+    const waMsg = `Olá! Procurei o manual de "${q}" na Central do Balanceiro e não encontrei no acervo. Vocês podem me ajudar a localizar?`;
+    return `
+      <div class="empty-state" style="grid-column:1/-1">
+        ${icon("search")}
+        <h4>"${escapeHtml(q)}" ainda não está no nosso acervo</h4>
+        <p>Você pode buscar esse manual na web ou pedir ajuda direto com a nossa equipe.</p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px">
+          <a class="btn btn--outline btn--sm" href="${searchUrl}" target="_blank" rel="noopener">${icon("search")} Buscar na web</a>
+          <a class="btn btn--primary btn--sm" data-wa-link data-wa-message="${escapeHtml(waMsg)}">${icon("whatsapp")} Pedir ajuda no WhatsApp</a>
+        </div>
+      </div>`;
   }
 
   /* ------------------------------------------------------------------ */
