@@ -62,10 +62,20 @@
       <a href="index.html" class="is-active">Início</a>
       <a href="index.html#solucoes">Soluções</a>
       <a href="apps.html">Aplicativos</a>
-      <a href="downloads.html">Downloads</a>
-      <a href="vendas.html">Produtos</a>
+      <div class="nav-dropdown">
+        <a href="vendas.html" class="nav-dropdown-trigger">Produtos<i data-icon="chevronDown"></i></a>
+        <div class="nav-dropdown-panel">
+          <a href="lc-teste.html">LC TESTE</a>
+          <a href="calibrapro.html">CalibraPro</a>
+          <a href="lc-agro.html">LC Agro</a>
+          <a href="lc-carga.html">LC Carga</a>
+          <div class="nav-dropdown-divider"></div>
+          <a href="vendas.html">Ver todos os produtos</a>
+        </div>
+      </div>
       <a href="balanceiros.html">Central do Balanceiro</a>
-      <a href="contato.html?assunto=Or%C3%A7amento%20personalizado">Orçamento</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="ajuda.html">Ajuda</a>
       <a href="contato.html">Contato</a>
     </nav>
     <div class="header-actions">
@@ -82,12 +92,17 @@
   <a href="index.html" class="is-active">Início</a>
   <a href="index.html#solucoes">Soluções</a>
   <a href="apps.html">Aplicativos</a>
-  <a href="downloads.html">Downloads</a>
   <a href="vendas.html">Produtos</a>
+  <div class="nav-mobile-sub">
+    <a href="lc-teste.html">LC TESTE</a>
+    <a href="calibrapro.html">CalibraPro</a>
+    <a href="lc-agro.html">LC Agro</a>
+    <a href="lc-carga.html">LC Carga</a>
+  </div>
   <a href="balanceiros.html">Central do Balanceiro</a>
-  <a href="contato.html?assunto=Or%C3%A7amento%20personalizado">Orçamento</a>
-  <a href="contato.html">Contato</a>
+  <a href="downloads.html">Downloads</a>
   <a href="ajuda.html">Ajuda e suporte</a>
+  <a href="contato.html">Contato</a>
   <a href="contato.html?assunto=Or%C3%A7amento%20personalizado" class="btn btn--primary btn--block">Solicitar orçamento</a>
 </nav>
 
@@ -97,12 +112,12 @@
   <section class="hero home-hero">
     <div class="container home-hero-grid">
       <div class="home-hero-copy">
-        <span class="eyebrow" data-reveal>Apps, softwares e tecnologia sob medida</span>
-        <h1 class="hero-title" data-reveal data-reveal-delay="1">Desenvolvemos apps e softwares para tirar sua ideia do papel.</h1>
-        <p class="hero-sub" data-reveal data-reveal-delay="2">A Exatta Tech cria aplicativos, softwares, sites e sistemas para diferentes tipos de negócio. Também temos soluções para pesagem e suporte técnico para balanceiros. Precisa de um app ou software? Entre em contato e peça seu orçamento.</p>
+        <span class="eyebrow" data-reveal>Aplicativos · Sistemas · Automação · Instrumentação · Pesagem</span>
+        <h1 class="hero-title" data-reveal data-reveal-delay="1">Tecnologia que conecta software, eletrônica e pesagem.</h1>
+        <p class="hero-sub" data-reveal data-reveal-delay="2">A Exatta Tech desenvolve aplicativos, sistemas web e soluções personalizadas para diferentes segmentos — e é especializada em tecnologia para pesagem: apps de pesagem, o testador LC TESTE e o sistema CalibraPro para laboratórios de calibração. Precisa de um app, sistema ou solução de pesagem? Entre em contato e peça seu orçamento.</p>
         <div class="hero-actions" data-reveal data-reveal-delay="3">
-          <a href="contato.html?assunto=Or%C3%A7amento%20de%20app%20ou%20software" class="btn btn--primary">Solicitar proposta personalizada <i data-icon="arrowRight"></i></a>
-          <a data-wa-link data-wa-message="Olá! Preciso de um app ou software e gostaria de pedir um orçamento com a Exatta Tech." class="btn btn--outline"><i data-icon="whatsapp"></i>Falar no WhatsApp</a>
+          <a href="#solucoes-exatta" class="btn btn--primary">Conhecer nossas soluções <i data-icon="arrowRight"></i></a>
+          <a href="contato.html?assunto=Or%C3%A7amento%20de%20app%20ou%20software" class="btn btn--outline">Solicitar orçamento</a>
         </div>
         <a class="home-quote-highlight" href="contato.html?assunto=Or%C3%A7amento%20de%20app%20ou%20software" data-reveal data-reveal-delay="4">
           <span class="home-quote-icon"><i data-icon="cpu"></i></span>
@@ -126,13 +141,13 @@
           <strong>LC TESTE em destaque</strong>
           <span>Diagnóstico técnico</span>
         </div>
-        <div class="showcase-phone">
+        <a class="showcase-phone" href="lc-teste.html" aria-label="Conhecer o LC TESTE">
           <div class="showcase-phone-bar">
             <span>LC TESTE</span>
             <span>Campo e bancada</span>
           </div>
           <img class="showcase-img--contain" src="assets/uploads/apps-testador.png" alt="LC TESTE" loading="eager">
-        </div>
+        </a>
         <div class="showcase-side">
           <div class="showcase-card showcase-card--metric">
             <span>Diagnóstico técnico</span>
@@ -142,7 +157,7 @@
           <div class="showcase-apps">
             <img src="assets/uploads/apps-lc-agro.jpg" alt="Aplicativo LC Agro" loading="lazy">
             <img src="assets/uploads/apps-lc-carga-atual.jpg" alt="Aplicativo LC Carga" loading="lazy">
-            <img src="assets/uploads/products-calibrapro-normal.png" alt="Calibra Pro" loading="lazy">
+            <a href="calibrapro.html" aria-label="Conhecer o CalibraPro"><img src="assets/uploads/products-calibrapro-normal.png" alt="CalibraPro" loading="lazy"></a>
           </div>
           <div class="showcase-card showcase-card--support">
             <i data-icon="headset"></i>
@@ -152,6 +167,55 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSSAS SOLUÇÕES -->
+  <section class="section section--tight" id="solucoes-exatta">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow">Nossas soluções</span>
+        <h2 class="section-title">Produtos desenvolvidos pela Exatta Tech.</h2>
+        <p class="section-sub">Equipamento, sistema e apps criados para quem trabalha com pesagem — do diagnóstico técnico à emissão de certificados.</p>
+      </div>
+      <div class="solution-grid" data-reveal>
+        <a class="solution-card" href="lc-teste.html">
+          <div class="solution-card-media"><img src="assets/uploads/products-prod-lc-teste-7ayd4.png" alt="LC TESTE" loading="lazy"></div>
+          <div class="solution-card-body">
+            <span class="tag tag--blue">Equipamento + App</span>
+            <h3>LC TESTE</h3>
+            <p>Diagnóstico profissional de células de carga, em campo ou bancada.</p>
+            <span class="solution-card-cta">Conhecer o LC TESTE <i data-icon="arrowRight"></i></span>
+          </div>
+        </a>
+        <a class="solution-card" href="calibrapro.html">
+          <div class="solution-card-media"><img src="assets/uploads/products-calibrapro-rbc.png" alt="CalibraPro" loading="lazy"></div>
+          <div class="solution-card-body">
+            <span class="tag tag--blue">Sistema desktop</span>
+            <h3>CalibraPro</h3>
+            <p>Gestão, calibração e emissão de certificados para laboratórios e empresas de pesagem.</p>
+            <span class="solution-card-cta">Conhecer o CalibraPro <i data-icon="arrowRight"></i></span>
+          </div>
+        </a>
+        <a class="solution-card" href="lc-agro.html">
+          <div class="solution-card-media"><img src="assets/uploads/apps-lc-agro.jpg" alt="LC Agro" loading="lazy"></div>
+          <div class="solution-card-body">
+            <span class="tag tag--blue">App Android</span>
+            <h3>LC Agro</h3>
+            <p>Pesagem agropecuária com desconto automático de tara por container (BIM).</p>
+            <span class="solution-card-cta">Conhecer o LC Agro <i data-icon="arrowRight"></i></span>
+          </div>
+        </a>
+        <a class="solution-card" href="lc-carga.html">
+          <div class="solution-card-media"><img src="assets/uploads/apps-lc-carga-atual.jpg" alt="LC Carga" loading="lazy"></div>
+          <div class="solution-card-body">
+            <span class="tag tag--blue">App + Sistema</span>
+            <h3>LC Carga</h3>
+            <p>Pesagem rodoviária de entrada e saída de veículos, em campo ou estação fixa.</p>
+            <span class="solution-card-cta">Conhecer o LC Carga <i data-icon="arrowRight"></i></span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -367,6 +431,10 @@
       <div class="footer-col">
         <h3>Soluções</h3>
         <ul>
+          <li><a href="lc-teste.html">LC TESTE</a></li>
+          <li><a href="calibrapro.html">CalibraPro</a></li>
+          <li><a href="lc-agro.html">LC Agro</a></li>
+          <li><a href="lc-carga.html">LC Carga</a></li>
           <li><a href="apps.html">Aplicativos</a></li>
           <li><a href="downloads.html">Downloads</a></li>
           <li><a href="vendas.html">Produtos</a></li>
@@ -375,6 +443,7 @@
       <div class="footer-col">
         <h3>Suporte</h3>
         <ul>
+          <li><a href="guias/index.html">Guias técnicos</a></li>
           <li><a href="ajuda.html">Ajuda</a></li>
           <li><a href="balanceiros.html">Central do Balanceiro</a></li>
           <li><a href="contato.html">Contato</a></li>

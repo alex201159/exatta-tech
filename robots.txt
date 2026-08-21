@@ -3,3 +3,4 @@ Allow: /
 Disallow: /admin.html
 
 Sitemap: https://exattatech.com/sitemap.xml
+Sitemap: https://exattatech.com/sitemap-balancas.xml

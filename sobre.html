@@ -31,10 +31,20 @@
       <a href="index.html">Início</a>
       <a href="index.html#solucoes">Soluções</a>
       <a href="apps.html">Aplicativos</a>
-      <a href="downloads.html">Downloads</a>
-      <a href="vendas.html">Produtos</a>
+      <div class="nav-dropdown">
+        <a href="vendas.html" class="nav-dropdown-trigger">Produtos<i data-icon="chevronDown"></i></a>
+        <div class="nav-dropdown-panel">
+          <a href="lc-teste.html">LC TESTE</a>
+          <a href="calibrapro.html">CalibraPro</a>
+          <a href="lc-agro.html">LC Agro</a>
+          <a href="lc-carga.html">LC Carga</a>
+          <div class="nav-dropdown-divider"></div>
+          <a href="vendas.html">Ver todos os produtos</a>
+        </div>
+      </div>
       <a href="balanceiros.html">Central do Balanceiro</a>
-      <a href="contato.html?assunto=Or%C3%A7amento%20personalizado">Orçamento</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="ajuda.html">Ajuda</a>
       <a href="contato.html">Contato</a>
     </nav>
     <div class="header-actions">
@@ -51,12 +61,17 @@
   <a href="index.html">Início</a>
   <a href="index.html#solucoes">Soluções</a>
   <a href="apps.html">Aplicativos</a>
-  <a href="downloads.html">Downloads</a>
   <a href="vendas.html">Produtos</a>
+  <div class="nav-mobile-sub">
+    <a href="lc-teste.html">LC TESTE</a>
+    <a href="calibrapro.html">CalibraPro</a>
+    <a href="lc-agro.html">LC Agro</a>
+    <a href="lc-carga.html">LC Carga</a>
+  </div>
   <a href="balanceiros.html">Central do Balanceiro</a>
-  <a href="contato.html?assunto=Or%C3%A7amento%20personalizado">Orçamento</a>
-  <a href="contato.html">Contato</a>
+  <a href="downloads.html">Downloads</a>
   <a href="ajuda.html">Ajuda e suporte</a>
+  <a href="contato.html">Contato</a>
   <a href="contato.html?assunto=Or%C3%A7amento%20personalizado" class="btn btn--primary btn--block">Solicitar orçamento</a>
 </nav>
 
@@ -120,6 +135,54 @@
 
   <section class="section section--tight">
     <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow">Projetos</span>
+        <h2 class="section-title">Projetos desenvolvidos pela Exatta Tech.</h2>
+        <p class="section-sub">Equipamento, sistema e apps criados do zero para resolver problemas reais de quem trabalha com pesagem.</p>
+      </div>
+      <div class="solution-grid" data-reveal>
+        <a class="solution-card" href="lc-teste.html">
+          <div class="solution-card-media"><img src="assets/uploads/products-prod-lc-teste-7ayd4.png" alt="LC TESTE" loading="lazy"></div>
+          <div class="solution-card-body">
+            <span class="tag tag--blue">Equipamento + App</span>
+            <h3>LC TESTE</h3>
+            <p>Testador portátil de células de carga: diagnóstico de resistência, sinal em mV e comunicação serial.</p>
+            <div class="tech-pills"><span class="tech-pill">Flutter</span><span class="tech-pill">Bluetooth LE</span><span class="tech-pill">Serial</span></div>
+          </div>
+        </a>
+        <a class="solution-card" href="calibrapro.html">
+          <div class="solution-card-media"><img src="assets/uploads/products-calibrapro-rbc.png" alt="CalibraPro" loading="lazy"></div>
+          <div class="solution-card-body">
+            <span class="tag tag--blue">Sistema desktop</span>
+            <h3>CalibraPro</h3>
+            <p>Sistema de gestão para laboratórios de calibração: clientes, ordens de serviço, certificados e financeiro.</p>
+            <div class="tech-pills"><span class="tech-pill">Desktop</span><span class="tech-pill">Certificados</span><span class="tech-pill">Financeiro</span></div>
+          </div>
+        </a>
+        <a class="solution-card" href="lc-agro.html">
+          <div class="solution-card-media"><img src="assets/uploads/apps-lc-agro.jpg" alt="LC Agro" loading="lazy"></div>
+          <div class="solution-card-body">
+            <span class="tag tag--blue">App Android</span>
+            <h3>LC Agro</h3>
+            <p>Pesagem agropecuária com cadastro de BIMs (containers) e desconto automático de tara.</p>
+            <div class="tech-pills"><span class="tech-pill">Flutter</span><span class="tech-pill">Bluetooth LE</span><span class="tech-pill">Cloud Sync</span></div>
+          </div>
+        </a>
+        <a class="solution-card" href="lc-carga.html">
+          <div class="solution-card-media"><img src="assets/uploads/apps-lc-carga-atual.jpg" alt="LC Carga" loading="lazy"></div>
+          <div class="solution-card-body">
+            <span class="tag tag--blue">App + Sistema</span>
+            <h3>LC Carga</h3>
+            <p>Pesagem rodoviária em campo (app) e em estação fixa (sistema desktop com câmera e relatórios).</p>
+            <div class="tech-pills"><span class="tech-pill">Serial</span><span class="tech-pill">Relatórios</span><span class="tech-pill">Câmera IP</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
       <div class="home-final-cta" data-reveal>
         <div>
           <span class="eyebrow">Projeto sob medida</span>
@@ -154,6 +217,10 @@
       <div class="footer-col">
         <h3>Soluções</h3>
         <ul>
+          <li><a href="lc-teste.html">LC TESTE</a></li>
+          <li><a href="calibrapro.html">CalibraPro</a></li>
+          <li><a href="lc-agro.html">LC Agro</a></li>
+          <li><a href="lc-carga.html">LC Carga</a></li>
           <li><a href="apps.html">Aplicativos</a></li>
           <li><a href="downloads.html">Downloads</a></li>
           <li><a href="vendas.html">Produtos</a></li>
@@ -162,6 +229,7 @@
       <div class="footer-col">
         <h3>Suporte</h3>
         <ul>
+          <li><a href="guias/index.html">Guias técnicos</a></li>
           <li><a href="ajuda.html">Ajuda</a></li>
           <li><a href="balanceiros.html">Central do Balanceiro</a></li>
           <li><a href="contato.html">Contato</a></li>

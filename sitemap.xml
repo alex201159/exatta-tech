@@ -16,6 +16,46 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://exattatech.com/lc-teste.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://exattatech.com/calibrapro.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://exattatech.com/lc-agro.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://exattatech.com/lc-carga.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://exattatech.com/guias/index.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://exattatech.com/guias/como-testar-celula-de-carga.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://exattatech.com/guias/configuracao-serial-balanca-rs232.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://exattatech.com/guias/calibracao-de-balanca.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://exattatech.com/downloads.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

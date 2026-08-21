@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guias Técnicos de Pesagem | Exatta Tech</title>
+<meta name="description" content="Guias técnicos gratuitos sobre pesagem: como testar célula de carga, configuração serial de balanças (RS-232/RS-485) e como calibrar uma balança.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Guias Técnicos de Pesagem | Exatta Tech">
+<meta property="og:description" content="Conteúdo técnico gratuito para quem trabalha com balanças, células de carga e indicadores de peso.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://exattatech.com/guias/index.html">
+<meta property="og:image" content="https://exattatech.com/assets/og-image.png">
+<link rel="canonical" href="https://exattatech.com/guias/index.html">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-971996179"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-971996179');
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"><i data-icon="scale"></i></span>
+      <span class="brand-name">Exatta<span>Tech</span></span>
+    </a>
+    <nav class="nav-desktop" aria-label="Navegação principal">
+      <a href="../index.html">Início</a>
+      <a href="../index.html#solucoes">Soluções</a>
+      <a href="../apps.html">Aplicativos</a>
+      <div class="nav-dropdown">
+        <a href="../vendas.html" class="nav-dropdown-trigger">Produtos<i data-icon="chevronDown"></i></a>
+        <div class="nav-dropdown-panel">
+          <a href="../lc-teste.html">LC TESTE</a>
+          <a href="../calibrapro.html">CalibraPro</a>
+          <a href="../lc-agro.html">LC Agro</a>
+          <a href="../lc-carga.html">LC Carga</a>
+          <div class="nav-dropdown-divider"></div>
+          <a href="../vendas.html">Ver todos os produtos</a>
+        </div>
+      </div>
+      <a href="../balanceiros.html">Central do Balanceiro</a>
+      <a href="../downloads.html">Downloads</a>
+      <a href="../ajuda.html">Ajuda</a>
+      <a href="../contato.html">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <a href="../contato.html?assunto=Or%C3%A7amento%20personalizado" class="btn btn--primary btn--sm">Solicitar orçamento</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMobile">
+        <i data-icon="menu" class="icon-menu"></i>
+        <i data-icon="close" class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-mobile" id="navMobile" aria-label="Navegação mobile">
+  <a href="../index.html">Início</a>
+  <a href="../index.html#solucoes">Soluções</a>
+  <a href="../apps.html">Aplicativos</a>
+  <a href="../vendas.html">Produtos</a>
+  <div class="nav-mobile-sub">
+    <a href="../lc-teste.html">LC TESTE</a>
+    <a href="../calibrapro.html">CalibraPro</a>
+    <a href="../lc-agro.html">LC Agro</a>
+    <a href="../lc-carga.html">LC Carga</a>
+  </div>
+  <a href="../balanceiros.html">Central do Balanceiro</a>
+  <a href="../downloads.html">Downloads</a>
+  <a href="../ajuda.html">Ajuda e suporte</a>
+  <a href="../contato.html">Contato</a>
+  <a href="../contato.html?assunto=Or%C3%A7amento%20personalizado" class="btn btn--primary btn--block">Solicitar orçamento</a>
+</nav>
+
+<main id="main">
+  <section class="page-hero page-hero--compact">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <nav aria-label="breadcrumb" style="margin-bottom:14px;font-size:13px;color:var(--text-muted)">
+          <a href="../balanceiros.html" style="color:var(--text-muted)">Central do Balanceiro</a>
+          <span> / </span>
+          <span>Guias técnicos</span>
+        </nav>
+        <span class="eyebrow">Guias técnicos</span>
+        <h1 class="section-title">Conteúdo técnico gratuito sobre pesagem.</h1>
+        <p class="section-sub">Guias práticos para quem trabalha com balanças, células de carga e indicadores de peso.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight section--flush-top">
+    <div class="container">
+      <div class="solution-grid" data-reveal>
+        <a class="solution-card" href="como-testar-celula-de-carga.html">
+          <div class="solution-card-media"><img src="../assets/uploads/products-prod-lc-teste-7ayd4.png" alt="Como testar célula de carga" loading="lazy"></div>
+          <div class="solution-card-body">
+            <span class="tag tag--blue">Diagnóstico</span>
+            <h3>Como testar célula de carga</h3>
+            <p>Teste de resistência entre terminais, medição de sinal em mV e diagnóstico de problemas comuns.</p>
+            <span class="solution-card-cta">Ler o guia <i data-icon="arrowRight"></i></span>
+          </div>
+        </a>
+        <a class="solution-card" href="configuracao-serial-balanca-rs232.html">
+          <div class="solution-card-media"><img src="../assets/uploads/products-prod-lc-teste-7ayd4.png" alt="Configuração serial de balança" loading="lazy"></div>
+          <div class="solution-card-body">
+            <span class="tag tag--blue">Comunicação</span>
+            <h3>Configuração serial: RS-232, RS-485</h3>
+            <p>Diferença entre os protocolos, parâmetros a configurar e como resolver os problemas mais comuns.</p>
+            <span class="solution-card-cta">Ler o guia <i data-icon="arrowRight"></i></span>
+          </div>
+        </a>
+        <a class="solution-card" href="calibracao-de-balanca.html">
+          <div class="solution-card-media"><img src="../assets/uploads/products-calibrapro-rbc.png" alt="Como calibrar uma balança" loading="lazy"></div>
+          <div class="solution-card-body">
+            <span class="tag tag--blue">Calibração</span>
+            <h3>Como calibrar uma balança</h3>
+            <p>Frequência recomendada, preparação, passo a passo geral e como documentar com certificado.</p>
+            <span class="solution-card-cta">Ler o guia <i data-icon="arrowRight"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="home-final-cta" data-reveal>
+        <div>
+          <span class="eyebrow">Central do Balanceiro</span>
+          <h2 class="section-title">Procurando o manual de um equipamento?</h2>
+          <p class="section-sub">Pesquise por fabricante ou modelo na Central do Balanceiro.</p>
+        </div>
+        <div class="home-final-actions">
+          <a href="../balanceiros.html" class="btn btn--primary">Acessar a Central</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark"><i data-icon="scale"></i></span>
+          <span class="brand-name">Exatta<span>Tech</span></span>
+        </a>
+        <p>Desenvolvimento de apps, softwares, sites, sistemas e soluções técnicas de pesagem.</p>
+        <div class="footer-contact">
+          <span>CNPJ: 57.593.441/0001-61</span>
+          <span>Atendimento remoto em todo o Brasil</span>
+          <a href="mailto:alexjunior201159@gmail.com">alexjunior201159@gmail.com</a>
+          <a href="tel:+5537998466711">+55 (37) 99846-6711</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Soluções</h3>
+        <ul>
+          <li><a href="../lc-teste.html">LC TESTE</a></li>
+          <li><a href="../calibrapro.html">CalibraPro</a></li>
+          <li><a href="../lc-agro.html">LC Agro</a></li>
+          <li><a href="../lc-carga.html">LC Carga</a></li>
+          <li><a href="../apps.html">Aplicativos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Suporte</h3>
+        <ul>
+          <li><a href="index.html">Guias técnicos</a></li>
+          <li><a href="../ajuda.html">Ajuda</a></li>
+          <li><a href="../balanceiros.html">Central do Balanceiro</a></li>
+          <li><a href="../contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Empresa</h3>
+        <ul>
+          <li><a href="../sobre.html">Sobre nós</a></li>
+          <li><a href="../politica-privacidade.html">Política de Privacidade</a></li>
+          <li><a href="../termos-uso.html">Termos de Uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Exatta Tech. Todos os direitos reservados.</span>
+      <span>Feito com precisão, em código.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="float-stack">
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><i data-icon="up"></i></button>
+  <a class="whatsapp-float" data-wa-link aria-label="Falar com a Exatta Tech pelo WhatsApp">
+    <i data-icon="whatsapp"></i>
+    <span class="wa-tooltip">Falar com a Exatta Tech</span>
+  </a>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="../js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

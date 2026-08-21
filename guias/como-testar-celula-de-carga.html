@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como Testar Célula de Carga: Resistência, mV e Diagnóstico | Exatta Tech</title>
+<meta name="description" content="Guia completo de como testar uma célula de carga: teste de resistência entre terminais E+, E-, S+, S-, medição de sinal em mV e diagnóstico de problemas comuns.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Como Testar Célula de Carga: Resistência, mV e Diagnóstico">
+<meta property="og:description" content="Passo a passo para testar resistência e sinal em mV de uma célula de carga, e identificar os problemas mais comuns.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://exattatech.com/guias/como-testar-celula-de-carga.html">
+<meta property="og:image" content="https://exattatech.com/assets/uploads/products-prod-lc-teste-7ayd4.png">
+<link rel="canonical" href="https://exattatech.com/guias/como-testar-celula-de-carga.html">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Como testar célula de carga: resistência, mV e diagnóstico",
+  "description": "Guia completo de como testar uma célula de carga: teste de resistência entre terminais E+, E-, S+, S-, medição de sinal em mV e diagnóstico de problemas comuns.",
+  "author": { "@type": "Organization", "name": "Exatta Tech" },
+  "publisher": { "@type": "Organization", "name": "Exatta Tech" },
+  "mainEntityOfPage": "https://exattatech.com/guias/como-testar-celula-de-carga.html"
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-971996179"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-971996179');
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"><i data-icon="scale"></i></span>
+      <span class="brand-name">Exatta<span>Tech</span></span>
+    </a>
+    <nav class="nav-desktop" aria-label="Navegação principal">
+      <a href="../index.html">Início</a>
+      <a href="../index.html#solucoes">Soluções</a>
+      <a href="../apps.html">Aplicativos</a>
+      <div class="nav-dropdown">
+        <a href="../vendas.html" class="nav-dropdown-trigger">Produtos<i data-icon="chevronDown"></i></a>
+        <div class="nav-dropdown-panel">
+          <a href="../lc-teste.html">LC TESTE</a>
+          <a href="../calibrapro.html">CalibraPro</a>
+          <a href="../lc-agro.html">LC Agro</a>
+          <a href="../lc-carga.html">LC Carga</a>
+          <div class="nav-dropdown-divider"></div>
+          <a href="../vendas.html">Ver todos os produtos</a>
+        </div>
+      </div>
+      <a href="../balanceiros.html">Central do Balanceiro</a>
+      <a href="../downloads.html">Downloads</a>
+      <a href="../ajuda.html">Ajuda</a>
+      <a href="../contato.html">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <a href="../contato.html?assunto=Or%C3%A7amento%20personalizado" class="btn btn--primary btn--sm">Solicitar orçamento</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMobile">
+        <i data-icon="menu" class="icon-menu"></i>
+        <i data-icon="close" class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-mobile" id="navMobile" aria-label="Navegação mobile">
+  <a href="../index.html">Início</a>
+  <a href="../index.html#solucoes">Soluções</a>
+  <a href="../apps.html">Aplicativos</a>
+  <a href="../vendas.html">Produtos</a>
+  <div class="nav-mobile-sub">
+    <a href="../lc-teste.html">LC TESTE</a>
+    <a href="../calibrapro.html">CalibraPro</a>
+    <a href="../lc-agro.html">LC Agro</a>
+    <a href="../lc-carga.html">LC Carga</a>
+  </div>
+  <a href="../balanceiros.html">Central do Balanceiro</a>
+  <a href="../downloads.html">Downloads</a>
+  <a href="../ajuda.html">Ajuda e suporte</a>
+  <a href="../contato.html">Contato</a>
+  <a href="../contato.html?assunto=Or%C3%A7amento%20personalizado" class="btn btn--primary btn--block">Solicitar orçamento</a>
+</nav>
+
+<main id="main">
+  <section class="page-hero page-hero--compact">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <nav aria-label="breadcrumb" style="margin-bottom:14px;font-size:13px;color:var(--text-muted)">
+          <a href="../balanceiros.html" style="color:var(--text-muted)">Central do Balanceiro</a>
+          <span> / </span>
+          <a href="index.html" style="color:var(--text-muted)">Guias técnicos</a>
+          <span> / </span>
+          <span>Como testar célula de carga</span>
+        </nav>
+        <span class="eyebrow">Guia técnico</span>
+        <h1 class="section-title">Como testar uma célula de carga: resistência, mV e diagnóstico.</h1>
+        <p class="section-sub">Passo a passo para testar uma célula de carga com multímetro — e onde um testador dedicado economiza tempo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight section--flush-top">
+    <div class="container">
+      <article class="legal-content" data-reveal>
+        <div class="guide-toc">
+          <strong>Neste guia</strong>
+          <a href="#o-que-e">O que é uma célula de carga</a>
+          <a href="#ferramentas">Ferramentas necessárias</a>
+          <a href="#resistencia">Teste de resistência entre terminais</a>
+          <a href="#interpretando">Interpretando os resultados</a>
+          <a href="#mv">Medição do sinal em mV</a>
+          <a href="#problemas">Problemas comuns</a>
+          <a href="#testador">Quando usar um testador dedicado</a>
+        </div>
+
+        <h2 id="o-que-e">O que é uma célula de carga e como ela funciona</h2>
+        <p>A célula de carga é um sensor que converte peso (força) em um sinal elétrico. A maioria das células comerciais usa extensômetros (strain gauges) montados em uma ponte de Wheatstone, com quatro terminais: <strong>E+</strong> e <strong>E-</strong> (excitação, onde entra a tensão de alimentação) e <strong>S+</strong> e <strong>S-</strong> (sinal, de onde sai a tensão proporcional ao peso aplicado).</p>
+        <p>Quando a célula sofre desgaste, umidade, sobrecarga ou dano físico, a ponte se desequilibra — e é isso que um teste elétrico consegue detectar antes de trocar a peça.</p>
+
+        <h2 id="ferramentas">Ferramentas necessárias</h2>
+        <ul>
+          <li><strong>Multímetro</strong> com função de resistência (Ω) e tensão DC (mV), para o teste manual.</li>
+          <li><strong>Fonte de alimentação regulada</strong>, se for medir o sinal em mV sob carga.</li>
+          <li><strong>Testador dedicado</strong> (como o LC TESTE) — automatiza as cinco medições de resistência, a leitura em mV e ainda testa a comunicação serial do indicador, tudo em um equipamento só.</li>
+        </ul>
+
+        <h2 id="resistencia">Passo 1: teste de resistência entre os terminais</h2>
+        <p>Com a célula <strong>desconectada</strong> do indicador (sem alimentação), meça a resistência entre as cinco combinações de terminais:</p>
+        <div class="pd-terminal-grid" style="margin:16px 0">
+          <div class="pd-terminal">E+ ↔ E-</div>
+          <div class="pd-terminal">E+ ↔ S+</div>
+          <div class="pd-terminal">E+ ↔ S-</div>
+          <div class="pd-terminal">E- ↔ S+</div>
+          <div class="pd-terminal">E- ↔ S-</div>
+        </div>
+        <p>A resistência de excitação (E+↔E-) e a de sinal (S+↔S-) variam por modelo e capacidade da célula — consulte o datasheet do fabricante. Células de strain gauge comuns costumam usar pontes de 350Ω ou próximo disso, mas isso não é universal: sempre confira a especificação do modelo específico antes de considerar um valor "fora do padrão".</p>
+        <div class="guide-callout">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <p>As medições entre excitação e sinal (E+↔S+, E+↔S-, E-↔S+, E-↔S-) costumam ficar próximas entre si na mesma célula saudável. É a <strong>comparação entre essas quatro leituras</strong> — mais do que o valor absoluto — que ajuda a identificar desequilíbrio.</p>
+        </div>
+
+        <h2 id="interpretando">Interpretando os resultados</h2>
+        <div class="guide-table-wrap">
+          <table>
+            <thead><tr><th>Sinal observado</th><th>O que pode indicar</th></tr></thead>
+            <tbody>
+              <tr><td>Resistência infinita (circuito aberto)</td><td>Rompimento no cabo ou na ponte interna</td></tr>
+              <tr><td>Resistência muito baixa ou curto</td><td>Curto-circuito, geralmente por umidade/infiltração</td></tr>
+              <tr><td>As 4 leituras E↔S bem diferentes entre si</td><td>Desequilíbrio da ponte — desgaste ou dano em um dos extensômetros</td></tr>
+              <tr><td>Valores próximos do esperado no datasheet</td><td>Ponte eletricamente saudável (não descarta problema mecânico)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="mv">Passo 2: medição do sinal em mV (sob carga)</h2>
+        <p>Além da resistência, é a resposta em milivolts (mV) que mostra se a célula está entregando o sinal correto quando recebe peso. A sensibilidade da célula é especificada em <strong>mV/V</strong> (ex.: 2 mV/V, 3 mV/V) — ou seja, quantos milivolts de saída ela entrega por volt de excitação, na capacidade máxima.</p>
+        <p>Fórmula de referência:</p>
+        <p style="font-family:var(--font-display);color:var(--text);font-size:15px">Saída esperada (mV) ≈ Sensibilidade (mV/V) × Tensão de excitação (V) × (carga aplicada ÷ capacidade nominal)</p>
+        <p><em>Exemplo:</em> uma célula de 2 mV/V, excitada com 10V e com metade da capacidade nominal aplicada, deve entregar aproximadamente 2 × 10 × 0,5 = 10 mV. Esse é um exemplo ilustrativo — sempre use a sensibilidade real informada no datasheet da sua célula.</p>
+
+        <h2 id="problemas">Problemas comuns e o que eles indicam</h2>
+        <ul>
+          <li><strong>Sinal invertido</strong> (negativo quando deveria ser positivo): geralmente é fiação trocada entre S+ e S-.</li>
+          <li><strong>Leitura instável ou "pulando"</strong>: mau contato no conector, cabo danificado ou umidade na célula.</li>
+          <li><strong>Zero não estabiliza</strong>: problema na ponte, aterramento incorreto ou interferência elétrica próxima.</li>
+          <li><strong>Peso exibido divergente do peso real</strong>: pode ser calibração desatualizada, mas também célula com desgaste — vale testar a célula antes de recalibrar.</li>
+        </ul>
+
+        <h2 id="testador">Quando vale usar um testador dedicado</h2>
+        <p>O teste manual com multímetro funciona, mas exige desconectar a célula, fazer as cinco medições uma a uma e ainda calcular a mV esperada manualmente. Um testador dedicado como o <a href="../lc-teste.html">LC TESTE</a> automatiza essas medições, testa a comunicação serial do indicador (RS-232, RS-485, TTL e Bluetooth) e salva o histórico de cada teste no cartão SD — reduzindo um diagnóstico de vários minutos para segundos.</p>
+
+        <p>Depois de confirmar que a célula está saudável, o próximo passo costuma ser calibrar a balança — veja o <a href="calibracao-de-balanca.html">guia de como calibrar uma balança</a> — e, se sua operação precisa de certificado, o <a href="../calibrapro.html">CalibraPro</a> organiza esse processo do início ao fim.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <a href="../lc-teste.html" class="pd-promo-band" data-reveal>
+        <img src="../assets/uploads/products-prod-lc-teste-7ayd4.png" alt="LC TESTE">
+        <div class="pd-promo-band-body">
+          <strong>LC TESTE: todos esses testes em um único equipamento</strong>
+          <span>Resistência, mV, comunicação serial e Bluetooth — diagnóstico completo de células de carga em campo ou bancada.</span>
+        </div>
+        <span class="btn btn--outline btn--sm">Conhecer o LC TESTE <i data-icon="arrowRight"></i></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="home-final-cta" data-reveal>
+        <div>
+          <span class="eyebrow">Fale com a Exatta Tech</span>
+          <h2 class="section-title">Ficou com dúvida no diagnóstico?</h2>
+          <p class="section-sub">Fale com quem desenvolveu o LC TESTE e pode te ajudar a interpretar o resultado.</p>
+        </div>
+        <div class="home-final-actions">
+          <a href="../contato.html?assunto=D%C3%BAvida%20t%C3%A9cnica" class="btn btn--primary">Falar com suporte</a>
+          <a data-wa-link data-wa-message="Olá! Tenho uma dúvida sobre teste de célula de carga." class="btn btn--whatsapp"><i data-icon="whatsapp"></i>WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="brand">
+          <span class="brand-mark"><i data-icon="scale"></i></span>
+          <span class="brand-name">Exatta<span>Tech</span></span>
+        </a>
+        <p>Desenvolvimento de apps, softwares, sites, sistemas e soluções técnicas de pesagem.</p>
+        <div class="footer-contact">
+          <span>CNPJ: 57.593.441/0001-61</span>
+          <span>Atendimento remoto em todo o Brasil</span>
+          <a href="mailto:alexjunior201159@gmail.com">alexjunior201159@gmail.com</a>
+          <a href="tel:+5537998466711">+55 (37) 99846-6711</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Soluções</h3>
+        <ul>
+          <li><a href="../lc-teste.html">LC TESTE</a></li>
+          <li><a href="../calibrapro.html">CalibraPro</a></li>
+          <li><a href="../lc-agro.html">LC Agro</a></li>
+          <li><a href="../lc-carga.html">LC Carga</a></li>
+          <li><a href="../apps.html">Aplicativos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Suporte</h3>
+        <ul>
+          <li><a href="index.html">Guias técnicos</a></li>
+          <li><a href="../ajuda.html">Ajuda</a></li>
+          <li><a href="../balanceiros.html">Central do Balanceiro</a></li>
+          <li><a href="../contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Empresa</h3>
+        <ul>
+          <li><a href="../sobre.html">Sobre nós</a></li>
+          <li><a href="../politica-privacidade.html">Política de Privacidade</a></li>
+          <li><a href="../termos-uso.html">Termos de Uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Exatta Tech. Todos os direitos reservados.</span>
+      <span>Feito com precisão, em código.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="float-stack">
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><i data-icon="up"></i></button>
+  <a class="whatsapp-float" data-wa-link aria-label="Falar com a Exatta Tech pelo WhatsApp">
+    <i data-icon="whatsapp"></i>
+    <span class="wa-tooltip">Falar com a Exatta Tech</span>
+  </a>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="../js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

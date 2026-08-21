@@ -333,27 +333,136 @@ let BALANCEIROS_STATS = [
 /* Ajuda — categorias e FAQ                                               */
 /* ---------------------------------------------------------------------- */
 const HELP_CATEGORIES = [
-  { id: "apps", name: "Aplicativos", icon: "phone", desc: "Uso geral dos apps Exatta Tech" },
-  { id: "instalacao", name: "Instalação", icon: "download", desc: "APK, permissões e primeiro acesso" },
-  { id: "bluetooth", name: "Bluetooth / BLE", icon: "bluetooth", desc: "Pareamento e conexão com balanças" },
-  { id: "serial", name: "Comunicação Serial", icon: "cpu", desc: "Protocolo Serial e RS-232" },
-  { id: "balancas", name: "Balanças", icon: "scale", desc: "Leitura de peso e indicadores" },
-  { id: "calibracao", name: "Calibração", icon: "gauge", desc: "Ajuste e precisão dos equipamentos" },
-  { id: "downloads", name: "Downloads", icon: "cloud", desc: "Versões, instaladores e atualizações" },
+  { id: "lc-teste", name: "LC TESTE", icon: "scale", desc: "Testador de células de carga" },
+  { id: "calibrapro", name: "CalibraPro", icon: "package", desc: "Gestão e certificados de calibração" },
+  { id: "lc-agro", name: "LC Agro", icon: "leaf", desc: "Pesagem agropecuária" },
+  { id: "lc-carga", name: "LC Carga", icon: "scale", desc: "Pesagem rodoviária" },
+  { id: "apps-gerais", name: "Outros aplicativos", icon: "phone", desc: "LC Peso, LC Trato e SOS Balanceiros" },
+  { id: "balanceiro", name: "Central do Balanceiro", icon: "search", desc: "Manuais, vídeos e busca por equipamento" },
+  { id: "instalacao", name: "Instalação e downloads", icon: "download", desc: "APK, permissões e primeiro acesso" },
   { id: "licencas", name: "Licenças", icon: "shield", desc: "Ativação e renovação de licença" },
-  { id: "problemas", name: "Problemas comuns", icon: "alert", desc: "Erros frequentes e soluções rápidas" },
 ];
 
 const FAQ = [
   {
-    cat: "apps",
-    q: "Quais aplicativos a Exatta Tech oferece atualmente?",
-    a: "Atualmente disponibilizamos o LC Peso (controle de pesagem), o LC Agro (gestão e pesagem para o agronegócio) e o Coletador RBC (coleta de dados em campo). Todos estão disponíveis para Android 8.0 ou superior.",
+    cat: "lc-teste",
+    q: "O LC TESTE funciona em campo ou só em bancada?",
+    a: "Os dois — o equipamento foi criado para diagnóstico portátil em campo e testes mais detalhados em bancada, com telas dedicadas de calibração, ajuste de seção e teste de desgaste de componentes.",
+  },
+  {
+    cat: "lc-teste",
+    q: "Como o LC TESTE identifica problemas na célula de carga?",
+    a: "Analisando as combinações entre os terminais E+, E-, S+ e S-, junto com a medição de sinal em milivolts (mV), o que ajuda a identificar alterações de resistência, desequilíbrios, falhas de ligação e inversão de sinais.",
+  },
+  {
+    cat: "lc-teste",
+    q: "O LC TESTE se conecta só por cabo ou também sem fio?",
+    a: "Os dois: tem Bluetooth/BLE para comunicação sem fio e também suporta conexão Serial, incluindo RS-232, RS-485 e TTL.",
+  },
+  {
+    cat: "lc-teste",
+    q: "O que é o \"display remoto\" do LC TESTE?",
+    a: "É um modo que recebe o peso do indicador pela porta serial e retransmite em frames para um visor à parte — útil quando o indicador está longe de onde o peso precisa aparecer.",
+  },
+  {
+    cat: "lc-teste",
+    q: "Os testes feitos no LC TESTE ficam salvos?",
+    a: "Sim — cada teste pode ser salvo no cartão SD e revisado depois na lista de relatórios salvos, com exportação para consulta ou histórico de manutenção.",
+  },
+  {
+    cat: "calibrapro",
+    q: "Qual a diferença entre o CalibraPro RBC e o Padrão?",
+    a: "O RBC tem um módulo específico para os padrões ambientais (termômetro, barômetro e higrômetro) exigidos pela acreditação Cgcre/RBC e emite certificado no layout oficial acreditado. O Padrão usa a mesma base de gestão, sem esse módulo, e conta com arquivamento automático de equipamentos sem movimentação recente.",
+  },
+  {
+    cat: "calibrapro",
+    q: "O CalibraPro calcula o certificado de calibração automaticamente?",
+    a: "O técnico preenche os pontos de teste e o sistema calcula erro, tolerância, incerteza e TUR automaticamente, gerando o PDF do certificado já com a identidade visual do laboratório.",
+  },
+  {
+    cat: "calibrapro",
+    q: "O CalibraPro tem controle financeiro?",
+    a: "Sim — registra receitas e despesas com categorias, forma de pagamento e recorrência, calcula comissão por técnico e mostra um dashboard com indicadores e gráficos.",
+  },
+  {
+    cat: "calibrapro",
+    q: "É possível ter mais de um usuário no CalibraPro?",
+    a: "Sim, o acesso é dividido em perfis (Master, Admin e Padrão) com restrição a áreas sensíveis como financeiro e configurações, e toda ação crítica fica registrada numa trilha de auditoria consultável por usuário, ação e período.",
+  },
+  {
+    cat: "calibrapro",
+    q: "Os dados do CalibraPro têm backup?",
+    a: "Sim — o sistema permite exportar/importar backup completo e sincronizar os dados entre estações via pasta compartilhada.",
+  },
+  {
+    cat: "lc-agro",
+    q: "O que é o cadastro de BIM no LC Agro?",
+    a: "BIM é o container, bag ou caixa de transporte cadastrado com número e tara próprios — o app desconta automaticamente esse peso e mostra direto o peso líquido da carga.",
+  },
+  {
+    cat: "lc-agro",
+    q: "O LC Agro funciona sem internet no campo?",
+    a: "Sim, ele conecta direto à balança via Bluetooth, BLE ou Serial; o histórico de pesagens fica salvo no aparelho e pode ser exportado em CSV depois.",
+  },
+  {
+    cat: "lc-agro",
+    q: "O LC Agro imprime tíquete na hora da pesagem?",
+    a: "Sim, em impressora térmica Bluetooth, direto na tela de pesagem.",
+  },
+  {
+    cat: "lc-carga",
+    q: "Qual a diferença entre o LC Carga Atual (app) e o LC Carga Desktop?",
+    a: "O LC Carga Atual é o app Android para pesagem de cargas em campo, com cadastro de clientes e tíquete impresso na hora. O LC Carga Desktop é o sistema para estações fixas de balança, com entrada/saída de veículos, câmera e relatórios completos.",
+  },
+  {
+    cat: "lc-carga",
+    q: "O LC Carga Desktop tira foto do veículo na pesagem?",
+    a: "Sim, conta com câmera local ou IP que fotografa o veículo no momento da pesagem.",
+  },
+  {
+    cat: "lc-carga",
+    q: "O LC Carga Desktop tem controle de usuários?",
+    a: "Sim, com três níveis de perfil — Administrador, Supervisor e Operador — cada um vendo só o que pode operar.",
+  },
+  {
+    cat: "apps-gerais",
+    q: "Quais outros aplicativos a Exatta Tech oferece além de LC TESTE, CalibraPro, LC Agro e LC Carga?",
+    a: "O LC Peso (pesagem com impressão de tíquete e relatório de desempenho), o LC Trato (carregamento de trato do rebanho por receita) e o SOS Balanceiros (busca automática de manuais e vídeos técnicos por modelo). Todos estão disponíveis para Android 8.0 ou superior.",
+  },
+  {
+    cat: "apps-gerais",
+    q: "O app não encontra minha balança via Bluetooth. O que fazer?",
+    a: "Verifique se o Bluetooth do indicador está ativo e visível, se a localização do celular está ligada (exigida pelo Android para escaneamento BLE) e tente parear novamente pela tela de dispositivos do aplicativo. Reinicie o app caso o problema persista.",
+  },
+  {
+    cat: "apps-gerais",
+    q: "Como conectar um indicador via porta Serial/RS-232?",
+    a: "É necessário um adaptador Serial-USB ou Serial-Bluetooth compatível. Configure a porta, baud rate e protocolo do indicador nas configurações avançadas do aplicativo. Consulte o manual do seu modelo na Central do Balanceiro para os parâmetros corretos.",
+  },
+  {
+    cat: "apps-gerais",
+    q: "Os relatórios em PDF não estão sendo gerados.",
+    a: "Verifique se o aplicativo tem permissão de armazenamento concedida e se há espaço livre suficiente no dispositivo. Caso o erro continue, entre em contato com o suporte técnico informando o modelo do celular e a versão do app.",
+  },
+  {
+    cat: "balanceiro",
+    q: "Como funciona a busca por manuais na Central do Balanceiro?",
+    a: "Basta digitar a marca ou o modelo do equipamento (ex: \"Prix 4 Uno\") na busca; o sistema filtra os manuais e vídeos técnicos relacionados, e cada equipamento tem uma página própria com manual em PDF e vídeos técnicos.",
+  },
+  {
+    cat: "balanceiro",
+    q: "Os manuais da Central do Balanceiro são gratuitos?",
+    a: "Sim, o acesso aos manuais e vídeos técnicos da Central do Balanceiro é gratuito, sem cadastro.",
+  },
+  {
+    cat: "balanceiro",
+    q: "Não encontrei o manual do meu equipamento. E agora?",
+    a: "O acervo está em crescimento constante. Fale com a gente pelo WhatsApp informando marca e modelo — ajudamos a localizar ou orientamos diretamente.",
   },
   {
     cat: "instalacao",
     q: "Como instalo o aplicativo pela primeira vez?",
-    a: "Baixe o APK na página de Downloads, permita a instalação de fontes desconhecidas nas configurações do Android e siga o assistente de configuração inicial dentro do app. O manual de instalação completo também está disponível para download.",
+    a: "Baixe o APK na página de Downloads, permita a instalação de fontes desconhecidas nas configurações do Android e siga o assistente de configuração inicial dentro do app.",
   },
   {
     cat: "instalacao",
@@ -361,54 +470,19 @@ const FAQ = [
     a: "As permissões solicitadas (Bluetooth, localização para escaneamento BLE e armazenamento) são exigidas pelo próprio Android para comunicação com dispositivos externos e geração de relatórios. Nenhum dado é compartilhado sem sua autorização.",
   },
   {
-    cat: "bluetooth",
-    q: "O app não encontra minha balança via Bluetooth. O que fazer?",
-    a: "Verifique se o Bluetooth do indicador está ativo e visível, se a localização do celular está ligada (exigida pelo Android para escaneamento BLE) e tente parear novamente pela tela de dispositivos do aplicativo. Reinicie o app caso o problema persista.",
-  },
-  {
-    cat: "bluetooth",
-    q: "Qual a diferença entre Bluetooth clássico e BLE nos nossos apps?",
-    a: "O Bluetooth clássico é usado por indicadores mais antigos com maior consumo de energia, enquanto o BLE (Bluetooth Low Energy) é usado em equipamentos modernos, com conexão mais rápida e menor consumo. Nossos aplicativos detectam automaticamente o tipo de conexão do equipamento.",
-  },
-  {
-    cat: "serial",
-    q: "Como conectar um indicador via porta Serial/RS-232?",
-    a: "É necessário um adaptador Serial-USB ou Serial-Bluetooth compatível. Configure a porta, baud rate e protocolo do indicador nas configurações avançadas do aplicativo. Consulte o manual do seu modelo na Central dos Balanceiros para os parâmetros corretos.",
-  },
-  {
-    cat: "balancas",
-    q: "O peso exibido está diferente do peso real. Como corrigir?",
-    a: "Isso geralmente indica necessidade de calibração do indicador ou da célula de carga. Consulte a categoria Calibração ou o manual específico do seu equipamento na Central dos Balanceiros.",
-  },
-  {
-    cat: "calibracao",
-    q: "Com que frequência devo calibrar minha balança?",
-    a: "Recomendamos calibração a cada 6 meses para uso comercial e a cada 3 meses para uso industrial ou rodoviário, além de sempre calibrar após qualquer manutenção ou troca de célula de carga.",
-  },
-  {
-    cat: "downloads",
+    cat: "instalacao",
     q: "Como sei se estou usando a versão mais recente do app?",
-    a: "A versão atual de cada aplicativo é exibida na página de Downloads, marcada com o selo 'Versão atual'. Você também pode conferir a versão instalada em Configurações > Sobre, dentro do próprio app.",
+    a: "A versão atual de cada aplicativo é exibida na página de Downloads, marcada com o selo \"Versão atual\", junto com a data de atualização.",
   },
   {
     cat: "licencas",
-    q: "Como ativo a licença do aplicativo após a compra?",
-    a: "Após a confirmação do pagamento, você recebe um código de ativação por e-mail ou WhatsApp. Insira o código na tela de licenciamento do aplicativo para liberar todas as funcionalidades.",
+    q: "Como ativo a licença de um sistema como o CalibraPro ou o LC Carga Desktop?",
+    a: "Após a confirmação, você recebe as instruções de ativação por e-mail ou WhatsApp. A licença do LC Carga Desktop é ativada por hardware, com período de teste de 5 dias.",
   },
   {
     cat: "licencas",
     q: "Posso usar a mesma licença em mais de um dispositivo?",
-    a: "Cada licença é vinculada a um número limitado de dispositivos, definido no plano contratado. Entre em contato com o suporte para consultar ou ampliar o número de ativações.",
-  },
-  {
-    cat: "problemas",
-    q: "O aplicativo fecha sozinho ao abrir a tela de pesagem.",
-    a: "Atualize o aplicativo para a versão mais recente disponível em Downloads. Se o problema persistir, limpe o cache do app nas configurações do Android e reinicie o dispositivo antes de abrir novamente.",
-  },
-  {
-    cat: "problemas",
-    q: "Os relatórios em PDF não estão sendo gerados.",
-    a: "Verifique se o aplicativo tem permissão de armazenamento concedida e se há espaço livre suficiente no dispositivo. Caso o erro continue, entre em contato com o suporte técnico informando o modelo do celular e a versão do app.",
+    a: "Cada licença é vinculada a um número limitado de dispositivos ou estações, definido no plano contratado. Entre em contato com o suporte para consultar ou ampliar o número de ativações.",
   },
 ];
 
@@ -459,7 +533,10 @@ function exattaRecomputeStats() {
 
 window.exattaLoadOverrides = async function exattaLoadOverrides() {
   try {
-    const res = await fetch("data/overrides.json", { cache: "no-store" });
+    // Caminho absoluto a partir da raiz do site: com pastas como /guias/ e
+    // /balancas/marca/, um caminho relativo ("data/overrides.json") resolveria
+    // errado a partir da URL da página (ex: /guias/data/overrides.json).
+    const res = await fetch("/data/overrides.json", { cache: "no-store" });
     if (!res.ok) return;
     const extra = await res.json();
     const removed = extra.removed || {};

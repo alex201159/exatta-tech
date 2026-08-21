@@ -59,6 +59,23 @@
   window.exattaIcon = icon;
 
   /* ------------------------------------------------------------------ */
+  /* Páginas próprias de produto — id do app/produto -> URL da página    */
+  /* dedicada (SEO). Usado para linkar "Ver página completa" nos cards. */
+  /* ------------------------------------------------------------------ */
+  const DETAIL_PAGES = {
+    testador: "lc-teste.html",
+    "prod-lc-teste-7ayd4": "lc-teste.html",
+    "calibrapro-rbc": "calibrapro.html",
+    "calibrapro-padrao": "calibrapro.html",
+    "prod-calibrapro-rbc": "calibrapro.html",
+    "prod-calibrapro-normal": "calibrapro.html",
+    "lc-agro": "lc-agro.html",
+    "lc-carga-atual": "lc-carga.html",
+    "lc-carga-desktop": "lc-carga.html",
+    "prod-lc-carga-desktop": "lc-carga.html",
+  };
+
+  /* ------------------------------------------------------------------ */
   /* Markdown leve — só ** negrito ** e # títulos, pra descrições longas */
   /* cadastradas pelo admin não aparecerem com a sintaxe crua no site.  */
   /* ------------------------------------------------------------------ */
@@ -355,8 +372,13 @@
       return;
     }
     const accent = appAccent(app);
+    const detailPage = DETAIL_PAGES[app.id];
+    // Card inteiro é um link para a página própria (SEO) quando ela existe;
+    // sem página própria, continua sendo um botão que abre o modal do app.
+    const tag = detailPage ? "a" : "button";
+    const openAttr = detailPage ? `href="${detailPage}"` : `type="button" data-open-app="${app.id}"`;
     el.innerHTML = `
-      <button type="button" class="app-spotlight app-spotlight--${accent.cls}" data-reveal data-open-app="${app.id}">
+      <${tag} class="app-spotlight app-spotlight--${accent.cls}" data-reveal ${openAttr}>
         <div class="app-spotlight-visual">
           <span class="app-spotlight-glow"></span>
           <div class="app-spotlight-icon">${app.image ? `<img src="${app.image}" alt="${app.name}" loading="lazy">` : icon(app.icon)}</div>
@@ -369,11 +391,11 @@
           <p>${app.shortDesc}</p>
           <div class="tech-pills">${app.tech.slice(0, 4).map((t) => `<span class="tech-pill">${t}</span>`).join("")}</div>
           <div class="app-spotlight-actions">
-            <span class="btn btn--primary btn--sm">Conhecer o app${icon("arrowRight")}</span>
-            ${app.hasDownload ? `<a class="btn btn--outline btn--sm" href="downloads.html#${app.id}">${icon("download")}Download</a>` : ""}
+            <span class="btn btn--primary btn--sm">${detailPage ? "Ver página completa" : "Conhecer o app"}${icon("arrowRight")}</span>
+            ${app.hasDownload && !detailPage ? `<a class="btn btn--outline btn--sm" href="downloads.html#${app.id}">${icon("download")}Download</a>` : ""}
           </div>
         </div>
-      </button>`;
+      </${tag}>`;
     observeReveal(el);
   }
 
@@ -443,7 +465,11 @@
           <p class="desc">${app.shortDesc}</p>
           <div class="tech-pills">${app.tech.slice(0, 3).map((t) => `<span class="tech-pill">${t}</span>`).join("")}</div>
           <div class="app-tile-actions">
-            <button class="btn btn--outline btn--sm" data-open-app="${app.id}">Conhecer</button>
+            ${
+              DETAIL_PAGES[app.id]
+                ? `<a class="btn btn--outline btn--sm" href="${DETAIL_PAGES[app.id]}">Ver página</a>`
+                : `<button class="btn btn--outline btn--sm" data-open-app="${app.id}">Conhecer</button>`
+            }
             ${app.hasDownload ? `<a class="btn btn--primary btn--sm" href="downloads.html#${app.id}">Download</a>` : ""}
           </div>
         </article>`;
@@ -591,8 +617,9 @@
           <button class="card-link" data-open-download="${d.id}">Ver descrição completa ${icon("arrowRight")}</button>
           <div class="dl-meta">
             <span><b>Versão</b> ${d.version}</span>
+            <span><b>Atualizado</b> ${d.date}</span>
             <span><b>Tamanho</b> ${d.size}</span>
-            <span><b>Data</b> ${d.date}</span>
+            <span><b>Desenvolvedor</b> Exatta Tech</span>
           </div>
           ${d.current ? `<span class="dl-badge">Versão atual</span>` : ""}
           ${
@@ -600,6 +627,7 @@
               ? `<a class="btn btn--primary btn--sm btn--block" href="${d.url}" download target="_blank" rel="noopener">${icon("download")} Baixar</a>`
               : `<button class="btn btn--primary btn--sm btn--block" data-download="${d.id}">${icon("download")} Baixar</button>`
           }
+          <div class="dl-trust">${icon("shield")}Download oficial Exatta Tech</div>
         </div>`
         )
         .join("");
@@ -718,7 +746,11 @@
             <div class="product-price">${p.priceLabel}${genericPrice ? `<small>Valor sob consulta</small>` : `<small>à vista ou combinado</small>`}</div>
           </div>
           <div class="product-actions">
-            <button class="btn btn--outline btn--sm" data-open-product="${p.id}">Ver detalhes</button>
+            ${
+              DETAIL_PAGES[p.id]
+                ? `<a class="btn btn--outline btn--sm" href="${DETAIL_PAGES[p.id]}">Ver página</a>`
+                : `<button class="btn btn--outline btn--sm" data-open-product="${p.id}">Ver detalhes</button>`
+            }
             <a class="btn btn--primary btn--sm" data-wa-link data-wa-message="Olá! Tenho interesse em: ${p.name}. Poderiam me passar mais informações?">Solicitar orçamento</a>
           </div>
         </div>
@@ -743,8 +775,11 @@
       return;
     }
     const bonusProduct = promo.bonusProductId ? PRODUCTS.find((p) => p.id === promo.bonusProductId) : null;
+    const promoDetailPage = DETAIL_PAGES[mainProduct.id];
+    const promoTag = promoDetailPage ? "a" : "button";
+    const promoOpenAttr = promoDetailPage ? `href="${promoDetailPage}"` : `type="button" data-open-product="${mainProduct.id}"`;
     el.innerHTML = `
-      <button type="button" class="promo-combo" data-open-product="${mainProduct.id}">
+      <${promoTag} class="promo-combo" ${promoOpenAttr}>
         <span class="promo-combo-shine"></span>
         <div class="promo-combo-photos">
           <div class="promo-combo-photo">${
@@ -767,7 +802,7 @@
           <span class="promo-combo-cta">${promo.cta || "Ver oferta"} ${icon("arrowRight")}</span>
           ${promo.fine ? `<span class="promo-combo-fine">${promo.fine}</span>` : ""}
         </div>
-      </button>`;
+      </${promoTag}>`;
   }
 
   function renderProductsPage() {
@@ -1122,14 +1157,19 @@
           <p>${m.desc}</p>
           <div class="result-card-actions">
             ${
+              window.MANUAL_PAGE_URLS && window.MANUAL_PAGE_URLS[m.id]
+                ? `<a class="btn btn--primary btn--sm" href="${window.MANUAL_PAGE_URLS[m.id]}">Ver página</a>`
+                : ""
+            }
+            ${
               m.url
                 ? `<a class="btn btn--outline btn--sm" href="${m.url}" target="_blank" rel="noopener">Visualizar</a>`
                 : `<button class="btn btn--outline btn--sm" disabled title="Link ainda não cadastrado">Visualizar</button>`
             }
             ${
-              m.sourceUrl || m.url
-                ? `<a class="btn btn--ghost btn--sm" href="${m.sourceUrl || m.url}" target="_blank" rel="noopener">Abrir fonte</a>`
-                : `<button class="btn btn--ghost btn--sm" disabled title="Link ainda não cadastrado">Abrir fonte</button>`
+              m.sourceUrl
+                ? `<a class="btn btn--ghost btn--sm" href="${m.sourceUrl}" target="_blank" rel="noopener">Abrir fonte</a>`
+                : ""
             }
           </div>
         </div>`
