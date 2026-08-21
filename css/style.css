@@ -562,13 +562,6 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
   flex-shrink: 0;
   margin-top: 1px;
 }
-.home-stats-strip {
-  justify-content: flex-start;
-  gap: 30px;
-  margin-top: 0;
-}
-.home-stats-strip .app-stat { text-align: left; }
-
 .home-showcase {
   position: relative;
   min-height: 560px;
@@ -1139,6 +1132,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
   background: var(--grad-brand); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .app-stat span { font-size: 12px; color: var(--text-muted); }
+.home-stats-strip { justify-content: flex-start; gap: 30px; margin-top: 0; }
+.home-stats-strip .app-stat { text-align: left; }
 
 .apps-panel {
   background: linear-gradient(180deg, #f8f9fc, #eceff5);
@@ -1356,6 +1351,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 }
 .stat-card .num { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--text); overflow-wrap: anywhere; }
 .stat-card .num .suffix { color: var(--cyan); }
+.stat-card .num .num-text { display: inline-block; font-size: 20px; overflow-wrap: normal; white-space: nowrap; }
 .stat-card .num .stat-soon {
   display: inline-block;
   font-size: 20px;

@@ -345,7 +345,7 @@
   }
 
   function statNumberHtml(s) {
-    if (s.customLabel) return s.customLabel;
+    if (s.customLabel) return `<span class="num-text">${s.customLabel}</span>`;
     if (!Number(s.value)) return `<span class="stat-soon">${s.emptyLabel || "Em breve"}</span>`;
     return `<span data-counter="${s.value}" data-suffix="${s.suffix}">0${s.suffix}</span>`;
   }
