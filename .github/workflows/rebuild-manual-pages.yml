@@ -1,0 +1,49 @@
+name: Regenera páginas de manuais
+
+# Sempre que data/overrides.json muda no branch main (seja pelo painel
+# admin web ou pelo app Flutter — os dois só gravam nesse arquivo),
+# roda o gerador de páginas estáticas de /balancas/ e publica o
+# resultado num commit automático, para as páginas por fabricante/
+# modelo e o sitemap-balancas.xml ficarem sempre sincronizados com os
+# dados reais, sem precisar de intervenção manual.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/overrides.json"
+      - "js/data.js"
+      - "scripts/build-manual-pages.js"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild-manual-pages
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configura Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Gera páginas de manuais
+        run: node scripts/build-manual-pages.js
+
+      - name: Publica se houve mudança
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add balancas/ sitemap-balancas.xml js/manual-pages.js
+          if git diff --cached --quiet; then
+            echo "Nada mudou nas páginas de manuais — nada para commitar."
+          else
+            git commit -m "Auto: regenera paginas de manuais (data/overrides.json)"
+            git push
+          fi
