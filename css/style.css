@@ -1329,6 +1329,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 .dl-panel .empty-state svg { color: #9aa3b5; }
 .dl-panel .empty-state h4 { color: #10151f; }
 .dl-panel .download-grid { gap: 16px; }
+.download-help-note { margin: -6px 0 22px; color: #5b6478; font-size: 13px; }
 .dl-panel .dl-card { background: #fff; border: none; box-shadow: 0 1px 3px rgba(15,23,42,0.08); padding: 20px; }
 .dl-panel .dl-card:hover { box-shadow: 0 12px 26px rgba(15,23,42,0.14); }
 .dl-panel .dl-card h4 { color: #10151f; }
@@ -2204,6 +2205,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 .admin-brand-group-body { padding: 10px; display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--border); }
 .admin-brand-group-body .admin-row { background: var(--bg-elevated); }
 .field input[type="file"] { padding: 10px 14px; min-height: auto; }
+.form-privacy-note { margin-top: 14px; color: var(--text-muted); font-size: 12px; line-height: 1.5; }
+.form-privacy-note a { color: var(--cyan); text-decoration: underline; text-underline-offset: 2px; }
 .admin-image-preview { width: 96px; height: 96px; border-radius: var(--radius-md); object-fit: cover; margin-top: 10px; border: 1px solid var(--border-strong); display: none; }
 .admin-image-preview.is-visible { display: block; }
 .admin-gallery-preview { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
@@ -2486,4 +2489,80 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
   .float-stack { right: 14px; bottom: 14px; }
   .whatsapp-float { width: 52px; height: 52px; }
   .whatsapp-float .wa-tooltip { display: none; }
+}
+
+/* ---------- Ajustes finais para telas compactas ---------- */
+@media (max-width: 640px) {
+  .section-head,
+  .shop-panel-head,
+  .bal-panel-head,
+  .contact-split,
+  .pd-plan-grid,
+  .pd-promo-band,
+  .help-cat,
+  .result-card,
+  .product-card,
+  .app-card { min-width: 0; }
+
+  /* A hierarquia da home deve começar pelo contexto, não pela ilustração. */
+  .home-showcase { order: initial; }
+
+  .shop-panel { padding: 20px 16px 24px; }
+  .shop-panel-head { align-items: stretch; }
+  .shop-panel-head .filter-chips,
+  .apps-panel .filter-chips,
+  .dl-panel .filter-chips,
+  .bal-panel .chip-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding: 2px 2px 10px;
+    margin-inline: -2px;
+    scrollbar-width: thin;
+  }
+  .filter-chips .chip,
+  .chip-row .chip { flex: 0 0 auto; }
+  .shop-panel-head .filter-search { width: 100%; min-width: 0; }
+
+  /* Dois cards estreitos prejudicavam leitura e comparação dos produtos. */
+  .product-grid { grid-template-columns: 1fr; }
+  .product-card { min-height: 0; }
+  .product-body { padding: 18px; }
+  .product-body p { -webkit-line-clamp: 2; line-clamp: 2; }
+
+  .promo-combo-photos { gap: 10px; padding: 22px 14px; }
+  .promo-combo-photo { width: min(27vw, 104px); height: min(27vw, 104px); }
+  .promo-combo-plus { width: 26px; height: 26px; }
+  .promo-combo-cta { width: 100%; justify-content: center; }
+
+  .bal-search { border-radius: var(--radius-md); padding: 6px 12px 6px 16px; }
+  .bal-search input { font-size: 15px; }
+  .bal-panel .tabs { display: flex; width: 100%; overflow-x: auto; flex-wrap: nowrap; }
+  .bal-panel .tab-btn { flex: 0 0 auto; }
+  .bal-contribute .btn { width: 100%; }
+
+  .pd-actions { flex-direction: column; align-items: stretch; }
+  .pd-actions .btn { width: 100%; }
+  .pd-plan { padding: 22px; }
+  .pd-promo-band { padding: 22px; }
+  .pd-promo-band-body { min-width: 0; }
+  .pd-promo-band .btn { width: 100%; }
+
+  /* As páginas geradas usam uma grade inline; esta regra garante leitura em uma coluna. */
+  .help-cat-grid[style] { grid-template-columns: 1fr !important; }
+  .help-cat { align-items: flex-start; }
+  .help-cat > div:last-child { min-width: 0; }
+  .help-cat strong,
+  .help-cat span { overflow-wrap: anywhere; }
+
+  .contact-type-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact-type-grid .contact-type:last-child { grid-column: span 2; }
+  .contact-type { padding: 16px 10px; }
+  .contact-panel .btn--block { white-space: normal; }
+
+  .app-card-actions { flex-direction: column; }
+  .app-card-actions .btn { width: 100%; }
+  .dev-banner { padding: 30px 20px; }
+  .dev-banner-body { min-width: 0; }
+  .dev-banner-actions .btn { min-width: 0; width: 100%; }
 }
