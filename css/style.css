@@ -451,7 +451,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(440px, 1.05fr);
   gap: 64px;
-  align-items: center;
+  align-items: start;
 }
 .home-hero-copy { max-width: 690px; }
 .home-hero .hero-title {
